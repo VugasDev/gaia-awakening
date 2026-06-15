@@ -47,3 +47,7 @@ plugins:
 
 nav:
   - Home: index.md
+  - Getting Started:
+      - Installation: getting-started/installation.md
+      - Your First Hour: getting-started/first-hour.md
+      - Using the Quest Book: getting-started/quest-book.md
