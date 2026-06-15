@@ -1,0 +1,48 @@
+site_name: Gaia Awakening Wiki
+site_description: The complete guide to the Gaia Awakening modpack.
+site_url: https://vugasdev.github.io/minecraft-modpack/
+repo_url: https://github.com/VugasDev/minecraft-modpack
+repo_name: VugasDev/minecraft-modpack
+edit_uri: edit/main/wiki/docs/
+
+theme:
+  name: material
+  palette:
+    - scheme: slate
+      primary: green
+      accent: light green
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+    - scheme: default
+      primary: green
+      accent: green
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+  features:
+    - navigation.sections
+    - navigation.top
+    - navigation.indexes
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.action.edit
+
+markdown_extensions:
+  - admonition
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+plugins:
+  - search
+
+nav:
+  - Home: index.md
