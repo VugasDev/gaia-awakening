@@ -1,6 +1,6 @@
 # Quest Overview
 
-Gaia Awakening includes **142 main-path quests** and **48 optional side quests** spread across **19 chapters** in five progression tiers. Open the quest book in-game at any time (bound to **B** by default) to track your progress.
+Gaia Awakening includes **94 main-path quests** and **48 optional side quests** (142 total) spread across **19 chapters** in five progression tiers. Open the quest book in-game at any time (bound to **B** by default) to track your progress.
 
 ## Shape Legend
 
@@ -80,14 +80,14 @@ Face the Cataclysm Apex bosses, harvest Singularity Shards for Mythic Catalysts,
 
 ## Quest Totals by Tier
 
-| Tier | Main Quests | Optional Side Quests |
-|------|------------|----------------------|
-| Tier 1 | 21 | 13 |
-| Tier 2 | 16 | 7 |
-| Tier 3 | 28 | 12 |
-| Tier 4 | 24 | 9 |
-| Tier 5 | 13 | 7 |
-| **Total** | **~102** | **~48** |
+| Tier | Main Quests | Optional Side Quests | Total |
+|------|------------|----------------------|-------|
+| Tier 1 | 19 | 15 | 34 |
+| Tier 2 | 18 | 9 | 27 |
+| Tier 3 | 25 | 12 | 37 |
+| Tier 4 | 19 | 9 | 28 |
+| Tier 5 | 13 | 3 | 16 |
+| **Total** | **94** | **48** | **142** |
 
 !!! tip "Getting the most out of side quests"
     Diamond-shaped quests often reward materials you would otherwise have to grind: magnet upgrades, backpack components, ore surpluses, and experience levels. If you are ever resource-gated, check the nearest diamond quests first.
