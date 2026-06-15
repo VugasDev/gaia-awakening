@@ -51,3 +51,10 @@ nav:
       - Installation: getting-started/installation.md
       - Your First Hour: getting-started/first-hour.md
       - Using the Quest Book: getting-started/quest-book.md
+  - Progression:
+      - Overview: progression/index.md
+      - "Tier 1: The Beginning": progression/tier-1.md
+      - "Tier 2: Brass and Machines": progression/tier-2.md
+      - "Tier 3: Energy and Automation": progression/tier-3.md
+      - "Tier 4: Advanced Systems": progression/tier-4.md
+      - "Tier 5: Endgame": progression/tier-5.md
