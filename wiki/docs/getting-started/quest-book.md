@@ -31,7 +31,7 @@ Each quest in the book is displayed as a shape. The shape tells you what kind of
 | Diamond | Optional side quest — extra rewards, not required to advance |
 | Gear | Milestone gate — a significant checkpoint in the progression |
 
-In the source data, main quests have no shape set (the chapter default is a circle). Diamond quests carry
+Main quests have no explicit shape set and appear as a circle in-game. Diamond quests carry
 `optional: true` and offer rewards for doing extra work. Gear quests mark major gates — for example, the
 gear-check quest before the Tier 5 boss encounters, and the final completion milestone.
 

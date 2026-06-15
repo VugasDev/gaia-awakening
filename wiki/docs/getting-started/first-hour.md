@@ -29,8 +29,10 @@ The survival foundation. The key quests in order:
 | Into Hell | Build a Nether portal — you need blaze rods for the next tier |
 | Blaze It | Kill blazes for 4 blaze rods and collect 16 quartz |
 
-Diamond-shaped quests in this chapter (sleeping, cooking with Farmer's Delight, FTB Ultimine vein mining,
-Sophisticated Backpacks) are optional side content with good rewards — do them when convenient.
+Diamond-shaped quests in this chapter are optional side content with good rewards — do them when convenient.
+These include: sleeping to set your spawn (A Place to Sleep), cooking with Farmer's Delight (Farm to Table),
+tracking crop seasons with Serene Seasons (Seasons Change), claiming chunks with FTB Chunks (Claim Your Land),
+vein mining with FTB Ultimine (One Block? All Blocks!), and carrying more with Sophisticated Backpacks (Pack Mule).
 
 ### Chapter 2: The Andesite Age
 
