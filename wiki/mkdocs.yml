@@ -1,0 +1,106 @@
+site_name: Gaia Awakening Wiki
+site_description: The complete guide to the Gaia Awakening modpack.
+site_url: https://VugasDev.github.io/minecraft-modpack/
+repo_url: https://github.com/VugasDev/minecraft-modpack
+repo_name: VugasDev/minecraft-modpack
+docs_dir: docs
+edit_uri: edit/main/wiki/docs/
+
+theme:
+  name: material
+  palette:
+    - scheme: slate
+      primary: green
+      accent: light-green
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+    - scheme: default
+      primary: green
+      accent: green
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+  features:
+    - navigation.sections
+    - navigation.top
+    - navigation.indexes
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.action.edit
+
+markdown_extensions:
+  - admonition
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+plugins:
+  - search
+
+nav:
+  - Home: index.md
+  - Getting Started:
+      - Installation: getting-started/installation.md
+      - Your First Hour: getting-started/first-hour.md
+      - Using the Quest Book: getting-started/quest-book.md
+  - Progression:
+      - Overview: progression/index.md
+      - "Tier 1: The Beginning": progression/tier-1.md
+      - "Tier 2: Brass and Machines": progression/tier-2.md
+      - "Tier 3: Energy and Automation": progression/tier-3.md
+      - "Tier 4: Advanced Systems": progression/tier-4.md
+      - "Tier 5: Endgame": progression/tier-5.md
+  - Custom Systems:
+      - The Catalyst System: systems/catalyst-system.md
+      - Drill Head System: systems/drill-heads.md
+      - XP Economy: systems/xp-economy.md
+      - Custom Recipes: systems/custom-recipes.md
+      - Enchantment System: systems/enchantments.md
+      - World Generation: systems/world-generation.md
+  - Mods by Category:
+      - Overview: mods/index.md
+      - Tech: mods/tech.md
+      - Magic: mods/magic.md
+      - Exploration & Adventure: mods/exploration.md
+      - Farming & Food: mods/farming-food.md
+      - Storage & QoL: mods/storage-qol.md
+      - Performance & Libraries: mods/performance-libraries.md
+  - Quests:
+      - Overview: quests/index.md
+      - "Tier 1: The Beginning":
+          - First Steps: quests/t1-survival.md
+          - The Andesite Age: quests/t1-create.md
+          - Into the Wild: quests/t1-exploration.md
+      - "Tier 2: Brass and Machines":
+          - The Brass Age: quests/t2-create-brass.md
+          - Green Machines: quests/t2-mekanism.md
+          - Stay Organized: quests/t2-storage.md
+          - Chef's Table: quests/t2-kitchen.md
+      - "Tier 3: Energy and Automation":
+          - Power Up: quests/t3-power.md
+          - Going Digital: quests/t3-ae2.md
+          - Under Pressure: quests/t3-pnc.md
+          - Mystical Farming: quests/t3-ma.md
+          - School of Magic: quests/t3-magic.md
+      - "Tier 4: Advanced Systems":
+          - Heavy Industry: quests/t4-mekanism.md
+          - Mass Storage: quests/t4-ae2-mega.md
+          - The Catalyst: quests/t4-catalyst.md
+          - Magical Automation: quests/t4-ars.md
+          - Beyond Vanilla Enchanting: quests/t4-enchant.md
+      - "Tier 5: Endgame":
+          - Apex Predators: quests/t5-bosses.md
+          - Gaia Awakens: quests/t5-endgame.md
+  - Reference:
+      - Full Mod List: reference/mod-list.md
+      - FAQ: reference/faq.md
+      - Credits & Licenses: reference/credits-licenses.md
+      - Changelog: reference/changelog.md
