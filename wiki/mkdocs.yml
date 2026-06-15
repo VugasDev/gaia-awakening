@@ -58,3 +58,10 @@ nav:
       - "Tier 3: Energy and Automation": progression/tier-3.md
       - "Tier 4: Advanced Systems": progression/tier-4.md
       - "Tier 5: Endgame": progression/tier-5.md
+  - Custom Systems:
+      - The Catalyst System: systems/catalyst-system.md
+      - Drill Head System: systems/drill-heads.md
+      - XP Economy: systems/xp-economy.md
+      - Custom Recipes: systems/custom-recipes.md
+      - Enchantment System: systems/enchantments.md
+      - World Generation: systems/world-generation.md
