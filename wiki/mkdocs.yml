@@ -73,3 +73,29 @@ nav:
       - Farming & Food: mods/farming-food.md
       - Storage & QoL: mods/storage-qol.md
       - Performance & Libraries: mods/performance-libraries.md
+  - Quests:
+      - Overview: quests/index.md
+      - "Tier 1: The Beginning":
+          - First Steps: quests/t1-survival.md
+          - The Andesite Age: quests/t1-create.md
+          - Into the Wild: quests/t1-exploration.md
+      - "Tier 2: Brass and Machines":
+          - The Brass Age: quests/t2-create-brass.md
+          - Green Machines: quests/t2-mekanism.md
+          - Stay Organized: quests/t2-storage.md
+          - Chef's Table: quests/t2-kitchen.md
+      - "Tier 3: Energy and Automation":
+          - Power Up: quests/t3-power.md
+          - Going Digital: quests/t3-ae2.md
+          - Under Pressure: quests/t3-pnc.md
+          - Mystical Farming: quests/t3-ma.md
+          - School of Magic: quests/t3-magic.md
+      - "Tier 4: Advanced Systems":
+          - Heavy Industry: quests/t4-mekanism.md
+          - Mass Storage: quests/t4-ae2-mega.md
+          - The Catalyst: quests/t4-catalyst.md
+          - Magical Automation: quests/t4-ars.md
+          - Beyond Vanilla Enchanting: quests/t4-enchant.md
+      - "Tier 5: Endgame":
+          - Apex Predators: quests/t5-bosses.md
+          - Gaia Awakens: quests/t5-endgame.md
