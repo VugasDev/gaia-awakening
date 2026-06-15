@@ -18,7 +18,7 @@ Two custom items gate access to higher-tier Mystical Agriculture seeds. These ar
 
 ### Resource Catalyst — Gate to T3 Seeds
 
-The **Resource Catalyst** (`apex:resource_catalyst`) is required to craft Tier 3 Mystical Agriculture seeds (diamond, emerald, gold, glowstone). You will encounter this gate during Tier 4's quest chapter "The Catalyst."
+The **Resource Catalyst** (`apex:resource_catalyst`) is required to craft Tier 3 Mystical Agriculture seeds (diamond, emerald, gold, glowstone). The catalyst itself is obtained during Tier 4's quest chapter "The Catalyst" — so while the T3 seeds exist from Tier 3 onwards, you will not be able to craft them until you reach that T4 chapter and secure your first Resource Catalyst.
 
 Three paths exist to obtain it:
 

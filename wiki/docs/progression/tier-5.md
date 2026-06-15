@@ -18,7 +18,7 @@ Boss sequence:
 3. **The Harbinger** — hovers in Ruined Citadels, attacks with lasers and missiles. Bring ranged weapons and maintain cover.
 4. **Ender Guardian** — deep in the Ruined Fortress of the End. Gravity attacks, teleport punishes, arena control required.
 
-Each Apex boss drops a **Singularity Shard** and guarantees one **Mythic Catalyst** per kill.
+The **Netherite Monstrosity** drops a **Resource Catalyst** (the Tier 3 seed gate) and a Singularity Shard on kill. The three Cataclysm Apex end-bosses — **Ignis, The Harbinger, and the Ender Guardian** — each guarantee one **Mythic Catalyst** (the Tier 4 seed gate) and a Singularity Shard per kill.
 
 Optional quests: the vanilla Wither (nether stars for beacons and high-tier crafts) and the Warden (strictly optional, widely considered a bad idea, rewards included anyway).
 
@@ -40,7 +40,7 @@ Optional quest: the 256M MEGA Cell — the largest storage cell in the pack. No 
 
 ## Key Mods
 
-- **Cataclysm** — Apex bosses (Netherite Monstrosity, Ignis, the Harbinger, the Ender Guardian); Mythic Catalyst source
+- **Cataclysm** — Apex bosses (Netherite Monstrosity: Resource Catalyst; Ignis, the Harbinger, the Ender Guardian: Mythic Catalyst)
 - **Ars Nouveau** — Drygmy farm automation of Mythic Catalyst production
 - **Mystical Agriculture + MA Agradditions** — Tier 4 seeds (osmium, tin, lead, uranium, fluorite)
 - **Mekanism** — Digital Miner, Fusion Reactor
