@@ -61,10 +61,6 @@ The YUNG's suite replaces vanilla structures with significantly more detailed, b
 
 **Artifacts** scatters rare accessory items throughout dungeon chests — Bunny Feet, Cross Necklace, Kitty Slippers, and similar unique items. These are worn in Curios slots and provide passive bonuses that do not require any crafting.
 
-### Relics
-
-**Relics** adds powerful artefacts with their own level-up system. Relics are found in the world and grow stronger as you use them, fitting the adventure-focused progression of the pack.
-
 ---
 
 ## Navigation

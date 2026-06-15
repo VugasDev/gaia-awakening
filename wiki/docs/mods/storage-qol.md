@@ -57,7 +57,7 @@ The Sophisticated suite provides configurable inventory expansion at every stage
 
 ## Curios API
 
-**Curios** adds extra equipment slots for accessories — back, belt, charm, necklace, ring, head. Many mods in this pack use Curios slots: Sophisticated Backpacks (back), Simple Magnets (belt), Artifacts and Relics items (charm/ring/necklace). Open the Curios screen with `G` or the dedicated button in your inventory.
+**Curios** adds extra equipment slots for accessories — back, belt, charm, necklace, ring, head. Many mods in this pack use Curios slots: Sophisticated Backpacks (back), Simple Magnets (belt), Artifacts items (charm/ring/necklace). Open the Curios screen with `G` or the dedicated button in your inventory.
 
 ---
 
@@ -72,9 +72,6 @@ The Sophisticated suite provides configurable inventory expansion at every stage
 | **FTB Ultimine** | Hold a configurable key while mining to vein-mine an entire connected ore vein. Configurable per tool type and ore tag. |
 | **FTB Chunks** | Claim chunks to prevent other players from building or breaking in your base area. Also enables chunk loading (active even when you are offline) for unattended machines. |
 | **Just Zoom** | Adds an adjustable zoom key (default `Z`). Scroll the mouse wheel while zoomed to increase/decrease magnification. |
-| **Toast Control** | Suppresses or re-routes the advancement toast popups that appear in the top-right corner, so they do not overlap with JourneyMap or other HUD elements. |
-| **Durability Viewer** | Adds a small HUD showing remaining durability on your held tool and armour pieces without opening inventory. |
-| **Configured** | Adds a Config menu entry for every loaded mod that supports standard config formats, accessible from the Mods screen in-game. |
 | **Sound Physics Remastered** | Adds reverb and occlusion to sounds — caves echo, sounds through walls are muffled. Purely atmospheric. |
 | **Chipped** | Adds many variants of vanilla blocks (stone, wood, glass) for building. Craft at a workbench-tier station using vanilla blocks. |
 | **Macaw's** suite | Seven mods adding varied windows, doors, roofs, bridges, fences, trapdoors, and lights. Purely decorative building options. |

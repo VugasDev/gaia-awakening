@@ -36,8 +36,6 @@ This is an optional comfort path — food buffs from Farmer's Delight do not blo
 | Mod | Role |
 |---|---|
 | **Veggies Delight** | More vegetable crops and Farmer's Delight compatible recipes. Adds structures (market stalls) where you can find seeds. |
-| **More Delight** | Additional meals, ingredients, and cooking options. |
-| **Chef's Delight** | Adds a Cook/Baker Villager profession who trades Farmer's Delight ingredients and recipes. |
 | **Create: Garnished** | Bridges Create and Farmer's Delight — adds Create-compatible processing for Farmer's Delight crops (mechanical mixing, pressing). |
 
 ---

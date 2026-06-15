@@ -38,7 +38,7 @@ The tech category covers mechanical automation (Create), digital logistics (Appl
 |---|---|
 | **Applied Mekanistics** | Bridges AE2 and Mekanism — allows Mekanism machines to be driven by AE2 autocrafting patterns and shares energy across both systems. Required if you want a fully automated Mekanism processing line. |
 | **Extended AE** | Late-game AE2 content: higher-tier storage cells, improved interfaces, and new crafting options for endgame throughput. |
-| **AE2 Things** | Quality-of-life additions to AE2 (better cables, additional cell types). Low-priority but convenient. |
+| **MEGA Cells** | Provides very high-capacity storage cells and drives (bulk storage tiers far beyond standard AE2 cells). The primary endgame solution for storing enormous quantities of late-game resources. |
 
 ---
 

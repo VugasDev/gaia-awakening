@@ -12,12 +12,9 @@ These mods are installed and require no configuration from the player. They run 
 
 | Mod | What it does |
 |---|---|
-| **Embeddium** | NeoForge port of Sodium. Rewrites the chunk rendering pipeline for significantly better GPU utilisation. The single biggest FPS improvement in the pack. |
-| **Iris Shaders** | Adds shader support that is compatible with Embeddium. Allows OptiFine-style shader packs (.zip format) to be used on NeoForge. |
+| **Sodium** | NeoForge-native chunk renderer. Rewrites the chunk rendering pipeline for significantly better GPU utilisation. The single biggest FPS improvement in the pack. |
+| **Iris Shaders** | Adds shader support compatible with Sodium. Allows OptiFine-style shader packs (.zip format) to be used on NeoForge. |
 | **Distant Horizons** | Generates low-detail level-of-detail (LoD) terrain for chunks far beyond the normal render distance (client-only). Provides the impression of a very large view distance without the performance cost of fully loading those chunks. |
-
-!!! note "Sodium"
-    The pack ships `sodium.pw.toml` as a dependency declaration. On NeoForge, rendering optimisation is handled by **Embeddium** (the NeoForge-native port). The sodium entry exists for dependency resolution compatibility.
 
 ### Memory & Game Logic
 
@@ -25,19 +22,15 @@ These mods are installed and require no configuration from the player. They run 
 |---|---|
 | **FerriteCore** | Reduces RAM usage by deduplicating block state data in memory. On large modpacks, this can cut memory use by several hundred MB. |
 | **ModernFix** | Reduces startup time, fixes unnecessary resource reloads, and patches several Minecraft performance regressions. |
-| **Moonrise** | Replaces the vanilla lighting engine with a multi-threaded implementation (successor to Starlight). Eliminates lighting update stalls during chunk generation. |
+| **Lithium** | Optimises game logic — entity AI, chunk sections, block states, and lighting updates — without changing behaviour. The NeoForge build is included directly. |
 
 ### World Generation & Chunk Management
 
 | Mod | What it does |
 |---|---|
 | **Noisium** | Optimises the noise-based world generation mathematics, which is especially important in a pack with an 800-block world height and custom biome layers from Terralith and Tectonic. |
-| **C2ME (Concurrent Chunk Management Engine)** | Parallelises chunk loading and generation across multiple CPU cores. Essential for the 800-block height — vanilla single-threaded chunk gen cannot keep pace. |
 | **Chunky** | Pre-generates chunks in a radius around the spawn before players join. The server should run Chunky pre-gen on initial world creation to avoid on-demand generation lag during play. |
 | **ServerCore** | Dynamic server-side optimisations: reduces entity processing overhead, adjusts simulation distance based on server load, and limits pathfinding at high mob counts. |
-| **Radium Reforged** | NeoForge port of Lithium. Optimises game logic (entity AI, chunk sections, block states) without changing behaviour. |
-| **Krypton Reno** | Optimises the network stack (packet serialisation, compression) to reduce network overhead between server and client. |
-| **Lithium** | The pack ships a `lithium.pw.toml` dependency file; the actual game logic optimisations are covered by Radium Reforged on NeoForge. |
 
 ---
 
@@ -51,7 +44,7 @@ These are required dependencies. Players do not interact with them directly.
 | **Balm** | Cross-loader abstraction used by Waystones and others. |
 | **Citadel** | Animation and entity library required by L_Ender's Cataclysm (1.21.1 port). |
 | **GeckoLib** | Advanced model animation library required by Mowzie's Mobs, Iron's Spells, and others. |
-| **OctoLib** | Library required by Relics. |
+| **OctoLib** | Utility library required by certain mob and animation mods. |
 | **Cloth Config API** | Configuration screen library used by many mods. |
 | **Patchouli** | In-game guidebook engine. Provides the Create Handbook and other mod documentation books. |
 | **GuideMe** | Additional guidebook support; works alongside Patchouli. |
@@ -69,7 +62,7 @@ These are required dependencies. Players do not interact with them directly.
 | **PlayerAnimator** | Player body animation library used by equipment and combat mods. |
 | **Iron's Lib** | Library required by Iron's Spells 'n Spellbooks. |
 | **MCJTYLib** | Library required by RFTools Base and XNet. |
-| **MEGA** | Extended storage library (Sophisticated suite dependency). |
+| **MEGA Cells** | AE2 addon providing very high-capacity storage cells and drives for late-game digital storage (see [Tech](tech.md)). |
 | **Titanium** | Library required by Industrial Foregoing. |
 | **Placebo** | Library required by Apotheosis and several Apothic mods. |
 | **Rhino** | JavaScript runtime for KubeJS. |

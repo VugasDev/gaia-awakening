@@ -161,10 +161,12 @@ nodeHandMiningYield = 0.1    # Hand-mining gives 10% of node content (starting b
 
 The extended world height and Tectonic terrain require additional optimisation mods included in the pack:
 
-- **C2ME** — multi-core chunk generation for complex density functions
-- **Noisium** — optimised noise calculations for on-the-fly generation
-- **Radium Reforged** — physics and AI logic optimisation, reducing server-side tick cost
-- **Distant Horizons** — LOD rendering for visibility out to 32 km
-- **Krypton Reno** — network stack optimisation against rubberbanding at high travel speeds
+- **Noisium** — optimised noise calculations for on-the-fly generation at the pack's extended height
+- **Lithium** — game logic optimisation (entity AI, chunk sections, lighting updates), reducing server-side tick cost
+- **Chunky** — pre-generates the 10,000-block core radius around spawn; run this before hosting the server for others
+- **ServerCore** — dynamic server-side adjustments: entity tick throttling and simulation distance scaling under load
+- **Distant Horizons** — LOD rendering for visibility out to 32 km without loading full chunks
+- **Sodium** — chunk render pipeline optimisation, reducing GPU load from the extended view distances
+- **FerriteCore** / **ModernFix** — memory and startup optimisation, important given the large number of mods and biome data
 
 Pre-generation with Chunky is recommended for the 10,000-block core radius around spawn before hosting the server for others.
