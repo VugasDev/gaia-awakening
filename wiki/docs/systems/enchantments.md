@@ -4,6 +4,9 @@ The enchantment system in Gaia Awakening is built on **Apotheosis**, **Pneumatic
 
 ---
 
+!!! warning "Implementation Status"
+    The **bookshelf crafting gates** (T2 Blazing, T3 Crystalline, T4 Stellar) and the Apotheosis config changes are implemented in `kubejs/server_scripts/07_enchanting_system.js`. However, the **T5 enchanting paths** described below — the PneumaticCraft Pressure Chamber upgrade recipes, the success-rate system, the Super Liquid XP and Mythic Liquid XP enchanting flows — are **design-intent and not yet implemented** in KubeJS. They describe the intended progression but are not functional in the current release. The `gaia:mythic_xp_shard` recipe in the script also has unverified item IDs (marked TODO) and should be treated as a stub. This page will be updated when T5 enchanting is implemented.
+
 ## Overview
 
 Enchanting has two independent dimensions:

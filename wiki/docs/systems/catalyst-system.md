@@ -64,13 +64,15 @@ This recipe requires a Mechanical Crafter — a standard crafting table cannot b
 
 | Source | Drop / Rate |
 |--------|-------------|
-| Mowzie's Mobs boss | 1× guaranteed per kill (100%) |
+| Mowzie's Mobs bosses (Ferrous Wroughtnaut, Frostmaw, Naga, Barako) | 1× guaranteed per kill (100%) |
 | Cataclysm Netherite Monstrosity | 1× guaranteed per kill (100%) |
 | When Dungeons Arise chest | 8% per chest |
 | YUNG's Better Dungeons chest | 8% per chest |
 | YUNG's Better Strongholds chest | 10% per chest |
-| Wandering Trader | 15% chance (trade slot) |
 | Catalyst Altar (Create:EI Spout) | 1× per 1000 mB Hyper Experience |
+
+!!! warning "Planned — not yet available in-game"
+    The **Wandering Trader** trade (≈15% chance per trade slot) is designed but currently deactivated. The KubeJS trade-injection event for this Minecraft version has not been confirmed and the hook is commented out in `06_loot_modifications.js`. This path will be re-enabled once the correct event API is identified.
 
 **Catalyst Altar recipe** (`gaia:catalyst_altar` + `create_enchantment_industry:hyper_experience` at 1000 mB via Spout):
 
@@ -141,12 +143,14 @@ See the [XP Economy](xp-economy.md) page for how to produce Mythic Liquid XP.
 | When Dungeons Arise chest | `gaia:resource_catalyst` | 8% per chest |
 | YUNG's Better Dungeons chest | `gaia:resource_catalyst` | 8% per chest |
 | YUNG's Better Strongholds chest | `gaia:resource_catalyst` | 10% per chest |
-| Mowzie's Mobs boss | `gaia:resource_catalyst` | 100% (1× per kill) |
+| Mowzie's Mobs — Ferrous Wroughtnaut (`mowziesmobs:ferrous_wroughtnaut`) | `gaia:resource_catalyst` | 100% (1× per kill) |
+| Mowzie's Mobs — Frostmaw (`mowziesmobs:frostmaw`) | `gaia:resource_catalyst` | 100% (1× per kill) |
+| Mowzie's Mobs — Naga (`mowziesmobs:naga`) | `gaia:resource_catalyst` | 100% (1× per kill) |
+| Mowzie's Mobs — Barako (`mowziesmobs:barakoa`) | `gaia:resource_catalyst` | 100% (1× per kill) |
 | Cataclysm Netherite Monstrosity | `gaia:resource_catalyst` | 100% (1× per kill) |
 | Cataclysm Apex bosses (Ignis, Harbinger, Ender Guardian) | `gaia:mythic_catalyst` | 100% (1× per kill) |
 | Catalyst Altar + 1000 mB Hyper Experience | `gaia:resource_catalyst` | 1× per use |
 | Catalyst Altar + 500 mB Mythic Liquid XP | `gaia:mythic_catalyst` | 1× per use |
-| Wandering Trader | `gaia:resource_catalyst` | 15% chance |
 
 ---
 

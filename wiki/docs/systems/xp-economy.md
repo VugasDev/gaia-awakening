@@ -34,17 +34,17 @@ Mythic Liquid XP is a custom fluid defined in this modpack. It is produced by mi
 - **Catalyst Altar** — 500 mB Mythic Liquid XP produces 1× `gaia:mythic_catalyst` (via Create Spout).
 - T5 Enchantment System — see [Enchantment System](enchantments.md).
 
-### Super Liquid XP and Mythic Liquid XP (Create:EI internal)
+### Super Liquid XP and Concentrated Mythic XP (Create:EI compression tiers)
 
-Create: Enchantment Industry also defines its own compression tiers used in the Enchantment System:
+Create: Enchantment Industry compresses `create_enchantment_industry:hyper_experience` into higher-concentration forms used by the Enchantment System. There is no separate "standard Liquid XP" fluid — the base fluid is always `create_enchantment_industry:hyper_experience`.
 
 | Fluid | Conversion | Use |
 |-------|-----------|-----|
-| Liquid XP (standard) | 1:1 from XP orbs | Base input |
-| Super Liquid XP | 10,000 mB Liquid XP → 1,000 mB Super XP | T5 enchanting (high-risk path) |
-| Mythic Liquid XP (Create:EI) | 1,000,000 mB Liquid XP → 1 mB | T5 enchanting (low-risk, extreme cost) |
+| `create_enchantment_industry:hyper_experience` | 1:1 from XP orbs (XP Drain) | Base input; also powers Catalyst Altar |
+| Super Liquid XP | 10,000 mB Hyper Experience → 1,000 mB Super XP | T5 enchanting (high-risk path) |
+| Mythic Liquid XP (Create:EI) | 1,000,000 mB Hyper Experience → 1 mB | T5 enchanting (low-risk, extreme cost) |
 
-Note: The pack's `gaia:mythic_liquid_xp` is a separate item from Create:EI's internal Mythic Liquid XP. The custom fluid is for Catalyst production; the Create:EI fluids are for enchanting.
+Note: The pack's `gaia:mythic_liquid_xp` is a separate custom fluid from Create:EI's concentrated Mythic XP tier. The custom fluid is for Catalyst production; the Create:EI compression tiers are for enchanting.
 
 ---
 
@@ -78,7 +78,7 @@ Branch B — Mythic Liquid XP
   gaia:mythic_liquid_xp → Spout → Catalyst Altar → gaia:mythic_catalyst (500 mB each)
 
 Branch C — Enchanting (see Enchantment System page)
-  Liquid XP → XP Compressor → Super Liquid XP → Enchanting Infusion Altar
+  Hyper Experience → XP Compressor → Super Liquid XP → Enchanting Infusion Altar
   Super Liquid XP → Super Compressor (max RPM) → Create:EI Mythic Liquid XP
 ```
 
@@ -86,7 +86,7 @@ Branch C — Enchanting (see Enchantment System page)
 
 ## Where XP Comes From
 
-The primary XP source is a mob farm feeding an XP Drain. The XP Drain converts orbs on the floor into Liquid XP fluid. A Create-powered mob farm with a Deployer to kill mobs is the standard setup from T3 onward.
+The primary XP source is a mob farm feeding an XP Drain. The XP Drain converts orbs on the floor into `create_enchantment_industry:hyper_experience` fluid. A Create-powered mob farm with a Deployer to kill mobs is the standard setup from T3 onward.
 
 Hyper Experience accumulates as long as the mob farm runs — it does not deplete unless actively consumed. Building enough storage for your XP tank before scaling up catalyst production is recommended.
 

@@ -163,6 +163,7 @@ The extended world height and Tectonic terrain require additional optimisation m
 
 - **C2ME** — multi-core chunk generation for complex density functions
 - **Noisium** — optimised noise calculations for on-the-fly generation
+- **Radium Reforged** — physics and AI logic optimisation, reducing server-side tick cost
 - **Distant Horizons** — LOD rendering for visibility out to 32 km
 - **Krypton Reno** — network stack optimisation against rubberbanding at high travel speeds
 

@@ -15,7 +15,7 @@ All six custom heads are registered under the `#createoreexcavation:drills` item
 | `gaia:nether_drill_head` | T3 | Red-orange | Nether veins only; Quartz / Gold / Blaze bonus |
 | `gaia:refined_obsidian_drill_head` | T4 | Purple-black | Rich Metal veins with increased output + Catalyst chance |
 | `gaia:catalyst_drill_head` | T4 | Amber (glow) | Catalyst Nodes and Catalyst Ley Lines |
-| `gaia:gaia_infused_drill_head` | T5 | Emerald green (glow) | Mythic veins; guaranteed Catalyst + Singularity Shard chance |
+| `gaia:gaia_infused_drill_head` | T5 | Emerald green (glow) | Primary: Mythic Vein (`gaia:mythic_vein`, Nether-only); bonus outputs on all other vein types |
 
 ---
 
@@ -121,7 +121,7 @@ Each drill head has a primary vein type it is optimised for. Using a non-special
 | `gaia:nether_drill_head` | `gaia:nether_vein` | 6× nether quartz; gold nuggets; 30% blaze powder |
 | `gaia:refined_obsidian_drill_head` | `gaia:rich_metal_vein` | Raw iron ×8, raw osmium ×2; 3% catalyst chance |
 | `gaia:catalyst_drill_head` | `gaia:catalyst_node_vein`, `gaia:catalyst_ley_line` | 5× `gaia:resource_catalyst`; 8% `gaia:mythic_catalyst` (node) / 5% (ley line) |
-| `gaia:gaia_infused_drill_head` | All veins | Guaranteed `gaia:resource_catalyst`; 1–10% `gaia:singularity_shard` |
+| `gaia:gaia_infused_drill_head` | `gaia:mythic_vein` (Nether-only, ancient-debris-based) | Guaranteed `gaia:mythic_catalyst` + `gaia:ancient_debris` + 10% `gaia:singularity_shard`; also provides bonus outputs on osmium, certus, nether, and rich-metal veins |
 
 ### Catalyst Nodes and Ley Lines
 
