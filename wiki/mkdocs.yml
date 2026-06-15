@@ -99,3 +99,8 @@ nav:
       - "Tier 5: Endgame":
           - Apex Predators: quests/t5-bosses.md
           - Gaia Awakens: quests/t5-endgame.md
+  - Reference:
+      - Full Mod List: reference/mod-list.md
+      - FAQ: reference/faq.md
+      - Credits & Licenses: reference/credits-licenses.md
+      - Changelog: reference/changelog.md
