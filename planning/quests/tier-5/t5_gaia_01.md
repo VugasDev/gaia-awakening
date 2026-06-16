@@ -1,13 +1,13 @@
-# Quest: t5_gaia_01 (Gaia-Fundament)
-## Beschreibung
-Die Krönung deines Wirkens. Errichte die Basis der Gaia-Kathedrale und initialisiere den Kern.
-## Technische Daten
-- **Quest-ID:** `t5_gaia_01`
+# Quest: t5_gaia_01 (Gaia Foundation)
+## Description
+The crowning achievement of your work. Build the base of the Gaia Cathedral and initialize the core.
+## Technical Data
+- **Quest ID:** `t5_gaia_01`
 - **Dependencies:** `t4_mek_01`
-- **Typ:** Spatial Validation
-## Aufgaben
-1. [ ] Platziere den `gaia_core` in der Mitte der Kathedralen-Fläche
-2. [ ] Aktiviere die Initialisierungs-Sequenz (Rechtsklick)
-## Belohnung
-- Gaia-Kathedrale "Baumeister"-Titel
+- **Type:** Spatial Validation
+## Tasks
+1. [ ] Place the `gaia_core` in the center of the cathedral area
+2. [ ] Activate the initialization sequence (right-click)
+## Reward
+- Gaia Cathedral "Builder" title
 - 2000 XP

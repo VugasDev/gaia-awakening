@@ -1,101 +1,101 @@
-# Catalyst-System — Gaia Awakening
+# Catalyst System — Gaia Awakening
 
-> **Status**: Planungsdokument — 2026-05-14
-> **Implementiert in**: `kubejs/server_scripts/08_catalyst_system.js` + `06_loot_modifications.js`
+> **Status**: Planning document — 2026-05-14
+> **Implemented in**: `kubejs/server_scripts/08_catalyst_system.js` + `06_loot_modifications.js`
 
-## Designprinzip
+## Design Principle
 
-MA T3+T4 Seeds verlangen `apex:resource_catalyst` bzw. `apex:mythic_catalyst`
-als Crafting-Ingredient. Catalysts haben **drei legitime Pfade**:
+MA T3+T4 seeds require `apex:resource_catalyst` or `apex:mythic_catalyst`
+as a crafting ingredient. Catalysts have **three legitimate paths**:
 
 ```
-PASSIV (Ore Excavation, background)
-    │   0.5% Drop pro Erz aus Vein
-    │   ~5-10 Catalysts pro 12h mittlerem Setup
+PASSIVE (Ore Excavation, background)
+    │   0.5% drop per ore from a vein
+    │   ~5-10 catalysts per 12h with a medium setup
     │
-PFAD MA-ALTERNATIV (Bauer mit Brass-Tier Create)
-    │   Mech Crafter Rezept aus 3 Essence-Typen + Apo-Gem
-    │   ~12-95 Catalysts/h je nach Farm-Größe
+PATH MA-ALTERNATIVE (Farmer with brass-tier Create)
+    │   Mechanical Crafter recipe from 3 essence types + Apo gem
+    │   ~12-95 catalysts/h depending on farm size
     │
-PFAD AKTIV (Adventurer / Endgame)
-    │   a) Boss-Drops: 1× pro Mowzie's-Boss / Netherite Monstrosity
-    │   b) Dungeon-Loot: 8-10% pro Truhe (Dungeons Arise + YUNG's)
-    │   c) Catalyst Altar: 1000 mB Hyper XP → 1× Catalyst (Create:EI Spout)
-    │   d) Wandering Trader: 15% Chance gegen Emeralds
+PATH ACTIVE (Adventurer / Endgame)
+    │   a) Boss drops: 1x per Mowzie's boss / Netherite Monstrosity
+    │   b) Dungeon loot: 8-10% per chest (Dungeons Arise + YUNG's)
+    │   c) Catalyst Altar: 1000 mB Hyper XP → 1x catalyst (Create:EI Spout)
+    │   d) Wandering Trader: 15% chance for emeralds
     │
 ↓
 T3 MA Seeds: Gold, Diamond, Emerald, Glowstone
 ```
 
-## Mythic Catalyst — Exklusiv
+## Mythic Catalyst — Exclusive
 
 ```
-QUELLE: Cataclysm Apex-Bosse (Ignis, Harbinger, Ender Guardian)
-        1× garantierter Drop pro Kill
-        
-AUTOMATISIERUNG: Drygmys (Ars Nouveau) + Mob-Effigy
-        Drygmy farmt Boss-Drops passiv wenn Mob-Statue aufgestellt
-        EINZIGE Automatisierungs-Möglichkeit
-        
-KEINE alternativen Pfade: Mythic Catalyst hat nur diesen einen Quellweg.
-                         Drygmy-Setup ist Late-T4 (Ars Nouveau Apprentice+)
+SOURCE: Cataclysm apex bosses (Ignis, Harbinger, Ender Guardian)
+        1x guaranteed drop per kill
+
+AUTOMATION: Drygmies (Ars Nouveau) + Mob Effigy
+        Drygmy farms boss drops passively when a mob statue is set up
+        ONLY automation option
+
+NO alternative paths: the Mythic Catalyst has only this one source.
+                      Drygmy setup is late-T4 (Ars Nouveau Apprentice+)
 
 ↓
 T4 MA Seeds: Osmium, Tin, Lead, Uranium, Fluorite (Mekanism via MA Agradditions)
 ```
 
-## Drop-Raten — Übersicht
+## Drop Rates — Overview
 
-| Quelle | Item | Rate |
+| Source | Item | Rate |
 |---|---|---|
-| Ore Excavation Vein | resource_catalyst | 0.5% pro Erz |
-| Dungeons Arise Chest | resource_catalyst | 8% pro Truhe |
-| YUNG's Better Dungeons | resource_catalyst | 8% pro Truhe |
-| YUNG's Better Strongholds | resource_catalyst | 10% pro Truhe |
-| Mowzie's Mobs Boss | resource_catalyst | 100% (1× pro Kill) |
-| Cataclysm Netherite Monstrosity | resource_catalyst | 100% (1× pro Kill) |
-| **Cataclysm Apex-Endbosse** | **mythic_catalyst** | **100% (1× pro Kill)** |
-| Catalyst Altar (Spout) | resource_catalyst | 1× pro 1000 mB Hyper XP |
-| Wandering Trader | resource_catalyst | 15% (Trade-Slot) |
+| Ore Excavation vein | resource_catalyst | 0.5% per ore |
+| Dungeons Arise chest | resource_catalyst | 8% per chest |
+| YUNG's Better Dungeons | resource_catalyst | 8% per chest |
+| YUNG's Better Strongholds | resource_catalyst | 10% per chest |
+| Mowzie's Mobs boss | resource_catalyst | 100% (1x per kill) |
+| Cataclysm Netherite Monstrosity | resource_catalyst | 100% (1x per kill) |
+| **Cataclysm apex final bosses** | **mythic_catalyst** | **100% (1x per kill)** |
+| Catalyst Altar (Spout) | resource_catalyst | 1x per 1000 mB Hyper XP |
+| Wandering Trader | resource_catalyst | 15% (trade slot) |
 
-## Spielfluss-Beispiele
+## Gameplay Flow Examples
 
-**Engineer (Create + Mekanism Focus):**
-- Pfad 1 dominant: Drill-Setup an erster Iron-Vein, akkumuliert Catalysts passiv
-- Pfad 3c sekundär: Catalyst Altar mit überschüssigem Hyper XP von Mob-Farm
-- Nach 20h: ~50 Catalysts → alle T3 Seeds zugänglich
-- Für T4: muss Cataclysm-Bosse besiegen (oder Drygmy-Anlage)
+**Engineer (Create + Mekanism focus):**
+- Path 1 dominant: drill setup at the first iron vein, accumulates catalysts passively
+- Path 3c secondary: Catalyst Altar with surplus Hyper XP from a mob farm
+- After 20h: ~50 catalysts → all T3 seeds accessible
+- For T4: must defeat Cataclysm bosses (or build a Drygmy facility)
 
-**Botanist (MA Focus):**
-- Pfad 2 dominant: Große Farm + Mech Crafter Catalyst-Conversion
-- Nach 20h: ~200+ Catalysts → skaliert auf T4 Mythic Catalyst-Beschaffung
-- Für T4: Drygmys + Apex-Mob-Effigy bauen → passive Mythic Catalyst Produktion
+**Botanist (MA focus):**
+- Path 2 dominant: large farm + Mechanical Crafter catalyst conversion
+- After 20h: ~200+ catalysts → scales into T4 Mythic Catalyst procurement
+- For T4: build Drygmies + apex Mob Effigy → passive Mythic Catalyst production
 
-**Adventurer (Boss/Dungeon Focus):**
-- Pfad 3a/3b dominant: Aktive Welt-Erkundung
-- Nach 20h: ~30 Catalysts + 2-3 Mythic Catalysts aus Apex-Bossen
-- Mythic-Catalyst-Vorsprung: kann T4 Seeds früher craften als andere Pfade
+**Adventurer (boss/dungeon focus):**
+- Path 3a/3b dominant: active world exploration
+- After 20h: ~30 catalysts + 2-3 Mythic Catalysts from apex bosses
+- Mythic Catalyst lead: can craft T4 seeds earlier than other paths
 
 ## Implementation Status
 
-| Komponente | File | Status |
+| Component | File | Status |
 |---|---|---|
-| Custom Items registriert | `startup_scripts/00_custom_items.js` | ✅ |
-| Catalyst Altar Block | `startup_scripts/00_custom_items.js` | ✅ |
-| Ore Excavation Drop | `server_scripts/06_loot_modifications.js` | ⚠️ TODO Verify Loot-Table-Pfad |
-| Boss-Drops T3 | `server_scripts/06_loot_modifications.js` | ⚠️ TODO Verify Boss-IDs |
-| Boss-Drops Mythic | `server_scripts/06_loot_modifications.js` | ⚠️ TODO Verify Cataclysm-IDs |
-| Dungeon-Loot | `server_scripts/06_loot_modifications.js` | ⚠️ TODO Verify Loot-Tables |
-| MA-Crafter Recipe | `server_scripts/08_catalyst_system.js` | ⚠️ TODO Verify Essence-IDs |
-| Catalyst Altar Spout Recipe | `server_scripts/08_catalyst_system.js` | ⚠️ TODO Create:EI Fluid API |
-| MA T3 Seed Overrides | `server_scripts/08_catalyst_system.js` | ⚠️ TODO Verify Seed-IDs |
-| MA T4 Seed Overrides | `server_scripts/08_catalyst_system.js` | ⚠️ TODO Verify Seed-IDs |
-| Wandering Trader Hook | — | ❌ Noch zu implementieren |
+| Custom items registered | `startup_scripts/00_custom_items.js` | ✅ |
+| Catalyst Altar block | `startup_scripts/00_custom_items.js` | ✅ |
+| Ore Excavation drop | `server_scripts/06_loot_modifications.js` | ⚠️ TODO verify loot table path |
+| Boss drops T3 | `server_scripts/06_loot_modifications.js` | ⚠️ TODO verify boss IDs |
+| Boss drops Mythic | `server_scripts/06_loot_modifications.js` | ⚠️ TODO verify Cataclysm IDs |
+| Dungeon loot | `server_scripts/06_loot_modifications.js` | ⚠️ TODO verify loot tables |
+| MA Crafter recipe | `server_scripts/08_catalyst_system.js` | ⚠️ TODO verify essence IDs |
+| Catalyst Altar Spout recipe | `server_scripts/08_catalyst_system.js` | ⚠️ TODO Create:EI fluid API |
+| MA T3 seed overrides | `server_scripts/08_catalyst_system.js` | ⚠️ TODO verify seed IDs |
+| MA T4 seed overrides | `server_scripts/08_catalyst_system.js` | ⚠️ TODO verify seed IDs |
+| Wandering Trader hook | — | ❌ Not yet implemented |
 
-## Verifizierung beim ersten Boot
+## Verification on First Boot
 
-Nach Pack-Reload `logs/kubejs/server.log` auf folgende Fehler prüfen:
-- `Unknown item: mysticalagriculture:iron_essence` → IDs korrigieren
-- `Unknown loot table: createoreexcavation:vein/*` → ggf. BlockEvents-Fallback
-- `Unknown fluid: create_enchantment_industry:hyper_experience` → ID prüfen
-- `Unknown entity: cataclysm:ignis` → Cataclysm-IDs verifizieren via Jade
+After a pack reload, check `logs/kubejs/server.log` for the following errors:
+- `Unknown item: mysticalagriculture:iron_essence` → correct the IDs
+- `Unknown loot table: createoreexcavation:vein/*` → possibly BlockEvents fallback
+- `Unknown fluid: create_enchantment_industry:hyper_experience` → check the ID
+- `Unknown entity: cataclysm:ignis` → verify Cataclysm IDs via Jade

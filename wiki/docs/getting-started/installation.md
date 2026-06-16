@@ -4,7 +4,7 @@
 
 The easiest way to install Gaia Awakening is through the **Modrinth App**:
 
-1. Download the latest `.mrpack` file from the [Releases](https://github.com/VugasDev/minecraft-modpack/releases) page.
+1. Download the latest `.mrpack` file from the [Releases](https://github.com/VugasDev/gaia-awakening/releases) page.
 2. Open the Modrinth App, go to **Library**, and click **Import**.
 3. Select the `.mrpack` file. The app will download all mods and configure the correct NeoForge version automatically.
 4. Launch the newly created instance.

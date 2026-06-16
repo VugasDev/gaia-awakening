@@ -1,197 +1,197 @@
-# Erzverteilung — Gaia Awakening
+# Ore Distribution — Gaia Awakening
 
-> **Status**: Planungsdokument — 2026-05-01
-> **Implementierung**: KubeJS Datapack-Overrides + Create Ore Excavation Config
-
----
-
-## Designprinzip: Ore Nodes als Kern
-
-Natürlich verteilte Erze sind **Starthilfe** — sie geben frühen Spielern genug Material
-um anzufangen, sind aber bewusst zu selten für nachhaltige Automatisierung.
-
-**Create Ore Excavation Nodes** sind die eigentliche Ressourcenquelle: groß, auffindbar
-durch Erkundung, und mit Create-Machinery unendlich erneuerbar. Jedes Erz bekommt
-einen Node-Typ. Wer keinen Node findet, kann nicht skalieren.
-
-```
-NATÜRLICH VERTEILTE ERZE     ──── Starthilfe (60-90% seltener als Vanilla)
-        │
-        ▼
-    Handabbau reicht für Tier 1 Setup
-        │
-        ▼
-CREATE ORE EXCAVATION NODE   ──── Hauptquelle (selten, aber pro Chunk ~500 Blöcke)
-        │
-        ▼
-    Exploration → Node finden → Create Bohranlage aufbauen
-        │
-        ▼
-    Unendliche Ressourcen (Create-powered, kein weiterer Eingriff nötig)
-```
-
-**Spielfluss:** T1 = Hand-Mining → T2 = ersten Iron/Zinc-Node finden & anzapfen →
-T3 = tiefer, Osmium/Certus-Nodes, Create-Automation ausbauen → T4-T5 = Abyss-Nodes
+> **Status**: Planning document — 2026-05-01
+> **Implementation**: KubeJS datapack overrides + Create Ore Excavation config
 
 ---
 
-## Natürliche Erzverteilung — Tiefenzonen
+## Design Principle: Ore Nodes as the Core
 
-**Beta-Phase: Vanilla-Höhe (Y -64 bis +320)** — Tectonic vertical_scale 2.25
-**Post-Beta: Tall World (Y -128 bis ~512)** — Tectonic increased_height + scale 3.5+
+Naturally distributed ores are a **starter aid** — they give early players enough material
+to get going, but are deliberately too rare for sustainable automation.
+
+**Create Ore Excavation nodes** are the actual resource source: large, findable
+through exploration, and infinitely renewable with Create machinery. Every ore gets
+a node type. Whoever doesn't find a node can't scale.
 
 ```
-Beta-Setup (Vanilla Y-Limit, Tectonic dramatische Berge)
-Y +320  ┌─────────────────────────────────────────────────────┐  ← Build-Limit
-        │   Berggipfel / Tectonic Peaks (Y +200 Snow Line)   │  Keine Erze
+NATURALLY DISTRIBUTED ORES   ──── Starter aid (60-90% rarer than vanilla)
+        │
+        ▼
+    Hand mining is enough for a Tier 1 setup
+        │
+        ▼
+CREATE ORE EXCAVATION NODE   ──── Main source (rare, but ~500 blocks per chunk)
+        │
+        ▼
+    Exploration → find node → build a Create drill rig
+        │
+        ▼
+    Infinite resources (Create-powered, no further intervention needed)
+```
+
+**Gameplay flow:** T1 = hand mining → T2 = find & tap the first iron/zinc node →
+T3 = deeper, osmium/certus nodes, expand Create automation → T4-T5 = abyss nodes
+
+---
+
+## Natural Ore Distribution — Depth Zones
+
+**Beta phase: vanilla height (Y -64 to +320)** — Tectonic vertical_scale 2.25
+**Post-beta: tall world (Y -128 to ~512)** — Tectonic increased_height + scale 3.5+
+
+```
+Beta setup (vanilla Y limit, Tectonic dramatic mountains)
+Y +320  ┌─────────────────────────────────────────────────────┐  ← build limit
+        │   Mountain peaks / Tectonic Peaks (Y +200 snow line)│  No ores
 Y +192  ├─────────────────────────────────────────────────────┤
-        │   Zone 1: Oberfläche                                │  Coal, Iron, Copper (reduziert)
+        │   Zone 1: Surface                                   │  Coal, Iron, Copper (reduced)
 Y   +64 ├─────────────────────────────────────────────────────┤
-        │   Zone 2: Normale Höhlen                            │  Zinc, Gold, Lapis (stark reduziert)
-Y     0 ├═════════════════════════════════════════════════════╡  ← Sea Level
-        │   Zone 3: Tiefe Höhlen                              │  Osmium, Certus, Diamond (sehr selten)
+        │   Zone 2: Normal caves                              │  Zinc, Gold, Lapis (heavily reduced)
+Y     0 ├═════════════════════════════════════════════════════╡  ← sea level
+        │   Zone 3: Deep caves                                │  Osmium, Certus, Diamond (very rare)
 Y   -48 ├─────────────────────────────────────────────────────┤
-        │   Zone 4: Abyss                                     │  Uranium, Lead, Fluorite (extrem selten)
-Y   -64 └─────────────────────────────────────────────────────┘  ← Bedrock (Beta)
+        │   Zone 4: Abyss                                     │  Uranium, Lead, Fluorite (extremely rare)
+Y   -64 └─────────────────────────────────────────────────────┘  ← bedrock (beta)
 
-(Post-Beta: Y-Range erweitert sich auf -128 unten und ~512 oben, Zone 5
-"Void-Schicht" wird unter Y -96 freigeschaltet für Ancient Debris + Osmium-Mega-Cluster)
+(Post-beta: the Y range expands to -128 below and ~512 above, Zone 5
+"void layer" is unlocked below Y -96 for Ancient Debris + osmium mega-clusters)
 ```
 
 ---
 
-## Zone 1 — Oberfläche (Y +64 bis +192)
+## Zone 1 — Surface (Y +64 to +192)
 
-**Tier 1 — Starthilfe, sofort zugänglich**
+**Tier 1 — starter aid, immediately accessible**
 
-| Erz | Vanilla Vein/Chunk | Neu Vein/Chunk | Reduktion | Grund |
+| Ore | Vanilla vein/chunk | New vein/chunk | Reduction | Reason |
 |-----|--------------------|----------------|-----------|-------|
-| Coal | 30 | 10 | -67% | Node übernimmt mittelfristig |
-| Iron | 10 | 4 | -60% | Hand-Mining reicht für T1 |
-| Copper | 16 | 6 | -62% | Ähnlich Iron |
+| Coal | 30 | 10 | -67% | Node takes over in the medium term |
+| Iron | 10 | 4 | -60% | Hand mining is enough for T1 |
+| Copper | 16 | 6 | -62% | Similar to iron |
 
-Zinc (Create) wird leicht nach unten verschoben (Y 0-60 statt 10-85) — ein paar Adern
-bleiben auf der Oberfläche, der Bulk liegt in Zone 2.
+Zinc (Create) is shifted slightly downward (Y 0-60 instead of 10-85) — a few veins
+remain on the surface, the bulk lies in Zone 2.
 
 ---
 
-## Zone 2 — Normale Höhlen (Y -32 bis +64)
+## Zone 2 — Normal Caves (Y -32 to +64)
 
-**Tier 2 — Create & erste Exploration**
+**Tier 2 — Create & first exploration**
 
-| Erz | Vanilla Vein/Chunk | Neu Vein/Chunk | Reduktion | Grund |
+| Ore | Vanilla vein/chunk | New vein/chunk | Reduction | Reason |
 |-----|--------------------|----------------|-----------|-------|
-| Zinc (Create) | 8 | 2 | -75% | Node-Fokus, kritisch für Create |
-| Gold | 4 | 1 | -75% | Selten und wertvoll |
-| Lapis | 2 | 1 | -50% | Für Enchanting weiterhin nötig |
-| Redstone | 8 | 3 | -62% | Automation-Grundstoff |
-| Ars: Source Gem | 4 | 2 | -50% | Magie-Einstieg |
-| AE2: Certus (oben) | 2 | 1 | -50% | Erste AE2-Kristalle |
+| Zinc (Create) | 8 | 2 | -75% | Node focus, critical for Create |
+| Gold | 4 | 1 | -75% | Rare and valuable |
+| Lapis | 2 | 1 | -50% | Still needed for enchanting |
+| Redstone | 8 | 3 | -62% | Automation staple |
+| Ars: Source Gem | 4 | 2 | -50% | Magic entry |
+| AE2: Certus (top) | 2 | 1 | -50% | First AE2 crystals |
 
 ---
 
-## Zone 3 — Tiefe Höhlen (Y -48 bis 0)
+## Zone 3 — Deep Caves (Y -48 to 0)
 
-**Tier 3 — Mekanism & AE2 Entry, sehr selten**
+**Tier 3 — Mekanism & AE2 entry, very rare**
 
-| Erz | Vanilla Vein/Chunk | Neu Vein/Chunk | Reduktion | Grund |
+| Ore | Vanilla vein/chunk | New vein/chunk | Reduction | Reason |
 |-----|--------------------|----------------|-----------|-------|
-| Osmium | 6 | 1 | -83% | Nur Starthilfe für Mekanism T1 |
-| Tin (Mekanism) | 5 | 1 | -80% | Bronze-Alloys Einstieg |
-| Certus (AE2, tief) | 3 | 1 | -67% | AE2 braucht Node für Skalierung |
-| Diamond | 1 | 0.3 | -70% | Sehr selten, stark Node-fokussiert |
+| Osmium | 6 | 1 | -83% | Only a starter aid for Mekanism T1 |
+| Tin (Mekanism) | 5 | 1 | -80% | Bronze alloys entry |
+| Certus (AE2, deep) | 3 | 1 | -67% | AE2 needs a node to scale |
+| Diamond | 1 | 0.3 | -70% | Very rare, heavily node-focused |
 
 ---
 
-## Zone 4 — Abyss (Y -96 bis -48)
+## Zone 4 — Abyss (Y -96 to -48)
 
-**Tier 4 — Praktisch kein natürliches Vorkommen**
+**Tier 4 — practically no natural occurrence**
 
-| Erz | Neu Vein/Chunk | Notizen |
+| Ore | New vein/chunk | Notes |
 |-----|----------------|---------|
-| Uranium | 0.3 | Fast nur über Node zugänglich |
-| Lead | 0.5 | Minimal natürlich |
-| Fluorite | 0.3 | Chemicals-Gate |
-| Osmium (Peak) | 1 | Höhere Konzentration für spätes T3 |
+| Uranium | 0.3 | Almost only accessible via node |
+| Lead | 0.5 | Minimal natural |
+| Fluorite | 0.3 | Chemicals gate |
+| Osmium (peak) | 1 | Higher concentration for late T3 |
 
 ---
 
-## Zone 5 — Void-Schicht (Y -128 bis -96)
+## Zone 5 — Void Layer (Y -128 to -96)
 
-**Tier 5 — Nur Nodes, kein natürliches Vorkommen**
+**Tier 5 — nodes only, no natural occurrence**
 
-| Erz | Neu Vein/Chunk | Notizen |
+| Ore | New vein/chunk | Notes |
 |-----|----------------|---------|
-| Ancient Debris | 0.2 | Praktisch nur Boss/Node |
-| Osmium Mega-Cluster | 0.5 | Große Adern für Lategame-Bulk |
+| Ancient Debris | 0.2 | Practically boss/node only |
+| Osmium mega-cluster | 0.5 | Large veins for late-game bulk |
 
 ---
 
-## Create Ore Excavation — Node-System
+## Create Ore Excavation — Node System
 
-### Funktionsweise
-Create Ore Excavation platziert große **Ore Nodes** (dichte Erz-Cluster) in der Welt.
-Ein Node enthält ~200-500 Erze gebündelt an einem Ort. Mit Create-Bohranlage
-(Mechanical Drill + Contraption) wird der Node **unendlich erneuerbar** gezapft.
+### How It Works
+Create Ore Excavation places large **ore nodes** (dense ore clusters) in the world.
+A node contains ~200-500 ores bundled in one place. With a Create drill rig
+(Mechanical Drill + contraption) the node is tapped **infinitely renewably**.
 
-Hand-Mining eines Nodes gibt ~20-30 Erze (Starthilfe). Create-Automation gibt pro
-Stunde hunderte Erze, solange die Anlage läuft.
+Hand mining a node gives ~20-30 ores (starter aid). Create automation gives hundreds
+of ores per hour as long as the rig runs.
 
-### Node-Tabelle — Alle Erze
+### Node Table — All Ores
 
-| Node-Typ | Zone | Y-Zentrum | Radius zwischen Nodes | Starthilfe | Create-Output/h |
+| Node type | Zone | Y center | Radius between nodes | Starter aid | Create output/h |
 |----------|------|-----------|----------------------|------------|-----------------|
-| Coal Node | 1 | +96 | ~300 Blöcke | 40 Stück | ~800 |
-| Iron Node | 1 | +48 | ~350 Blöcke | 30 Stück | ~600 |
-| Copper Node | 1 | +64 | ~350 Blöcke | 25 Stück | ~500 |
-| Zinc Node | 2 | +20 | ~400 Blöcke | 20 Stück | ~400 |
-| Gold Node | 2 | -10 | ~500 Blöcke | 20 Stück | ~300 |
-| Lapis Node | 2 | +10 | ~500 Blöcke | 15 Stück | ~250 |
-| Redstone Node | 2 | -15 | ~400 Blöcke | 25 Stück | ~500 |
-| Source Gem Node | 2 | +20 | ~600 Blöcke | 15 Stück | ~200 |
-| Diamond Node | 3 | -35 | ~800 Blöcke | 10 Stück | ~150 |
-| Osmium Node | 3 | -30 | ~600 Blöcke | 20 Stück | ~350 |
-| Tin Node | 3 | -25 | ~600 Blöcke | 20 Stück | ~300 |
-| Certus Node | 3 | -30 | ~700 Blöcke | 15 Stück | ~200 |
-| Uranium Node | 4 | -70 | ~1200 Blöcke | 8 Stück | ~100 |
-| Lead Node | 4 | -65 | ~900 Blöcke | 12 Stück | ~150 |
-| Fluorite Node | 4 | -60 | ~900 Blöcke | 10 Stück | ~120 |
-| Ancient Debris Node | 5 | -110 | ~2000 Blöcke | 5 Stück | ~50 |
+| Coal Node | 1 | +96 | ~300 blocks | 40 units | ~800 |
+| Iron Node | 1 | +48 | ~350 blocks | 30 units | ~600 |
+| Copper Node | 1 | +64 | ~350 blocks | 25 units | ~500 |
+| Zinc Node | 2 | +20 | ~400 blocks | 20 units | ~400 |
+| Gold Node | 2 | -10 | ~500 blocks | 20 units | ~300 |
+| Lapis Node | 2 | +10 | ~500 blocks | 15 units | ~250 |
+| Redstone Node | 2 | -15 | ~400 blocks | 25 units | ~500 |
+| Source Gem Node | 2 | +20 | ~600 blocks | 15 units | ~200 |
+| Diamond Node | 3 | -35 | ~800 blocks | 10 units | ~150 |
+| Osmium Node | 3 | -30 | ~600 blocks | 20 units | ~350 |
+| Tin Node | 3 | -25 | ~600 blocks | 20 units | ~300 |
+| Certus Node | 3 | -30 | ~700 blocks | 15 units | ~200 |
+| Uranium Node | 4 | -70 | ~1200 blocks | 8 units | ~100 |
+| Lead Node | 4 | -65 | ~900 blocks | 12 units | ~150 |
+| Fluorite Node | 4 | -60 | ~900 blocks | 10 units | ~120 |
+| Ancient Debris Node | 5 | -110 | ~2000 blocks | 5 units | ~50 |
 
-> **Hinweis zu Output/h**: Richtwert bei einer mittleren Create-Bohranlage (4 Drills,
-> 128 RPM). Echte Werte nach Testing anpassen.
+> **Note on output/h**: a guideline value for a medium Create drill rig (4 drills,
+> 128 RPM). Adjust real values after testing.
 
-### Node-Spawnrate Konfiguration
+### Node Spawn Rate Configuration
 ```toml
-# config/createoreexcavation-common.toml (nach erstem Start generiert)
-# Nodes seltener als Default um Exploration-Wert zu erhöhen
-nodeSpawnRarity = 0.4        # Standard ~1.0 — reduziert auf 40%
-nodeRenewable = true         # Nodes unendlich erneuerbar via Create
-nodeHandMiningYield = 0.1    # Hand-Mining gibt nur 10% des Node-Inhalts (Starthilfe)
+# config/createoreexcavation-common.toml (generated after first start)
+# Nodes rarer than default to increase exploration value
+nodeSpawnRarity = 0.4        # default ~1.0 — reduced to 40%
+nodeRenewable = true         # nodes infinitely renewable via Create
+nodeHandMiningYield = 0.1    # hand mining gives only 10% of the node content (starter aid)
 ```
 
 ---
 
-## Quest-Integration
+## Quest Integration
 
-| Quest | Trigger | Belohnung |
+| Quest | Trigger | Reward |
 |-------|---------|-----------|
-| "Gaia's Adern" (T1) | Ersten Iron-Node gefunden | Create Drill Schematic |
-| "Tiefer graben" (T2) | Ersten Zinc-Node angezapft (Create-Bohranlage aktiv) | Mekanism Osmium-Kompass |
-| "Das schwarze Gold" (T3) | Ersten Osmium-Node mit Create-Automation | Mekanism Basic Machine Set |
-| "Aus der Tiefe" (T4) | Ersten Uranium-Node gefunden | PNC Pressure Tube Kit |
-| "Unter der Welt" (T5) | Ancient Debris Node gefunden | Endgame-Crafting-Component |
+| "Gaia's Veins" (T1) | First iron node found | Create Drill schematic |
+| "Dig Deeper" (T2) | First zinc node tapped (Create drill rig active) | Mekanism Osmium Compass |
+| "The Black Gold" (T3) | First osmium node with Create automation | Mekanism Basic Machine set |
+| "From the Depths" (T4) | First uranium node found | PNC Pressure Tube kit |
+| "Beneath the World" (T5) | Ancient Debris node found | Endgame crafting component |
 
-Ein hypothetischer "Ore-Kompass" (via KubeJS oder Create Ore Excavation built-in) kann
-Spieler zum nächsten Node des gewünschten Typs leiten — wichtig für Multiplayer, damit
-Spieler nicht stundenlang suchen.
+A hypothetical "ore compass" (via KubeJS or Create Ore Excavation built-in) can
+guide players to the nearest node of the desired type — important for multiplayer, so
+players don't search for hours.
 
 ---
 
-## Implementierungs-Reihenfolge
+## Implementation Order
 
-1. **Create Ore Excavation Config** prüfen (nach erstem Start): Node-Rarity, Renewal-Mechanic
-2. **Mekanism Datapack-Override** für Osmium/Uranium/Lead Vein-Count Reduktion
-3. **Vanilla Placed Features Override** für Diamond/Gold Reduktion (`kubejs/data/minecraft/worldgen/placed_feature/`)
-4. **AE2 Certus Override** für reduzierte natürliche Verteilung
-5. **Testing**: Mit `/locate` und F3+G Nodes und natürliche Erzverteilung in-Game validieren
+1. **Check Create Ore Excavation config** (after first start): node rarity, renewal mechanic
+2. **Mekanism datapack override** for osmium/uranium/lead vein-count reduction
+3. **Vanilla placed features override** for diamond/gold reduction (`kubejs/data/minecraft/worldgen/placed_feature/`)
+4. **AE2 Certus override** for reduced natural distribution
+5. **Testing**: validate nodes and natural ore distribution in-game with `/locate` and F3+G

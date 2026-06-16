@@ -1,59 +1,59 @@
 # Boss Loot System — "OP Loot" Integration
 
-> **Status**: Konzept — 2026-04-29
-> Ziel: Bosse aus Cataclysm, Mowzie's Mobs und Iron's Spells sollen Belohnungen liefern, die über Vanilla/Standard hinausgehen.
+> **Status**: Concept — 2026-04-29
+> Goal: Bosses from Cataclysm, Mowzie's Mobs and Iron's Spells should deliver rewards that go beyond vanilla/standard.
 
 ---
 
-## Kern-Konzept
+## Core Concept
 
-Der Loot wird in drei Kategorien unterteilt:
-1. **Unikale Waffen/Relikte**: Direkt aus der Boss-Mod (z.B. Cataclysm).
-2. **Apotheosis Escalation**: Garantierte High-Tier Gems und Affixe.
-3. **Technik-Ingredienzen**: Materialien, die für das Late-Game in Create/Mekanism nötig sind.
+The loot is split into three categories:
+1. **Unique weapons/relics**: directly from the boss mod (e.g. Cataclysm).
+2. **Apotheosis escalation**: guaranteed high-tier gems and affixes.
+3. **Tech ingredients**: materials needed for the late game in Create/Mekanism.
 
 ---
 
-## Boss-Tiering & Belohnungen
+## Boss Tiering & Rewards
 
-### Tier 1: Exploration Bosses (Frühspiel)
-*   **Bosse**: Ferrous Wroughtnaut (Mowzie's), Corrupt Ogre (Dungeons & Taverns).
-*   **Artifacts/Relics**: Chance auf seltene Trinkets (Bunny Hoppers, Power Glove).
-*   **Apotheosis**: 100% Drop von *Common* bis *Uncommon* Gems.
-*   **Tech**: Komponenten für Create-Pressen und Mixer.
+### Tier 1: Exploration Bosses (Early Game)
+*   **Bosses**: Ferrous Wroughtnaut (Mowzie's), Corrupt Ogre (Dungeons & Taverns).
+*   **Artifacts/Relics**: chance at rare trinkets (Bunny Hoppers, Power Glove).
+*   **Apotheosis**: 100% drop of *Common* to *Uncommon* gems.
+*   **Tech**: components for Create presses and mixers.
 
 ### Tier 2: Mid-Game Challenges
-*   **Bosse**: Netherite Monstrosity (Cataclysm), Dead King (Iron's Spells).
-*   **Apotheosis**: Garantierter *Epic Gem*. Items droppen mit dem Affix "Reforged".
-*   **Relics**: XP-Boost für getragene Relikte.
-*   **Tech**: Erster Drop von "Ancient Metal" (benötigt für AE2 ME-Controller).
+*   **Bosses**: Netherite Monstrosity (Cataclysm), Dead King (Iron's Spells).
+*   **Apotheosis**: guaranteed *Epic Gem*. Items drop with the "Reforged" affix.
+*   **Relics**: XP boost for worn relics.
+*   **Tech**: first drop of "Ancient Metal" (needed for the AE2 ME Controller).
 
 ### Tier 3: Apex Bosses (Endgame)
-*   **Bosse**: Ignis, The Harbinger, Ender Guardian (alle Cataclysm).
-*   **Apotheosis**: Garantierter *Mythic Gem*. Chance auf "Godly" Affixe.
-*   **Artifacts**: Unikate wie der *Eternal Compass* oder *Void Totem*.
-*   **Tech**: "Singularity Shards" für den Mekanism Fusion Reactor oder Create Aeronautics Apex-Antriebe.
+*   **Bosses**: Ignis, The Harbinger, Ender Guardian (all Cataclysm).
+*   **Apotheosis**: guaranteed *Mythic Gem*. Chance at "Godly" affixes.
+*   **Artifacts**: uniques like the *Eternal Compass* or *Void Totem*.
+*   **Tech**: "Singularity Shards" for the Mekanism Fusion Reactor or Create Aeronautics apex drives.
 
 ---
 
-## Automatisierung (Late-Game)
+## Automation (Late Game)
 
-Statt technischer Simulation nutzen wir den magischen Pfad von **Ars Nouveau**:
+Instead of a technical simulation we use the magical path of **Ars Nouveau**:
 
-1.  **Drygmies**: Diese Geister sammeln Loot von Mobs/Bossen in ihrer Nähe, ohne diese zu töten.
-2.  **Herausforderung**: 
-    *   **Containment**: Der Boss muss lebend in Reichweite der Drygmies gehalten werden (z.B. in einer verstärkten Zelle aus Create-Blöcken).
-    *   **Source-Infrastruktur**: Drygmies benötigen eine konstante Zufuhr von **Source** (Magie-Energie), um zu arbeiten.
-3.  **Vorteil**: Keine "toten" Simulationen, sondern eine lebendige Boss-Farm, die toll aussieht.
+1.  **Drygmies**: these spirits collect loot from nearby mobs/bosses without killing them.
+2.  **Challenge**:
+    *   **Containment**: the boss must be kept alive within range of the Drygmies (e.g. in a reinforced cell made of Create blocks).
+    *   **Source infrastructure**: Drygmies need a constant supply of **Source** (magic energy) to work.
+3.  **Advantage**: no "dead" simulations, but a living boss farm that looks great.
 
 ---
 
-## KubeJS Integration (Planung)
+## KubeJS Integration (Planning)
 ...
-Um den Loot "OP" zu machen, müssen wir die Loot-Tables via KubeJS anpassen:
+To make the loot "OP", we need to adjust the loot tables via KubeJS:
 
 ```javascript
-// Beispiel für Cataclysm Ignis Loot-Modification
+// Example for Cataclysm Ignis loot modification
 LootJS.modifiers((event) => {
     event.addEntityLootModifier("cataclysm:ignis")
         .addLoot("apotheosis:gem{gem:\"apotheosis:core/fire\", rarity:\"mythic\"}")
@@ -64,8 +64,8 @@ LootJS.modifiers((event) => {
 
 ---
 
-## Balancing-Regeln
+## Balancing Rules
 
-1. **Kein Grind**: Bosse sollten einmalig (oder selten) besiegt werden müssen, um den Fortschritt zu triggern, statt 100x gefarmt zu werden.
-2. **Qualität vor Quantität**: Lieber ein extrem mächtiges Item (OP) als ein Inventar voller Schrott.
-3. **Synergie**: Boss-Loot sollte den Bau der "Fliegenden Festung" (Create Aeronautics) beschleunigen oder erst ermöglichen.
+1. **No grind**: bosses should only need to be defeated once (or rarely) to trigger progression, instead of being farmed 100x.
+2. **Quality over quantity**: better one extremely powerful item (OP) than an inventory full of junk.
+3. **Synergy**: boss loot should speed up — or even enable — building the "Flying Fortress" (Create Aeronautics).

@@ -1,37 +1,37 @@
 # Server Setup — APEX Modpack
 
-> Letzte Aktualisierung: 2026-04-30 | Version: 0.1.x
+> Last updated: 2026-04-30 | Version: 0.1.x
 
-## Voraussetzungen
+## Prerequisites
 
-- Java 21 (empfohlen: Eclipse Temurin 21 — https://adoptium.net)
-  - Java-Version prüfen: `java -version` — muss `21.x.x` zeigen
-  - Falls mehrere Java-Versionen installiert: `sudo update-alternatives --config java` (Ubuntu)
-- Mindestens 8 GB RAM für den Server-Prozess
-- Linux (Ubuntu 22.04+) oder Windows Server 2019+
-- Port 25565 TCP/UDP im Router freigegeben
+- Java 21 (recommended: Eclipse Temurin 21 — https://adoptium.net)
+  - Check the Java version: `java -version` — must show `21.x.x`
+  - If multiple Java versions are installed: `sudo update-alternatives --config java` (Ubuntu)
+- At least 8 GB RAM for the server process
+- Linux (Ubuntu 22.04+) or Windows Server 2019+
+- Port 25565 TCP/UDP forwarded in the router
 
-## 1. NeoForge Server installieren
+## 1. Install the NeoForge Server
 
-NeoForge 1.21.1 Installer herunterladen von:
-https://projects.neoforged.net/neoforged/neoforge → neueste stabile Version für 1.21.1
+Download the NeoForge 1.21.1 installer from:
+https://projects.neoforged.net/neoforged/neoforge → latest stable version for 1.21.1
 
 ```bash
-# Server-Verzeichnis anlegen
+# Create the server directory
 mkdir apex-server && cd apex-server
 
-# NeoForge Server installieren
+# Install the NeoForge server
 java -jar neoforge-21.1.x-installer.jar --install-server .
 
-# EULA akzeptieren (Pflicht)
+# Accept the EULA (mandatory)
 echo "eula=true" > eula.txt
 ```
 
-## 2. Startskript einrichten
+## 2. Set Up the Start Script
 
-NeoForge generiert nach der Installation automatisch ein `run.sh` (Linux) bzw. `run.bat` (Windows). JVM-Flags werden in `user_jvm_args.txt` gesetzt, nicht direkt im Startskript.
+After installation, NeoForge automatically generates a `run.sh` (Linux) or `run.bat` (Windows). JVM flags are set in `user_jvm_args.txt`, not directly in the start script.
 
-Datei `user_jvm_args.txt` anpassen:
+Adjust the `user_jvm_args.txt` file:
 
 ```
 -Xmx8G
@@ -42,29 +42,29 @@ Datei `user_jvm_args.txt` anpassen:
 -XX:+DisableExplicitGC
 ```
 
-Server starten:
+Start the server:
 
 ```bash
 chmod +x run.sh
 ./run.sh nogui
 ```
 
-## 3. Modpack deployen
+## 3. Deploy the Modpack
 
-Mods, Config und KubeJS aus dem Repository in den Server-Ordner kopieren:
+Copy mods, config and KubeJS from the repository into the server folder:
 
 ```bash
-# Aus dem Repo-Root ausführen
+# Run from the repo root
 cp -r config/   apex-server/config/
 cp -r kubejs/   apex-server/kubejs/
 ```
 
-Alle Mod-JARs aus dem Modrinth mrpack in `apex-server/mods/` ablegen.
+Place all mod JARs from the Modrinth mrpack into `apex-server/mods/`.
 
-> Alternativ: mrpack mit dem NeoForge Installer direkt importieren (falls unterstützt)
-> oder Packwiz: `packwiz server install` im Server-Verzeichnis ausführen.
+> Alternatively: import the mrpack directly with the NeoForge installer (if supported)
+> or Packwiz: run `packwiz server install` in the server directory.
 
-## 4. server.properties konfigurieren
+## 4. Configure server.properties
 
 ```properties
 max-players=10
@@ -76,37 +76,37 @@ spawn-protection=0
 level-seed=
 ```
 
-> Für Modded-Server mit Terralith empfohlen: 8–10. Werte über 12 können bei begrenztem RAM zu TPS-Problemen führen.
+> Recommended for a modded server with Terralith: 8–10. Values above 12 can cause TPS problems with limited RAM.
 
-> `level-seed` leer lassen für zufälligen Seed, oder einen festen Seed eintragen.
-> **Wichtig:** Seed nach Welt-Erstellung dokumentieren — kann nicht mehr geändert werden.
+> Leave `level-seed` empty for a random seed, or enter a fixed seed.
+> **Important:** document the seed after world creation — it can no longer be changed.
 
-## 5. Erster Start
+## 5. First Start
 
 ```bash
 ./start.sh
 ```
 
-Warten bis in der Konsole erscheint:
+Wait until the console shows:
 ```
 [Server thread/INFO]: Done (Xs)! For help, type "help"
 ```
 
-Fehler im Log prüfen:
+Check the log for errors:
 ```bash
 grep -i "error\|exception\|crash" logs/latest.log
 ```
 
-KubeJS-Fehler separat prüfen:
+Check KubeJS errors separately:
 ```bash
 grep -i "error" logs/kubejs/server.log
 ```
 
-## 6. Chunky Pre-Gen ausführen
+## 6. Run the Chunky Pre-Gen
 
-**Vor dem ersten Spieler-Join ausführen!** (Verhindert Lag beim Erkunden)
+**Run before the first player joins!** (prevents lag while exploring)
 
-In der Server-Konsole eingeben:
+Enter in the server console:
 
 ```
 chunky world minecraft:overworld
@@ -116,16 +116,16 @@ chunky shape square
 chunky start
 ```
 
-Status überwachen:
+Monitor the status:
 ```
 chunky progress
 ```
 
-> Pre-Gen dauert je nach Hardware 30–90 Minuten.
-> Server bleibt dabei spielbar, aber Chunk-Generierungs-Lag ist möglich.
-> Empfehlung: Pre-Gen vor dem Gruppen-Launch abschließen.
+> Pre-gen takes 30–90 minutes depending on hardware.
+> The server stays playable, but chunk-generation lag is possible.
+> Recommendation: finish the pre-gen before the group launch.
 
-Nether nach Overworld:
+Nether after the Overworld:
 ```
 chunky world minecraft:the_nether
 chunky center 0 0
@@ -134,22 +134,22 @@ chunky shape square
 chunky start
 ```
 
-## 7. Verbindungstest
+## 7. Connection Test
 
-Alle 5 Spieler verbinden sich gleichzeitig und führen folgende Checks durch:
+All 5 players connect at the same time and run the following checks:
 
-- [ ] Verbindung funktioniert (kein Timeout)
-- [ ] TPS ≥ 18 (`/tps` in der Konsole — Wert unter 18 = Performance-Problem)
-- [ ] World Gen sichtbar: Terralith-Biome erkennbar, Welthöhe > 400 Blöcke (`F3`)
-- [ ] FTB Quests öffnet sich (`M` oder Quest-Taste)
-- [ ] Keine roten Fehler in `logs/latest.log`
+- [ ] Connection works (no timeout)
+- [ ] TPS ≥ 18 (`/tps` in the console — a value below 18 = performance problem)
+- [ ] World gen visible: Terralith biomes recognizable, world height > 400 blocks (`F3`)
+- [ ] FTB Quests opens (`M` or the quest key)
+- [ ] No red errors in `logs/latest.log`
 
-## Bekannte Tücken
+## Known Pitfalls
 
-| Problem | Ursache | Lösung |
+| Problem | Cause | Solution |
 |---------|---------|--------|
-| Server startet nicht | Falscher Java-Pfad | `java -version` prüfen — muss Java 21 sein |
-| KubeJS Errors | Script-Fehler | `logs/kubejs/server.log` prüfen, Syntax in `kubejs/` korrigieren |
-| Tectonic greift nicht | Config falsch gelesen | Im Spiel `F3` → Max Y prüfen; Config-Keys in `logs/latest.log` suchen |
-| Chunky startet nicht | Mod nicht geladen | `/chunky` eingeben — `Unknown command` = Mod fehlt |
-| Niedrige TPS | Zu viele Entities/Chunks | `simulation-distance` auf 6 reduzieren |
+| Server won't start | Wrong Java path | Check `java -version` — must be Java 21 |
+| KubeJS errors | Script error | Check `logs/kubejs/server.log`, fix syntax in `kubejs/` |
+| Tectonic not applying | Config read incorrectly | In-game `F3` → check Max Y; search config keys in `logs/latest.log` |
+| Chunky won't start | Mod not loaded | Type `/chunky` — `Unknown command` = mod missing |
+| Low TPS | Too many entities/chunks | Reduce `simulation-distance` to 6 |

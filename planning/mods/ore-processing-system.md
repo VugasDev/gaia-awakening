@@ -1,13 +1,13 @@
 # APEX — Ore Processing System
 ### Automated Progressive EXtraction (x1 → x16)
 
-> **Design-Ziel**: Jede Multiplikationsstufe erfordert aktiv ein anderes Mod-System.
-> Kein Mod allein kommt an x16 — das ist ein echtes Cross-Mod-Feature.
-> Jede Stufe ist optional, aber lohnender.
+> **Design goal**: every multiplication stage actively requires a different mod system.
+> No mod alone reaches x16 — this is a genuine cross-mod feature.
+> Every stage is optional, but more rewarding.
 
 ---
 
-## Das vollständige Chain-System
+## The Complete Chain System
 
 ```
                     ┌─────────────────────────────────────────────┐
@@ -19,72 +19,72 @@
      ▼
 ┌─────────────────────────────────────────────────────────────────┐
 │ TIER 1 — x1 — Vanilla Smelting                                  │
-│  Ofen / Blast Furnace                                           │
-│  Gate: Sofort                                                    │
+│  Furnace / Blast Furnace                                        │
+│  Gate: immediately                                              │
 └─────────────────────────────────────────────────────────────────┘
      │
-     ▼ [Tier 2 freigeschaltet: Create Tier 2]
+     ▼ [Tier 2 unlocked: Create Tier 2]
 ┌─────────────────────────────────────────────────────────────────┐
 │ TIER 2 — x2 — Create Mechanical Crushing                        │
 │  Create: Crushing Wheels                                        │
-│  1 Ore → 2× Crushed Ore (KubeJS-Rezept: deterministisch 2x)    │
-│  Crushed Ore → Furnace → Ingot                                  │
+│  1 ore → 2× crushed ore (KubeJS recipe: deterministic 2x)      │
+│  Crushed ore → furnace → ingot                                  │
 └─────────────────────────────────────────────────────────────────┘
      │
-     ▼ [Tier 3 freigeschaltet: Mekanism Tier 1]
+     ▼ [Tier 3 unlocked: Mekanism Tier 1]
 ┌─────────────────────────────────────────────────────────────────┐
 │ TIER 3 — x4 — Create + Mekanism Enrichment                      │
-│  Create: Crushing Wheels → 2× Crushed Ore                       │
-│  Mekanism: Enrichment Chamber (KubeJS: akzeptiert Crushed Ore)  │
-│  2× Crushed Ore → Enrichment (x2 pro Stück) → 4× Ore Dust      │
-│  Ore Dust → Furnace/Alloy Smelter → Ingot                       │
+│  Create: Crushing Wheels → 2× crushed ore                       │
+│  Mekanism: Enrichment Chamber (KubeJS: accepts crushed ore)    │
+│  2× crushed ore → enrichment (x2 each) → 4× ore dust           │
+│  Ore dust → furnace/alloy smelter → ingot                       │
 └─────────────────────────────────────────────────────────────────┘
      │
-     ▼ [Tier 4 freigeschaltet: Mekanism T3 + Gas-Infrastruktur (O₂)]
+     ▼ [Tier 4 unlocked: Mekanism T3 + gas infrastructure (O₂)]
 ┌─────────────────────────────────────────────────────────────────┐
 │ TIER 4 — x8 — Create + Mekanism Purification Chain              │
-│  Create: Crushing Wheels → 2× Crushed Ore                       │
+│  Create: Crushing Wheels → 2× crushed ore                       │
 │  Mekanism:                                                       │
-│    Purification Chamber (O₂) → 2× Clump pro Crushed Ore        │
-│    Crusher → 2× Dirty Dust pro Clump                            │
-│    Enrichment Chamber → 2× Ore Dust pro Dirty Dust              │
-│    Effektiv: 2 Crushed → 8× Ore Dust (x4 durch Mekanism-Chain) │
-│  Net: 1 Ore × 2 (Create) × 4 (Mekanism) = 8× Ingots            │
+│    Purification Chamber (O₂) → 2× clump per crushed ore        │
+│    Crusher → 2× dirty dust per clump                            │
+│    Enrichment Chamber → 2× ore dust per dirty dust              │
+│    Effectively: 2 crushed → 8× ore dust (x4 via Mekanism chain)│
+│  Net: 1 ore × 2 (Create) × 4 (Mekanism) = 8× ingots            │
 └─────────────────────────────────────────────────────────────────┘
      │
-     ▼ [Tier 5 freigeschaltet: Pneumaticraft High-Pressure + Plastik]
+     ▼ [Tier 5 unlocked: PneumaticCraft high-pressure + plastic]
 ┌─────────────────────────────────────────────────────────────────┐
-│ TIER 5 — x16 — Create + Mekanism + Pneumaticraft                │
-│  Vorherige Stufen: → 8× Ore Dust (aus Tier 4)                   │
-│  Pneumaticraft Pressure Chamber (4 bar):                         │
-│    8× Ore Dust                                                   │
-│    + 4× Pneumaticraft Plastic Sheet (aus Öl-Raffinerie)         │
-│    + 1× Mekanism Brine (Salz-Lösung, leicht herstellbar)        │
-│    → 16× [Metal] Refined Pellets                                 │
-│  Refined Pellets → Furnace → Ingot                              │
-│  Net: 1 Ore × 2 (Create) × 4 (Mekanism) × 2 (PNC) = 16× Ingot │
+│ TIER 5 — x16 — Create + Mekanism + PneumaticCraft               │
+│  Previous stages: → 8× ore dust (from Tier 4)                   │
+│  PneumaticCraft Pressure Chamber (4 bar):                        │
+│    8× ore dust                                                  │
+│    + 4× PneumaticCraft Plastic Sheet (from oil refinery)        │
+│    + 1× Mekanism Brine (salt solution, easy to make)            │
+│    → 16× [metal] refined pellets                                │
+│  Refined pellets → furnace → ingot                              │
+│  Net: 1 ore × 2 (Create) × 4 (Mekanism) × 2 (PNC) = 16× ingot │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-## Warum Pneumaticraft Plastik als Gate?
+## Why PneumaticCraft Plastic as a Gate?
 
-Pneumaticraft produziert **Plastic Sheets** aus **Öl** über eine eigene Raffinerie-Kette:
-1. Öl pumpen (in der Welt vorkommend oder via Create: Diesel Generators)
-2. Thermopneumatic Processing Plant: Öl → Biodiesel → Plastic
-3. Plastic Sheet: Crafting-Ingredient für alle fortgeschrittenen PNC-Rezepte
+PneumaticCraft produces **Plastic Sheets** from **oil** via its own refinery chain:
+1. Pump oil (occurring in the world or via Create: Diesel Generators)
+2. Thermopneumatic Processing Plant: oil → biodiesel → plastic
+3. Plastic Sheet: crafting ingredient for all advanced PNC recipes
 
-**Synergien:**
-- Create: Diesel Generators nutzt dasselbe Öl → **Ressourcen-Konkurrenz** (Energie oder Plastik?)
-- Mekanism Electrolytic Separator produziert Brine aus Wasser + Salz → minimal aufwendig
-- Das Gate kombiniert: Pneumaticraft Infrastruktur aufbauen + Öl-Entscheidung treffen
+**Synergies:**
+- Create: Diesel Generators use the same oil → **resource competition** (energy or plastic?)
+- Mekanism Electrolytic Separator produces brine from water + salt → minimally complex
+- The gate combines: build PneumaticCraft infrastructure + make the oil decision
 
 ---
 
-## KubeJS-Implementierung — Schlüsselstellen
+## KubeJS Implementation — Key Spots
 
-### 1. Create Crushing Wheels → deterministisches x2
+### 1. Create Crushing Wheels → deterministic x2
 ```javascript
 // src/kubejs/server_scripts/ore_processing/create_crushing.js
 ServerEvents.recipes(event => {
@@ -92,24 +92,24 @@ ServerEvents.recipes(event => {
     ['minecraft:iron_ore',   'minecraft:raw_iron',      'create:crushed_raw_iron'],
     ['minecraft:gold_ore',   'minecraft:raw_gold',      'create:crushed_raw_gold'],
     ['minecraft:copper_ore', 'minecraft:raw_copper',    'create:crushed_raw_copper'],
-    // Mekanism-Metalle:
+    // Mekanism metals:
     ['mekanism:osmium_ore',  'mekanism:raw_osmium',     'apex:crushed_osmium'],
-    // ... alle relevanten Erze
+    // ... all relevant ores
   ]
 
   crushedOres.forEach(([ore, raw, crushed]) => {
-    // Ore Block → 2× Crushed (deterministisch, kein Zufall)
+    // Ore block → 2× crushed (deterministic, no randomness)
     event.custom({
       type: 'create:crushing',
       ingredients: [{ item: ore }],
       results: [
         { item: crushed, count: 2 },
-        // Kleiner Bonus-Drop (10%): bleibt aus Balance-Gründen optional
+        // Small bonus drop (10%): kept optional for balance reasons
         // { item: 'create:experience_nugget', chance: 0.1 }
       ],
       processingTime: 200
     })
-    // Raw Material → 2× Crushed (für Raw-Block-Variante)
+    // Raw material → 2× crushed (for the raw-block variant)
     event.custom({
       type: 'create:crushing',
       ingredients: [{ item: raw }],
@@ -120,22 +120,22 @@ ServerEvents.recipes(event => {
 })
 ```
 
-### 2. Mekanism Enrichment: Crushed Ore als Input
+### 2. Mekanism Enrichment: crushed ore as input
 ```javascript
 // src/kubejs/server_scripts/ore_processing/mekanism_crushed_input.js
-// Mekanism akzeptiert von Haus aus schon Create-Crushed-Ore für viele Metalle,
-// aber für Mods-Metalle brauchen wir Custom-Rezepte:
+// Mekanism already accepts Create crushed ore out of the box for many metals,
+// but for mod metals we need custom recipes:
 ServerEvents.recipes(event => {
   event.custom({
     type: 'mekanism:enriching',
     input: { ingredient: { item: 'apex:crushed_osmium' } },
     output: { item: 'mekanism:dust_osmium', count: 2 }
   })
-  // ... weitere custom Metalle
+  // ... further custom metals
 })
 ```
 
-### 3. Pneumaticraft Pressure Chamber — Tier 5 (x16)
+### 3. PneumaticCraft Pressure Chamber — Tier 5 (x16)
 ```javascript
 // src/kubejs/server_scripts/ore_processing/pnc_tier5.js
 ServerEvents.recipes(event => {
@@ -152,11 +152,11 @@ ServerEvents.recipes(event => {
       inputs: [
         { item: dust, count: 8 },
         { item: 'pneumaticcraft:plastic', count: 4 },
-        { item: 'mekanism:brine_bucket', count: 1 }  // oder als Fluid-Input
+        { item: 'mekanism:brine_bucket', count: 1 }  // or as a fluid input
       ],
       outputs: [
         { item: pellet, count: 16 },
-        // Brine-Eimer zurückgeben
+        // return the brine bucket
         { item: 'minecraft:bucket', count: 1 }
       ],
       pressure: 4.0
@@ -165,49 +165,49 @@ ServerEvents.recipes(event => {
 })
 ```
 
-### 4. Refined Pellets → Ingots (Smelting)
+### 4. Refined Pellets → ingots (smelting)
 ```javascript
-// Einfaches Smelting-Rezept für alle Refined Pellets:
+// Simple smelting recipe for all refined pellets:
 ServerEvents.recipes(event => {
   event.smelting('mekanism:ingot_iron', 'apex:refined_iron_pellet').xp(0.1)
-  // oder via Mekanism Energized Smelter (schneller + kein Ofenslot)
+  // or via the Mekanism Energized Smelter (faster + no furnace slot)
 })
 ```
 
 ---
 
-## Unterstützte Metalle (geplant)
+## Supported Metals (planned)
 
-| Metall | Vanilla? | Quelle | Tier 5 sinnvoll? |
+| Metal | Vanilla? | Source | Tier 5 worthwhile? |
 |--------|---------|--------|-----------------|
-| Eisen | ✓ | Vanilla | ✓ |
+| Iron | ✓ | Vanilla | ✓ |
 | Gold | ✓ | Vanilla | ✓ |
-| Kupfer | ✓ | Vanilla | ✓ |
+| Copper | ✓ | Vanilla | ✓ |
 | Osmium | — | Mekanism | ✓ |
-| Zinn | — | Mekanism ⚠️ / Thermal | ✓ |
-| Blei | — | Mekanism | ✓ |
-| Uran | — | Mekanism | ✓ (Fusion-Gate) |
-| Netherit (Schrott) | ✓ | Vanilla | ✓ (teuer) |
+| Tin | — | Mekanism ⚠️ / Thermal | ✓ |
+| Lead | — | Mekanism | ✓ |
+| Uranium | — | Mekanism | ✓ (fusion gate) |
+| Netherite (scrap) | ✓ | Vanilla | ✓ (expensive) |
 | Certus Quartz | — | AE2 | Optional |
 
 ---
 
-## Balancing-Überlegungen
+## Balancing Considerations
 
-- **Plastik als Verbrauchsmaterial**: Öl ist begrenzt → macht x16 nicht "gratis" in großem Maßstab
-- **Brine**: Leicht herzustellen (Mekanism Electrolytic Separator), kein harter Gate
-- **Tier 4→5 Kosten**: 8 Dust + 4 Plastic → 16 Pellets = man investiert 4 Plastic pro 2 Bonus-Ingots
-  - Pro Pellet: 0.25 Plastic + 0.5 Dust → 1 Ingot
-  - Lohnt sich nur bei großer Skala → perfekt für Late-Game-Automation
-- **Keine Tier-5-Automation ohne AE2**: Die Pipeline ist so komplex, dass man AE2 Auto-Crafting braucht
-  → Zwingt den Spieler, alle Systeme zu verbinden
+- **Plastic as a consumable**: oil is limited → makes x16 not "free" at large scale
+- **Brine**: easy to make (Mekanism Electrolytic Separator), no hard gate
+- **Tier 4→5 cost**: 8 dust + 4 plastic → 16 pellets = you invest 4 plastic per 2 bonus ingots
+  - Per pellet: 0.25 plastic + 0.5 dust → 1 ingot
+  - Only worthwhile at large scale → perfect for late-game automation
+- **No Tier-5 automation without AE2**: the pipeline is so complex that you need AE2 auto-crafting
+  → Forces the player to connect all systems
 
 ---
 
-## Offene Implementierungsfragen
+## Open Implementation Questions
 
-- [ ] Mekanism akzeptiert Create Crushed Ore nativ? (Testen — evtl. schon built-in)
-- [ ] Pneumaticraft Fluid-Input für Brine (Eimer vs. Fluid-Interface)
-- [ ] `apex:` Namespace: Brauchen wir ein eigenes Mini-Mod, oder reichen KubeJS-Custom-Items?
-  - KubeJS kann Custom Items registrieren → kein extra Mod nötig
-- [ ] Serene Seasons beeinflusst Mystical Agriculture Crop Growth Rate?
+- [ ] Does Mekanism accept Create crushed ore natively? (Test — possibly already built-in)
+- [ ] PneumaticCraft fluid input for brine (bucket vs. fluid interface)
+- [ ] `apex:` namespace: do we need our own mini-mod, or are KubeJS custom items enough?
+  - KubeJS can register custom items → no extra mod needed
+- [ ] Does Serene Seasons affect Mystical Agriculture crop growth rate?

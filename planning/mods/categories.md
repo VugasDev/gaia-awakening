@@ -1,9 +1,9 @@
-# Mod-Kategorien Brainstorming
+# Mod Categories Brainstorming
 
-> Ausgangspunkt für die Mod-Kuration mit Claude.
-> Für jede Kategorie: Welche Mods kommen in Frage?
+> Starting point for mod curation with Claude.
+> For each category: which mods are candidates?
 
-## Pflicht (Core)
+## Core (Mandatory)
 
 **Performance (Fabric):**
 - Sodium, Lithium, Ferrite Core, Starlight, ImmediatelyFast
@@ -11,34 +11,34 @@
 
 **Libraries:**
 - Fabric API, Cloth Config, ModMenu
-- Architectury (falls Hybrid-Mods)
+- Architectury (if hybrid mods)
 
-## Technologie
+## Technology
 
-Fragen zu beantworten:
-- Wie komplex soll Technik sein? (Create = mechanisch-intuitiv, Mekanism = klassisch-technisch)
-- Automation-Tiefe? (Simple Storage vs. AE2/RS)
-- Energiesystem? (Forge Energy / Tech Reborn Energy)
+Questions to answer:
+- How complex should tech be? (Create = mechanical-intuitive, Mekanism = classic-technical)
+- Automation depth? (Simple Storage vs. AE2/RS)
+- Energy system? (Forge Energy / Tech Reborn Energy)
 
-Kandidaten:
-- **Create** — Mechanisch, visuell, sehr beliebt
-- **Mekanism** — Klassische Technik, viel Content
-- **Tech Reborn** — Fabric-native Alternative
-- **Applied Energistics 2** — Late-Game Storage
-- **Refined Storage** — Einfachere AE2-Alternative
+Candidates:
+- **Create** — mechanical, visual, very popular
+- **Mekanism** — classic tech, lots of content
+- **Tech Reborn** — Fabric-native alternative
+- **Applied Energistics 2** — late-game storage
+- **Refined Storage** — simpler AE2 alternative
 
-## Magie
+## Magic
 
-- **Botania** — Natur-Magie, Ringe/Runen
-- **Ars Nouveau** — Spell-Crafting
-- **Hexerei** — Witchcraft-Thema
-- **Iron's Spells** — Kampf-Magie
-- **Enigmatic Legacy** — Artefakte
+- **Botania** — nature magic, rings/runes
+- **Ars Nouveau** — spell crafting
+- **Hexerei** — witchcraft theme
+- **Iron's Spells** — combat magic
+- **Enigmatic Legacy** — artifacts
 
-## Weltgenerierung
+## World Generation
 
-- **Terralith** — Vanilla+ Biome
-- **YUNG's Better X** — Strukturen verbessern
+- **Terralith** — vanilla+ biomes
+- **YUNG's Better X** — improved structures
 - **Repurposed Structures**
 - **Tectonic** (Fabric)
 
@@ -51,20 +51,20 @@ Kandidaten:
 
 ## QoL & UI
 
-- **FTB Quests** — Quest-System
+- **FTB Quests** — quest system
 - **Just Enough Items (JEI)** / **Roughly Enough Items (REI)**
-- **Jade** — Block-Info
-- **Waystones** — Schnellreise
+- **Jade** — block info
+- **Waystones** — fast travel
 - **Xaero's Minimap + World Map**
 
 ## Food & Survival
 
 - **Farmer's Delight**
-- **Pam's HarvestCraft** (wenn verfügbar)
+- **Pam's HarvestCraft** (if available)
 - **Serene Seasons**
 
-## Balancing-kritische Mods (brauchen Custom Rezepte)
+## Balancing-Critical Mods (need custom recipes)
 
-> Mods die out-of-the-box zu stark/schwach sind:
+> Mods that are too strong/weak out of the box:
 
-- (nach Konzept-Entscheidung befüllen)
+- (fill in after concept decision)

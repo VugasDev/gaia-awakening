@@ -1,17 +1,17 @@
-# Quest: t1_basics_01 (Erste Schritte)
+# Quest: t1_basics_01 (First Steps)
 
-## Beschreibung
-Willkommen in der Welt! Bevor wir die Maschinen zum Laufen bringen, müssen wir die Grundlagen beherrschen.
+## Description
+Welcome to the world! Before we get the machines running, we need to master the basics.
 
-## Technische Daten
-- **Quest-ID:** `t1_basics_01`
-- **Typ:** Item Submission
+## Technical Data
+- **Quest ID:** `t1_basics_01`
+- **Type:** Item Submission
 
-## Aufgaben
-1. [ ] Sammle 1x Handwerkstisch (Crafting Table)
-2. [ ] Sammle 1x Beliebigen Holzstamm
+## Tasks
+1. [ ] Collect 1x Crafting Table
+2. [ ] Collect 1x Any wood log
 
-## Belohnung
-- 1x Set: Stein-Picke, Stein-Axt
-- 3x Äpfel
+## Reward
+- 1x Set: Stone Pickaxe, Stone Axe
+- 3x Apples
 - 50 XP

@@ -1,17 +1,17 @@
-# Quest: t1_create_01 (Zahnräder & Energie)
+# Quest: t1_create_01 (Gears & Energy)
 
-## Beschreibung
-Die erste Dampfmaschine ist noch weit weg. Fangen wir mit dem Fundament der Create-Physik an: Drehbewegung.
+## Description
+The first steam engine is still far away. Let's start with the foundation of Create physics: rotational motion.
 
-## Technische Daten
-- **Quest-ID:** `t1_create_01`
+## Technical Data
+- **Quest ID:** `t1_create_01`
 - **Dependencies:** `t1_basics_01`
-- **Typ:** Item Submission
+- **Type:** Item Submission
 
-## Aufgaben
-1. [ ] Sammle 2x Andesit-Legierung (Andesite Alloy)
-2. [ ] Sammle 1x Wasserrad (Water Wheel)
+## Tasks
+1. [ ] Collect 2x Andesite Alloy
+2. [ ] Collect 1x Water Wheel
 
-## Belohnung
-- 1x Create-Ingenieur-Goggle (Tutorial-Guide)
+## Reward
+- 1x Create Engineer's Goggles (tutorial guide)
 - 100 XP

@@ -1,26 +1,26 @@
-# Pneumaticraft — Enchantment Escalation Path
+# PneumaticCraft — Enchantment Escalation Path
 
-> **Design-Ziel**: Pneumaticraft als optionaler aber lohnender Endgame-Pfad.
-> Die Pressure Chamber ist die einzige Möglichkeit, Enchantments über Apotheosis-Limits zu heben.
-> Spieler können normale Apotheosis-Enchants nutzen — aber wer OP will, muss Pneumaticraft meistern.
+> **Design goal**: PneumaticCraft as an optional but rewarding endgame path.
+> The Pressure Chamber is the only way to raise enchantments beyond Apotheosis limits.
+> Players can use normal Apotheosis enchants — but whoever wants OP must master PneumaticCraft.
 
 ---
 
-## Enchantment-Tier-System
+## Enchantment Tier System
 
-| Tier | Level-Range | Crafting-Station | Druck | Gate |
+| Tier | Level range | Crafting station | Pressure | Gate |
 |------|------------|-----------------|-------|------|
-| T1 — Normal | 1–5 | Vanilla Anvil | — | Sofort |
-| T2 — Enhanced | 6–10 | Apotheosis Enchanting | — | Apotheosis-Tisch Tier 3 |
-| T3 — Advanced | 11–25 | Pressure Chamber | 2–4 bar | Pneumaticraft freigeschaltet |
-| T4 — Elite | 26–50 | Pressure Chamber | 4–6 bar | High-Pressure-Upgrade |
-| T5 — Godlike | 51–100 | Pressure Chamber | 6–8+ bar | Endgame-Materialien |
+| T1 — Normal | 1–5 | Vanilla anvil | — | Immediately |
+| T2 — Enhanced | 6–10 | Apotheosis Enchanting | — | Apotheosis table Tier 3 |
+| T3 — Advanced | 11–25 | Pressure Chamber | 2–4 bar | PneumaticCraft unlocked |
+| T4 — Elite | 26–50 | Pressure Chamber | 4–6 bar | High-pressure upgrade |
+| T5 — Godlike | 51–100 | Pressure Chamber | 6–8+ bar | Endgame materials |
 
 ---
 
-## Apotheosis-Config-Anpassungen
+## Apotheosis Config Adjustments
 
-In `src/config/apotheosis/enchanting.json` (oder ähnlich):
+In `src/config/apotheosis/enchanting.json` (or similar):
 
 ```json
 {
@@ -32,30 +32,30 @@ In `src/config/apotheosis/enchanting.json` (oder ähnlich):
 }
 ```
 
-> Apotheosis erlaubt per Config das Entfernen der Enchantment-Level-Caps.
-> Ohne diese Config-Änderung ignoriert das Spiel Level > Vanilla-Max beim Anvil.
+> Apotheosis allows removing the enchantment level caps via config.
+> Without this config change, the game ignores levels > vanilla max on the anvil.
 
 ---
 
-## KubeJS — Pressure Chamber Rezepte
+## KubeJS — Pressure Chamber Recipes
 
-Datei: `src/kubejs/server_scripts/pneumaticraft_enchantments.js`
+File: `src/kubejs/server_scripts/pneumaticraft_enchantments.js`
 
-### Prinzip
+### Principle
 
-Jedes Upgrade kombiniert:
-- N×  Buch (aktueller Level)
-- Spezielle Materialien (steigen mit Tier)
-- Druck-Anforderung (steigt mit Tier)
+Every upgrade combines:
+- N×  book (current level)
+- Special materials (increase with tier)
+- Pressure requirement (increases with tier)
 
-### Tier 3: Level 6-10 → Level 25 (Druck: 3.5 bar)
+### Tier 3: Level 6-10 → Level 25 (pressure: 3.5 bar)
 
 ```javascript
-// Beispiel: Sharpness X → Sharpness XXV
-// Materialien: Mekanism Refined Obsidian + Apotheosis Gem (Normal)
+// Example: Sharpness X → Sharpness XXV
+// Materials: Mekanism Refined Obsidian + Apotheosis Gem (Normal)
 ServerEvents.recipes(event => {
 
-  // Helfer-Funktion: Pressure Chamber Recipe
+  // Helper function: Pressure Chamber recipe
   const pressureChamber = (inputs, outputs, pressure) => {
     event.custom({
       type: "pneumaticcraft:pressure_chamber",
@@ -95,12 +95,12 @@ ServerEvents.recipes(event => {
     3.5
   )
 
-  // ... weitere Enchantments nach demselben Muster
+  // ... further enchantments following the same pattern
 
 })
 ```
 
-### Tier 4: Level 25 → Level 50 (Druck: 5.5 bar)
+### Tier 4: Level 25 → Level 50 (pressure: 5.5 bar)
 
 ```javascript
   // Sharpness: T3 (XXV) → T4 (L)
@@ -120,7 +120,7 @@ ServerEvents.recipes(event => {
   )
 ```
 
-### Tier 5: Level 50 → Level 100 (Druck: 7.5 bar)
+### Tier 5: Level 50 → Level 100 (pressure: 7.5 bar)
 
 ```javascript
   // Sharpness: T4 (L) → T5 (C)
@@ -143,19 +143,19 @@ ServerEvents.recipes(event => {
 
 ---
 
-## Priorisierte Enchantments für das System
+## Prioritized Enchantments for the System
 
-Diese Enchantments bekommen alle 5 Tier-Rezepte:
+These enchantments all get the 5 tier recipes:
 
-### Offensiv
+### Offensive
 | Enchantment | T3 (25) | T4 (50) | T5 (100) |
 |-------------|---------|---------|----------|
 | Sharpness | ✓ | ✓ | ✓ |
-| Power (Bogen) | ✓ | ✓ | ✓ |
+| Power (bow) | ✓ | ✓ | ✓ |
 | Smite | ✓ | ✓ | — |
 | Bane of Arthropods | ✓ | ✓ | — |
 
-### Defensiv
+### Defensive
 | Enchantment | T3 (25) | T4 (50) | T5 (100) |
 |-------------|---------|---------|----------|
 | Protection | ✓ | ✓ | ✓ |
@@ -172,52 +172,52 @@ Diese Enchantments bekommen alle 5 Tier-Rezepte:
 | Unbreaking | ✓ | ✓ | — |
 | Mending | ✓ | — | — |
 
-> **T5 (100)** bleibt auf wenige ikonische Enchants beschränkt: Sharpness, Protection, Efficiency.
-> Das behält den "Godlike"-Charakter dieser Items.
+> **T5 (100)** stays limited to a few iconic enchants: Sharpness, Protection, Efficiency.
+> This keeps the "Godlike" character of these items.
 
 ---
 
-## Materialien-Übersicht pro Tier
+## Materials Overview per Tier
 
-| Tier | Hauptmaterialien | Druck | Beschaffung |
+| Tier | Main materials | Pressure | Acquisition |
 |------|-----------------|-------|-------------|
-| T3 (→25) | Mekanism Refined Obsidian, Apotheosis Gem Normal | 3.5 bar | Mid-Game |
-| T4 (→50) | AE2 Fluix Crystal, Apotheosis Gem Epic, Mekanism Atomic Alloy | 5.5 bar | Late-Game |
+| T3 (→25) | Mekanism Refined Obsidian, Apotheosis Gem Normal | 3.5 bar | Mid-game |
+| T4 (→50) | AE2 Fluix Crystal, Apotheosis Gem Epic, Mekanism Atomic Alloy | 5.5 bar | Late-game |
 | T5 (→100) | AE2 Charged Certus, Apotheosis Gem Mythic, Mekanism Glowstone, Create Precision Mech. | 7.5 bar | Endgame |
 
-> Alle Materialien aus verschiedenen Mod-Pfaden → verhindert Single-Mod-Rush
+> All materials from different mod paths → prevents a single-mod rush
 
 ---
 
-## Quest-Chapter: "Drucksachen"
+## Quest Chapter: "Under Pressure"
 
-Geplante Quest-Kette für Pneumaticraft:
+Planned quest chain for PneumaticCraft:
 
-1. **"Erste Kompression"** — Baue einen Compressor
-2. **"Die Kammer"** — Baue eine vollständige Pressure Chamber
-3. **"Unter Druck"** — Erreiche 4 bar
-4. **"Enhanced Enchanting"** — Erste Tier-3-Enchantment (Level 25)
-5. **"Hochdruckzone"** — Erreiche 6 bar (High-Pressure-Upgrade)
-6. **"Elite-Level"** — Erste Tier-4-Enchantment (Level 50)
-7. **"Der Gottesmodus"** — Erste Tier-5-Enchantment (Level 100)
-8. **"Unzerstörbar"** — Lege ein Level-100-Enchantment auf ein Netherite-Item
-
----
-
-## Balancing-Überlegungen
-
-- **Pressure Chamber ≠ Anfänger-Content**: Die benötigten Materialien garantieren, dass dies Late-Game bleibt
-- **Druck ist das Gate**: Höherer Druck erfordert bessere Kompressoren (Pneumaticraft-Progression)
-- **Materialien sind mod-übergreifend**: Spieler MÜSSEN AE2, Mekanism UND Apotheosis vorantreiben
-- **Anzahl der Input-Bücher**: Mehrere Bücher als Input verhindert "1 Buch = 1 God-Book"
-- **Kein Mending T5**: Mending Level 100 wäre absolut overpowered — bleibt auf T3 limitiert
+1. **"First Compression"** — build a Compressor
+2. **"The Chamber"** — build a complete Pressure Chamber
+3. **"Under Pressure"** — reach 4 bar
+4. **"Enhanced Enchanting"** — first Tier-3 enchantment (level 25)
+5. **"High-Pressure Zone"** — reach 6 bar (high-pressure upgrade)
+6. **"Elite Levels"** — first Tier-4 enchantment (level 50)
+7. **"God Mode"** — first Tier-5 enchantment (level 100)
+8. **"Indestructible"** — put a level-100 enchantment on a Netherite item
 
 ---
 
-## Offene Implementierungsfragen
+## Balancing Considerations
 
-- [ ] Apotheosis-Config: Exakter Config-Key für Level-Cap-Removal prüfen
-- [ ] NBT-Syntax für StoredEnchantments in NeoForge 1.21.1 verifizieren (ggf. `"id"` → `"id"` als ResourceLocation)
-- [ ] Pneumaticraft KubeJS-Integration testen (Plugin vorhanden?)
-- [ ] Pressure-Werte balancieren (7.5 bar = High-Pressure-Tier in Pneumaticraft?)
-- [ ] Apotheosis Gem-Namen/IDs verifizieren
+- **Pressure Chamber ≠ beginner content**: the required materials guarantee this stays late-game
+- **Pressure is the gate**: higher pressure requires better compressors (PneumaticCraft progression)
+- **Materials are cross-mod**: players MUST advance AE2, Mekanism AND Apotheosis
+- **Number of input books**: several books as input prevents "1 book = 1 god book"
+- **No Mending T5**: Mending level 100 would be absolutely overpowered — stays limited to T3
+
+---
+
+## Open Implementation Questions
+
+- [ ] Apotheosis config: check the exact config key for level-cap removal
+- [ ] Verify the NBT syntax for StoredEnchantments in NeoForge 1.21.1 (possibly `"id"` as a ResourceLocation)
+- [ ] Test PneumaticCraft KubeJS integration (plugin available?)
+- [ ] Balance the pressure values (7.5 bar = high-pressure tier in PneumaticCraft?)
+- [ ] Verify Apotheosis gem names/IDs

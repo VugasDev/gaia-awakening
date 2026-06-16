@@ -1,88 +1,88 @@
-# Vollständiges Enchantment-System
+# Complete Enchantment System
 
-> Drei Mods, drei Rollen — kein Mod macht alles allein.
+> Three mods, three roles — no mod does everything alone.
 
 ```
-Create: Enchantment Industry  →  Automation, Kopieren, Kombinieren, Liquid XP
-Enchantment Library Standalone →  Speichern & Abrufen von Fortschritt
-Pneumaticraft Pressure Chamber →  Große Sprünge auf extreme Levels
+Create: Enchantment Industry  →  Automation, copying, combining, Liquid XP
+Enchantment Library Standalone →  Store & retrieve progress
+PneumaticCraft Pressure Chamber →  Large jumps to extreme levels
 ```
 
 ---
 
-## Übersicht: Tier-System
+## Overview: Tier System
 
 ```
 Level 1–5     Vanilla / Apotheosis Enchanting Table
-Level 6–10    Apotheosis (Cap entfernt) + Create EI Blaze Forger Automation
-Level 11–25   Pneumaticraft Pressure Chamber Tier 1  (2.5 bar)
-Level 26–50   Create EI Pipeline: Library → Printer → Blaze Forger → Library
-Level 51–100  Pneumaticraft Pressure Chamber Tier 2  (6.0 bar)
+Level 6–10    Apotheosis (cap removed) + Create EI Blaze Forger automation
+Level 11–25   PneumaticCraft Pressure Chamber Tier 1  (2.5 bar)
+Level 26–50   Create EI pipeline: Library → Printer → Blaze Forger → Library
+Level 51–100  PneumaticCraft Pressure Chamber Tier 2  (6.0 bar)
 ```
 
 ---
 
-## Die drei Bausteine
+## The Three Building Blocks
 
-### Baustein 1 — Create: Enchantment Industry
+### Building Block 1 — Create: Enchantment Industry
 
 **Status**: ✓ NeoForge 1.21.1 (v2.2.4)
 
-**Relevante Maschinen:**
+**Relevant machines:**
 
-| Maschine | Funktion |
+| Machine | Function |
 |----------|---------|
-| **Experience Hatch** | Spieler-XP → Liquid Experience (Fluid) |
-| **Blaze Forger** | Automatisierter Amboss — kombiniert Bücher + Liquid XP |
-| **Blaze Enchanter** | Hebt Enchantment-Level um +1 mit Liquid Hyper XP |
-| **Printer** | Kopiert ein Enchantment-Buch (Buch + Liquid XP → 2 Bücher) |
-| **Disenchanter** | Zieht Enchantments aus Items heraus → Liquid XP |
-| **Mechanical Grindstone** | Automatisierter Schleifstein (Enchants entfernen) |
+| **Experience Hatch** | Player XP → Liquid Experience (fluid) |
+| **Blaze Forger** | Automated anvil — combines books + Liquid XP |
+| **Blaze Enchanter** | Raises an enchantment level by +1 with Liquid Hyper XP |
+| **Printer** | Copies an enchanted book (book + Liquid XP → 2 books) |
+| **Disenchanter** | Pulls enchantments out of items → Liquid XP |
+| **Mechanical Grindstone** | Automated grindstone (remove enchants) |
 
 **Liquid Hyper Experience:**
-- Herstellung: 100 mB Liquid XP + Mechanical Mixer → 10 mB Hyper XP
-- Verhältnis: 10:1 — teuer, aber notwendig für Level > Vanilla-Cap
-- Blaze Enchanter: 1 Buch + Hyper XP → Buch mit Level +1
+- Production: 100 mB Liquid XP + Mechanical Mixer → 10 mB Hyper XP
+- Ratio: 10:1 — expensive, but necessary for levels > vanilla cap
+- Blaze Enchanter: 1 book + Hyper XP → book with level +1
 
 ---
 
-### Baustein 2 — Enchantment Library Standalone
+### Building Block 2 — Enchantment Library Standalone
 
 **Status**: ✓ NeoForge 1.21.1
 
-**Funktion:**
-- Bücher einlegen → werden in "Enchantment Points" umgewandelt
-- Points abrufen → beliebiges Buch auf beliebigem gespeicherten Level extrahieren
-- XP-Kosten beim Extrahieren (skaliert quadratisch mit Level)
-- Direktes Disenchanting von Items möglich
+**Function:**
+- Insert books → converted into "Enchantment Points"
+- Retrieve points → extract any book at any stored level
+- XP cost on extraction (scales quadratically with level)
+- Direct disenchanting of items possible
 
-**Steuerung:**
-| Aktion | Tastenkombination |
+**Controls:**
+| Action | Key combination |
 |--------|------------------|
-| 1 Level extrahieren | Linksklick |
-| Max Level extrahieren | Shift + Linksklick |
-| 1 Level zurückgeben | Ctrl + Linksklick |
+| Extract 1 level | Left-click |
+| Extract max level | Shift + Left-click |
+| Return 1 level | Ctrl + Left-click |
 
-**Rolle im System**: Das "Speicherkonto" für Enchantment-Fortschritt.
-
----
-
-### Baustein 3 — Pneumaticraft Pressure Chamber
-
-Aus `planning/quests/pneumaticraft-enchantment-path.md` — große Sprünge:
-- **2.5 bar**: Level 10 → Level 25 (T1-Sprung)
-- **6.0 bar**: Level 50 → Level 100 (T2-Sprung)
+**Role in the system**: the "savings account" for enchantment progress.
 
 ---
 
-## Der vollständige Workflow
+### Building Block 3 — PneumaticCraft Pressure Chamber
 
-### Phase 1: Fundament (Level 1–10)
+From `planning/quests/pneumaticraft-enchantment-path.md` — large jumps:
+- **2.5 bar**: Level 10 → Level 25 (T1 jump)
+- **6.0 bar**: Level 50 → Level 100 (T2 jump)
+
+---
+
+## The Complete Workflow
+
+### Phase 1: Foundation (Level 1–10)
 
 ```
-Apotheosis Enchanting Table (mit mehr Bookshelves)
+Apotheosis Enchanting Table (with more bookshelves)
         ↓
-Buch Sharpness V (max Vanilla)
+Sharpness V book (max vanilla)
         ↓
 Create EI: Blaze Forger + Liquid XP
   2× Sharpness V → Sharpness VI
@@ -90,159 +90,159 @@ Create EI: Blaze Forger + Liquid XP
   ...
   → Sharpness X
         ↓
-Enchantment Library: Sharpness X gespeichert ✓
+Enchantment Library: Sharpness X stored ✓
 ```
 
-*Automation hier einfach: Blaze Forger auf Fließband mit 2er-Bündeln, XP-Tank daneben.*
+*Automation here is simple: Blaze Forger on a conveyor with pairs, XP tank next to it.*
 
 ---
 
-### Phase 2: Der große Sprung (Level 10 → 25)
+### Phase 2: The Big Jump (Level 10 → 25)
 
 ```
-Enchantment Library: Sharpness X abrufen
+Enchantment Library: retrieve Sharpness X
         ↓
-Pneumaticraft Pressure Chamber (2.5 bar)
+PneumaticCraft Pressure Chamber (2.5 bar)
   + Mekanism Refined Obsidian (4×)
   + Apotheosis Normal Gem (2×)
         ↓
-Sharpness XXV (1 Buch)
+Sharpness XXV (1 book)
         ↓
-Enchantment Library: Sharpness XXV gespeichert ✓
+Enchantment Library: Sharpness XXV stored ✓
 ```
 
 ---
 
-### Phase 3: Granulare Steigerung (Level 25–50)
+### Phase 3: Granular Increase (Level 25–50)
 
 ```
-Enchantment Library: Sharpness XXV abrufen
+Enchantment Library: retrieve Sharpness XXV
         ↓
 Create EI: Printer + Liquid XP
-  1× Sharpness XXV → 2× Sharpness XXV (Kopie)
+  1× Sharpness XXV → 2× Sharpness XXV (copy)
         ↓
 Create EI: Blaze Enchanter + Liquid Hyper XP
   2× Sharpness XXV → Sharpness XXVI
-  (Apotheosis Level-Cap entfernt → funktioniert über Vanilla-Max)
+  (Apotheosis level cap removed → works above vanilla max)
         ↓
-Enchantment Library: Sharpness XXVI speichern ✓
+Enchantment Library: store Sharpness XXVI ✓
         ↓
-Wiederholen bis Sharpness L (Level 50)
+Repeat until Sharpness L (Level 50)
 ```
 
-**XP-Bedarf pro Schritt wächst** → benötigt automatisierte XP-Farm:
-- Industrial Foregoing: Mob Factory → XP-Drops
-- Create EI Experience Hatch: Spieler-XP → Liquid XP
-- Create EI Disenchanter: Alte Items → Liquid XP recyclen
+**XP demand per step grows** → requires an automated XP farm:
+- Industrial Foregoing: Mob Factory → XP drops
+- Create EI Experience Hatch: player XP → Liquid XP
+- Create EI Disenchanter: recycle old items → Liquid XP
 
 ---
 
-### Phase 4: Endgame-Sprung (Level 50 → 100)
+### Phase 4: Endgame Jump (Level 50 → 100)
 
 ```
-Enchantment Library: Sharpness L abrufen
+Enchantment Library: retrieve Sharpness L
         ↓
-Pneumaticraft Pressure Chamber (6.0 bar)
+PneumaticCraft Pressure Chamber (6.0 bar)
   + AE2 Charged Certus Quartz (16×)
   + Apotheosis Mythic Gem (1×)
   + Mekanism Refined Glowstone Ingot (8×)
   + Create: Precision Mechanism (4×)
         ↓
-Sharpness C (Level 100) — 1 Buch
+Sharpness C (Level 100) — 1 book
         ↓
-Create EI: Printer → kopieren
+Create EI: Printer → copy
         ↓
-Auf Netherite-Item anvilen (Blaze Forger)
+Anvil onto a Netherite item (Blaze Forger)
 ```
 
 ---
 
-## Automatisierungs-Pipeline (AE2 + Create EI)
+## Automation Pipeline (AE2 + Create EI)
 
 ```
 [Mob Farm (IF)]
-      ↓ XP-Drops
+      ↓ XP drops
 [Experience Hatch]
       ↓ Liquid XP
 [Mechanical Mixer + Basin]
       ↓ Liquid Hyper XP (10:1)
 [Fluid Tank (Create)]
       ↓
-      ├──→ [Blaze Forger]    ← 2× Bücher vom AE2-Netz
-      │         ↓ kombiniertes Buch
-      └──→ [Blaze Enchanter] ← 1 Buch + Hyper XP
-                ↓ Level+1 Buch
-           [Enchantment Library] ← AE2 Pattern Provider steuert
-                ↓ auf Anfrage
-           [Printer]  ← erzeugt 2 Kopien
+      ├──→ [Blaze Forger]    ← 2× books from the AE2 network
+      │         ↓ combined book
+      └──→ [Blaze Enchanter] ← 1 book + Hyper XP
+                ↓ level+1 book
+           [Enchantment Library] ← AE2 Pattern Provider controls
+                ↓ on request
+           [Printer]  ← produces 2 copies
                 ↓
-           zurück zum Blaze Forger (Loop)
+           back to the Blaze Forger (loop)
 ```
 
-Mit AE2 Auto-Crafting kann man den Loop vollständig automatisieren:
+With AE2 auto-crafting the loop can be fully automated:
 - Pattern: `Sharpness(n) × 2 + Hyper XP → Sharpness(n+1)`
-- Loop läuft durch bis Ziellevel erreicht
+- Loop runs until the target level is reached
 
 ---
 
-## XP-Generierung — Stack-Synergien
+## XP Generation — Stack Synergies
 
-| Quelle | XP/min (ca.) | Gate |
+| Source | XP/min (approx.) | Gate |
 |--------|-------------|------|
-| Manuelle Mob-Kämpfe | Niedrig | Sofort |
-| Iron's Spells Kämpfe | Mittel | Stufe 2 |
-| Industrial Foregoing Mob Factory | Hoch | Stufe 3 |
-| Mystical Agriculture XP Crops (via Agradditions) | Mittel-hoch | Stufe 3 |
-| Apotheosis Dungeon-Bosse | Sehr hoch (Burst) | Stufe 4 |
-| Disenchanter: Alte Items → Recycling | Variable | Ab Stufe 2 |
+| Manual mob fights | Low | Immediately |
+| Iron's Spells fights | Medium | Tier 2 |
+| Industrial Foregoing Mob Factory | High | Tier 3 |
+| Mystical Agriculture XP crops (via Agradditions) | Medium-high | Tier 3 |
+| Apotheosis dungeon bosses | Very high (burst) | Tier 4 |
+| Disenchanter: old items → recycling | Variable | From Tier 2 |
 
 ---
 
 ## KubeJS — Level-Cap Removal (Apotheosis Config)
 
-Damit Blaze Forger / Blaze Enchanter über Level 5-10 hinaus funktioniert:
+So the Blaze Forger / Blaze Enchanter works beyond level 5-10:
 
 ```javascript
 // src/kubejs/startup_scripts/apotheosis_config.js
-// Apotheosis Level-Caps per Enchantment deaktivieren
-// (alternativ via apotheosis/enchanting.json Config-Datei)
+// Disable Apotheosis level caps per enchantment
+// (alternatively via the apotheosis/enchanting.json config file)
 
-// Die meisten Apotheosis-Caps werden via Config gesteuert:
+// Most Apotheosis caps are controlled via config:
 // apotheosis-common.toml → evilcraft.enchantment_max_level = false
-// Oder via KubeJS Enchantment-Registry-Event (1.21.1 API prüfen)
+// Or via the KubeJS enchantment registry event (check 1.21.1 API)
 ```
 
 ---
 
-## Quest-Chapter: "Meister der Verzauberung"
+## Quest Chapter: "Master of Enchantment"
 
-1. **"Flüssige Erfahrung"** — Baue einen Experience Hatch
-2. **"Der automatische Amboss"** — Blaze Forger in Betrieb nehmen
-3. **"Bibliothek der Macht"** — Enchantment Library aufbauen
-4. **"Sharpness X"** — Erste manuell kombinierte Enchantment Level 10
-5. **"Der Sprung"** — Pressure Chamber: Level 25 in einem Schritt
-6. **"Druckerei"** — Printer: Erstes Buch kopieren
-7. **"Der Loop"** — Automatisierte Combining-Pipeline Level 25→50
-8. **"Gottgleich"** — Erste Level 100 Enchantment
-9. **"Das perfekte Schwert"** — Netherite-Schwert mit Sharpness 100 + weitere OP-Enchants
+1. **"Liquid Experience"** — build an Experience Hatch
+2. **"The Automatic Anvil"** — get the Blaze Forger running
+3. **"Library of Power"** — set up the Enchantment Library
+4. **"Sharpness X"** — first manually combined enchantment level 10
+5. **"The Jump"** — Pressure Chamber: level 25 in one step
+6. **"Printing House"** — Printer: copy your first book
+7. **"The Loop"** — automated combining pipeline level 25→50
+8. **"Godlike"** — first level 100 enchantment
+9. **"The Perfect Sword"** — Netherite sword with Sharpness 100 + further OP enchants
 
 ---
 
-## Mod-Checkliste
+## Mod Checklist
 
-| Mod | Rolle | Status |
+| Mod | Role | Status |
 |-----|-------|--------|
 | Create: Enchantment Industry | Automation, Liquid XP, Printer, Blaze Forger/Enchanter | ✓ 1.21.1 |
-| Enchantment Library Standalone | Speichern & Abrufen von Enchantment-Fortschritt | ✓ 1.21.1 |
-| Apotheosis | Level-Cap-Removal, Basis-Enchanting T1-T2 | ✓ 1.21.1 |
-| Pneumaticraft: Repressurized | Große Sprünge (Level 10→25, 50→100) | ✓ 1.21.1 |
-| Industrial Foregoing | XP-Farm via Mob Factory | ✓ 1.21.1 |
+| Enchantment Library Standalone | Store & retrieve enchantment progress | ✓ 1.21.1 |
+| Apotheosis | Level-cap removal, base enchanting T1-T2 | ✓ 1.21.1 |
+| PneumaticCraft: Repressurized | Large jumps (level 10→25, 50→100) | ✓ 1.21.1 |
+| Industrial Foregoing | XP farm via Mob Factory | ✓ 1.21.1 |
 
 ---
 
-## Offene Fragen
+## Open Questions
 
-- [ ] Apotheosis Level-Cap-Config: Exakter Key für "remove all caps" verifizieren
-- [ ] Blaze Forger akzeptiert Bücher über Level 5 ohne Config-Änderung?
-- [ ] Enchantment Library: Kann sie mit AE2 ME-Interface interagieren (automatisiert befüllen/entleeren)?
-- [ ] Liquid Hyper XP: Kann in Create Fluid Tanks gespeichert werden?
+- [ ] Apotheosis level-cap config: verify the exact key for "remove all caps"
+- [ ] Does the Blaze Forger accept books above level 5 without a config change?
+- [ ] Enchantment Library: can it interact with the AE2 ME interface (automatically fill/empty)?
+- [ ] Liquid Hyper XP: can it be stored in Create fluid tanks?

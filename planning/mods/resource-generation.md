@@ -1,187 +1,187 @@
-# Ressourcen-Generierung — Übersicht
+# Resource Generation — Overview
 
-> **Design-Ziel**: Mehrere parallele Wege zur Ressourcengewinnung, die sich sinnvoll ergänzen.
-> Keine Methode ist per se "die beste" — Kontext entscheidet (Frühspiel vs. Late Game).
+> **Design goal**: several parallel paths to resource generation that complement each other meaningfully.
+> No method is inherently "the best" — context decides (early game vs. late game).
 
 ---
 
-## Ressourcen-Generierungs-Pyramide
+## Resource Generation Pyramid
 
 ```
                         [Endgame]
                     Mekanism Digital Miner
-                   (targeted, automatisiert)
-                 Pneumaticraft Mining Drones
-                   (programmierbar, präzise)
+                   (targeted, automated)
+                 PneumaticCraft Mining Drones
+                   (programmable, precise)
               ──────────────────────────────────
                        [Late Game]
                Mystical Agriculture Tier 5-6
-               (unendlich, aber langsam & teuer)
+               (infinite, but slow & expensive)
                   Create Mining Contraptions
-                   (große Gebiete, effizient)
+                   (large areas, efficient)
               ──────────────────────────────────
                        [Mid Game]
                Mystical Agriculture Tier 2-4
-                 (zuverlässig, planbar)
+                 (reliable, plannable)
                   Serene Seasons Farming
-                  (Jahreszeiten-Synergien)
+                  (seasonal synergies)
               ──────────────────────────────────
                        [Early Game]
                Vanilla Mining + Apotheosis Fortune
                      Create: Deep Dark
-                    (Verstärkte Drops)
+                    (boosted drops)
 ```
 
 ---
 
-## Methode 1: Mystical Agriculture (Haupt-Generierungsweg)
+## Method 1: Mystical Agriculture (main generation path)
 
 **Status**: ✓ NeoForge 1.21.1 | ✓ Modrinth
-**Add-On**: Mystical Agradditions ✓ (Tier 6 Insanium-Crops)
+**Add-on**: Mystical Agradditions ✓ (Tier 6 Insanium crops)
 
 ### Design
 
-Mystical Agriculture erlaubt das Anbauen von Ressourcen als Pflanzen.
-Es gibt 6 Tiers, die von gängig bis extrem-selten reichen:
+Mystical Agriculture allows growing resources as plants.
+There are 6 tiers, ranging from common to extremely rare:
 
-| Tier | Beispiel-Ressourcen | Gate |
+| Tier | Example resources | Gate |
 |------|-------------------|------|
-| T1 | Erde, Holz, Stein | Frühspiel |
-| T2 | Kohle, Eisen, Kupfer | Create T1 |
-| T3 | Gold, Quartz, Lapislazuli | Create T2 |
-| T4 | Diamant, Osmium, Enderperle | Mekanism T1 |
-| T5 | Netherit, Certus Quartz, Uran | Mekanism T3 |
-| T6 (Insanium) | Netherit Scrap (schnell), Spezialitäten | Endgame |
+| T1 | Dirt, wood, stone | Early game |
+| T2 | Coal, iron, copper | Create T1 |
+| T3 | Gold, quartz, lapis lazuli | Create T2 |
+| T4 | Diamond, osmium, ender pearl | Mekanism T1 |
+| T5 | Netherite, certus quartz, uranium | Mekanism T3 |
+| T6 (Insanium) | Netherite scrap (fast), specialties | Endgame |
 
-### Synergien im Stack
+### Synergies in the Stack
 
 ```
-Serene Seasons  →  beeinflusst Wachstumsrate (Sommer = schneller)
-Farmer's Delight →  Ernte-Mechaniken teilen sich Farmland-Logik
-Mekanism         →  Crop Matron (automatische Dünger-Bewässerung)
-Create           →  Mechanischer Arm harvested automatisch
-AE2              →  ME-Netz lagert Crops automatisch ein
+Serene Seasons   →  affects growth rate (summer = faster)
+Farmer's Delight →  harvest mechanics share farmland logic
+Mekanism         →  Crop Matron (automatic fertilizer/irrigation)
+Create           →  Mechanical Arm harvests automatically
+AE2              →  ME network stores crops automatically
 ```
 
-### Crops für den Modpack-Stack
+### Crops for the Modpack Stack
 
-Wir brauchen Mystic Agradditions-Integration für:
+We need Mystical Agradditions integration for:
 - **Osmium Crop** (Mekanism)
 - **Certus Quartz Crop** (AE2)
 - **Compressed Iron Crop** (PneumaticCraft)
-- **Refined Obsidian Crop** (Mekanism, Endgame)
-- **Fluix Crystal Crop** (AE2, Endgame)
+- **Refined Obsidian Crop** (Mekanism, endgame)
+- **Fluix Crystal Crop** (AE2, endgame)
 
 ---
 
-## Methode 2: Create Mining Contraptions
+## Method 2: Create Mining Contraptions
 
-**Integriert in Create (kein extra Mod nötig)**
+**Built into Create (no extra mod needed)**
 
 ### Mining Drill Contraption
 
-Create ermöglicht mechanische Mining-Contraptions mit Bohrköpfen:
-- Fahrbarer Bohrer auf Schienen (Steam 'n' Rails)
-- Automatische Mine im Strip-Mining-Stil
-- Ressourcen direkt ins Create-Fließband
+Create enables mechanical mining contraptions with drill heads:
+- Mobile drill on rails (Steam 'n' Rails)
+- Automatic mine in strip-mining style
+- Resources go straight onto the Create conveyor
 
 **Progression:**
-1. Erster Bohrer (Frühspiel): Kleiner manueller Bohrer
-2. Schienen-Bohrer (Midgame): Steam 'n' Rails-Zug mit Bohrer-Front
-3. Großer Aeronautics-Bohrer (Late): Fliegende Mining-Platform (Aeronautics!)
+1. First drill (early game): small manual drill
+2. Rail drill (midgame): Steam 'n' Rails train with a drill front
+3. Large Aeronautics drill (late): flying mining platform (Aeronautics!)
 
 ---
 
-## Methode 3: Mekanism Digital Miner
+## Method 3: Mekanism Digital Miner
 
-**Teil von Mekanism (kein extra Mod)**
+**Part of Mekanism (no extra mod)**
 
-- Spezifisches Erz-Targeting (nur Diamanten, nur Osmium etc.)
-- Radius einstellbar (max 32 Blöcke)
-- Benötigt massive FE-Energie
-- Ideal für gezielte Late-Game-Ressourcen
+- Specific ore targeting (only diamonds, only osmium etc.)
+- Adjustable radius (max 32 blocks)
+- Requires massive FE energy
+- Ideal for targeted late-game resources
 
-**Gate**: Mekanism T3 + große Energiequelle
-
----
-
-## Methode 4: Pneumaticraft Drones
-
-**Teil von Pneumaticraft: Repressurized**
-
-- Programmierbare Drohnen mit Mining-Behavior
-- Präzises Item-Filtering (holt nur bestimmte Erze)
-- Drohnen brauchen Druckluft (Pneumaticraft-Infrastruktur)
-- Können in Kombination mit AE2 direkt ins ME-Netz einlagern
-
-**Gate**: Pneumaticraft T2 + Drone-Programmiereinheit
+**Gate**: Mekanism T3 + a large energy source
 
 ---
 
-## Methode 5: Serene Seasons — Saisonale Ressourcen
+## Method 4: PneumaticCraft Drones
+
+**Part of PneumaticCraft: Repressurized**
+
+- Programmable drones with mining behavior
+- Precise item filtering (only fetches certain ores)
+- Drones need compressed air (PneumaticCraft infrastructure)
+- Can store directly into the ME network in combination with AE2
+
+**Gate**: PneumaticCraft T2 + drone programming unit
+
+---
+
+## Method 5: Serene Seasons — Seasonal Resources
 
 **Status**: ✓ NeoForge 1.21.1 | ✓ Modrinth
 
-Serene Seasons beeinflusst:
-- Pflanzenwachstum (Mystical Agriculture: Sommer = +20% Wachstumsrate)
-- Biom-spezifische Events (manche Ressourcen seasonal)
-- Farmer's Delight: Saisonale Zutaten
+Serene Seasons affects:
+- Plant growth (Mystical Agriculture: summer = +20% growth rate)
+- Biome-specific events (some resources seasonal)
+- Farmer's Delight: seasonal ingredients
 
-**Balancing-Möglichkeit**: Seltene Ressourcen nur in bestimmten Jahreszeiten droppen
-(via Loot-Table-Customization + KubeJS)
+**Balancing option**: drop rare resources only in certain seasons
+(via loot-table customization + KubeJS)
 
 ---
 
-## Ressourcen-Generierungs-Matrix
+## Resource Generation Matrix
 
-| Ressource | Mystical Agri | Create Mining | Digital Miner | PNC Drones |
+| Resource | Mystical Agri | Create Mining | Digital Miner | PNC Drones |
 |-----------|:---:|:---:|:---:|:---:|
-| Eisen | T2 ✓ | ✓ | ✓ | ✓ |
+| Iron | T2 ✓ | ✓ | ✓ | ✓ |
 | Gold | T3 ✓ | ✓ | ✓ | ✓ |
-| Diamant | T4 ✓ | ✓ | ✓ | ✓ |
+| Diamond | T4 ✓ | ✓ | ✓ | ✓ |
 | Osmium | T4 ✓ | ✓ | ✓ | ✓ |
-| Certus Quartz | T5 ✓ | — (Meteors) | ✓ | ✓ |
-| Netherit | T5 ✓ | Nether only | ✓ | ✓ |
-| Uran | T5 ✓ | ✓ | ✓ | ✓ |
+| Certus Quartz | T5 ✓ | — (meteors) | ✓ | ✓ |
+| Netherite | T5 ✓ | Nether only | ✓ | ✓ |
+| Uranium | T5 ✓ | ✓ | ✓ | ✓ |
 | Ancient Debris | — | Nether | Nether | Nether |
 
 ---
 
-## Energie-Generierungs-Übersicht
+## Energy Generation Overview
 
-> Ressourcen-Generierung braucht Energie — hier der Stack:
+> Resource generation needs energy — here's the stack:
 
-| Mod | Quelle | Tier | FE/t |
+| Mod | Source | Tier | FE/t |
 |-----|--------|------|------|
-| Create: C&A | Rotierende Maschinen | T2 | mittel |
-| Create: Diesel | Öl-Verbrennung | T2-3 | mittel-hoch |
-| Powah: Rebooted | Solar, Thermo, Reactor | T2-4 | mittel-sehr hoch |
-| Mekanism: Gen | Solar, Wind, Gas-Burning | T3-4 | hoch |
-| Mekanism: Gen | Bio-Fuel Generator | T2 | niedrig |
-| Mekanism: Gen | Fusion Reactor | T5 | extrem |
+| Create: C&A | Rotating machines | T2 | medium |
+| Create: Diesel | Oil combustion | T2-3 | medium-high |
+| Powah: Rebooted | Solar, thermo, reactor | T2-4 | medium-very high |
+| Mekanism: Gen | Solar, wind, gas-burning | T3-4 | high |
+| Mekanism: Gen | Bio-fuel generator | T2 | low |
+| Mekanism: Gen | Fusion Reactor | T5 | extreme |
 
-**Powah: Rebooted** füllt eine schöne Lücke:
-- Früheres Mid-Game als Mekanism Generators
-- Energizing Recipes (crafting mit Energie) als interessante Mechank
-- Kein riesiger Infrastruktur-Aufwand
-- **Empfehlung**: Ins Modpack aufnehmen als Energie-Brücke T2→T3
+**Powah: Rebooted** fills a nice gap:
+- Earlier mid-game than Mekanism generators
+- Energizing recipes (crafting with energy) as an interesting mechanic
+- No huge infrastructure effort
+- **Recommendation**: add to the modpack as an energy bridge T2→T3
 
 ---
 
-## Neue Mods für Ressourcen-System
+## New Mods for the Resource System
 
-| Mod | Zweck | Status | Priorität |
+| Mod | Purpose | Status | Priority |
 |-----|-------|--------|-----------|
-| **Mystical Agriculture** | Crop-basierte Ressourcen | ✓ 1.21.1 | Pflicht |
-| **Mystical Agradditions** | Tier 6 + Modded Crops | ✓ 1.21.1 | Pflicht |
-| **Serene Seasons** | Jahreszeiten + Farming-Synergien | ✓ 1.21.1 | Empfohlen |
-| **Powah: Rebooted** | Energie-Brücke Mid-Game | ✓ 1.21.1 | Empfohlen |
+| **Mystical Agriculture** | Crop-based resources | ✓ 1.21.1 | Mandatory |
+| **Mystical Agradditions** | Tier 6 + modded crops | ✓ 1.21.1 | Mandatory |
+| **Serene Seasons** | Seasons + farming synergies | ✓ 1.21.1 | Recommended |
+| **Powah: Rebooted** | Energy bridge mid-game | ✓ 1.21.1 | Recommended |
 
 ---
 
-## Offene Fragen
+## Open Questions
 
-- [ ] Compressed Creativity (Create↔PNC) NICHT für 1.21.1 — nach Release beobachten
-- [ ] Mystic Agradditions: Welche Mod-Crops werden unterstützt? Osmium, Certus, Compressed Iron?
-- [ ] Serene Seasons: Genauer Einfluss auf Mystical Agriculture Wachstum prüfen
-- [ ] Powah Reactor als Zwischen-Endgame (vor Mekanism Fusion Reactor) definieren?
+- [ ] Compressed Creativity (Create↔PNC) NOT for 1.21.1 — watch after release
+- [ ] Mystical Agradditions: which mod crops are supported? Osmium, Certus, Compressed Iron?
+- [ ] Serene Seasons: check the exact influence on Mystical Agriculture growth
+- [ ] Define the Powah Reactor as an intermediate endgame (before the Mekanism Fusion Reactor)?

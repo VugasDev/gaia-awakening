@@ -1,16 +1,16 @@
 # Quest: t1_create_03 (Crushing Wheels)
 
-## Beschreibung
-Das Herzstück deiner frühen APEX-Ore-Chain. Hier beginnt das x2 Ore-Processing.
+## Description
+The heart of your early APEX ore chain. This is where x2 ore processing begins.
 
-## Technische Daten
-- **Quest-ID:** `t1_create_03`
+## Technical Data
+- **Quest ID:** `t1_create_03`
 - **Dependencies:** `t1_create_02`
-- **Typ:** Item Submission
+- **Type:** Item Submission
 
-## Aufgaben
-1. [ ] Sammle 2x Crushing Wheel (Zerkleinerungsrad)
+## Tasks
+1. [ ] Collect 2x Crushing Wheel
 
-## Belohnung
-- 1x Test-Eisenerz (als Basis für ersten Processing-Test)
+## Reward
+- 1x Test Iron Ore (as a basis for the first processing test)
 - 200 XP

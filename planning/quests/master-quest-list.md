@@ -1,72 +1,72 @@
-# Quest Roadmap: Modpack-Progression
+# Quest Roadmap: Modpack Progression
 
-Dieses Dokument dient als Masterplan für die FTB Quests Konfiguration.
-
----
-
-## Tier 1: Der Einstieg (Frühes Spiel)
-**Ziel:** Verständnis der Create-Grundlagen und Aufbau einer überlebensfähigen Basis.
-
-| Quest-Gruppe | Quest-Name | Ziel/Zusammenfassung | Status |
-| :--- | :--- | :--- | :--- |
-| **Grundlagen** | Erste Schritte | Handwerk von Holz- und Steinwerkzeugen. | Essential |
-| **Create** | Zahnräder & Energie | Bau einer Wasserrad-Anlage zur Energieerzeugung. | Essential |
-| **Create** | Mechanische Presse | Automatisierung von Eisenplatten. | Essential |
-| **Create** | Mühle (Crushing) | Erste Erz-Verarbeitung (T1). | Essential |
-| **Utility** | Waystones | Setzen des ersten Reisepunktes. | Essential |
-| **Optional** | Farming-Glück | Farmer's Delight: Bau eines Kochtopfs. | Optional |
-| **Optional** | Schatzsucher | Apotheosis: Erstes T1 Enchanting. | Optional |
+This document serves as the master plan for the FTB Quests configuration.
 
 ---
 
-## Tier 2: Mechanisierung (Mittel-Spiel I)
-**Ziel:** Aufbau komplexer Automatisierungs-Ketten und Einstieg in die Magie.
+## Tier 1: The Beginning (Early Game)
+**Goal:** Understand the Create basics and build a survivable base.
 
-| Quest-Gruppe | Quest-Name | Ziel/Zusammenfassung | Status |
+| Quest Group | Quest Name | Goal/Summary | Status |
 | :--- | :--- | :--- | :--- |
-| **Create** | Dampfkraft | Bau eines Dampfkessels zur massiven Energie-Skalierung. | Essential |
-| **Create** | Fließband-Netz | Vollständige Verbindung der Haupt-Maschinen. | Essential |
-| **Ars Nouveau** | Mana & Glyphen | Einstieg in die Zauberei; Bau eines Mana-Pools. | Essential |
-| **Storage** | Sophisticated Storage | Bau von Rucksäcken & Lagersystemen. | Essential |
-| **Optional** | Occultism | Dämonen-Beschwörung für ersten Extra-Speicher. | Optional |
-| **Optional** | Schienen-Netz | Steam 'n' Rails: Bau einer Transport-Lok. | Optional |
+| **Basics** | First Steps | Crafting wood and stone tools. | Essential |
+| **Create** | Gears & Energy | Build a water wheel setup for power generation. | Essential |
+| **Create** | Mechanical Press | Automate iron plates. | Essential |
+| **Create** | Crushing | First ore processing (T1). | Essential |
+| **Utility** | Waystones | Set your first travel point. | Essential |
+| **Optional** | Farming Luck | Farmer's Delight: build a cooking pot. | Optional |
+| **Optional** | Treasure Hunter | Apotheosis: first T1 enchanting. | Optional |
 
 ---
 
-## Tier 3: Digitalisierung (Mittel-Spiel II)
-**Ziel:** Umstellung von mechanisch auf digital und Vorbereitung der Erz-Verarbeitung.
+## Tier 2: Mechanization (Mid Game I)
+**Goal:** Build complex automation chains and get started with magic.
 
-| Quest-Gruppe | Quest-Name | Ziel/Zusammenfassung | Status |
+| Quest Group | Quest Name | Goal/Summary | Status |
 | :--- | :--- | :--- | :--- |
-| **AE2** | ME-Einstieg | Suche von Certus Quarz; Aufbau eines ME-Netzes. | Essential |
-| **AE2** | Crafting-System | Pattern Provider & CPU-Aufbau. | Essential |
-| **Mekanism** | Energie-Infrastruktur | Bau einer Basis-Energie-Anlage (Wind/Solar). | Essential |
-| **Mekanism** | Ore Processing | Bau einer Enrichment Chamber. | Essential |
-| **PNC** | Druckluft-Basis | Aufbau der ersten Druckluft-Kompressoren. | Essential |
-| **Optional** | Crop-Automatisierung | Mystical Agriculture: T2/T3 Seeds aufbauen. | Optional |
+| **Create** | Steam Power | Build a steam boiler for massive energy scaling. | Essential |
+| **Create** | Conveyor Network | Fully connect the main machines. | Essential |
+| **Ars Nouveau** | Mana & Glyphs | Get started with spellcasting; build a mana pool. | Essential |
+| **Storage** | Sophisticated Storage | Build backpacks & storage systems. | Essential |
+| **Optional** | Occultism | Demon summoning for first extra storage. | Optional |
+| **Optional** | Rail Network | Steam 'n' Rails: build a transport locomotive. | Optional |
 
 ---
 
-## Tier 4: Industrialisierung (Spätes Spiel)
-**Ziel:** Maximierung des Outputs und Boss-Kampf Vorbereitung.
+## Tier 3: Digitization (Mid Game II)
+**Goal:** Switch from mechanical to digital and prepare ore processing.
 
-| Quest-Gruppe | Quest-Name | Ziel/Zusammenfassung | Status |
+| Quest Group | Quest Name | Goal/Summary | Status |
 | :--- | :--- | :--- | :--- |
-| **Mekanism** | Purifier-Chain | Bau der Purification Chamber für x8-Output. | Essential |
-| **PNC** | Pressure Chamber | Aufstieg auf High-Pressure (3.5 bar). | Essential |
-| **Bosse** | Cataclysm-Vorbereitung | Ausrüstung auf das Maximum bringen (Apotheosis). | Essential |
-| **Bosse** | Boss-Raid 1 | Besiege den ersten Cataclysm-Boss (Ignis). | Essential |
-| **Optional** | Plastik-Industrie | Vollständige Raffinerie-Kette aufbauen. | Optional |
+| **AE2** | ME Entry | Find Certus Quartz; build an ME network. | Essential |
+| **AE2** | Crafting System | Pattern Provider & CPU setup. | Essential |
+| **Mekanism** | Energy Infrastructure | Build a basic power plant (wind/solar). | Essential |
+| **Mekanism** | Ore Processing | Build an Enrichment Chamber. | Essential |
+| **PNC** | Pneumatic Base | Set up the first pneumatic compressors. | Essential |
+| **Optional** | Crop Automation | Mystical Agriculture: build T2/T3 seeds. | Optional |
 
 ---
 
-## Tier 5: Gaia-Endgame
-**Ziel:** Bau der Megastruktur "Gaia-Kathedrale".
+## Tier 4: Industrialization (Late Game)
+**Goal:** Maximize output and prepare for boss fights.
 
-| Quest-Gruppe | Quest-Name | Ziel/Zusammenfassung | Status |
+| Quest Group | Quest Name | Goal/Summary | Status |
 | :--- | :--- | :--- | :--- |
-| **Kathedrale** | Fundament | Bau des `gaia_core` und Struktur-Validierung. | Essential |
-| **Kathedrale** | Reaktor-Sync | Integration des Mekanism Fusion Reaktors. | Essential |
-| **Endgame** | Boss-Trio | Besiege alle Cataclysm-Bosse mit Gaia-Buffs. | Essential |
-| **Vollendung** | Gaia-Erwachen | Finale Aktivierung der Kathedrale (Sieg-Quest). | Essential |
-| **Optional** | Absolute Macht | Erreichen von Level 100 Enchantments. | Optional |
+| **Mekanism** | Purifier Chain | Build the Purification Chamber for x8 output. | Essential |
+| **PNC** | Pressure Chamber | Advance to high pressure (3.5 bar). | Essential |
+| **Bosses** | Cataclysm Preparation | Bring gear to the maximum (Apotheosis). | Essential |
+| **Bosses** | Boss Raid 1 | Defeat the first Cataclysm boss (Ignis). | Essential |
+| **Optional** | Plastics Industry | Build a complete refinery chain. | Optional |
+
+---
+
+## Tier 5: Gaia Endgame
+**Goal:** Build the megastructure "Gaia Cathedral".
+
+| Quest Group | Quest Name | Goal/Summary | Status |
+| :--- | :--- | :--- | :--- |
+| **Cathedral** | Foundation | Build the `gaia_core` and validate the structure. | Essential |
+| **Cathedral** | Reactor Sync | Integrate the Mekanism Fusion Reactor. | Essential |
+| **Endgame** | Boss Trio | Defeat all Cataclysm bosses with Gaia buffs. | Essential |
+| **Completion** | Gaia Awakening | Final activation of the cathedral (victory quest). | Essential |
+| **Optional** | Absolute Power | Reach level 100 enchantments. | Optional |

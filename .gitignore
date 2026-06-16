@@ -1,8 +1,5 @@
-# Mod JARs (werden über Modrinth-Manifest verwaltet)
-src/mods/*.jar
-
-# KI-Outputs (Rohdaten, nicht reviewt)
-ai-workflows/outputs/
+# Mod JARs (managed via the Modrinth/packwiz manifest)
+mods/*.jar
 
 # Python
 __pycache__/
@@ -14,11 +11,11 @@ venv/
 .env
 *.key
 
-# OS
-.DS_Store
-Thumbs.db
-
 # Modpack build artifacts
 *.mrpack
 build/
 custom_mods/
+
+# OS
+.DS_Store
+Thumbs.db

@@ -1,17 +1,17 @@
-# Quest: t1_create_02 (Mechanische Presse)
+# Quest: t1_create_02 (Mechanical Press)
 
-## Beschreibung
-Rohmaterialien müssen verarbeitet werden. Die Presse ist das erste Werkzeug, um Platten aus Ingots herzustellen.
+## Description
+Raw materials need to be processed. The press is the first tool for making plates from ingots.
 
-## Technische Daten
-- **Quest-ID:** `t1_create_02`
+## Technical Data
+- **Quest ID:** `t1_create_02`
 - **Dependencies:** `t1_create_01`
-- **Typ:** Item Submission
+- **Type:** Item Submission
 
-## Aufgaben
-1. [ ] Sammle 1x Mechanische Presse (Mechanical Press)
-2. [ ] Sammle 1x Mechanisches Becken (Basin)
+## Tasks
+1. [ ] Collect 1x Mechanical Press
+2. [ ] Collect 1x Basin
 
-## Belohnung
-- 8x Andesit-Legierung
+## Reward
+- 8x Andesite Alloy
 - 150 XP

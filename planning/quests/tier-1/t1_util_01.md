@@ -1,17 +1,17 @@
 # Quest: t1_util_01 (Waystones)
 
-## Beschreibung
-Die Welt ist groß. Damit du nicht den Überblick verlierst, sind Waystones deine Ankerpunkte.
+## Description
+The world is large. So you don't lose track, Waystones are your anchor points.
 
-## Technische Daten
-- **Quest-ID:** `t1_util_01`
+## Technical Data
+- **Quest ID:** `t1_util_01`
 - **Dependencies:** `t1_basics_01`
-- **Typ:** Location/Item Submission
+- **Type:** Location/Item Submission
 
-## Aufgaben
-1. [ ] Finde einen Waystone in der Welt
-2. [ ] Sammle 1x Experience Bottle
+## Tasks
+1. [ ] Find a Waystone in the world
+2. [ ] Collect 1x Experience Bottle
 
-## Belohnung
-- 1x Waystone (Item für die Basis)
+## Reward
+- 1x Waystone (item for your base)
 - 100 XP

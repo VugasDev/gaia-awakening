@@ -1,8 +1,8 @@
 site_name: Gaia Awakening Wiki
 site_description: The complete guide to the Gaia Awakening modpack.
-site_url: https://VugasDev.github.io/minecraft-modpack/
-repo_url: https://github.com/VugasDev/minecraft-modpack
-repo_name: VugasDev/minecraft-modpack
+site_url: https://VugasDev.github.io/gaia-awakening/
+repo_url: https://github.com/VugasDev/gaia-awakening
+repo_name: VugasDev/gaia-awakening
 docs_dir: docs
 edit_uri: edit/main/wiki/docs/
 

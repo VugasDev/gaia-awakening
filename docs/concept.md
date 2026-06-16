@@ -1,57 +1,57 @@
-# Modpack Konzept
+# Modpack Concept
 
-> **Status**: Definiert — 2026-04-29
+> **Status**: Defined — 2026-04-29
 
-## Grundlegende Entscheidungen
+## Fundamental Decisions
 
-| Parameter | Entscheidung | Begründung |
+| Parameter | Decision | Rationale |
 |-----------|-------------|------------|
-| Minecraft Version | **1.21.1** | Create Aeronautics erfordert 1.21.1 |
-| Mod Loader | **NeoForge** | Create Aeronautics nur auf NeoForge |
-| Stil | **Kitchen Sink** | Viele Anforderungen (Create, AE2, Mekanism, Magie, QoL) |
-| Zielgruppe | **Casual Multiplayer** | Freunde ohne Erfahrung → gutes Questing wichtig |
-| Schwierigkeit | **Normal** | Kein Hardcore-Modus, kein Hunger-Stress |
-| Fokus | **Create-zentriert** | Alle anderen Mods ergänzen Create |
+| Minecraft version | **1.21.1** | Create Aeronautics requires 1.21.1 |
+| Mod loader | **NeoForge** | Create Aeronautics only on NeoForge |
+| Style | **Kitchen Sink** | Many requirements (Create, AE2, Mekanism, magic, QoL) |
+| Target audience | **Casual Multiplayer** | Friends without experience → good questing matters |
+| Difficulty | **Normal** | No hardcore mode, no hunger stress |
+| Focus | **Create-centric** | All other mods complement Create |
 
-## Thema & Vision
+## Theme & Vision
 
-Ein technisch-modernes Abenteuer-Modpack, das mechanische Ingenieurskunst (Create) mit fortgeschrittener Digitaltechnik (AE2, Mekanism) und einem Hauch Magie verbindet. Spieler beginnen als einfache Handwerker und bauen sich bis zu fliegenden Festungen (Create Aeronautics) und automatisierten Megabasen hoch.
+A technically modern adventure modpack that combines mechanical engineering (Create) with advanced digital tech (AE2, Mekanism) and a touch of magic. Players start as simple crafters and work their way up to flying fortresses (Create Aeronautics) and automated mega-bases.
 
-**Elevator Pitch**: *"Von der ersten Dampfmaschine bis zur fliegenden Festung"*
+**Elevator pitch**: *"From the first steam engine to the flying fortress"*
 
-## Kern-Gameplay-Loop
+## Core Gameplay Loop
 
-1. Ressourcen sammeln → erste Create-Maschinen bauen
-2. Automatisieren → Ressourcen für AE2/Mekanism freischalten
-3. Magie-Pfad parallel erkunden (Apotheosis, Botania/Ars Nouveau)
-4. Flugzeuge & Luftschiffe bauen (Create Aeronautics)
-5. Endgame: Vollautomatisierte Basis + epische Luftgefährte
+1. Gather resources → build the first Create machines
+2. Automate → unlock resources for AE2/Mekanism
+3. Explore the magic path in parallel (Apotheosis, Botania/Ars Nouveau)
+4. Build aircraft & airships (Create Aeronautics)
+5. Endgame: fully automated base + epic air vehicles
 
-## Progressions-Säulen
+## Progression Pillars
 
-1. **Create** — Hauptpfad, von Zahnrad bis Aeronautics
-2. **Digital-Technik** — AE2 (Storage/Automation) + Mekanism (Energie/Processing)
-3. **Magie & Enhancement** — Apotheosis (Enchanting) + Botania oder Ars Nouveau
-4. **Exploration** — Dungeons, verbesserte Strukturen, neue Biome
-5. **QoL-Progression** — Waystones, Backpacks, Xaero's Maps
+1. **Create** — main path, from gear to Aeronautics
+2. **Digital tech** — AE2 (storage/automation) + Mekanism (energy/processing)
+3. **Magic & enhancement** — Apotheosis (enchanting) + Botania or Ars Nouveau
+4. **Exploration** — dungeons, improved structures, new biomes
+5. **QoL progression** — Waystones, backpacks, Xaero's maps
 
-## Abgrenzung
+## Scope Boundaries
 
-- Kein Hauptfokus auf Survival-Hardcore (kein Terrafirmecraft-Stil)
-- Keine überladene Magie (1-2 Magie-Mods max)
-- Kein PvP-Fokus
-- Keine Mods, die nur auf CurseForge verfügbar sind (Modrinth-Kompatibilität nötig)
+- No main focus on survival-hardcore (no TerraFirmaCraft style)
+- No overloaded magic (1-2 magic mods max)
+- No PvP focus
+- No mods that are only available on CurseForge (Modrinth compatibility needed)
 
-## Technische Rahmenbedingungen
+## Technical Constraints
 
-- **Server**: Privat selbst gehostet (Freunde-Gruppe)
-- **Performance-Ziel**: Spielbar auf Mid-Range (GTX 1060+), flüssig auf RTX 4070
-- **Modrinth-Publishing**: Ja — alle Mods müssen Modrinth-Lizenz haben
-- **Shader-Support**: Iris + Distant Horizons / Voxy (Client-Only)
+- **Server**: privately self-hosted (group of friends)
+- **Performance target**: playable on mid-range (GTX 1060+), smooth on RTX 4070
+- **Modrinth publishing**: yes — all mods must have a Modrinth-compatible license
+- **Shader support**: Iris + Distant Horizons / Voxy (client-only)
 
-## Risiko-Monitor
+## Risk Monitor
 
-| Mod | Risiko | Status |
+| Mod | Risk | Status |
 |-----|--------|--------|
-| Create Aeronautics | Alpha für 1.21.1 — kann instabil sein | Beobachten |
-| Voxy vs. DH | Voxy neuer, weniger getestet | DH als Fallback |
+| Create Aeronautics | Alpha for 1.21.1 — may be unstable | Watching |
+| Voxy vs. DH | Voxy newer, less tested | DH as fallback |

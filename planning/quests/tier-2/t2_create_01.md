@@ -1,13 +1,13 @@
-# Quest: t2_create_01 (Dampfkraft)
-## Beschreibung
-Die Wasserkraft stößt an ihre Grenzen. Zeit für echte industrielle Energie: Dampf.
-## Technische Daten
-- **Quest-ID:** `t2_create_01`
+# Quest: t2_create_01 (Steam Power)
+## Description
+Water power is reaching its limits. Time for real industrial energy: steam.
+## Technical Data
+- **Quest ID:** `t2_create_01`
 - **Dependencies:** `t1_create_03`
-- **Typ:** Item Submission
-## Aufgaben
-1. [ ] Sammle 1x Dampfkessel (Steam Engine)
-2. [ ] Sammle 1x Dampfmaschine (Steam Engine)
-## Belohnung
-- 16x Kupferblech
+- **Type:** Item Submission
+## Tasks
+1. [ ] Collect 1x Steam Engine
+2. [ ] Collect 1x Steam Engine
+## Reward
+- 16x Copper Sheets
 - 250 XP

@@ -1,71 +1,71 @@
-# Enchantment-System — Gaia Awakening
+# Enchantment System — Gaia Awakening
 
-> **Status**: Planungsdokument — 2026-05-01
-> **Mods**: Apotheosis 8.5.2, Pneumaticraft: Repressurized, Create: Enchantment Industry
-
----
-
-## Designprinzip
-
-Enchanting hat zwei Dimensionen:
-- **Tier-Freischaltung** (Bookshelves): Schaltet das Maximum eines Tiers frei — einmalig, materialintensiv
-- **Enchantment-Upgrade** (Kombinieren): Bringt existierende Verzauberungen immer höher — iterativ, ressourcenintensiv
-
-Beides ist eng verzahnt: Höhere Tier-Freischaltung ist Voraussetzung für höhere Upgrade-Outputs.
-Das absolute Endgame-Limit ist keine Zahl, sondern die verfügbaren Ressourcen — primär
-**Super Liquid XP** aus Create: Enchantment Industry.
+> **Status**: Planning document — 2026-05-01
+> **Mods**: Apotheosis 8.5.2, PneumaticCraft: Repressurized, Create: Enchantment Industry
 
 ---
 
-## Tier-Übersicht
+## Design Principle
+
+Enchanting has two dimensions:
+- **Tier unlock** (bookshelves): unlocks the maximum of a tier — one-time, material-intensive
+- **Enchantment upgrade** (combining): pushes existing enchantments ever higher — iterative, resource-intensive
+
+Both are tightly interlocked: a higher tier unlock is a prerequisite for higher upgrade outputs.
+The absolute endgame limit is not a number, but the available resources — primarily
+**Super Liquid XP** from Create: Enchantment Industry.
+
+---
+
+## Tier Overview
 
 ```
-TIER   MAX-LEVEL   UPGRADE-CAP   ERFOLGS-CHANCE     GATE
-  1        30           V        100% (garantiert)  Apotheosis Holz/Stein Regale
-  2        50          XI        100% (garantiert)  Blazing/Hellish Regale + Nether
-  3        75         XVI        85% → 65%          Crystalline Regale + Osmium + Certus
-  4       100          XXV       70% → 35%          Enderby Regale + Refined Obsidian + End
+TIER   MAX-LEVEL   UPGRADE-CAP   SUCCESS-CHANCE     GATE
+  1        30           V        100% (guaranteed)  Apotheosis wood/stone shelves
+  2        50          XI        100% (guaranteed)  Blazing/Hellish shelves + Nether
+  3        75         XVI        85% → 65%          Crystalline shelves + Osmium + Certus
+  4       100          XXV       70% → 35%          Enderby shelves + Refined Obsidian + End
   5     Uncapped     Uncapped    60% → 25%  (Super) Create:EI Super Liquid XP
                                  99% → 90% (Mythic) Create:EI Mythic Liquid XP
 ```
 
 ---
 
-## Enchantment-Upgrade-Pfad
+## Enchantment Upgrade Path
 
-### Das Prinzip
+### The Principle
 
-Jeder Tier erlaubt es, bestehende Items aufzurüsten — nicht nur neu zu verzaubern.
-Das Apotheosis-Amboss-System erlaubt das Kombinieren gleicher Verzauberungen:
-`Sharpness V + Sharpness V → Sharpness VI` (mit passenden Tier-Regalen).
+Each tier allows upgrading existing items — not just enchanting new ones.
+The Apotheosis anvil system allows combining identical enchantments:
+`Sharpness V + Sharpness V → Sharpness VI` (with matching tier shelves).
 
-Die Pneumaticraft Pressure Chamber übernimmt ab T3 als Upgrade-Maschine:
-Input: Enchanted Book (niedriger Level) + Druck + Materialien → Output: höheres Level.
+The PneumaticCraft Pressure Chamber takes over as the upgrade machine from T3:
+input: enchanted book (low level) + pressure + materials → output: higher level.
 
-Create: Enchantment Industry liefert ab T5 unendlich Super Liquid XP als einzige Schranke.
+Create: Enchantment Industry provides infinite Super Liquid XP from T5 as the only constraint.
 
-### Upgrade-Caps und Erfolgswahrscheinlichkeiten
+### Upgrade Caps and Success Probabilities
 
-| Tier | Von → Bis | Erfolg | Bei Misserfolg | Methode |
+| Tier | From → To | Success | On Failure | Method |
 |------|-----------|--------|----------------|---------|
 | T1 | I → V | 100% | — | Apotheosis Table |
-| T2 | V → XI | 100% | — | Apotheosis Amboss-Combine |
-| T3 | XI → XVI | 85%→65% | Alle Inputs verloren | PNC 3.5 bar |
-| T4 | XVI → XXV | 70%→35% | Alle Inputs verloren | PNC 5.5 bar |
-| T5 (Super) | XXV → ∞ | 60%→25% | Alle Inputs verloren | Create:EI Super XP |
-| T5 (Mythic) | XXV → ∞ | 99%→90% | Alle Inputs verloren | Create:EI Mythic XP |
+| T2 | V → XI | 100% | — | Apotheosis anvil combine |
+| T3 | XI → XVI | 85%→65% | All inputs lost | PNC 3.5 bar |
+| T4 | XVI → XXV | 70%→35% | All inputs lost | PNC 5.5 bar |
+| T5 (Super) | XXV → ∞ | 60%→25% | All inputs lost | Create:EI Super XP |
+| T5 (Mythic) | XXV → ∞ | 99%→90% | All inputs lost | Create:EI Mythic XP |
 
-**Misserfolg-Regel (ab T3):** Bei jedem Fehlversuch werden Buch, Materialien und XP vollständig
-verbraucht. Das Enchantment-Level bleibt unverändert. Kein Teilrückgabe.
+**Failure rule (from T3):** on every failed attempt the book, materials and XP are fully
+consumed. The enchantment level stays unchanged. No partial refund.
 
-**Erfolg-Regel:** Immer genau +1 Level. Nie mehr.
+**Success rule:** always exactly +1 level. Never more.
 
-> Die Caps gelten für **alle** Enchantments: Protection, Efficiency, Fortune etc.
+> The caps apply to **all** enchantments: Protection, Efficiency, Fortune etc.
 
-### Wahrscheinlichkeits-Kurve im Detail
+### Probability Curve in Detail
 
-**T3 (PNC 3.5 bar)** — Einstieg ins Risiko:
-| Upgrade | Erfolg |
+**T3 (PNC 3.5 bar)** — entry into risk:
+| Upgrade | Success |
 |---------|--------|
 | XI → XII | 85% |
 | XII → XIII | 80% |
@@ -73,8 +73,8 @@ verbraucht. Das Enchantment-Level bleibt unverändert. Kein Teilrückgabe.
 | XIV → XV | 70% |
 | XV → XVI | 65% |
 
-**T4 (PNC 5.5 bar)** — Echtes Risiko:
-| Upgrade | Erfolg |
+**T4 (PNC 5.5 bar)** — real risk:
+| Upgrade | Success |
 |---------|--------|
 | XVI → XVII | 70% |
 | XVII → XIX | 65% |
@@ -82,178 +82,178 @@ verbraucht. Das Enchantment-Level bleibt unverändert. Kein Teilrückgabe.
 | XXI → XXIII | 45% |
 | XXIII → XXV | 35% |
 
-**T5 Super Liquid XP** — Hochrisiko, Ressourcen-Gate:
-| Level-Bereich | Erfolg |
+**T5 Super Liquid XP** — high-risk, resource gate:
+| Level range | Success |
 |---------------|--------|
 | XXV – XXX | 60% |
 | XXX – L | 50% |
 | L – C | 40% |
 | C – CC | 30% |
-| CC+ | 25% (Floor) |
+| CC+ | 25% (floor) |
 
-**T5 Mythic Liquid XP** — Nahezu garantiert, extreme Kosten:
-| Level-Bereich | Erfolg |
+**T5 Mythic Liquid XP** — nearly guaranteed, extreme cost:
+| Level range | Success |
 |---------------|--------|
 | XXV – L | 99% |
 | L – C | 97% |
 | C – CC | 95% |
 | CC – D | 92% |
-| D+ | 90% (Floor) |
+| D+ | 90% (floor) |
 
-### T1→T2 Upgrade: Apotheosis Amboss-Combine
+### T1→T2 Upgrade: Apotheosis Anvil Combine
 
-Apotheosis entfernt die "Too Expensive"-Beschränkung. Damit ist beliebiges Kombinieren möglich:
+Apotheosis removes the "Too Expensive" restriction. This makes arbitrary combining possible:
 ```
-Sharpness V (Buch) + Sharpness V (Buch) + Blazing Regal-Setup → Sharpness VI
-Sharpness IX + Sharpness IX → Sharpness X (mit T2 Regalen)
-Max bei T2: XI
+Sharpness V (book) + Sharpness V (book) + Blazing shelf setup → Sharpness VI
+Sharpness IX + Sharpness IX → Sharpness X (with T2 shelves)
+Max at T2: XI
 ```
-Kostet XP (steigt linear mit dem Level). Mit Create:EI Liquid XP automatisierbar.
+Costs XP (increases linearly with the level). Automatable with Create:EI Liquid XP.
 
-### T2→T3 Upgrade: Erste Pressure Chamber Nutzung (Risiko beginnt)
+### T2→T3 Upgrade: First Pressure Chamber Use (risk begins)
 
-Ab T3 kann die Pressure Chamber Bücher direkt upgraden — **erstmals mit Verlustrisiko**:
+From T3 the Pressure Chamber can upgrade books directly — **for the first time with loss risk**:
 ```
-Input:   Sharpness XI Buch + 2x Osmium Ingot + 1x Certus Crystal + 3.5 bar
-Erfolg:  Sharpness XII Buch  (85%)
-Fehler:  Alles verloren, Sharpness bleibt bei XI  (15%)
+Input:   Sharpness XI book + 2x Osmium Ingot + 1x Certus Crystal + 3.5 bar
+Success: Sharpness XII book  (85%)
+Failure: everything lost, Sharpness stays at XI  (15%)
 ```
-Mehrere Durchläufe bis XVI. Jedes Stufe senkt die Erfolgschance um ~5%.
-PNC unterstützt native Wahrscheinlichkeits-Outputs — kein KubeJS-Workaround nötig.
+Several runs up to XVI. Each step lowers the success chance by ~5%.
+PNC supports native probability outputs — no KubeJS workaround needed.
 
-### T3→T4 Upgrade: Pressure Chamber 5.5 bar (Risiko steigt)
-
-```
-Input:   Sharpness XVI Buch + 1x Refined Obsidian + 1x Fluix Crystal + 5.5 bar
-Erfolg:  Sharpness XVII Buch  (70%)
-Fehler:  Alles verloren, Sharpness bleibt bei XVI  (30%)
-```
-Von XVI bis XXV dauert es im Schnitt ~8-10 Versuche bei sinkender Erfolgsrate.
-Refined Obsidian und Fluix Crystal sind die Hauptengpässe — beide teuer genug, dass
-jeder Fehlversuch spürbar schmerzt.
-
-### T4→T5: Create:EI Liquid XP — Drei Stufen, eine Entscheidung
-
-Create: Enchantment Industry führt drei XP-Typen ein:
+### T3→T4 Upgrade: Pressure Chamber 5.5 bar (risk rises)
 
 ```
-Liquid XP       — 1:1 aus XP-Kugeln/Mob-Farm (normales Liquid XP)
-Super Liquid XP — 10.000 mB Liquid XP → 1.000 mB Super XP (Kompressor)
-Mythic Liquid XP — 1.000.000 mB Liquid XP (≙ 1.000 mB Super XP) → 1 mB Mythic XP
+Input:   Sharpness XVI book + 1x Refined Obsidian + 1x Fluix Crystal + 5.5 bar
+Success: Sharpness XVII book  (70%)
+Failure: everything lost, Sharpness stays at XVI  (30%)
+```
+From XVI to XXV it takes on average ~8-10 attempts at a falling success rate.
+Refined Obsidian and Fluix Crystal are the main bottlenecks — both expensive enough that
+every failed attempt noticeably hurts.
+
+### T4→T5: Create:EI Liquid XP — Three Stages, One Decision
+
+Create: Enchantment Industry introduces three XP types:
+
+```
+Liquid XP       — 1:1 from XP orbs/mob farm (normal Liquid XP)
+Super Liquid XP — 10,000 mB Liquid XP → 1,000 mB Super XP (compressor)
+Mythic Liquid XP — 1,000,000 mB Liquid XP (≙ 1,000 mB Super XP) → 1 mB Mythic XP
 ```
 
-#### Super Liquid XP — Hochrisiko, mittlere Kosten
+#### Super Liquid XP — high-risk, medium cost
 
 ```
-Input:   Enchanted Book (Level N) + X mB Super Liquid XP
-Erfolg:  Buch mit Level N+1  (60% bei Level XXV, sinkend bis 25% Floor)
-Fehler:  Alles verloren — kein Level-Change  (restliche %)
+Input:   enchanted book (level N) + X mB Super Liquid XP
+Success: book with level N+1  (60% at level XXV, falling to 25% floor)
+Failure: everything lost — no level change  (remaining %)
 ```
 
-Kosten-Skalierung (Super XP pro Versuch):
-| Level | Super XP / Versuch | Ø Versuche bis Erfolg | Ø Super XP bis +1 Level |
+Cost scaling (Super XP per attempt):
+| Level | Super XP / attempt | Avg. attempts to success | Avg. Super XP per +1 level |
 |-------|--------------------|-----------------------|-------------------------|
-| XXV → XXVI | 500 mB | ~1,7 | ~850 mB |
-| L → LI | 2.000 mB | ~2,5 | ~5.000 mB |
-| C → CI | 10.000 mB | ~4,0 | ~40.000 mB |
-| CC → CCI | 50.000 mB | ~4,0 | ~200.000 mB |
+| XXV → XXVI | 500 mB | ~1.7 | ~850 mB |
+| L → LI | 2,000 mB | ~2.5 | ~5,000 mB |
+| C → CI | 10,000 mB | ~4.0 | ~40,000 mB |
+| CC → CCI | 50,000 mB | ~4.0 | ~200,000 mB |
 
-#### Mythic Liquid XP — Nahezu garantiert, extreme Kosten
+#### Mythic Liquid XP — nearly guaranteed, extreme cost
 
 ```
-Input:   Enchanted Book (Level N) + Y mB Mythic Liquid XP
-Erfolg:  Buch mit Level N+1  (99% bei Level XXV, min. 90% Floor)
-Fehler:  Alles verloren  (1-10%)
+Input:   enchanted book (level N) + Y mB Mythic Liquid XP
+Success: book with level N+1  (99% at level XXV, min. 90% floor)
+Failure: everything lost  (1-10%)
 ```
 
-Mythic XP ist 1000× konzentrierter als Super XP — eine Kompressor-Kette der höchsten
-Create-Stufe (hohe RPM, mehrere Stufen) braucht Stunden für wenige mB Mythic XP.
-Dafür sind Fehlversuche extrem selten. Für Spieler, die ein spezifisches Item auf
-Level CC bringen wollen ohne 200 Fehlversuche zu riskieren.
+Mythic XP is 1000× more concentrated than Super XP — a top-tier Create compressor chain
+(high RPM, several stages) needs hours for a few mB of Mythic XP.
+In return, failures are extremely rare. For players who want to bring a specific item to
+level CC without risking 200 failed attempts.
 
-**Produktion Mythic XP:**
+**Production of Mythic XP:**
 ```
-[Mob Farm] → Liquid XP → [Super Compressor Stufe 1] → Super Liquid XP
-Super Liquid XP → [Super Compressor Stufe 2, max RPM] → Mythic Liquid XP
+[Mob Farm] → Liquid XP → [Super Compressor Stage 1] → Super Liquid XP
+Super Liquid XP → [Super Compressor Stage 2, max RPM] → Mythic Liquid XP
 ```
-~1 mB Mythic XP pro ~30 Minuten optimierter Anlage (Richtwert, nach Testing kalibrieren).
+~1 mB Mythic XP per ~30 minutes of an optimized setup (guideline, calibrate after testing).
 
-**KubeJS Implementation (T5 Chance-Mechanic):**
+**KubeJS Implementation (T5 chance mechanic):**
 ```javascript
 // kubejs/server_scripts/enchanting_infusion.js
-// Da Create:EI kein natives Chance-System hat, wird per KubeJS-Event eine
-// Wahrscheinlichkeitsprüfung eingebaut
+// Since Create:EI has no native chance system, a probability check is
+// built in via a KubeJS event
 ItemEvents.rightClicked('apex:enchanting_infusion_altar', event => {
     const level = getEnchantLevel(event.item)
-    const successChance = getSuperXPChance(level)  // 0.60 bis 0.25
+    const successChance = getSuperXPChance(level)  // 0.60 to 0.25
     if (Math.random() < successChance) {
-        upgradeEnchant(event.item)  // +1 Level
+        upgradeEnchant(event.item)  // +1 level
     }
-    consumeInputs(event)  // immer: Inputs verbrauchen
+    consumeInputs(event)  // always: consume inputs
 })
 ```
-> Exakte API nach Testing verifizieren — möglicherweise über Custom Block + KubeJS Block Events.
+> Verify the exact API after testing — possibly via a custom block + KubeJS block events.
 
 ---
 
-## Tier 1 — Vanilla+ (Sofort, Stunden 0-5)
+## Tier 1 — Vanilla+ (immediately, hours 0-5)
 
-**Enchanting-Table-Maximum**: Level 30 | **Upgrade-Cap**: Sharpness V
+**Enchanting table maximum**: Level 30 | **Upgrade cap**: Sharpness V
 
-**Verfügbare Mechaniken:**
+**Available mechanics:**
 - Standard Apotheosis Enchanting Table
-- Apotheosis Holz- und Stein-Regale (bessere Enchanting Power als Vanilla)
-- Erste Apotheosis-Unique-Enchants: Scavenger, Lifemend
-- Common & Uncommon Gems aus Höhlen-Truhen
-- Apotheosis Amboss: "Too Expensive" entfernt
+- Apotheosis wood and stone shelves (better enchanting power than vanilla)
+- First Apotheosis unique enchants: Scavenger, Lifemend
+- Common & Uncommon gems from cave chests
+- Apotheosis anvil: "Too Expensive" removed
 
-**Regale (15 Stück für T1-Maximum):**
-- Apotheosis Typeset Bookshelves (Bücher + Tinte)
+**Shelves (15 for the T1 maximum):**
+- Apotheosis Typeset Bookshelves (books + ink)
 
-**Quest:** "Dein erster verbesserter Zaubertisch" → Belohnung: Apotheosis Typeset Book x5, Common Gem x2
+**Quest:** "Your First Improved Enchanting Table" → reward: Apotheosis Typeset Book x5, Common Gem x2
 
 ---
 
-## Tier 2 — Nether-Infused (Stunden 5-15)
+## Tier 2 — Nether-Infused (hours 5-15)
 
-**Enchanting-Table-Maximum**: Level 50 | **Upgrade-Cap**: Sharpness XI
+**Enchanting table maximum**: Level 50 | **Upgrade cap**: Sharpness XI
 
-**Gate:** Nether-Zugang + Create T2 (Blaze Burner für Blaze-Rod-Automatisierung)
+**Gate:** Nether access + Create T2 (Blaze Burner for blaze-rod automation)
 
-**Neue Mechaniken:**
-- Apotheosis Blazing Regale (Blaze Rods + Netherrack) — **neue Enchantment Power Quelle**
-- Apotheosis Hellish Regale (Nether Bricks + Soul Sand + Gold)
-- Amboss-Combine bis Sharpness XI möglich (benötigt T2-Regale aktiv)
-- Apotheosis Smithing Templates in Nether-Strukturen (verbesserte Rüstungs-Upgrades)
-- Uncommon & Rare Gems in Nether-Festungen und YUNG's Dungeons
+**New mechanics:**
+- Apotheosis Blazing shelves (Blaze Rods + Netherrack) — **new enchanting power source**
+- Apotheosis Hellish shelves (Nether Bricks + Soul Sand + Gold)
+- Anvil combine up to Sharpness XI possible (requires active T2 shelves)
+- Apotheosis Smithing Templates in Nether structures (improved armor upgrades)
+- Uncommon & Rare gems in Nether fortresses and YUNG's dungeons
 
-**Regale für T2 (8 Blazing + 4 Hellish):**
+**Shelves for T2 (8 Blazing + 4 Hellish):**
 - Blazing Bookshelf: Blaze Rod + Nether Brick + Apotheosis Typeset Book
 - Hellish Bookshelf: Nether Brick Block + Gold Block + Soul Sand
 
-**Balancing:** Create Blaze Burner treibt Blaze-Rod-Produktion — ohne Create ist T2 sehr teuer.
-Das ist Absicht: Create-Adoption wird durch den Enchanting-Anreiz gefördert.
+**Balancing:** the Create Blaze Burner drives blaze-rod production — without Create, T2 is very expensive.
+That is intentional: Create adoption is encouraged through the enchanting incentive.
 
-**Quest:** "Nether-Magie: Zähme die Glut" → Belohnung: Blazing Bookshelf x4, Rare Gem x1
+**Quest:** "Nether Magic: Tame the Embers" → reward: Blazing Bookshelf x4, Rare Gem x1
 
 ---
 
-## Tier 3 — Crystalline (Stunden 15-30)
+## Tier 3 — Crystalline (hours 15-30)
 
-**Enchanting-Table-Maximum**: Level 75 | **Upgrade-Cap**: Sharpness XVI
+**Enchanting table maximum**: Level 75 | **Upgrade cap**: Sharpness XVI
 
-**Gate:** Mekanism T1 (Osmium) + AE2 Entry (Certus Quartz) + PNC Einstieg (3.5 bar)
+**Gate:** Mekanism T1 (Osmium) + AE2 entry (Certus Quartz) + PNC entry (3.5 bar)
 
-**Neue Mechaniken:**
-- Apotheosis Crystalline Regale (Osmium + Certus) — höchste Enchanting Power im normalen Spiel
-- **Gem Socketing freigeschaltet** (Common & Uncommon Gems in Ausrüstung)
-- **PNC Pressure Chamber Enchanting**: Input-Book upgraden bis XVI
-- Apotheosis Gem-Fusion: 3x gleiche Gems → 1x nächste Seltenheit
+**New mechanics:**
+- Apotheosis Crystalline shelves (Osmium + Certus) — highest enchanting power in normal play
+- **Gem socketing unlocked** (Common & Uncommon gems in gear)
+- **PNC Pressure Chamber enchanting**: upgrade input book up to XVI
+- Apotheosis gem fusion: 3x identical gems → 1x next rarity
 
-**Regale für T3 (8 Crystalline):**
+**Shelves for T3 (8 Crystalline):**
 - Crystalline Bookshelf: Mekanism Osmium Ingot + AE2 Certus Crystal + Apotheosis Typeset Book
 
-**PNC Pressure Chamber Rezept (KubeJS):**
+**PNC Pressure Chamber recipe (KubeJS):**
 ```javascript
 // kubejs/server_scripts/pneumaticraft_enchanting.js
 PneumaticCraftEvents.pressureChamber(event => {
@@ -270,101 +270,101 @@ PneumaticCraftEvents.pressureChamber(event => {
     })
 })
 ```
-> Exakte PNC KubeJS API nach Testing verifizieren.
+> Verify the exact PNC KubeJS API after testing.
 
-**Quest:** "Kristallisierte Magie" → Belohnung: Crystalline Bookshelf x4, Rare Gem x3, PNC Pressure Tube Kit
+**Quest:** "Crystallized Magic" → reward: Crystalline Bookshelf x4, Rare Gem x3, PNC Pressure Tube Kit
 
 ---
 
-## Tier 4 — Enderby Elite (Stunden 30-50)
+## Tier 4 — Enderby Elite (hours 30-50)
 
-**Enchanting-Table-Maximum**: Level 100 | **Upgrade-Cap**: Sharpness XXV
+**Enchanting table maximum**: Level 100 | **Upgrade cap**: Sharpness XXV
 
-**Gate:** End-Zugang + Mekanism Refined Obsidian + PNC 5.5 bar
+**Gate:** End access + Mekanism Refined Obsidian + PNC 5.5 bar
 
-**Neue Mechaniken:**
-- Apotheosis Enderby Regale (Refined Obsidian + End Stone + Ender Pearl)
-- **Gem Socketing: Rare & Epic Gems** freigeschaltet
-- PNC 5.5 bar Upgrade: Level XVI → XXV in mehreren Läufen
-- Create:EI Liquid XP: Erste XP-Automatisierung möglich (normales Liquid XP)
+**New mechanics:**
+- Apotheosis Enderby shelves (Refined Obsidian + End Stone + Ender Pearl)
+- **Gem socketing: Rare & Epic gems** unlocked
+- PNC 5.5 bar upgrade: level XVI → XXV in several runs
+- Create:EI Liquid XP: first XP automation possible (normal Liquid XP)
 
-**Regale für T4 (8 Enderby):**
+**Shelves for T4 (8 Enderby):**
 - Enderby Bookshelf: Mekanism Refined Obsidian Ingot + End Stone Bricks + Ender Pearl + Apotheosis Typeset Book
 
-**PNC 5.5 bar Upgrade:**
+**PNC 5.5 bar upgrade:**
 ```
-Input:  Sharpness XVI Buch + Refined Obsidian + Fluix Crystal + 5.5 bar
-Output: Sharpness XIX Buch
-(3 Durchläufe bis XXV)
+Input:  Sharpness XVI book + Refined Obsidian + Fluix Crystal + 5.5 bar
+Output: Sharpness XIX book
+(3 runs to XXV)
 ```
 
-**Quest:** "Jenseits der Sterne" → Belohnung: Enderby Bookshelf x4, Epic Gem x2, End Portal Kompass
+**Quest:** "Beyond the Stars" → reward: Enderby Bookshelf x4, Epic Gem x2, End Portal Compass
 
 ---
 
-## Tier 5 — Legendary / Uncapped (Stunden 50+)
+## Tier 5 — Legendary / Uncapped (hours 50+)
 
-**Enchanting-Table-Maximum**: Uncapped | **Upgrade-Cap**: Nur Ressourcen
+**Enchanting table maximum**: Uncapped | **Upgrade cap**: resources only
 
-**Gate:** Cataclysm-Bosse besiegt + Create:EI Super Liquid XP Produktion aufgebaut
+**Gate:** Cataclysm bosses defeated + Create:EI Super Liquid XP production set up
 
-**Neue Mechaniken:**
-- **Mythic Gem Socketing** (stärkste passive Boni im Spiel)
-- **Super Liquid XP**: Jeder Level-Sprung kostet exponentiell mehr — mit 25%-60% Erfolg
-- **Mythic Liquid XP**: 1000× konzentrierter, 90-99% Erfolgsrate — extreme Produktionskosten
-- Apotheosis Unique Enchants (nur aus Boss-Loot, nicht craftbar)
-- Create:EI Enchanting Infusion Altar: Hauptmechanik für unlimitiertes Upgraden
+**New mechanics:**
+- **Mythic gem socketing** (strongest passive bonuses in the game)
+- **Super Liquid XP**: every level jump costs exponentially more — with 25%-60% success
+- **Mythic Liquid XP**: 1000× more concentrated, 90-99% success rate — extreme production cost
+- Apotheosis unique enchants (only from boss loot, not craftable)
+- Create:EI Enchanting Infusion Altar: main mechanic for unlimited upgrading
 
-**Die Entscheidung ab T5:**
+**The decision from T5:**
 ```
-Viele billige Super-XP-Versuche    ──→  25-60% Erfolg, häufige Verluste
-Wenige teure Mythic-XP-Versuche   ──→  90-99% Erfolg, extreme Produktionszeit
+Many cheap Super-XP attempts    ──→  25-60% success, frequent losses
+Few expensive Mythic-XP attempts ──→  90-99% success, extreme production time
 ```
-Beide Wege führen zum Ziel. Super XP ist schneller pro Versuch, Mythic XP sicherer pro
-Level-Sprung. Wer eine effiziente Mob-Farm hat, bevorzugt Super XP. Wer ein einzelnes
-Prestige-Item auf Level CCC bringen will, spart Mythic XP an.
+Both paths reach the goal. Super XP is faster per attempt, Mythic XP safer per
+level jump. Whoever has an efficient mob farm prefers Super XP. Whoever wants to bring a single
+prestige item to level CCC saves up Mythic XP.
 
-**XP-Pipeline:**
+**XP pipeline:**
 ```
 Mob Farm → XP Drain → Liquid XP → Super Compressor 1 → Super Liquid XP
                                    Super Compressor 2 → Mythic Liquid XP
-                                   (max RPM, Create Tier 3+ erforderlich)
+                                   (max RPM, Create Tier 3+ required)
 ```
 
-**Quest:** "Der Endlos-Aufstieg" (nach allen 4 Cataclysm-Bossen) → Mythic Gem Socketing-Werkbank freigeschaltet + Enchanting Infusion Altar Schematic
+**Quest:** "The Endless Ascent" (after all 4 Cataclysm bosses) → Mythic gem socketing workbench unlocked + Enchanting Infusion Altar schematic
 
 ---
 
-## Gem-System — Vollständige Übersicht
+## Gem System — Complete Overview
 
-| Seltenheit | Quelle | Socketing ab | Bonus-Beispiel |
+| Rarity | Source | Socketing from | Bonus example |
 |------------|--------|-------------|----------------|
-| Common | Alle Höhlen-Truhen | T3 | +5% Damage |
-| Uncommon | YUNG's Dungeons | T3 | +10% Defense |
+| Common | All cave chests | T3 | +5% Damage |
+| Uncommon | YUNG's dungeons | T3 | +10% Defense |
 | Rare | When Dungeons Arise | T3-T4 | +15% Speed |
-| Epic | Apotheosis-Bosse, Cataclysm Entry | T4 | +25% Crit Chance |
-| Mythic | Cataclysm-Endbosse, PNC 7.5 bar | T5 | +40% Damage + Spezialeffekt |
+| Epic | Apotheosis bosses, Cataclysm entry | T4 | +25% Crit Chance |
+| Mythic | Cataclysm final bosses, PNC 7.5 bar | T5 | +40% Damage + special effect |
 
-**Gem-Fundorte Config (Apotheosis + Loot Tables):**
-- Common/Uncommon: Vanilla Dungeons + YUNG's → unangetastet
-- Rare: **Nur** When Dungeons Arise + YUNG's Better Strongholds
-- Epic: **Nur** Apotheosis-Boss-Loot + Cataclysm Entry-Dungeons
-- Mythic: **Ausschließlich** Cataclysm-Endbosse + PNC Pressure Chamber 7.5 bar
+**Gem location config (Apotheosis + loot tables):**
+- Common/Uncommon: vanilla dungeons + YUNG's → untouched
+- Rare: **only** When Dungeons Arise + YUNG's Better Strongholds
+- Epic: **only** Apotheosis boss loot + Cataclysm entry dungeons
+- Mythic: **exclusively** Cataclysm final bosses + PNC Pressure Chamber 7.5 bar
 
 ---
 
-## Apotheosis Config-Plan
+## Apotheosis Config Plan
 
 ```toml
-# config/apotheosis/enchanting.toml (nach erstem Start generiert, dann anpassen)
+# config/apotheosis/enchanting.toml (generated after first start, then adjust)
 
 [general]
-    removeEnchantingCap = true      # Level-Cap entfernen für T4/T5
-    maxEnchantingPower = 200        # Erhöht für Crystalline/Enderby Regale
+    removeEnchantingCap = true      # remove level cap for T4/T5
+    maxEnchantingPower = 200        # increased for Crystalline/Enderby shelves
 
 [gems]
-    epicGemsInBasicLoot = false     # Epic Gems nur Boss-Drops
-    mythicGemsInBasicLoot = false   # Mythic Gems nur Cataclysm
+    epicGemsInBasicLoot = false     # Epic gems boss drops only
+    mythicGemsInBasicLoot = false   # Mythic gems Cataclysm only
 ```
 
 ---
@@ -372,35 +372,35 @@ Mob Farm → XP Drain → Liquid XP → Super Compressor 1 → Super Liquid XP
 ## Create:EI Integration — Liquid XP Pipeline
 
 ```
-[Mob Farm]           → XP Kugeln auf Boden
-[Deployer]           → Aufsammeln
+[Mob Farm]           → XP orbs on the ground
+[Deployer]           → pick up
 [XP Drain (EI)]      → Liquid XP (mB)
-[Fluid Pipe]         → Tank
+[Fluid Pipe]         → tank
 [XP Compressor (EI)] → 10x Liquid XP → 1x Super Liquid XP
 [Super XP Tank]      → Enchanting Infusion Altar (T5)
 ```
 
-Die XP Drain und Compressor-Mengen-Verhältnisse nach Testing kalibrieren.
-Ziel: Sharpness 50 sollte ~10-15h aktiver Mob-Farm-Laufzeit kosten.
+Calibrate the XP Drain and compressor quantity ratios after testing.
+Goal: Sharpness 50 should cost ~10-15h of active mob-farm runtime.
 
 ---
 
-## Zusammenfassung — Macht-Kurve & Risiko
+## Summary — Power Curve & Risk
 
 ```
-Tier   Level-Cap   Erfolg    Ressourcen-Verlust möglich?
-  1         V      100%      Nein
-  2        XI      100%      Nein
-  3       XVI      65-85%    Ja — Osmium + Certus
-  4       XXV      35-70%    Ja — Refined Obsidian + Fluix Crystal
-  5 (S)    ∞       25-60%    Ja — Super Liquid XP (viel)
-  5 (M)    ∞       90-99%    Ja — Mythic Liquid XP (wenig, aber extrem teuer)
+Tier   Level cap   Success   Resource loss possible?
+  1         V      100%      No
+  2        XI      100%      No
+  3       XVI      65-85%    Yes — Osmium + Certus
+  4       XXV      35-70%    Yes — Refined Obsidian + Fluix Crystal
+  5 (S)    ∞       25-60%    Yes — Super Liquid XP (a lot)
+  5 (M)    ∞       90-99%    Yes — Mythic Liquid XP (little, but extremely expensive)
 ```
 
-**Der zentrale Design-Gedanke:** T1 und T2 sind frustrationsfrei. Erst ab T3 wird
-Enchanting zu einem System mit echten Entscheidungen: Wann ist das Risiko es wert?
-Möchte ich lieber viele billige Versuche mit Super XP, oder spare ich für Mythic XP?
+**The central design idea:** T1 and T2 are frustration-free. Only from T3 does
+enchanting become a system with real decisions: when is the risk worth it?
+Do I prefer many cheap attempts with Super XP, or do I save up for Mythic XP?
 
-Es gibt kein Hard-Cap. Ein Spieler mit maximaler Automatisierung kann Sharpness 100+
-erreichen — aber jeder Level über 50 ist ein bewusstes Investment, kein Selbstläufer.
-Das fühlt sich verdient an, nicht gegrinded.
+There is no hard cap. A player with maximum automation can reach Sharpness 100+
+— but every level above 50 is a deliberate investment, not a free ride.
+This feels earned, not grinded.

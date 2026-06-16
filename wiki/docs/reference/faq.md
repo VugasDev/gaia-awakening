@@ -18,7 +18,7 @@ Java 21 or newer. NeoForge 21.1.x requires Java 21. Most launchers (Modrinth App
 
 ### How do I install the pack?
 
-Download the latest `.mrpack` file from the [Releases page](https://github.com/VugasDev/minecraft-modpack/releases) and import it into your launcher:
+Download the latest `.mrpack` file from the [Releases page](https://github.com/VugasDev/gaia-awakening/releases) and import it into your launcher:
 
 - **Modrinth App** — drag the `.mrpack` onto the launcher window, or use *Add Instance → From file*.
 - **Prism Launcher / ATLauncher** — *Add Instance → Import from zip*, then select the `.mrpack` file.
@@ -30,7 +30,7 @@ Download the latest `.mrpack` file from the [Releases page](https://github.com/V
 
 ### How do I update to a new version?
 
-Download the new `.mrpack` from the [Releases page](https://github.com/VugasDev/minecraft-modpack/releases) and import it as a new instance rather than overwriting your existing one. This preserves your world saves and config changes in the old instance.
+Download the new `.mrpack` from the [Releases page](https://github.com/VugasDev/gaia-awakening/releases) and import it as a new instance rather than overwriting your existing one. This preserves your world saves and config changes in the old instance.
 
 After importing, copy your world save folder from the old instance's `saves/` directory to the new instance's `saves/` directory before launching.
 
@@ -91,7 +91,7 @@ Yes. The pack includes **Iris Shaders**, which is compatible with OptiFine-style
 
 ### Where do I report bugs or crashes?
 
-Open an issue on the [GitHub repository](https://github.com/VugasDev/minecraft-modpack/issues). Include:
+Open an issue on the [GitHub repository](https://github.com/VugasDev/gaia-awakening/issues). Include:
 
 - The full crash log or latest.log (from the instance's `logs/` folder).
 - The pack version (shown in the title screen or in `pack.toml`).

@@ -1,99 +1,99 @@
-# Create: Ore Excavation — Ressourcen-Generierung
+# Create: Ore Excavation — Resource Generation
 
 **Status**: ✓ NeoForge 1.21.1 (v1.6.8, Nov 2025) | ✓ Modrinth
 
 ---
 
-## Was es tut
+## What It Does
 
-Create: Ore Excavation fügt **versteckte, unendliche Erzadern** in die Weltgenerierung ein:
+Create: Ore Excavation inserts **hidden, infinite ore veins** into world generation:
 
-- Pro Chunk: zufällige Chance eine unsichtbare Erzader zu enthalten
-- Nur **eine** Ader pro Chunk
-- Abbau via **Create Rotational Force** (Bohrköpfe, Contraptions)
-- **Ore Vein Finder Tool**: Zeigt Adern in der Umgebung an
+- Per chunk: a random chance to contain an invisible ore vein
+- Only **one** vein per chunk
+- Mined via **Create rotational force** (drill heads, contraptions)
+- **Ore Vein Finder tool**: shows veins in the surroundings
 
-### Schlüsseleigenschaft: "Unendlich"
-Im Gegensatz zu normalen Erzvorkommen sind diese Adern nicht erschöpfbar durch normales Mining.
-Sie werden durch Create-Maschinen abgebaut, die sie langsam "anzapfen".
+### Key Property: "Infinite"
+Unlike normal ore deposits, these veins are not exhaustible through normal mining.
+They are mined by Create machines that slowly "tap" them.
 
 ---
 
-## Synergie mit dem Stack
+## Synergy With the Stack
 
 ### APEX Ore Chain (x16)
 ```
-Create Ore Excavation Ader (unendlich)
-        ↓ Create Bohrer/Contraption
-Roherz (kontinuierlich)
+Create Ore Excavation vein (infinite)
+        ↓ Create drill/contraption
+Raw ore (continuous)
         ↓ APEX Tier 2-5
 Crushed → Enriched → Purified → Refined Pellets
         ↓
-bis zu 16× Ingots pro Erz
+up to 16x ingots per ore
 ```
 
-→ Unendliche Ader × x16 Multiplikation = vollständig automatisierte, skalierbare Produktion
+→ Infinite vein × x16 multiplication = fully automated, scalable production
 
 ### Create Aeronautics
-Eine **fliegende Mining-Platform** (Aeronautics) + Ore Vein Finder könnte:
-- Über der Welt fliegen
-- Adern lokalisieren
-- Automatisch abbauen und zurückfliegen
+A **flying mining platform** (Aeronautics) + Ore Vein Finder could:
+- Fly over the world
+- Locate veins
+- Mine automatically and fly back
 
-→ Endgame-Feature: Fliegendes Erzabbau-Schiff
+→ Endgame feature: a flying ore-mining ship
 
-### Mekanism Digital Miner Abgrenzung
+### Mekanism Digital Miner Distinction
 | Feature | Create Ore Excavation | Mekanism Digital Miner |
 |---------|----------------------|----------------------|
-| Ressource | Unendliche Adern | Endliche Welt-Erze |
-| Steuerung | Rotational Force | FE (Energie) |
-| Targeting | Ader-basiert | Block-spezifisch |
-| Automation | Create-Fließband | Eigenes Filter-System |
+| Resource | Infinite veins | Finite world ores |
+| Control | Rotational force | FE (energy) |
+| Targeting | Vein-based | Block-specific |
+| Automation | Create conveyor | Own filter system |
 | Gate | Create T2 | Mekanism T3 |
-| Skalierung | Durch Bohrer-Größe | Durch Radius-Upgrade |
+| Scaling | Through drill size | Through radius upgrade |
 
-→ **Beide Methoden sinnvoll und komplementär** — kein Overlap
+→ **Both methods are useful and complementary** — no overlap
 
 ---
 
 ## Vein Finder Tool
 
-- Zeigt umliegende Adern an (Radius konfigurierbar)
-- Hilft bei der Planung von Mining-Contraptions
-- Early-Mid Game: Manuell Adern finden und Bohrer draufsetzen
-- Late Game: Via Pneumaticraft Drones automatisch Adern scannen?
+- Shows surrounding veins (radius configurable)
+- Helps with planning mining contraptions
+- Early-mid game: find veins manually and place drills on them
+- Late game: automatically scan veins via PneumaticCraft drones?
 
 ---
 
-## Balancing-Überlegungen
+## Balancing Considerations
 
-- **Unendliche Ressourcen** klingen op — aber:
-  - Abbaurate hängt von Create-Rotational-Power ab (je mehr Power, desto schneller)
-  - Rotation braucht Energiequelle (Steam, Diesel Generators, etc.)
-  - Fließband zur Weiterverarbeitung braucht Infrastruktur
-  - APEX-Chain braucht Mekanism-Gase (O₂, HCl)
-  - → Keine "free resources", sondern skalierbare Ressourcen für Late-Game-Automation
+- **Infinite resources** sound OP — but:
+  - The mining rate depends on Create rotational power (more power, faster)
+  - Rotation needs an energy source (steam, diesel generators, etc.)
+  - A conveyor for further processing needs infrastructure
+  - The APEX chain needs Mekanism gases (O₂, HCl)
+  - → No "free resources", but scalable resources for late-game automation
 
-- **Eine Ader pro Chunk**: Begrenzt die Anzahl paralleler Extraktion-Points
-  → Spieler müssen aktiv Adern suchen und priorisieren
+- **One vein per chunk**: limits the number of parallel extraction points
+  → Players must actively search for veins and prioritize
 
 ---
 
-## Integration in Progression
+## Integration Into Progression
 
-| Stufe | Anwendung |
+| Stage | Application |
 |-------|----------|
-| T2 (Create) | Erste Ader gefunden, einfacher Bohrer |
-| T3 (Mekanism) | APEX x4 angeschlossen → deutlich mehr Output |
-| T4 | APEX x8 + Schienen-basierter Abbau (Steam 'n' Rails) |
-| T5 (Aeronautics) | Fliegendes Mining-Schiff sucht Adern automatisch |
+| T2 (Create) | First vein found, simple drill |
+| T3 (Mekanism) | APEX x4 connected → significantly more output |
+| T4 | APEX x8 + rail-based mining (Steam 'n' Rails) |
+| T5 (Aeronautics) | Flying mining ship searches for veins automatically |
 
 ---
 
-## Empfehlung
+## Recommendation
 
-**Ins Modpack aufnehmen** — ideal als "Create-nativer" Ressourcen-Generator der:
-1. Früh verfügbar ist (Create T2)
-2. Mit APEX skaliert (x16 Late Game)
-3. Einen eigenen Gameplay-Loop hat (Adern suchen, Bohrer aufstellen, Fließband bauen)
-4. Aeronautics-Integration als Endgame-Feature ermöglicht
+**Add to the modpack** — ideal as a "Create-native" resource generator that:
+1. Is available early (Create T2)
+2. Scales with APEX (x16 late game)
+3. Has its own gameplay loop (search veins, set up drills, build a conveyor)
+4. Enables Aeronautics integration as an endgame feature
