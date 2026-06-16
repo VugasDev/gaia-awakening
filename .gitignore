@@ -11,6 +11,9 @@ venv/
 .env
 *.key
 
+# Local-only project instructions (not published)
+CLAUDE.md
+
 # Modpack build artifacts
 *.mrpack
 build/
