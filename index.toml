@@ -1462,7 +1462,7 @@ hash = "b71907d693d8e1aaf5dcee0538de43fa9d4e966eab8bbdaab2d36a541c255d56"
 
 [[files]]
 file = "kubejs/server_scripts/11_base_metal_veins.js"
-hash = "d30f1b7efda82ed033480081aa68aa7022412d7974c30b8c9c24ad40c4009d79"
+hash = "c7a33ab95f079b8cf4f081e9806de35b2a35c5f990fe12627d453f3024e4b134"
 
 [[files]]
 file = "kubejs/server_scripts/12_tinted_stone_gate.js"
