@@ -93,3 +93,49 @@ ServerEvents.recipes(event => {
         ).drill('gaia:reinforced_drill_head').priority(1).id(`gaia:${m.id}_ley_reinforced`)
     })
 })
+
+// Part C — high-end veins. Diamond gets the only high-end infinite ley line.
+ServerEvents.recipes(event => {
+
+    // --- Diamond: rare finite ---
+    event.recipes.createoreexcavation.vein(
+        { text: 'Diamond Vein', color: 'aqua' }, 'minecraft:diamond_ore'
+    ).placement(96, 24, 52001).veinSize(1, 1).alwaysFinite()
+     .biomeWhitelist('forge:is_overworld').id('gaia:diamond_vein')
+
+    event.recipes.createoreexcavation.drilling(
+        Item.of('minecraft:diamond', 1), 'gaia:diamond_vein', 400
+    ).id('gaia:diamond_any')
+
+    event.recipes.createoreexcavation.drilling(
+        Item.of('minecraft:diamond', 2), 'gaia:diamond_vein', 260
+    ).drill('gaia:reinforced_drill_head').priority(1).id('gaia:diamond_reinforced')
+
+    // --- Diamond: super-super-rare INFINITE ley line (only high-end infinite) ---
+    event.recipes.createoreexcavation.vein(
+        { text: 'Diamond Ley Line', color: 'light_purple' }, 'minecraft:diamond_ore'
+    ).placement(640, 64, 152001).alwaysInfinite()
+     .biomeWhitelist('forge:is_overworld').id('gaia:diamond_ley_line')
+
+    event.recipes.createoreexcavation.drilling(
+        Item.of('minecraft:diamond', 1), 'gaia:diamond_ley_line', 420
+    ).id('gaia:diamond_ley_any')
+
+    event.recipes.createoreexcavation.drilling(
+        Item.of('minecraft:diamond', 2), 'gaia:diamond_ley_line', 280
+    ).drill('gaia:reinforced_drill_head').priority(1).id('gaia:diamond_ley_reinforced')
+
+    // --- Ancient Debris: rare finite, no infinite (Nether only) ---
+    event.recipes.createoreexcavation.vein(
+        { text: 'Ancient Debris Vein', color: 'dark_red' }, 'minecraft:ancient_debris'
+    ).placement(128, 32, 52002).veinSize(1, 1).alwaysFinite()
+     .biomeBlacklist('forge:is_overworld').id('gaia:ancient_debris_vein')
+
+    event.recipes.createoreexcavation.drilling(
+        Item.of('minecraft:netherrack', 1), 'gaia:ancient_debris_vein', 600
+    ).id('gaia:ancient_debris_any')
+
+    event.recipes.createoreexcavation.drilling(
+        Item.of('minecraft:ancient_debris', 1), 'gaia:ancient_debris_vein', 360
+    ).drill('gaia:reinforced_drill_head').priority(1).id('gaia:ancient_debris_reinforced')
+})
