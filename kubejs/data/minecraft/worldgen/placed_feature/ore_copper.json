@@ -1,5 +1,5 @@
 {
-  "feature": "minecraft:ore_iron_small",
+  "feature": "minecraft:ore_copper",
   "placement": [
     { "type": "minecraft:rarity_filter", "chance": 1000000 },
     { "type": "minecraft:in_square" },
