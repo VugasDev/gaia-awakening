@@ -12,7 +12,7 @@ The COE Drilling Machine recipe is significantly more expensive than vanilla:
 
 | Ingredient | Quantity |
 |---|---|
-| Iron Block | 6 |
+| Iron Block | 7 |
 | Precision Mechanism | 1 |
 | Brass Casing | 1 |
 
