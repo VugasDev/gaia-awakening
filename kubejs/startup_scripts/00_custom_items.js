@@ -95,6 +95,18 @@ StartupEvents.registry('item', event => {
     // Jeder Head skaliert den Resource Catalyst Drop-Bonus (06_loot_modifications.js)
     // und kann spezifische Bonus-Drops für bestimmte Ressourcen geben (10_drill_heads.js)
 
+    // Basic Drill Head — T1/2 entry tier, expensive in iron, low yield/slow
+    event.create('gaia:basic_drill_head')
+        .displayName('Basic Drill Head')
+        .rarity('common')
+        .maxStackSize(1)
+
+    // Reinforced Drill Head — T2, steel/brass + iron, more yield/faster
+    event.create('gaia:reinforced_drill_head')
+        .displayName('Reinforced Drill Head')
+        .rarity('uncommon')
+        .maxStackSize(1)
+
     // Osmium Drill Head — T3-Gate, +1% Catalyst-Drop, +Osmium-Bonus
     event.create('gaia:osmium_drill_head')
         .displayName('Osmium Drill Head')
