@@ -1,25 +1,68 @@
 # Drill Head System
 
-Gaia Awakening adds six custom drill heads for use with **Create Ore Excavation**. These extend the standard Create Ore Excavation drill head progression (Andesite / Iron / Steel / Diamond) with three T3 specialist heads, one T4 generalist, one T4 catalyst-focused head, and one T5 mythic head.
+Gaia Awakening adds eight custom drill heads for use with **Create Ore Excavation**. Two lower-tier heads (T1/T2) bridge the early game before the six specialist heads unlock at T3+. COE's built-in Iron, Diamond, and Netherite Drill heads are disabled; these custom heads replace them entirely.
 
-All six custom heads are registered under the `#createoreexcavation:drills` item tag and implemented in `kubejs/server_scripts/10_drill_heads.js`.
+All custom heads are registered under the `#createoreexcavation:drills` item tag and implemented in `kubejs/server_scripts/10_drill_heads.js`.
+
+---
+
+## Drilling Machine Gate
+
+The COE Drilling Machine recipe is significantly more expensive than vanilla:
+
+| Ingredient | Quantity |
+|---|---|
+| Iron Block | 6 |
+| Precision Mechanism | 1 |
+| Brass Casing | 1 |
+
+This gate ensures the Drilling Machine is a mid-game milestone, not a day-one build.
 
 ---
 
 ## Drill Head Table
 
-| Item | Tier | Color | Specialty |
-|------|------|-------|-----------|
-| `gaia:osmium_drill_head` | T3 | Steel-blue | Osmium veins; small Resource Catalyst chance |
-| `gaia:crystal_drill_head` | T3 | Ice-blue | Certus Quartz / Amethyst veins; Fluix Crystal bonus |
-| `gaia:nether_drill_head` | T3 | Red-orange | Nether veins only; Quartz / Gold / Blaze bonus |
-| `gaia:refined_obsidian_drill_head` | T4 | Purple-black | Rich Metal veins with increased output + Catalyst chance |
-| `gaia:catalyst_drill_head` | T4 | Amber (glow) | Catalyst Nodes and Catalyst Ley Lines |
-| `gaia:gaia_infused_drill_head` | T5 | Emerald green (glow) | Primary: Mythic Vein (`gaia:mythic_vein`, Nether-only); bonus outputs on all other vein types |
+| Item | Tier | Specialty |
+|------|------|-----------|
+| `gaia:basic_drill_head` | T1/T2 | General-purpose entry head; works on all common finite veins |
+| `gaia:reinforced_drill_head` | T2 | Improved yield and speed over Basic; required before T3 specialist heads |
+| `gaia:osmium_drill_head` | T3 | Osmium veins; small Resource Catalyst chance |
+| `gaia:crystal_drill_head` | T3 | Certus Quartz / Amethyst veins; Fluix Crystal bonus |
+| `gaia:nether_drill_head` | T3 | Nether veins only; Quartz / Gold / Blaze bonus |
+| `gaia:refined_obsidian_drill_head` | T4 | Rich Metal veins with increased output + Catalyst chance |
+| `gaia:catalyst_drill_head` | T4 | Catalyst Nodes and Catalyst Ley Lines |
+| `gaia:gaia_infused_drill_head` | T5 | Primary: Mythic Vein (`gaia:mythic_vein`, Nether-only); bonus outputs on all other vein types |
 
 ---
 
 ## Crafting Recipes
+
+### Basic Drill Head (T1/T2)
+
+```
+I I I
+I A I
+I A I
+```
+
+| Key | Item |
+|-----|------|
+| `I` | `minecraft:iron_ingot` |
+| `A` | `create:andesite_alloy` |
+
+### Reinforced Drill Head (T2)
+
+```
+B I B
+I D I
+B I B
+```
+
+| Key | Item |
+|-----|------|
+| `B` | `create:brass_ingot` |
+| `I` | `minecraft:iron_ingot` |
+| `D` | `gaia:basic_drill_head` |
 
 ### Osmium Drill Head (T3)
 

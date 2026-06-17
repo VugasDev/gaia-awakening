@@ -1,6 +1,6 @@
 # World Generation
 
-Gaia Awakening uses **Tectonic** and **Terralith** for terrain generation, producing dramatically taller mountains, richer biome variety, and a custom ore distribution designed around Create Ore Excavation nodes as the primary long-term resource source.
+Gaia Awakening uses **Tectonic** and **Terralith** for terrain generation, producing dramatically taller mountains, richer biome variety, and a custom ore distribution where vanilla ores are gated behind tinted stones and Create Ore Excavation drilling veins are the scalable long-term resource source.
 
 ---
 
@@ -42,118 +42,125 @@ The Mantle zone (Y=-64 to -96) is a Blackstone and Magma dominated layer that vi
 
 ## Ore Distribution
 
+### Crimsite-Gated Early Progression
+
+Vanilla iron, copper, and gold ores do **not** spawn in the world. Instead, early-game metals come exclusively from mining and crushing Create's four tinted decorative stones. These stones must be mined — their renewable crafting recipes (e.g. heated mixing for Veridium) have been removed.
+
+| Create Stone | Crushing Yield |
+|---|---|
+| **Crimsite** | Raw Iron |
+| **Veridium** | Raw Copper |
+| **Ochrum** | Raw Gold |
+| **Asurine** | Raw Zinc |
+
+Until a player has a working crusher, there are no metals. This makes Create's ore processing the gate to every other tech tree.
+
+### All Other Ores — Super-Rare
+
+All remaining ores spawn at extreme rarity. Natural deposits exist only as an emergency fallback; **Create Ore Excavation drilling is the primary resource source**.
+
+- Vanilla ores (diamond, coal, redstone, lapis, emerald, ancient debris): `rarity_filter` chance 96 — generating in roughly 1% of placements (1-in-96)
+- Mekanism ores (osmium, tin, lead, uranium, fluorite): `perChunk = 1` — at most one vein per chunk
+
+### Vein Model — Finite Deposits and Infinite Ley Lines
+
+Each significant ore type has two COE vein categories:
+
+| Category | Spawn Rate | Capacity | Renewal |
+|---|---|---|---|
+| Common Finite Vein | Several per region | ~1,000–3,000 raw items | Depletes permanently |
+| Rare Infinite Ley Line | Very rare | Unlimited | Renewable via Create drilling |
+
+Base metals (iron, copper, gold, zinc) and diamond each have both a common finite vein and a rare infinite ley line. Ancient Debris has a finite Nether vein only. Using a higher-tier drill head increases yield per operation and drilling speed on all vein types.
+
 ### Design Philosophy
 
-Naturally spawning ores are reduced by 50–83% compared to vanilla. They provide enough material to start Tier 1 but are insufficient for sustained automation. **Create Ore Excavation Nodes** are the primary long-term resource — large clusters found through exploration that become renewable via Create drilling machinery.
-
 ```
-Natural ores  →  Tier 1 hand mining (starting resource)
-Ore Nodes     →  Exploration target → Create Drill setup → Unlimited output
+Tinted stones (Crimsite/Veridium/Ochrum/Asurine)  →  Early metal source (mine & crush)
+Super-rare natural ores                             →  Emergency fallback only
+COE finite veins (~1,000–3,000 items, deplete)     →  Mid-game bulk source
+COE infinite ley lines (base metals + diamond)      →  Scalable, renewable endgame source
 ```
 
-### Natural Ore Zones
+### Natural Ore Depth Zones
+
+Natural ore spawns are a fallback — sparse, but present across all depth zones.
 
 #### Zone 1 — Surface (Y +64 to +192)
 
-| Ore | Vanilla Veins/Chunk | Custom Veins/Chunk | Reduction |
-|-----|--------------------|--------------------|-----------|
-| Coal | 30 | 10 | -67% |
-| Iron | 10 | 4 | -60% |
-| Copper | 16 | 6 | -62% |
+| Ore | Notes |
+|-----|-------|
+| Coal | Reduced vein count; still hand-minable early |
+| (Iron, Copper, Gold absent) | Replaced by Crimsite / Veridium / Ochrum crushing |
 
-Zinc (Create) is shifted slightly downward; a few veins remain on the surface but the majority is in Zone 2.
+Zinc (Create) is shifted slightly downward; a few veins remain near the surface.
 
 #### Zone 2 — Normal Caves (Y -32 to +64)
 
-| Ore | Vanilla Veins/Chunk | Custom Veins/Chunk | Reduction |
-|-----|--------------------|--------------------|-----------|
-| Zinc (Create) | 8 | 2 | -75% |
-| Gold | 4 | 1 | -75% |
-| Lapis | 2 | 1 | -50% |
-| Redstone | 8 | 3 | -62% |
-| Ars Nouveau Source Gem | 4 | 2 | -50% |
-| AE2 Certus Quartz (upper) | 2 | 1 | -50% |
+| Ore | Notes |
+|-----|-------|
+| Zinc (Create) | Sparse; primary source is COE veins |
+| Lapis | Reduced; sufficient for early enchanting |
+| Redstone | Reduced; automation staple |
+| Ars Nouveau Source Gem | Reduced |
+| AE2 Certus Quartz | Reduced |
 
 #### Zone 3 — Deep Caves (Y -48 to 0)
 
-| Ore | Vanilla Veins/Chunk | Custom Veins/Chunk | Reduction |
-|-----|--------------------|--------------------|-----------|
-| Osmium (Mekanism) | 6 | 1 | -83% |
-| Tin (Mekanism) | 5 | 1 | -80% |
-| Certus Quartz (AE2, deep) | 3 | 1 | -67% |
-| Diamond | 1 | 0.3 | -70% |
+| Ore | Notes |
+|-----|-------|
+| Osmium (Mekanism) | `perChunk = 1`; one vein max |
+| Tin (Mekanism) | `perChunk = 1`; one vein max |
+| Certus Quartz (AE2) | Reduced |
+| Diamond | `rarity_filter` chance 96 — ~1% placement rate (1-in-96) |
 
 #### Zone 4 — Abyss (Y -96 to -48)
 
-| Ore | Custom Veins/Chunk | Notes |
-|-----|-------------------|-------|
-| Uranium | 0.3 | Almost exclusively via node |
-| Lead | 0.5 | Minimal natural occurrence |
-| Fluorite | 0.3 | Chemicals gate |
-| Osmium (peak) | 1 | Higher concentration for late T3 |
+| Ore | Notes |
+|-----|-------|
+| Uranium | Extremely rare; `perChunk = 1` |
+| Lead | Minimal natural occurrence |
+| Fluorite | Chemicals gate; very rare |
+| Osmium (peak) | Higher concentration for late T3 |
 
 #### Zone 5 — Void Layer (Y -128 to -96)
 
-| Ore | Custom Veins/Chunk | Notes |
-|-----|-------------------|-------|
-| Ancient Debris | 0.2 | Practically only boss/node sourced |
-| Osmium Mega-Cluster | 0.5 | Large veins for lategame bulk |
+| Ore | Notes |
+|-----|-------|
+| Ancient Debris | Rare finite Nether vein only; no infinite ley line |
+| Osmium Mega-Cluster | Large veins for lategame bulk |
 
 Zone 5 is only available in world presets with the extended Y range (Apex: The Grand Journey and equivalents).
 
 ---
 
-## Create Ore Excavation Node System
+## Create Ore Excavation — Drilling Veins
 
-### How Nodes Work
+COE drilling veins are the primary long-term resource source. The two vein categories (common finite and rare infinite ley line) are described in the Vein Model section above. Base metals and diamond have both types; Ancient Debris has a finite Nether vein only.
 
-Create Ore Excavation places large **Ore Nodes** — dense clusters of 200–500 ore blocks — at set intervals across the world. Hand-mining a node gives roughly 20–30 ore as a starting bonus (10% of node yield). With a Create drilling contraption, the node is **infinitely renewable** and produces ore continuously as long as the machine runs.
+### Drilling Machine
 
-Node spawn rarity is set to 40% of the default (`nodeSpawnRarity = 0.4`), making exploration necessary to find them.
+The COE `drilling_machine` is an expensive, intentional gate:
 
-### Node Table
+- **Cost**: 6× Iron Block, 1× Precision Mechanism, 1× Brass Casing
+- COE's built-in drill heads are disabled; two custom heads bridge early tiers:
+  - **Basic Drill Head** — T1/T2; iron + andesite alloy
+  - **Reinforced Drill Head** — T2; brass + iron + basic drill head
+  - Existing T3+ heads unlock at higher tiers
 
-| Node Type | Zone | Y Centre | Node Spacing | Hand-Mine Yield | Create Output/h |
-|-----------|------|----------|-------------|-----------------|-----------------|
-| Coal Node | 1 | +96 | ~300 blocks | 40 | ~800 |
-| Iron Node | 1 | +48 | ~350 blocks | 30 | ~600 |
-| Copper Node | 1 | +64 | ~350 blocks | 25 | ~500 |
-| Zinc Node | 2 | +20 | ~400 blocks | 20 | ~400 |
-| Gold Node | 2 | -10 | ~500 blocks | 20 | ~300 |
-| Lapis Node | 2 | +10 | ~500 blocks | 15 | ~250 |
-| Redstone Node | 2 | -15 | ~400 blocks | 25 | ~500 |
-| Source Gem Node | 2 | +20 | ~600 blocks | 15 | ~200 |
-| Diamond Node | 3 | -35 | ~800 blocks | 10 | ~150 |
-| Osmium Node | 3 | -30 | ~600 blocks | 20 | ~350 |
-| Tin Node | 3 | -25 | ~600 blocks | 20 | ~300 |
-| Certus Node | 3 | -30 | ~700 blocks | 15 | ~200 |
-| Uranium Node | 4 | -70 | ~1,200 blocks | 8 | ~100 |
-| Lead Node | 4 | -65 | ~900 blocks | 12 | ~150 |
-| Fluorite Node | 4 | -60 | ~900 blocks | 10 | ~120 |
-| Ancient Debris Node | 5 | -110 | ~2,000 blocks | 5 | ~50 |
-
-Output figures assume a mid-size Create drilling setup (4 drills, 128 RPM). Actual values depend on drill configuration and are calibrated after testing.
-
-### Node Configuration
-
-```toml
-# config/createoreexcavation-common.toml
-nodeSpawnRarity = 0.4        # 40% of default — nodes are rare, exploration matters
-nodeRenewable = true         # Nodes are infinitely renewable via Create drilling
-nodeHandMiningYield = 0.1    # Hand-mining gives 10% of node content (starting bonus only)
-```
+A higher-tier drill head increases yield per operation and drilling speed on all vein types.
 
 ---
 
 ## Progression Through the World
 
-| Tier | Mining strategy |
-|------|----------------|
-| T1 | Hand-mine natural ores for first machines |
-| T2 | Find first Iron/Zinc Node; set up Create drilling contraption |
-| T3 | Go deeper for Osmium/Certus/Diamond Nodes; expand Create automation |
-| T4 | Reach Zone 4 Abyss for Uranium/Lead/Fluorite Nodes |
-| T5 | Zone 5 Void Layer for Ancient Debris Nodes; Shattered Outer Rim for endgame loot |
+| Tier | Resource strategy |
+|------|-----------------|
+| T1 | Mine Crimsite/Veridium/Ochrum for first ingots; hand-mine coal and sparse ores |
+| T2 | Build crusher; tap first iron/zinc COE finite vein with a Create drilling contraption |
+| T3 | Go deeper for osmium/certus/diamond veins; find rare infinite ley lines for base metals |
+| T4 | Reach Zone 4 Abyss for uranium/lead/fluorite; expand Create automation |
+| T5 | Zone 5 Void Layer for Ancient Debris (finite); Shattered Outer Rim for endgame loot |
 
 ---
 

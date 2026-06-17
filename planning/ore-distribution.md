@@ -1,5 +1,66 @@
 # Ore Distribution — Gaia Awakening
 
+---
+
+## Implemented Model (2026-06-16): Crimsite-Gated Progression
+
+> **Status**: Implemented on branch `feat/crimsite-ore-progression`
+
+This section documents what was actually built. The older planning content below reflects earlier design iterations.
+
+### Core Concept
+
+Vanilla iron, copper, and gold ore are **removed from worldgen entirely** via datapack overrides. Early-game metal production is gated behind Create's four tinted decorative stones, which must be **mined** (renewable crafting recipes for them were removed):
+
+| Create Stone | Crushing Output |
+|---|---|
+| Crimsite | Raw Iron |
+| Veridium | Raw Copper |
+| Ochrum | Raw Gold |
+| Asurine | Raw Zinc |
+
+This forces players to engage with Create's crushing workflow before they can smelt their first ingots.
+
+### All Other Ores — Super-Rare
+
+All remaining ores are made extremely rare via datapack overrides, making hand-mining a last resort rather than a primary strategy:
+
+- **Vanilla ores** (diamond, coal, redstone, lapis, emerald, ancient debris): `rarity_filter` `chance: 96` — only 1-in-96 placements succeed (~1%)
+- **Mekanism ores** (osmium, tin, lead, uranium, fluorite): `perChunk` set to 1 — one vein per chunk maximum
+- **COE drilling is the real source**; natural spawns are only a fallback
+
+### Vein Model — Finite + Rare Infinite Ley Lines
+
+Veins come in two flavours:
+
+| Flavour | Frequency | Size | Renewal |
+|---|---|---|---|
+| Common Finite Vein | Multiple per world region | ~1,000–3,000 raw items total | One-time; depletes |
+| Rare Infinite Ley Line | Very rare | Unlimited | Renewable via Create drilling |
+
+Metals with both types: base metals (iron, copper, gold, zinc) and diamond. Ancient Debris has a finite Nether vein only; no infinite ley line.
+
+A better drill head increases yield per operation and drilling speed, making ley lines significantly more productive at higher tiers.
+
+### Drilling Machine Gate
+
+COE's `drilling_machine` recipe is overridden to cost:
+
+- 6× Iron Block
+- 1× Precision Mechanism
+- 1× Brass Casing
+
+COE's built-in drill heads (Iron / Diamond / Netherite Drill) are **disabled**. Two new lower-tier heads bridge the gap before the custom T3+ heads:
+
+- **Basic Drill Head** (`gaia:basic_drill_head`) — T1/T2; requires iron + andesite alloy
+- **Reinforced Drill Head** (`gaia:reinforced_drill_head`) — T2; requires brass + iron + basic drill head
+
+### New Mod: Create Ore Excavation Better Finder
+
+Replaces the default text-based vein finder with a radar-style UI. Available on both Modrinth and CurseForge (MIT licence).
+
+---
+
 > **Status**: Planning document — 2026-05-01
 > **Implementation**: KubeJS datapack overrides + Create Ore Excavation config
 

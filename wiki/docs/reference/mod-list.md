@@ -19,6 +19,7 @@ Mods are grouped by the same categories used in the [Mods by Category](../mods/i
 | Create: Dreams & Desires | [Modrinth](https://modrinth.com/mod/JmybsfWs) | [CurseForge](https://www.curseforge.com/minecraft/mc-mods/create-dreams-desires) |
 | Create: Enchantment Industry | [Modrinth](https://modrinth.com/mod/JWGBpFUP) | [CurseForge](https://www.curseforge.com/minecraft/mc-mods/create-enchantment-industry) |
 | Create Ore Excavation | [Modrinth](https://modrinth.com/mod/ResbpANg) | [CurseForge](https://www.curseforge.com/minecraft/mc-mods/create-ore-excavation) |
+| Create Ore Excavation Better Finder | [Modrinth](https://modrinth.com/mod/create-ore-excavation-better-finder) | [CurseForge](https://www.curseforge.com/minecraft/mc-mods/create-ore-excavation-better-finder) |
 | Create: Simple Ore Doubling | [Modrinth](https://modrinth.com/mod/7jXyH8Xk) | [CurseForge](https://www.curseforge.com/minecraft/mc-mods/create-simple-ore-doubling) |
 | Create: New Age | [Modrinth](https://modrinth.com/mod/FTeXqI9v) | [CurseForge](https://www.curseforge.com/minecraft/mc-mods/create-new-age) |
 | Create: Garnished | [Modrinth](https://modrinth.com/mod/6e2SlzR4) | [CurseForge](https://www.curseforge.com/minecraft/mc-mods/garnished) |
