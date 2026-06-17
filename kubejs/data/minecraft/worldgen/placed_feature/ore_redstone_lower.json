@@ -1,5 +1,5 @@
 {
-  "feature": "minecraft:ore_diamond_buried",
+  "feature": "minecraft:ore_redstone_lower",
   "placement": [
     { "type": "minecraft:rarity_filter", "chance": 96 },
     { "type": "minecraft:in_square" },

@@ -1,16 +1,9 @@
 {
-  "feature": "minecraft:ore_coal",
+  "feature": "minecraft:ore_coal_upper",
   "placement": [
-    { "type": "minecraft:count", "count": 7 },
+    { "type": "minecraft:rarity_filter", "chance": 96 },
     { "type": "minecraft:in_square" },
-    {
-      "type": "minecraft:height_range",
-      "height": {
-        "type": "minecraft:uniform",
-        "min_inclusive": { "absolute": 136 },
-        "max_inclusive": { "absolute": 320 }
-      }
-    },
+    { "type": "minecraft:height_range", "height": { "type": "minecraft:trapezoid", "min_inclusive": { "absolute": -64 }, "max_inclusive": { "absolute": 30 } } },
     { "type": "minecraft:biome" }
   ]
 }
