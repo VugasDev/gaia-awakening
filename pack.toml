@@ -1,13 +1,13 @@
 name = "Gaia Awakening"
 author = "VugasDev"
-version = "0.1.41-alpha"
+version = "0.1.42-alpha"
 pack-format = "packwiz:1.1.0"
 
 [index]
 file = "index.toml"
 hash-format = "sha256"
-hash = "3115d92a2f6f11e88c258240d48c336ea50e4f9b58bf8c727a0e24badf751807"
+hash = "74e537c7e147ff9eff188e08463254c55be21fc778d6349c87f9e4d28874c239"
 
 [versions]
 minecraft = "1.21.1"
-neoforge = "21.1.228"
+neoforge = "21.1.233"
