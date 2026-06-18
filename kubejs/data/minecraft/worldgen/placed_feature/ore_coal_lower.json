@@ -1,5 +1,5 @@
 {
-  "feature": "minecraft:ore_coal_lower",
+  "feature": "minecraft:ore_coal_buried",
   "placement": [
     { "type": "minecraft:rarity_filter", "chance": 96 },
     { "type": "minecraft:in_square" },

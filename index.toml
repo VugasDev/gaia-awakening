@@ -1366,15 +1366,15 @@ hash = "62012e2acf99f98f80291250b824d1cf4093d731b807c2b74ed49d05f008213d"
 
 [[files]]
 file = "kubejs/data/minecraft/worldgen/placed_feature/ore_coal_lower.json"
-hash = "ada5f9a7e5722c20645dc756f2aa93b0fe9d51eea1833e8f60c61a131f23da77"
+hash = "db2cd3400d7f5cf4d5cb6465e47bfd1a0005d8862db35f9532a3882426a2c325"
 
 [[files]]
 file = "kubejs/data/minecraft/worldgen/placed_feature/ore_coal_upper.json"
-hash = "9a0268c87e7215e2f78ec9a9f460163f54722eea4e0bf812f6b0743ddffacad2"
+hash = "fe93b714b5f316d1c514a91a7f1f91629ff73608cd9cc4db19c0b5d885d5a5e2"
 
 [[files]]
 file = "kubejs/data/minecraft/worldgen/placed_feature/ore_copper.json"
-hash = "17a0b825b57ea527d6e400898fb6a7af2a8e4348ee5086b5d319990a42f5d08f"
+hash = "bd58151e4fa8b1fd7d9e44ab536f305452e32ea0417e4aedf276fccc3805f639"
 
 [[files]]
 file = "kubejs/data/minecraft/worldgen/placed_feature/ore_copper_large.json"
@@ -1382,7 +1382,7 @@ hash = "2f3609e5df51ed8c7049cab389faf62a1c757269d37cd4bcb57b2f87209282d1"
 
 [[files]]
 file = "kubejs/data/minecraft/worldgen/placed_feature/ore_diamond.json"
-hash = "75087d5621f03d9845bf13ce4755482aae68e25b5f59dd45c2397926d7f1b685"
+hash = "3336edc36c48cd4daacea6680249c3789ccd5b4c8a95ee4bcd196c77e89ccb31"
 
 [[files]]
 file = "kubejs/data/minecraft/worldgen/placed_feature/ore_diamond_buried.json"
@@ -1406,11 +1406,11 @@ hash = "3ffb594fdf416fb22da4409eaddf9fe0ef569bf8077f82606c43918b146cd5fb"
 
 [[files]]
 file = "kubejs/data/minecraft/worldgen/placed_feature/ore_gold_lower.json"
-hash = "9a9fd54c32b90bb99ec0b22db8283aa90be7edd39836958deb788d235a359011"
+hash = "3d81634dc7361a9f76b56feb8524e690a49fca86faffe3640b7ab6b79a7f2fb8"
 
 [[files]]
 file = "kubejs/data/minecraft/worldgen/placed_feature/ore_iron_middle.json"
-hash = "59b298d19b220878ddab036e4558cc6568c25aab1a5c903ce9361133815e30ca"
+hash = "09b63c623a041bcd6a701a60a56e27b6abe33a8f9d8fca289a434ca67454a35f"
 
 [[files]]
 file = "kubejs/data/minecraft/worldgen/placed_feature/ore_iron_small.json"
@@ -1418,7 +1418,7 @@ hash = "47cc0c71a4c7cff3cf4b4d6edc0ea38c20642b3537ab3d4c518ba82e860c79ae"
 
 [[files]]
 file = "kubejs/data/minecraft/worldgen/placed_feature/ore_iron_upper.json"
-hash = "4b5f477d84c12c99e56191ed965aeea1ba5e1a473db6deaeb87a94ba731db8fe"
+hash = "09b63c623a041bcd6a701a60a56e27b6abe33a8f9d8fca289a434ca67454a35f"
 
 [[files]]
 file = "kubejs/data/minecraft/worldgen/placed_feature/ore_lapis.json"
@@ -1434,7 +1434,7 @@ hash = "88392a71a07c7694c64cc7b23c6debf6e97d57d477fde351f7ec05b2245c06a3"
 
 [[files]]
 file = "kubejs/data/minecraft/worldgen/placed_feature/ore_redstone_lower.json"
-hash = "33f1588ed2bdb35bc716ce0fd2203ea3c6066048c85d7dc46d4e5c89b27f9ae7"
+hash = "88392a71a07c7694c64cc7b23c6debf6e97d57d477fde351f7ec05b2245c06a3"
 
 [[files]]
 file = "kubejs/server_scripts/01_resource_unification.js"
