@@ -16,7 +16,7 @@
 				"PneumaticCraft runs on AIR pressure. First, make Compressed Iron — drop iron and ignite TNT next to it. Boom, science!"
 				"Wear protective gear or stand back. Preferably both."
 			]
-			icon: "pneumaticcraft:compressed_iron_ingot"
+			icon: "pneumaticcraft:ingot_iron_compressed"
 			id: "0000000000043001"
 			rewards: [
 				{
@@ -36,7 +36,7 @@
 				{
 					count: 8L
 					id: "1000000000043001"
-					item: "pneumaticcraft:compressed_iron_ingot"
+					item: "pneumaticcraft:ingot_iron_compressed"
 					type: "item"
 				}
 			]
@@ -58,7 +58,7 @@
 				{
 					count: 8L
 					id: "A000000000043002"
-					item: "pneumaticcraft:compressed_iron_ingot"
+					item: "pneumaticcraft:ingot_iron_compressed"
 					type: "item"
 				}
 				{
