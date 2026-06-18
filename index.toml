@@ -1229,64 +1229,80 @@ file = "kubejs/assets/gaia/textures/block/stellar_bookshelf.png"
 hash = "783a2829b5f06750ecb09a749d4f6e6bcc451d213471294bd5509fb98fac5a5f"
 
 [[files]]
+file = "kubejs/assets/gaia/textures/entity/drill/basic_drill_head.png"
+hash = "dbb69029d407a3e6969cb8830470cb5f1c9cf51bf72038e41ec9cfa04ebf5613"
+
+[[files]]
 file = "kubejs/assets/gaia/textures/entity/drill/catalyst_drill_head.png"
-hash = "acf2c026417b5e7b294038d5964a36d3cf28ac506d82b6a4f744547d3ccb81e7"
+hash = "c762f2c7dc6d747f4bb42e966cecb8d0b5bc21eae092a6e857e656ad8685cb7e"
 
 [[files]]
 file = "kubejs/assets/gaia/textures/entity/drill/crystal_drill_head.png"
-hash = "4374cc3690f8b5b22d465d46eaf8876be8c47738de6533887504c1bc65e068df"
+hash = "ce34b36730df22f1e4ea3ef5a9e3c3c045d76cd0f2a3524f63d0a8756d9d3432"
 
 [[files]]
 file = "kubejs/assets/gaia/textures/entity/drill/gaia_infused_drill_head.png"
-hash = "6b11fe0943eeed9ead1517bcdfdefeb8e7f52b0c064dc0a48a2c11f41fadf1a3"
+hash = "05d992b9d91a1f26b7e56351fbd467d630853feb6325f6063b154808e6c11627"
 
 [[files]]
 file = "kubejs/assets/gaia/textures/entity/drill/nether_drill_head.png"
-hash = "25a2072c81e91c3918e441424ab5791eee6f4a8ef4d9a99cef4fdde7a36aa459"
+hash = "7c85cdd9a78e766707d04b3dea95b517c592d33f587204e604c042ceae845539"
 
 [[files]]
 file = "kubejs/assets/gaia/textures/entity/drill/osmium_drill_head.png"
-hash = "8b47a63d51c15c8601c3523dce2dac5f8392e4b78e667940d93cc7e4fa002811"
+hash = "fcc7c81ddaecbdef12e33560e0af6f6f4f92f55edf38bd31c4639be6085c63fe"
 
 [[files]]
 file = "kubejs/assets/gaia/textures/entity/drill/refined_obsidian_drill_head.png"
-hash = "cabe78e75407803a94da839c8364a2c26f348d34ec4274bba5079d9826a13909"
+hash = "0486571241a04d1ed75988b30e940476038ac4601c42886c4cf9f7d318bf4b69"
+
+[[files]]
+file = "kubejs/assets/gaia/textures/entity/drill/reinforced_drill_head.png"
+hash = "c164909e492067c0371819cd33e52ac075037f3cf5499d9178a59fd1eff4fcde"
 
 [[files]]
 file = "kubejs/assets/gaia/textures/fluid/mythic_liquid_xp_flowing.png"
-hash = "d8d2cf691555924e510a39a34be7ae4604bc122ea4b600374cc8d580be8c6889"
+hash = "d57a960cd42c48d7ad3321d4e590f8d3a6d98a38c102487dd89902a0c851879a"
+
+[[files]]
+file = "kubejs/assets/gaia/textures/fluid/mythic_liquid_xp_flowing.png.mcmeta"
+hash = "9b53d9769418604cb936e1e76b0a8264741f7229dcc4674d5343d484925b1c4b"
 
 [[files]]
 file = "kubejs/assets/gaia/textures/fluid/mythic_liquid_xp_still.png"
-hash = "73b860781ba1d559e2e5d5fe2a1cea7387ecaca6a0177494fa10f2308a81fdca"
+hash = "64ff170468b8a5156b9f79dd19920bbf0867beb3360b1b5b7a8182dd69bbc4d3"
+
+[[files]]
+file = "kubejs/assets/gaia/textures/fluid/mythic_liquid_xp_still.png.mcmeta"
+hash = "6a19bef21d66aac8fdcd8032751057733e321446b304d38f5ee8ba35efe99a1d"
 
 [[files]]
 file = "kubejs/assets/gaia/textures/item/basic_drill_head.png"
-hash = "8b47a63d51c15c8601c3523dce2dac5f8392e4b78e667940d93cc7e4fa002811"
+hash = "f5d63168a7d8538b76c4e468f73fb850d3088b2544bc5b7c926fc7ff0fed8a59"
 
 [[files]]
 file = "kubejs/assets/gaia/textures/item/catalyst_drill_head.png"
-hash = "acf2c026417b5e7b294038d5964a36d3cf28ac506d82b6a4f744547d3ccb81e7"
+hash = "f79446f42bcca41f009611f3cd2377a8d2dd0e211c4fa60f56e92015f4a81279"
 
 [[files]]
 file = "kubejs/assets/gaia/textures/item/crushed_osmium.png"
-hash = "b23a8c29bc439aabd7c29d5c8a960d1e5e4119cf162cd428e61ac9f98290a4e3"
+hash = "c19595b59c907491d459009485748dcf2519a45e4bbb84dd8314881f0f1ac34f"
 
 [[files]]
 file = "kubejs/assets/gaia/textures/item/crystal_drill_head.png"
-hash = "4374cc3690f8b5b22d465d46eaf8876be8c47738de6533887504c1bc65e068df"
+hash = "2661b9a6ecf1c2792583235d927955aea94f5824611332c929de373eb1397833"
 
 [[files]]
 file = "kubejs/assets/gaia/textures/item/gaia_awakening_token.png"
-hash = "8d3f2d4c9c505d6525bf7276c08cea4e580b871fe8e2a3930b727bfd6e080859"
+hash = "9251dfb8bfc7436ddc43aa0beef2358a0da5ddd192d9274123168d9db90dd237"
 
 [[files]]
 file = "kubejs/assets/gaia/textures/item/gaia_infused_drill_head.png"
-hash = "6b11fe0943eeed9ead1517bcdfdefeb8e7f52b0c064dc0a48a2c11f41fadf1a3"
+hash = "171e8c0b289e039a5f6c949a1b16bd143f74c0679df84e3ba12afb8995c21cbd"
 
 [[files]]
 file = "kubejs/assets/gaia/textures/item/mythic_catalyst.png"
-hash = "df26dd587d7c7da04963d7c5ca9c57883a94a7885ada2613ef059521315ed5da"
+hash = "8d4a83d409f555b471f2b112922dd38ec9a2a15091e08864fe5b045a33bdc407"
 
 [[files]]
 file = "kubejs/assets/gaia/textures/item/mythic_liquid_xp_bucket.png"
@@ -1294,43 +1310,43 @@ hash = "32ad88daa9f50bf676fe54e20409fe2593e573b30f26bf0d3d0328cc91d722ed"
 
 [[files]]
 file = "kubejs/assets/gaia/textures/item/mythic_xp_shard.png"
-hash = "fde88e4e7e9e02d66b608a7489fd0c76b5516ada61e887234e2755860b2fb5f2"
+hash = "789ebdcf0ff4f3ab66e839cf52c7b456dc22b3f201f49f8356239d36dddaed10"
 
 [[files]]
 file = "kubejs/assets/gaia/textures/item/nether_drill_head.png"
-hash = "25a2072c81e91c3918e441424ab5791eee6f4a8ef4d9a99cef4fdde7a36aa459"
+hash = "c52322e179d67100f30c6ea8cd68efff62c4f0f2455e794897bbe0c16b79989f"
 
 [[files]]
 file = "kubejs/assets/gaia/textures/item/osmium_drill_head.png"
-hash = "8b47a63d51c15c8601c3523dce2dac5f8392e4b78e667940d93cc7e4fa002811"
+hash = "2fa73be8a75740c077f971d08c70e79ee878d832b0f1df40e587e6e69668694a"
 
 [[files]]
 file = "kubejs/assets/gaia/textures/item/refined_gold_pellet.png"
-hash = "dd818652ef43a33cc8c6c17446001e92d45710e52f3986469fd8ccfb8f381279"
+hash = "a4e88e2f3d74b0a0a7a8e0722709a5babc883e2fab846431a6b132aef77b17ac"
 
 [[files]]
 file = "kubejs/assets/gaia/textures/item/refined_iron_pellet.png"
-hash = "1f5539d5b7d1a16ad8c42ea6e66b54a3d039dd690fb5fc856b739e6d34fa8d13"
+hash = "5f969fd4768af50d49881c3daa3cebf92e0011ae6c1a1f944a27883d3ebbcf11"
 
 [[files]]
 file = "kubejs/assets/gaia/textures/item/refined_obsidian_drill_head.png"
-hash = "cabe78e75407803a94da839c8364a2c26f348d34ec4274bba5079d9826a13909"
+hash = "0453ced3d6153b11ee560a7ac6afa0ff587b0c12389b637ca740bb07718a0ccc"
 
 [[files]]
 file = "kubejs/assets/gaia/textures/item/refined_osmium_pellet.png"
-hash = "bcfbffc5932419f133c8050b547dec5d82747ae150da2b424a296820f3369e50"
+hash = "bb3404c57829dcc7076c4f5c43991be2cd16a5c97abbb151cbb905c27ed6b8b0"
 
 [[files]]
 file = "kubejs/assets/gaia/textures/item/reinforced_drill_head.png"
-hash = "8b47a63d51c15c8601c3523dce2dac5f8392e4b78e667940d93cc7e4fa002811"
+hash = "22712654e485a7e2ef9023846521db8f5ded39adb254a81da5b3320cb168b1b6"
 
 [[files]]
 file = "kubejs/assets/gaia/textures/item/resource_catalyst.png"
-hash = "0a4587e2ae94c6ce6e53c2bf8cdb388e28933984e5a009457da0409576f46f1c"
+hash = "7beebd4e9002f5b125a92f83cc5c069275f48841404c56853d537fb9f1e739df"
 
 [[files]]
 file = "kubejs/assets/gaia/textures/item/singularity_shard.png"
-hash = "d0485ae68732096e4651d4aa0720f1e22727e8a1c4c4134ff6715dea6728fcac"
+hash = "71deae035d6f30242539ea3836b40e21cba01f2e06a96145a0ba01a0150f2ee9"
 
 [[files]]
 file = "kubejs/assets/minecraft/texts/splashes.txt"
