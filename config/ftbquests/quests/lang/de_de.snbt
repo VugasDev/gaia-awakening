@@ -195,7 +195,7 @@
 
     "t4_create_ei.title": "Hyper-Erfahrung",
     "t4_create_ei.quest_subtitle": "Flüssige XP. Industrieller Maßstab. Weil warum nicht.",
-    "t4_create_ei.quest_desc": ["Create: Enchantment Industry wandelt XP in flüssige Form um und verarbeitet sie dann zu Hyper-Erfahrung.", "Hyper-Erfahrung wird im Catalyst Altar verwendet — einer der drei Wege, einen Resource Catalyst herzustellen.", "Setup: XP über einen Experience Rotor sammeln (Mob-Farm in der Nähe) → in einem Tank lagern → durch ein Misch-Rezept laufen lassen, um Hyper-Erfahrung zu produzieren.", "Der Catalyst Altar verbraucht 1000 mB Hyper-Erfahrung (über einen Create Spout), um einen Resource Catalyst herzustellen.", "Dies ist die kontrollierteste Catalyst-Quelle — vollständig automatisierbar mit einem Create+Mekanism-Setup."],
+    "t4_create_ei.quest_desc": ["Create: Enchantment Industry wandelt XP in flüssige Form um und verarbeitet sie dann zu Hyper-Erfahrung.", "Hyper-Erfahrung wird im Catalyst Altar verwendet — einer der drei Wege, einen Resource Catalyst herzustellen.", "Setup: XP per Mechanical Grindstone + Grindstone Drain aus dem Entzaubern von Items gewinnen (bzw. per Experience Hatch abzapfen) → in einem Tank lagern → durch ein Misch-Rezept laufen lassen, um Hyper-Erfahrung zu produzieren.", "Der Catalyst Altar verbraucht 1000 mB Hyper-Erfahrung (über einen Create Spout), um einen Resource Catalyst herzustellen.", "Dies ist die kontrollierteste Catalyst-Quelle — vollständig automatisierbar mit einem Create+Mekanism-Setup."],
 
     "t4_finale.title": "Bereit für Tier 5",
     "t4_finale.quest_subtitle": "Die Bosse warten. Genauso wie deine Beerdigung.",

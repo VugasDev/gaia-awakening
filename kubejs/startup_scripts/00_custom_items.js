@@ -11,7 +11,7 @@ StartupEvents.registry('fluid', event => {
         .displayName('Mythic Liquid XP')
         .stillTexture('gaia:fluid/mythic_liquid_xp_still')
         .flowingTexture('gaia:fluid/mythic_liquid_xp_flowing')
-        .tint(0x00CCFF)
+        .tint(0xA020F0)
         .type(function(type) {
             type.viscosity(800)
             type.density(1800)

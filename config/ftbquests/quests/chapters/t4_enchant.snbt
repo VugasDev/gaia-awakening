@@ -83,10 +83,10 @@
 				"0000000000055002"
 			]
 			description: [
-				"Create: Enchantment Industry turns experience into a FLUID. The Experience Rotor harvests it from belts of items."
+				"Create: Enchantment Industry turns experience into a FLUID. A Mechanical Grindstone over a Grindstone Drain disenchants items into Liquid Experience; an Experience Hatch taps it out."
 				"Condense regular XP into Hyper Experience — fuel for the Catalyst Altar and high-tier enchanting."
 			]
-			icon: "create_enchantment_industry:experience_rotor"
+			icon: "create_enchantment_industry:mechanical_grindstone"
 			id: "0000000000055003"
 			rewards: [
 				{
@@ -106,7 +106,7 @@
 				{
 					count: 1L
 					id: "1000000000055003"
-					item: "create_enchantment_industry:experience_rotor"
+					item: "create_enchantment_industry:mechanical_grindstone"
 					type: "item"
 				}
 			]

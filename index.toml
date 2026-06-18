@@ -766,7 +766,7 @@ hash = "94645f7cd8a8bb627cad0a58e84564a0a7d29665c737a744315607b6223ac278"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/t2_create_brass.snbt"
-hash = "852524e42a48a9a2f98125d8619f058c685237196b7cfefcc9a7913b9660116b"
+hash = "f33b34b59d479b2ed30b442fdb2d9f9d20aa7c50ca9bc735c1f21ffd0973901f"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/t2_kitchen.snbt"
@@ -814,7 +814,7 @@ hash = "cc5f15301ee684ae9ec6bb59fef9f51a8b86129e3a066eaa15b6269d6f65e0ce"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/t4_enchant.snbt"
-hash = "d83a83fa295b2947576201ada6e4246d7946659470690de82932f241926a70bc"
+hash = "2aea8c6d9cd308f94eac9f7fd64981d0dbbd45140ab0acefe11c67b66d56290c"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/t4_mekanism.snbt"
@@ -834,7 +834,7 @@ hash = "df92fd6b31e38ecbe9761f6ca2260e1b19eb9bcce38e9116565733ad47078b76"
 
 [[files]]
 file = "config/ftbquests/quests/lang/de_de.snbt"
-hash = "598a6dd8f71a989c6ffd0dd7b6caf2a5478c02b4c4f68180e8825db7dc671e45"
+hash = "1cded31e9d478c98107bd98f64b2155e3a51f9a506162356f31f44751e1f46fa"
 
 [[files]]
 file = "config/ftbteams-server.snbt"
@@ -1306,11 +1306,11 @@ hash = "8d4a83d409f555b471f2b112922dd38ec9a2a15091e08864fe5b045a33bdc407"
 
 [[files]]
 file = "kubejs/assets/gaia/textures/item/mythic_liquid_xp_bucket.png"
-hash = "32ad88daa9f50bf676fe54e20409fe2593e573b30f26bf0d3d0328cc91d722ed"
+hash = "1822ba8fb149cab95bf2d0a430c43532b68ab0482e771af6ab47d58e3d480082"
 
 [[files]]
 file = "kubejs/assets/gaia/textures/item/mythic_xp_shard.png"
-hash = "789ebdcf0ff4f3ab66e839cf52c7b456dc22b3f201f49f8356239d36dddaed10"
+hash = "f6375304f7d7aa89733b9d528c922da7a69bdb81f5301916b280054fe94b073f"
 
 [[files]]
 file = "kubejs/assets/gaia/textures/item/nether_drill_head.png"
@@ -1498,7 +1498,7 @@ hash = "66fde3759a8d79e501e0ea61b5f9cb5b158cdd876604a6cdb09ca02b72a766b0"
 
 [[files]]
 file = "kubejs/startup_scripts/00_custom_items.js"
-hash = "ed72a0b33ec00e762277b1aba43a0267aa9ed2b1d6f1d298918a95d4d06218a4"
+hash = "96fa770e697a7f967afe3b429114191340d811c90693eaf3381d0c11f23b74b1"
 
 [[files]]
 file = "mods/ae2.pw.toml"
