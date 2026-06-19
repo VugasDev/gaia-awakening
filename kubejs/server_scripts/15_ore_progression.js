@@ -39,22 +39,22 @@ ServerEvents.recipes(event => {
         // Per-ore distinct + tier-scaled placement so vein types DON'T all cluster
         // in the same cells. Higher tiers spread wider; large distinct salts
         // (prime step) decorrelate each type's grid so they land in different areas.
-        const fSpacing = 40 + o.tier * 10 + (i % 5) * 3   // finite: ~50..92 chunks
+        const fSpacing = 600 + o.tier * 150 + (i % 5) * 45  // finite: ~750..1380 chunks (rare nodes)
         const fSalt = 50021 + i * 104729
-        const lSpacing = fSpacing * 4                      // ley line: much rarer
+        const lSpacing = fSpacing * 2                        // ley line: rarer still
         const lSalt = 800011 + i * 104729
 
         // finite vein — depletes; min head = o.tier
         // COE expects `name` as a STRING (stringified text component), not an object.
         coe.vein(JSON.stringify({ text: `${o.id} Deposit`, color: o.color }), o.block)
-            .placement(fSpacing, 16, fSalt).veinSize(1, 3).alwaysFinite()
+            .placement(fSpacing, 64, fSalt).veinSize(1, 3).alwaysFinite()
             .biomeWhitelist(biome).id(`gaia:${o.id}_vein`)
         coe.drilling(Item.of(o.raw, o.n), `gaia:${o.id}_vein`, 240)
             .drill(TAG(o.tier)).id(`gaia:${o.id}_drill`)
 
         // infinite ley line — renewable; min head = one tier up
         coe.vein(JSON.stringify({ text: `${o.id} Ley Line`, color: o.color }), o.block)
-            .placement(lSpacing, 48, lSalt).alwaysInfinite()
+            .placement(lSpacing, 128, lSalt).alwaysInfinite()
             .biomeWhitelist(biome).id(`gaia:${o.id}_ley`)
         coe.drilling(Item.of(o.raw, o.n), `gaia:${o.id}_ley`, 240)
             .drill(TAG(leyTier)).id(`gaia:${o.id}_ley_drill`)

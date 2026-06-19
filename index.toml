@@ -1582,11 +1582,11 @@ hash = "a07d2f625e26eb44965a68e13fbe8c3e109c254b05b0da89619c5dbd9561242f"
 
 [[files]]
 file = "kubejs/server_scripts/14_drill_tier_tags.js"
-hash = "aea589498154ed1c296582268c10f87e13ba4effbe22d8a1d0f3afa784b432b3"
+hash = "e29ee97a826aa277d167a566fbf5ddb8de24beeb153fb5a502874f77b302b874"
 
 [[files]]
 file = "kubejs/server_scripts/15_ore_progression.js"
-hash = "51f0180d17440807609f57e74dac784e1ec98ac5d7d6daed7242ee6feebd09a4"
+hash = "ee0d6b8a93c5153f7f0516e0a7f3cb39be3df5622e24f137bc91388df56b2721"
 
 [[files]]
 file = "kubejs/server_scripts/enchantment_automation.js"
