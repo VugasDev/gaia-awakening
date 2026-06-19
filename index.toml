@@ -1586,7 +1586,7 @@ hash = "aea589498154ed1c296582268c10f87e13ba4effbe22d8a1d0f3afa784b432b3"
 
 [[files]]
 file = "kubejs/server_scripts/15_ore_progression.js"
-hash = "818aa8047a9ecf9d6048077ca4842f8c31feb68e74dc4d411dba2a5460a28348"
+hash = "51f0180d17440807609f57e74dac784e1ec98ac5d7d6daed7242ee6feebd09a4"
 
 [[files]]
 file = "kubejs/server_scripts/enchantment_automation.js"
