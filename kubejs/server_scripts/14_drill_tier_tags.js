@@ -8,6 +8,7 @@ ServerEvents.tags('item', event => {
         nether:   'gaia:nether_drill_head',
         crystal:  'gaia:crystal_drill_head',
         refined:  'gaia:refined_obsidian_drill_head',
+        catalyst: 'gaia:catalyst_drill_head',
         gaia:     'gaia:gaia_infused_drill_head'
     }
     const t3 = [H.osmium, H.nether, H.crystal, H.refined, H.gaia]
@@ -19,5 +20,6 @@ ServerEvents.tags('item', event => {
 
     // Every gaia head must be a valid COE drill item (machine drill-slot gate).
     // Consolidates the basic+reinforced tagging previously in 11_base_metal_veins.js Part A.
+    // catalyst is a specialist drill for the catalyst-node system; intentionally has no progression tier.
     event.add('createoreexcavation:drills', Object.values(H))
 })

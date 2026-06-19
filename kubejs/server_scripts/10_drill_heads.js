@@ -17,7 +17,6 @@
 // Alle Gaia-Adern sind alwaysFinite — verhindert endloses Farmen einer einzelnen Ader.
 //
 // Entity-Textur: assets/gaia/textures/entity/drill/<name>.png
-// Item-Tag:      #createoreexcavation:drills (am Ende dieser Datei)
 
 // =========================================================================
 // HANDWERK-REZEPTE — eigener Block damit COE-Fehler diese nicht killen
@@ -329,18 +328,4 @@ ServerEvents.recipes(event => {
         ],
         'gaia:catalyst_ley_line', 350
     ).drill('gaia:catalyst_drill_head').priority(1).id('gaia:ley_line_catalyst_head')
-})
-
-// =========================================================================
-// ITEM-TAG: Custom Drills zur COE-Drill-Liste hinzufügen
-// =========================================================================
-ServerEvents.tags('item', event => {
-    event.add('createoreexcavation:drills', [
-        'gaia:osmium_drill_head',
-        'gaia:crystal_drill_head',
-        'gaia:nether_drill_head',
-        'gaia:refined_obsidian_drill_head',
-        'gaia:catalyst_drill_head',
-        'gaia:gaia_infused_drill_head'
-    ])
 })
