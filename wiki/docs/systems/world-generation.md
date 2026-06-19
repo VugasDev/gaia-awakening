@@ -129,7 +129,7 @@ For the full tier→ore mapping and gating rules, see [Drill Head System](drill-
 
 The COE `drilling_machine` is an intentional mid-game gate:
 
-- **Cost**: 6× Iron Block, 1× Precision Mechanism, 1× Brass Casing
+- **Cost**: 7× Iron Block, 1× Precision Mechanism, 1× Brass Casing
 - COE's built-in drill heads are disabled; custom heads replace them entirely
 
 ---

@@ -193,18 +193,9 @@ This is a shapeless upgrade of the Refined Obsidian Drill Head. It requires a My
 
 ---
 
-## Vein Compatibility
+## Vein Access and Drill Head Specialisation
 
-Each drill head has a primary vein type it is optimised for. The Gaia Infused Drill Head unlocks bonus outputs on most vein types.
-
-| Head | Primary Vein | Bonus Output |
-|------|-------------|--------------|
-| `gaia:osmium_drill_head` | `gaia:osmium_vein` | +`mekanism:raw_osmium`; 1% `gaia:resource_catalyst` chance |
-| `gaia:crystal_drill_head` | `gaia:certus_vein` | 4× `ae2:certus_quartz_crystal`; 25% `ae2:fluix_crystal` chance |
-| `gaia:nether_drill_head` | `gaia:nether_vein` | 6× nether quartz; gold nuggets; 30% blaze powder |
-| `gaia:refined_obsidian_drill_head` | `gaia:rich_metal_vein` | Raw iron ×8, raw osmium ×2; 3% catalyst chance |
-| `gaia:catalyst_drill_head` | `gaia:catalyst_node_vein`, `gaia:catalyst_ley_line` | 5× `gaia:resource_catalyst`; 8% `gaia:mythic_catalyst` (node) / 5% (ley line) |
-| `gaia:gaia_infused_drill_head` | `gaia:mythic_vein` (Nether-only, ancient-debris-based) | Guaranteed `gaia:mythic_catalyst` + `gaia:ancient_debris` + 10% `gaia:singularity_shard`; also provides bonus outputs on osmium, certus, nether, and rich-metal veins |
+Vein access is governed by the drill-head tier tags defined in the [Drill Head Tier Table](#cumulative-tier-tags) above. Each drill head is optimised for specific ore types: the Osmium head for uranium and fluorite, the Crystal head for diamond and emerald, and the Nether head for Nether-exclusive ores. The Refined Obsidian and Catalyst heads unlock higher-tier resources. Vein abundance and bonus output vary by head specialisation, but all veins follow the finite-then-infinite model determined by the tier tag — see [World Generation](world-generation.md) for details.
 
 ### Catalyst Nodes and Ley Lines
 
