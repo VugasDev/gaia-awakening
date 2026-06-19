@@ -17,6 +17,7 @@ ServerEvents.recipes(event => {
         { id:'osmium',        block:'mekanism:osmium_ore',                raw:'mekanism:raw_osmium',                   n:2, tier:2, color:'blue'     },
         { id:'tin',           block:'mekanism:tin_ore',                   raw:'mekanism:raw_tin',                      n:2, tier:2, color:'white'    },
         { id:'lead',          block:'mekanism:lead_ore',                  raw:'mekanism:raw_lead',                     n:2, tier:2, color:'dark_gray'},
+        { id:'silver',        block:'occultism:silver_ore',               raw:'occultism:raw_silver',                  n:2, tier:2, color:'white'    },
         { id:'inferium',      block:'mysticalagriculture:inferium_ore',   raw:'mysticalagriculture:inferium_essence', n:3, tier:2, color:'green'    },
         { id:'uranium',       block:'mekanism:uranium_ore',               raw:'mekanism:raw_uranium',                  n:1, tier:3, color:'green'    },
         { id:'fluorite',      block:'mekanism:fluorite_ore',              raw:'mekanism:fluorite_gem',                 n:2, tier:3, color:'white'    },

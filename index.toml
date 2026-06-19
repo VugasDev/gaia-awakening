@@ -1433,6 +1433,10 @@ file = "kubejs/data/minecraft/worldgen/placed_feature/ore_gold_deltas.json"
 hash = "5de2337935f92b7e5d1a69b38c7e2d3b334a98aeaa53a3868b8987e023472f7c"
 
 [[files]]
+file = "kubejs/data/minecraft/worldgen/placed_feature/ore_gold_extra.json"
+hash = "471005da681785677d8546fa7bcaaee78b81605fd26821903c2181bb90bf66db"
+
+[[files]]
 file = "kubejs/data/minecraft/worldgen/placed_feature/ore_gold_lower.json"
 hash = "31db7110e42224571cacea7f8ede6dc568304d47e2abbe0e1baa69d34b8f7a25"
 
@@ -1473,12 +1477,36 @@ file = "kubejs/data/minecraft/worldgen/placed_feature/ore_redstone_lower.json"
 hash = "6e1fa39908c979a935711521d2f64ca58006137386945fe40ca748a446e75ef5"
 
 [[files]]
+file = "kubejs/data/mysticalagradditions/worldgen/placed_feature/end_inferium_ore.json"
+hash = "669c34baef0d710c710d3813b778f2006f7f79980731da2863a0ac7df30d771c"
+
+[[files]]
+file = "kubejs/data/mysticalagradditions/worldgen/placed_feature/end_prosperity_ore.json"
+hash = "f506a14b8c534fa61a5258498381ceb712ebae38ddd305871011ed0bd8b3dac0"
+
+[[files]]
+file = "kubejs/data/mysticalagradditions/worldgen/placed_feature/nether_inferium_ore.json"
+hash = "7da3494f7856231fa6e268f987baa232d896f97f6efff446907a4ca114a28746"
+
+[[files]]
+file = "kubejs/data/mysticalagradditions/worldgen/placed_feature/nether_prosperity_ore.json"
+hash = "7745cf109c11c11afb8b70da56a18591132ded766026c2eece3a4ca2b9621dfd"
+
+[[files]]
 file = "kubejs/data/mysticalagriculture/worldgen/placed_feature/inferium_ore.json"
 hash = "a35d9350c6a23d9494183d1907e4a8b9edb563b94203239e0b5ec5901e996499"
 
 [[files]]
 file = "kubejs/data/mysticalagriculture/worldgen/placed_feature/prosperity_ore.json"
 hash = "facd10e5d4ad120f8eed0b05f842e73caa3240a952ade548bad65312e2fc1345"
+
+[[files]]
+file = "kubejs/data/occultism/worldgen/placed_feature/ore_silver.json"
+hash = "0cb452de26160206c8605962233e03057c9689d1eff2d879198ec616641007c4"
+
+[[files]]
+file = "kubejs/data/occultism/worldgen/placed_feature/ore_silver_deepslate.json"
+hash = "57e78c3b215c5d9763a3171e1c585d054438802a4cd9e57a527fd2e9cc06c109"
 
 [[files]]
 file = "kubejs/data/powah/worldgen/placed_feature/uraninite_ore.json"
@@ -1491,6 +1519,10 @@ hash = "3fa16eb6f56f8b75c4a2c00a3be3f359c26c1e606598f11b61e7be8b8f70a9bc"
 [[files]]
 file = "kubejs/data/powah/worldgen/placed_feature/uraninite_ore_poor.json"
 hash = "a0bf65625f521b17ffdd723d5f8456852c4994b208a5bec97b604de1526e3113"
+
+[[files]]
+file = "kubejs/data/terralith/worldgen/placed_feature/cave/fungal/ore_coal_extra.json"
+hash = "2484379796d90cd9c61bf8bd2cf56e7c4f001f38d2118c5c753defab1f4319db"
 
 [[files]]
 file = "kubejs/server_scripts/01_resource_unification.js"
@@ -1550,7 +1582,7 @@ hash = "aea589498154ed1c296582268c10f87e13ba4effbe22d8a1d0f3afa784b432b3"
 
 [[files]]
 file = "kubejs/server_scripts/15_ore_progression.js"
-hash = "499cf310fe418ee84e0ad595c0ad60c26131824dc77ffdaa7a7a9bab512f1e47"
+hash = "d5ff581e984dea5e33ca4d62facf23c5100f2c4fcf64a6a51460762d42364ab7"
 
 [[files]]
 file = "kubejs/server_scripts/enchantment_automation.js"
@@ -2314,7 +2346,7 @@ hash = "87bdca8da9daf3d9897679760986d46357e988c5b4dec68b7bb6e2595f1df392"
 
 [[files]]
 file = "wiki/site/404.html"
-hash = "d1e89d63a1127f02dcd631525d3dd802b5af2c5c505252f84174877d028bae1b"
+hash = "813e9b5021ddc17aec9a1556efa380c06b1fb9a26edc1458db6e6b39f8e09d7b"
 
 [[files]]
 file = "wiki/site/assets/images/favicon.png"
@@ -2490,200 +2522,200 @@ hash = "34adeb4bd64dc0a09c193db755f6e2e79e2d99423cc18724042de2a797dea2e7"
 
 [[files]]
 file = "wiki/site/getting-started/first-hour/index.html"
-hash = "be329a53c7f4d03197d65b129d564187349d2b9996a762e9543b1985fc96dfaf"
+hash = "5284cb2af4973e8425a59273c66e5dcfa5897328d541cfeed5c8ab36ae7fefc7"
 
 [[files]]
 file = "wiki/site/getting-started/installation/index.html"
-hash = "1e84c201099ef59a4aaabd292dcc9386714c6ecf340870b302998e92e489ab53"
+hash = "124e747a4189c2eda3171f5d5708e539b7128f70d34c9eafcdbd64dbf6c60f14"
 
 [[files]]
 file = "wiki/site/getting-started/quest-book/index.html"
-hash = "4e7126c7080236c3b7c9e9dbd4aa527f1596d377bc083b4b2b3bb9679a5bbc0b"
+hash = "7a013214a231cb30642b01a6967d09814f1f22f1c1a2d5711676b5984481124a"
 
 [[files]]
 file = "wiki/site/index.html"
-hash = "09f95e1458049420931a54d6b8632ecee2d11b0aa5b36ccbb5a2356fe32445f0"
+hash = "5dfe841e7b19cb111af4d00fd55d41e5dfb59c2b3a70ff2aad58576e66c8b8f0"
 
 [[files]]
 file = "wiki/site/mods/exploration/index.html"
-hash = "27cf2acaaaffb4e21ea45f9ca97df59cca8715248baa2974966883f5ff571fe4"
+hash = "a0c9f679b1c6b296d0659677c68a33ed32c5d9456747e991b5fd77e2a02325f4"
 
 [[files]]
 file = "wiki/site/mods/farming-food/index.html"
-hash = "fc6dcd9509f3afcbb414c703860e17ec5d258adcbbbd00492763cf0351422d87"
+hash = "95006611f51385be4990cccbf89c05764f14e5bd69736197b205e272a3cf9f9d"
 
 [[files]]
 file = "wiki/site/mods/index.html"
-hash = "db15f9ccc86bc983512e22e02a166703e1ca49b283d9ab48bc0178e71769b8d3"
+hash = "781dd25f3a229cd6d64ff628c6c265b80fc2990b84205422822076d442538685"
 
 [[files]]
 file = "wiki/site/mods/magic/index.html"
-hash = "1fc1a941e1fb347ed10db51bef287e03d658575625d0b8555340343c37481701"
+hash = "7a30f35ebcda1da46fd09998242dc6c47cab6f2ade1ba36d6305b468dd63ba97"
 
 [[files]]
 file = "wiki/site/mods/performance-libraries/index.html"
-hash = "2686848efd41ac9e30dcd8e8ea0f8ce58a8e3cb5eb6a510b197e1cd6af26b840"
+hash = "e659f094d8b0200ce42c712f3a8054e49d9d80196eda4a32b662455dffd2dd2d"
 
 [[files]]
 file = "wiki/site/mods/storage-qol/index.html"
-hash = "59f97ea7313a174ccf426c4ab4ed899c69bceff4834a7d15d6d7ba5d7d5f150f"
+hash = "73dc0b6eb6c49bd7b0c1b319134673101472b3d5495f548deadc090a4e672a6b"
 
 [[files]]
 file = "wiki/site/mods/tech/index.html"
-hash = "c858ed94c86a7646b9e5804b52f3b83cea25887dd4db02ee6ea000b077b7ce77"
+hash = "81b19b444e0b870d2a31fa2d81fcd1d5e8534bf29c269c9cec18f1712955d585"
 
 [[files]]
 file = "wiki/site/progression/index.html"
-hash = "d17301f3ba76bb4daef383131551193f6bb16c86c2f458f230a5617e0fc8bb5b"
+hash = "5c21f23a189a500bc55252d77fac8cb5520ff1ee84217564eaf6cc8684a73b59"
 
 [[files]]
 file = "wiki/site/progression/tier-1/index.html"
-hash = "33a19895117dd8174981633c39a271fff621237fe2106a90be575f9b24278138"
+hash = "b9b37ecfa3204c2d63ce29350c2cd25c7944d8c9391b1eacd1ae16988932ec99"
 
 [[files]]
 file = "wiki/site/progression/tier-2/index.html"
-hash = "12a13d4af07f7033df18075ed6c1d2c91e1e52ed097e464e7a0b841768a2b836"
+hash = "bfdb08eccb4e3750811036b17e1e8c5a388c2f4422ccd8ccd8e33cb45cdc39e8"
 
 [[files]]
 file = "wiki/site/progression/tier-3/index.html"
-hash = "30055d0c4f104a6edb16b6a3370edc284ecd85cd691eeadd1c8b002338254b43"
+hash = "caabcfa9124e64d7747db2c989a961ad03e0a16ee45ce6f5f8b2d4688bb73148"
 
 [[files]]
 file = "wiki/site/progression/tier-4/index.html"
-hash = "bb4ec2da4db6ae7254c7897f5c652cf0ecdc9d5b786c69bd665d3150d1ce87d5"
+hash = "5846070da3bcff703fcbc3460d77163dc7948c5dd032a08f8d1f70c58ec9a957"
 
 [[files]]
 file = "wiki/site/progression/tier-5/index.html"
-hash = "138bfbdaa689409d7829dfaf00b2c3975d3aecb0bc6d6f1df55844cf7fe2123d"
+hash = "566eaf8dc58aab5fad1d090ac4004fd72f8160259be2f4e966f0521943d1212b"
 
 [[files]]
 file = "wiki/site/quests/index.html"
-hash = "896aad7a84696b9863ec6871ff11ecdcc86e4d69173503fed8d233509f2eab28"
+hash = "a94fe2dfe35cb980d81dbcfe9c815aae2f671390f8d68a4014967ddd78f483b7"
 
 [[files]]
 file = "wiki/site/quests/t1-create/index.html"
-hash = "4cdebc68eafe616f8ad0b08e7fe07dbf62c0e2944db18e3b05cc09349bc81bfd"
+hash = "5503ea49f8eade53b3dc442910893d98eae064f62c39415836eec237a94656f8"
 
 [[files]]
 file = "wiki/site/quests/t1-exploration/index.html"
-hash = "7f579c393d72b3b02f23bba67cddc16bd36e371b188cc5b873fa108c6f160f4c"
+hash = "8aa7c8be3a579d62e196b405f58c7a2ff671dbde98f43c5fe906bf45fef28652"
 
 [[files]]
 file = "wiki/site/quests/t1-survival/index.html"
-hash = "4e15e40f48db423d9e6734b2c65b55f37bee5118f8659898d9e88b7117a19fa4"
+hash = "fcd197f78a7ee8db4d2575d7c7ea276c4e6075a0a4ed952984a7b60b874b5961"
 
 [[files]]
 file = "wiki/site/quests/t2-create-brass/index.html"
-hash = "7d8fd4a6357db6a2902245f8b4db6ba01d63503f36a86f7bcc14c4c6cc6e8e28"
+hash = "17f116deef2a388a7d6821db4ccfc8e547fce956eedb9cc83c31f41bcf07e2d3"
 
 [[files]]
 file = "wiki/site/quests/t2-kitchen/index.html"
-hash = "0860fdaf48aca7769384a697b1682175bba019694b23332fa7ff5ad64165a476"
+hash = "bf06913342eeb07b84996708c4a475c41b264e86fef215b7a7289db9315a307e"
 
 [[files]]
 file = "wiki/site/quests/t2-mekanism/index.html"
-hash = "91cff7000ca6c825ed8747d38b91bc0ab106ba0a88b0b6849292d5a5c84f25bd"
+hash = "b5d8dccdb0101eeede68ab03c984bd02d9a38be81125a5241f5f7f17145fe99f"
 
 [[files]]
 file = "wiki/site/quests/t2-storage/index.html"
-hash = "8ae82b7460c485f30c421482ffad4920b6ec8828c9fccbfab3b83c43c6144c96"
+hash = "ac39870ff47bc9894cdd5b144232710a51041d9f9581aff5c67ea68436c015df"
 
 [[files]]
 file = "wiki/site/quests/t3-ae2/index.html"
-hash = "a2d23ba316b43590f5bfffd40a56c74f8886a05c9f7163a10bb6381fda45b54c"
+hash = "08ebd06b5602740e7110b763814cb2d19033db09a226d376c89797279b188287"
 
 [[files]]
 file = "wiki/site/quests/t3-ma/index.html"
-hash = "4d5cac8ae3f72e45657bf4d9bc20751eba3d7b1a8fc1357b270acf1244039759"
+hash = "b05daf1798cc901c4848d168439ae3f3157894fc959dfc561d72c1908ca697a8"
 
 [[files]]
 file = "wiki/site/quests/t3-magic/index.html"
-hash = "e3e75b964e8aa3f0bcd347a8732cd8cfdc8395e4c8750f007545c09fbabb88d8"
+hash = "44ed4230dff31cc2bd594867bb98798545811e53e5aa1dd81b2960f033553353"
 
 [[files]]
 file = "wiki/site/quests/t3-pnc/index.html"
-hash = "a7ebe0758ac15101b9ce6f47c140759edce9973fc0b48515e04bfe046f68edf4"
+hash = "06ff721083cb8764ba809c018c3533951cc55a98e202c8e1c910e49d288b1397"
 
 [[files]]
 file = "wiki/site/quests/t3-power/index.html"
-hash = "ae60718cc07848217347d55e4d40a30683bd4fc363e8c4d88a4710f7a2db7ed7"
+hash = "68fbebf44f6cc559ece648b3dd008b9963412a864f36b3dfc10609f5a0a7ed59"
 
 [[files]]
 file = "wiki/site/quests/t4-ae2-mega/index.html"
-hash = "0ddec8570e0def7dae502004205738b1a9342968902133ffdeeb9f38cfc203b8"
+hash = "688c0d34d88ac90aaecc44073dd7a7d84c09f68371a1e058cf2029c0eb7fc2e4"
 
 [[files]]
 file = "wiki/site/quests/t4-ars/index.html"
-hash = "d3368b5ea36b59884a060542c707527e6de10878d4d5a89aad400655f735bea5"
+hash = "029959bccd0ac97d2f9dc837c235c53acd9f0715ee195bee56f8a79a46074257"
 
 [[files]]
 file = "wiki/site/quests/t4-catalyst/index.html"
-hash = "52147f7a185f9f2f14ff297e299322df8913620ed4fab542d5e2ebca71666991"
+hash = "ae30ed6f633fc0873bd6863da6f518efe9a8d68adf62b84bdbe23dae1b4b59fc"
 
 [[files]]
 file = "wiki/site/quests/t4-enchant/index.html"
-hash = "68880fc941fa44104eb1d08f38656393b66a5dd9acb90f29585d6d07f5e25885"
+hash = "6a85c7802c00f5022fb3c6b35738b567011a1b79ade54e1efc71fa2a0a04bd17"
 
 [[files]]
 file = "wiki/site/quests/t4-mekanism/index.html"
-hash = "21808a4d03a5013e2c30dc7296daad89ead6ee492128abc4b0b7ffa4d8adeb0b"
+hash = "c7987b3926feabb3baf271f6e07499a8e9f71eca1456cac1127fb70afb36afbf"
 
 [[files]]
 file = "wiki/site/quests/t5-bosses/index.html"
-hash = "4b8edbbccb82827fb8cfbb7aefb6c30e4e6f99cc07c9575b1945d70cabab460f"
+hash = "62f36d31fe40023a10bb4755169c789b12d139820c1664b844016998496c2405"
 
 [[files]]
 file = "wiki/site/quests/t5-endgame/index.html"
-hash = "e3dd4bd19d5375cac13879d8504c0aa629c9c7b492502ae3f9ad3e8f0da42876"
+hash = "966fa50a532f39e48bf0e4ad9dc76d17283481ec98ab19b01c1e5f17c97fbf5f"
 
 [[files]]
 file = "wiki/site/reference/changelog/index.html"
-hash = "6187fbd743ee5c5c94551890f66ac7e728b6ae2e6ec17e08a1bbcbabac83d941"
+hash = "990d11493afaf1c35d4f9e763d738a7ff0cf2a234ba7c5ac30c9f9d21ef41e6e"
 
 [[files]]
 file = "wiki/site/reference/credits-licenses/index.html"
-hash = "5ae03a0c5d95711b6b5122ea28b25157ccd540c34e8a1e2b78dff270c6819768"
+hash = "fdacd869d207b0a412a6a75a65c06ef25287be566d08f74568b7a529adccf907"
 
 [[files]]
 file = "wiki/site/reference/faq/index.html"
-hash = "be928b95c13a9f0421b477b13b55339e9bc4ee0e79ce956fa40a986050ae07d2"
+hash = "a10cf79ea5648b2d0cdce2cd1549f16988a0393f1bcfa0895b93d149fe4566a6"
 
 [[files]]
 file = "wiki/site/reference/mod-list/index.html"
-hash = "6cabd31775b1adcfc078eaf9a9bf174fb511d53c15622950eaccdc62c50ccb15"
+hash = "6c9929f043c689d8ff93e6c465471bf3358f7e4727053b7da6fe7d531b3c3bdf"
 
 [[files]]
 file = "wiki/site/search/search_index.json"
-hash = "9a24325bfa224f647f31483737fd9ee4deb2064adf55234a5005cc75911b2f24"
+hash = "f45357cf02970e6ab8fd0bc8460331fb49759ff37b86f120285304e00f5908f1"
 
 [[files]]
 file = "wiki/site/sitemap.xml"
-hash = "7e22adc24f0f4ecca1f37aa0415006eda2b0d4bab436e10b94d3fc286dcf7e12"
+hash = "540e813f22b7ac361a35bc34e07d2073c09f5bcb6433478120dfd64b75e89146"
 
 [[files]]
 file = "wiki/site/sitemap.xml.gz"
-hash = "97fff4956b880e51136300170465455b4bdbbbc4f20a612346c364403fdeaa3d"
+hash = "07c9714b7a9859bc541559caea7089b3e8af23663e67e0bb5bd5a3cc40a6f6f8"
 
 [[files]]
 file = "wiki/site/systems/catalyst-system/index.html"
-hash = "202a0dd1f6e2ce3dab93851430c6b5601caa0115158931f0352a7312b0503fed"
+hash = "4ab1d42043f79cb0c9ae253805cfabd0da069fffa22e4ba760a7af06545b0093"
 
 [[files]]
 file = "wiki/site/systems/custom-recipes/index.html"
-hash = "7a2c50a07fc56413326ed49b843afd7847a17a4e8f0eedfd0ae11eef8816235d"
+hash = "8a49e11ab690e29cfe2a0f34b204092f7779a6806656a34beb7d88811966bac8"
 
 [[files]]
 file = "wiki/site/systems/drill-heads/index.html"
-hash = "a48f3dd1db849ad31d19e6674ca2384e6c1d4b31660e652abee2142ae39c6bb4"
+hash = "a1a2b40cd9cc13a1254a933a90cce80eb29fc32cf28ca0a88d9df1e80b3c79ff"
 
 [[files]]
 file = "wiki/site/systems/enchantments/index.html"
-hash = "9e12ddeb6a6a3df36819c7eb2aba1fac83022b6d3f4525dea0d1bc01c8de1270"
+hash = "0950ae28853d10507c966af8068ee78d340e09cb2c8129ac1184a0e2c9d8ef4d"
 
 [[files]]
 file = "wiki/site/systems/world-generation/index.html"
-hash = "476a69140fad68d81b470841fb88c2f0f63d2966611f1df023e841b705ed0215"
+hash = "a0f9251026aa49803495b11e11fbd8a287b3994e80c887f273f52197e99773b7"
 
 [[files]]
 file = "wiki/site/systems/xp-economy/index.html"
-hash = "0f2a89001544cfb06d79b599bc2718e0e7c59dea98fa513d059a9920190a84b9"
+hash = "1c8c0cc3eda619f816e9a8d25ae4b559798ac1569a55d0136cc56fb6d390150c"

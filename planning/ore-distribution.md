@@ -24,6 +24,10 @@
 | Powah uraninite (×3 variants) | placed_feature override (`powah:` namespace) |
 | Create New Age thorium | placed_feature override (`create_new_age:` namespace) |
 | Mystical Agriculture inferium / prosperity | placed_feature override (`mysticalagriculture:` namespace) |
+| Occultism silver (overworld + deepslate) | placed_feature override (`occultism:` namespace) |
+| Mystical Agradditions nether/end inferium & prosperity | placed_feature override (`mysticalagradditions:` namespace) |
+| Terralith fungal cave coal extra | placed_feature override (`terralith:` namespace) |
+| Vanilla `ore_gold_extra` (Terralith bonus spawn) | placed_feature override (`minecraft:` namespace, `ore_gold_extra`) |
 
 ### Exceptions (left in worldgen, no COE vein)
 
@@ -31,6 +35,12 @@
 |---|---|
 | AE2 Certus / Charged Certus | Comes from meteorites, not ore worldgen |
 | Amethyst geodes | Crystal growth mechanic, not an ore block |
+| Enigmatic Legacy etherium | Intentionally left; rare decorative crystal |
+| Iron's Spells mithril | Intentionally left; left as worldgen source |
+| RFTools dimensional shard | Intentionally left; dimension-specific mechanic |
+| Create: Garnished ores | Intentionally left; food/decoration, not progression |
+| Alex's Caves cave-biome ores | Intentionally left; biome-locked, not main progression |
+| Occultism iesnium (The Other) | Intentionally left; dimension-gated, not overworld |
 
 ---
 
@@ -75,7 +85,7 @@ Its ley line gates on `gaia:drills/tier(N+1)` — one tier above.
 | Head | Tier Tag | Finite-vein ores |
 |---|---|---|
 | Basic Drill Head | T1 | iron, copper, coal |
-| Reinforced Drill Head | T2 | gold, zinc, redstone, lapis, osmium, tin, lead, nether quartz, MA inferium |
+| Reinforced Drill Head | T2 | gold, zinc, redstone, lapis, osmium, tin, lead, silver (Occultism), nether quartz, MA inferium |
 | Osmium Drill Head | T3 | uranium, fluorite |
 | Nether Drill Head | T3 | nether gold, glowstone, ancient debris |
 | Crystal Drill Head | T3 | diamond, emerald, MA prosperity |
