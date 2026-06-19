@@ -70,7 +70,7 @@ hash = "d0e129bb5c552e991f673aa841236844b0e35fcebb38e253cffe37cf5974a66c"
 
 [[files]]
 file = "config/Mekanism/world.toml"
-hash = "af9b4f1c0b0b40a610cde79f09368056469bf0d27231f842cbddbc97191dd947"
+hash = "c14f8452c4d22aed28348e3705c013a724208e55598ed10067e0d9c97776ea38"
 
 [[files]]
 file = "config/MouseTweaks.cfg"
@@ -1357,84 +1357,140 @@ file = "kubejs/data/apex/worldgen/world_preset/grand_journey.json"
 hash = "ea395168e9edf40c8d1b09fb2b1d08176ec31abaa8041ac393376e888ce47260"
 
 [[files]]
-file = "kubejs/data/minecraft/worldgen/placed_feature/ore_ancient_debris_large.json"
-hash = "3dcb1469c4626851027fd63061db9c517756d34fcf6dd31e744211914dfbfb5b"
+file = "kubejs/data/create/worldgen/placed_feature/striated_ores_nether.json"
+hash = "8bbe9c3b87756fca822c81ca6e1338e2061c4be57253257ce7d73e61ae2f7875"
 
 [[files]]
-file = "kubejs/data/minecraft/worldgen/placed_feature/ore_ancient_debris_small.json"
-hash = "62012e2acf99f98f80291250b824d1cf4093d731b807c2b74ed49d05f008213d"
+file = "kubejs/data/create/worldgen/placed_feature/striated_ores_overworld.json"
+hash = "7609d9e35e5cce3fe7174eafbd446678a2c7428e34b5fda2297b1d8e2729ba94"
+
+[[files]]
+file = "kubejs/data/create/worldgen/placed_feature/zinc_ore.json"
+hash = "a6973b271e485ab3454393e74229dbd36efae68a4863c3dea26ca82cdc0d363d"
+
+[[files]]
+file = "kubejs/data/create_new_age/worldgen/placed_feature/thorium_ore.json"
+hash = "95868663e1cfbc455dd03c29f70b75a56b77058af08162159d2551e4d0bd0285"
+
+[[files]]
+file = "kubejs/data/minecraft/worldgen/placed_feature/glowstone.json"
+hash = "7aac218bb6803309946cda0010110a176e12ac67b7cf5c2b00a0356ffd402adf"
+
+[[files]]
+file = "kubejs/data/minecraft/worldgen/placed_feature/glowstone_extra.json"
+hash = "7aac218bb6803309946cda0010110a176e12ac67b7cf5c2b00a0356ffd402adf"
+
+[[files]]
+file = "kubejs/data/minecraft/worldgen/placed_feature/ore_ancient_debris_large.json"
+hash = "324a0d7f3cfb7ba48af1ba1056d64f1ea8b92455884ba5df8b33f4d3364405a0"
 
 [[files]]
 file = "kubejs/data/minecraft/worldgen/placed_feature/ore_coal_lower.json"
-hash = "db2cd3400d7f5cf4d5cb6465e47bfd1a0005d8862db35f9532a3882426a2c325"
+hash = "4c6a33abf456fc8605f1d6f46d17b3a32003da9e3febea7566dc0f4a8496b4fe"
 
 [[files]]
 file = "kubejs/data/minecraft/worldgen/placed_feature/ore_coal_upper.json"
-hash = "fe93b714b5f316d1c514a91a7f1f91629ff73608cd9cc4db19c0b5d885d5a5e2"
+hash = "5e2d08442522142d7a5b3809fe4ef880dfb90937ef465ab4aeea31296bddfcc1"
 
 [[files]]
 file = "kubejs/data/minecraft/worldgen/placed_feature/ore_copper.json"
-hash = "bd58151e4fa8b1fd7d9e44ab536f305452e32ea0417e4aedf276fccc3805f639"
+hash = "f9b8d8231135c448baca774cd7a94ccd9317338e728cb9caff86515881c02de4"
 
 [[files]]
 file = "kubejs/data/minecraft/worldgen/placed_feature/ore_copper_large.json"
-hash = "2f3609e5df51ed8c7049cab389faf62a1c757269d37cd4bcb57b2f87209282d1"
+hash = "1dbde4e3772cc76ce19f0a64fb672b7fb47252a475245329e6621fa00f25392c"
+
+[[files]]
+file = "kubejs/data/minecraft/worldgen/placed_feature/ore_debris_small.json"
+hash = "45e2d4e056d153805ba1b666e8ddfee0171b989117916732c0b26ac46081bfaf"
 
 [[files]]
 file = "kubejs/data/minecraft/worldgen/placed_feature/ore_diamond.json"
-hash = "3336edc36c48cd4daacea6680249c3789ccd5b4c8a95ee4bcd196c77e89ccb31"
+hash = "0aa9f872363cb5d5bc9e11dd103318724af8369f14c5c26291b12368563b8b81"
 
 [[files]]
 file = "kubejs/data/minecraft/worldgen/placed_feature/ore_diamond_buried.json"
-hash = "8735e6bcdf0c8dd097d573721faf645d0541975b8efbe6ac8188179ded035d1c"
+hash = "63f68ab91ef95770b171c086739cf05bf82349decefe483de39131d9b587221d"
 
 [[files]]
 file = "kubejs/data/minecraft/worldgen/placed_feature/ore_diamond_large.json"
-hash = "5ded2383475b8e2568d684d82ecf5d02191d23225fbabd186ad947fcc6cbaf75"
+hash = "2c95ba1a5e3c2449eb57de3bb1d6b114f7f42d312f06092a12310e1aec64561f"
 
 [[files]]
 file = "kubejs/data/minecraft/worldgen/placed_feature/ore_diamond_medium.json"
-hash = "e93c26ae2b7552684081c060040e839d076f745e6ada2e8ce7cc714a3b93c4ad"
+hash = "f756f74e38e8823e5154f138b5da45aaa9d673558c47a7949a03cff657304e89"
 
 [[files]]
 file = "kubejs/data/minecraft/worldgen/placed_feature/ore_emerald.json"
-hash = "8c63a2b0f54e0d69e52f07edf6e93a68403f70f52b2ef61f06e6e95e55803985"
+hash = "95c67b3905807ed5c505bda44eb42528dbb65a6452bceded5bae74b0f41ad9af"
 
 [[files]]
 file = "kubejs/data/minecraft/worldgen/placed_feature/ore_gold.json"
-hash = "3ffb594fdf416fb22da4409eaddf9fe0ef569bf8077f82606c43918b146cd5fb"
+hash = "dbe7dfa50471c475db2b881680c7c7afe90bd49a42ac1f75c5eb85d354a6ed70"
+
+[[files]]
+file = "kubejs/data/minecraft/worldgen/placed_feature/ore_gold_deltas.json"
+hash = "5de2337935f92b7e5d1a69b38c7e2d3b334a98aeaa53a3868b8987e023472f7c"
 
 [[files]]
 file = "kubejs/data/minecraft/worldgen/placed_feature/ore_gold_lower.json"
-hash = "3d81634dc7361a9f76b56feb8524e690a49fca86faffe3640b7ab6b79a7f2fb8"
+hash = "31db7110e42224571cacea7f8ede6dc568304d47e2abbe0e1baa69d34b8f7a25"
+
+[[files]]
+file = "kubejs/data/minecraft/worldgen/placed_feature/ore_gold_nether.json"
+hash = "5de2337935f92b7e5d1a69b38c7e2d3b334a98aeaa53a3868b8987e023472f7c"
 
 [[files]]
 file = "kubejs/data/minecraft/worldgen/placed_feature/ore_iron_middle.json"
-hash = "09b63c623a041bcd6a701a60a56e27b6abe33a8f9d8fca289a434ca67454a35f"
+hash = "769022e436c69d25bf54159195c77c3d8524843d44d52e6405cddd7046d6187c"
 
 [[files]]
 file = "kubejs/data/minecraft/worldgen/placed_feature/ore_iron_small.json"
-hash = "47cc0c71a4c7cff3cf4b4d6edc0ea38c20642b3537ab3d4c518ba82e860c79ae"
+hash = "f30ba8d54d2f5d89db5c8f9d7157eae1ba4083b83a3e7f1d20b3f7cf9658c723"
 
 [[files]]
 file = "kubejs/data/minecraft/worldgen/placed_feature/ore_iron_upper.json"
-hash = "09b63c623a041bcd6a701a60a56e27b6abe33a8f9d8fca289a434ca67454a35f"
+hash = "769022e436c69d25bf54159195c77c3d8524843d44d52e6405cddd7046d6187c"
 
 [[files]]
 file = "kubejs/data/minecraft/worldgen/placed_feature/ore_lapis.json"
-hash = "cd44800f5c558d1f3a01e1be3f2104b87e01f2e830c722305695d59297a1d2fc"
+hash = "442710f5014e5e3bdd98e617319016b04f35edf924d57c07dfe6efd7949edc6a"
 
 [[files]]
 file = "kubejs/data/minecraft/worldgen/placed_feature/ore_lapis_buried.json"
-hash = "b3772e92e98b83bc7e6c8f728f4ce8585b5b731a2a6373a8dca3d5635e63664c"
+hash = "0e193e9f9c61c20d9eb7ddaf5028359b41a7c7cf1ad0e6737c4586da937726b3"
+
+[[files]]
+file = "kubejs/data/minecraft/worldgen/placed_feature/ore_quartz_nether.json"
+hash = "204cc90d80f93f0dbf6598d5686e08b269c5a383aff0c42229c71ab9e3d6abad"
 
 [[files]]
 file = "kubejs/data/minecraft/worldgen/placed_feature/ore_redstone.json"
-hash = "88392a71a07c7694c64cc7b23c6debf6e97d57d477fde351f7ec05b2245c06a3"
+hash = "6e1fa39908c979a935711521d2f64ca58006137386945fe40ca748a446e75ef5"
 
 [[files]]
 file = "kubejs/data/minecraft/worldgen/placed_feature/ore_redstone_lower.json"
-hash = "88392a71a07c7694c64cc7b23c6debf6e97d57d477fde351f7ec05b2245c06a3"
+hash = "6e1fa39908c979a935711521d2f64ca58006137386945fe40ca748a446e75ef5"
+
+[[files]]
+file = "kubejs/data/mysticalagriculture/worldgen/placed_feature/inferium_ore.json"
+hash = "a35d9350c6a23d9494183d1907e4a8b9edb563b94203239e0b5ec5901e996499"
+
+[[files]]
+file = "kubejs/data/mysticalagriculture/worldgen/placed_feature/prosperity_ore.json"
+hash = "facd10e5d4ad120f8eed0b05f842e73caa3240a952ade548bad65312e2fc1345"
+
+[[files]]
+file = "kubejs/data/powah/worldgen/placed_feature/uraninite_ore.json"
+hash = "65cbe341f691587a42bbdc71d3ebe1c487076d4f49443b7f2c13c6aeda30d181"
+
+[[files]]
+file = "kubejs/data/powah/worldgen/placed_feature/uraninite_ore_dense.json"
+hash = "3fa16eb6f56f8b75c4a2c00a3be3f359c26c1e606598f11b61e7be8b8f70a9bc"
+
+[[files]]
+file = "kubejs/data/powah/worldgen/placed_feature/uraninite_ore_poor.json"
+hash = "a0bf65625f521b17ffdd723d5f8456852c4994b208a5bec97b604de1526e3113"
 
 [[files]]
 file = "kubejs/server_scripts/01_resource_unification.js"
@@ -1474,11 +1530,11 @@ hash = "b1184fe1f76ba6556e83510d0ec41d14fe56d8e2b8b0971748d732ec135a7387"
 
 [[files]]
 file = "kubejs/server_scripts/10_drill_heads.js"
-hash = "b71907d693d8e1aaf5dcee0538de43fa9d4e966eab8bbdaab2d36a541c255d56"
+hash = "2479291f13ced7292fdfadf3964e22d00f4f108bb6300e07f8da1b5142f9ceba"
 
 [[files]]
 file = "kubejs/server_scripts/11_base_metal_veins.js"
-hash = "c7a33ab95f079b8cf4f081e9806de35b2a35c5f990fe12627d453f3024e4b134"
+hash = "8955b7895a1dab0624e6366ef57d22a18c2ad9fa6ae8df57a9792932ec177bc6"
 
 [[files]]
 file = "kubejs/server_scripts/12_tinted_stone_gate.js"
@@ -1486,7 +1542,15 @@ hash = "5435bed8cdd709aa507438ee03ab30f09b88466d1073fc45b2930085cb8ab2fc"
 
 [[files]]
 file = "kubejs/server_scripts/13_coe_builtin_removal.js"
-hash = "57e30416cec1913a43197ad11d614506a1cbeecc07327d49f3042e7b0bb83c1f"
+hash = "a07d2f625e26eb44965a68e13fbe8c3e109c254b05b0da89619c5dbd9561242f"
+
+[[files]]
+file = "kubejs/server_scripts/14_drill_tier_tags.js"
+hash = "aea589498154ed1c296582268c10f87e13ba4effbe22d8a1d0f3afa784b432b3"
+
+[[files]]
+file = "kubejs/server_scripts/15_ore_progression.js"
+hash = "499cf310fe418ee84e0ad595c0ad60c26131824dc77ffdaa7a7a9bab512f1e47"
 
 [[files]]
 file = "kubejs/server_scripts/enchantment_automation.js"

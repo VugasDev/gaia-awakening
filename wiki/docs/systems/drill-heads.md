@@ -12,7 +12,7 @@ The COE Drilling Machine recipe is significantly more expensive than vanilla:
 
 | Ingredient | Quantity |
 |---|---|
-| Iron Block | 7 |
+| Iron Block | 6 |
 | Precision Mechanism | 1 |
 | Brass Casing | 1 |
 
@@ -20,24 +20,64 @@ This gate ensures the Drilling Machine is a mid-game milestone, not a day-one bu
 
 ---
 
-## Drill Head Table
+## Drill Head Tier Table
+
+Every ore vein and ley line is **hard-gated** by a cumulative drill-head tier tag. A lower-tier head on a higher-tier vein produces no useful output. Higher-tier heads satisfy all lower-tier requirements.
+
+### Cumulative Tier Tags
+
+| Tag | Heads that satisfy it |
+|---|---|
+| `gaia:drills/tier1` | Basic + all higher tiers |
+| `gaia:drills/tier2` | Reinforced + all higher tiers |
+| `gaia:drills/tier3` | Osmium, Nether, Crystal + higher tiers |
+| `gaia:drills/tier4` | Refined Obsidian + Gaia-Infused |
+| `gaia:drills/tier5` | Gaia-Infused only |
+
+### Head → Ore Mapping
+
+Each ore has a **finite vein** (gated at tier N) and an **infinite ley line** (gated at tier N+1).
+The ley line becomes drillable once the player reaches the next tier — "finite now, infinite once you out-tier it."
+
+| Head | Tier | Finite-vein ores | Ley-line gate |
+|---|---|---|---|
+| Basic Drill Head | T1 | iron, copper, coal | T2 (Reinforced) |
+| Reinforced Drill Head | T2 | gold, zinc, redstone, lapis, osmium, tin, lead, nether quartz, MA inferium | T3 (any T3 head) |
+| Osmium Drill Head | T3 | uranium, fluorite | T4 (Refined Obsidian) |
+| Nether Drill Head | T3 | nether gold, glowstone, ancient debris | T4 (Refined Obsidian) |
+| Crystal Drill Head | T3 | diamond, emerald, MA prosperity | T4 (Refined Obsidian) |
+| Refined Obsidian Drill Head | T4 | thorium, uraninite | T5 (Gaia-Infused) |
+| Gaia-Infused Drill Head | T5 | (apex — unlocks all T4 ley lines) | — |
+
+!!! note "Deadlock rule"
+    Osmium and nether quartz are ingredients in higher-tier drill head recipes, so they
+    are deliberately capped at T2 — always accessible before the heads that require them.
+
+!!! note "T3 specialist heads"
+    The three T3 heads (Osmium, Nether, Crystal) are parallel specialists. Any T3 head
+    satisfies `gaia:drills/tier3`, so a T3 ore is drillable by whichever specialist
+    the player has built first.
+
+---
+
+## Drill Head Reference
 
 | Item | Tier | Specialty |
 |------|------|-----------|
-| `gaia:basic_drill_head` | T1/T2 | General-purpose entry head; works on all common finite veins |
-| `gaia:reinforced_drill_head` | T2 | Improved yield and speed over Basic; required before T3 specialist heads |
-| `gaia:osmium_drill_head` | T3 | Osmium veins; small Resource Catalyst chance |
-| `gaia:crystal_drill_head` | T3 | Certus Quartz / Amethyst veins; Fluix Crystal bonus |
-| `gaia:nether_drill_head` | T3 | Nether veins only; Quartz / Gold / Blaze bonus |
-| `gaia:refined_obsidian_drill_head` | T4 | Rich Metal veins with increased output + Catalyst chance |
+| `gaia:basic_drill_head` | T1 | General-purpose entry head; works on T1 finite veins |
+| `gaia:reinforced_drill_head` | T2 | Improved yield and speed over Basic; works on T2 finite veins |
+| `gaia:osmium_drill_head` | T3 | Uranium / fluorite veins; small Resource Catalyst chance |
+| `gaia:crystal_drill_head` | T3 | Diamond / emerald / prosperity veins; Fluix Crystal bonus |
+| `gaia:nether_drill_head` | T3 | Nether biome veins only; Quartz / Gold / Blaze bonus |
+| `gaia:refined_obsidian_drill_head` | T4 | Thorium / uraninite veins; increased output + Catalyst chance |
 | `gaia:catalyst_drill_head` | T4 | Catalyst Nodes and Catalyst Ley Lines |
-| `gaia:gaia_infused_drill_head` | T5 | Primary: Mythic Vein (`gaia:mythic_vein`, Nether-only); bonus outputs on all other vein types |
+| `gaia:gaia_infused_drill_head` | T5 | Apex head; unlocks T4 ley lines; bonus outputs on all vein types |
 
 ---
 
 ## Crafting Recipes
 
-### Basic Drill Head (T1/T2)
+### Basic Drill Head (T1)
 
 ```
 I I I
@@ -155,7 +195,7 @@ This is a shapeless upgrade of the Refined Obsidian Drill Head. It requires a My
 
 ## Vein Compatibility
 
-Each drill head has a primary vein type it is optimised for. Using a non-specialist head on a vein still works, but gives reduced output. The Gaia Infused Drill Head unlocks bonus outputs on most vein types.
+Each drill head has a primary vein type it is optimised for. The Gaia Infused Drill Head unlocks bonus outputs on most vein types.
 
 | Head | Primary Vein | Bonus Output |
 |------|-------------|--------------|

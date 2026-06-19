@@ -1,6 +1,6 @@
 # World Generation
 
-Gaia Awakening uses **Tectonic** and **Terralith** for terrain generation, producing dramatically taller mountains, richer biome variety, and a custom ore distribution where vanilla ores are gated behind tinted stones and Create Ore Excavation drilling veins are the scalable long-term resource source.
+Gaia Awakening uses **Tectonic** and **Terralith** for terrain generation, producing dramatically taller mountains, richer biome variety, and a custom ore system where **all real ore worldgen is disabled** and every ore is obtained exclusively through **Create Ore Excavation (COE)** drilling veins.
 
 ---
 
@@ -36,15 +36,41 @@ Four world presets are available at world creation:
 | Bufferzone | 28,000–32,000 blocks | Fragmented border region; partial Void underneath; dramatic visual break |
 | Shattered Outer Rim | 32,000+ blocks | No continuous floor; floating archipelagos at three height layers (Low-Orbit, Cloud-Layer, High-Apex) |
 
-The Mantle zone (Y=-64 to -96) is a Blackstone and Magma dominated layer that visually and mechanically resembles a Nether antechamber. It is the preferred zone for Ancient Debris.
+The Mantle zone (Y=-64 to -96) is a Blackstone and Magma dominated layer that visually and mechanically resembles a Nether antechamber.
 
 ---
 
 ## Ore Distribution
 
-### Crimsite-Gated Early Progression
+### All Ore Worldgen Disabled
 
-Vanilla iron, copper, and gold ores do **not** spawn in the world. Instead, early-game metals come exclusively from mining and crushing Create's four tinted decorative stones. These stones must be mined — their renewable crafting recipes (e.g. heated mixing for Veridium) have been removed.
+**No ore spawns naturally in the world.** Every ore is obtained exclusively through
+Create Ore Excavation drilling veins (see [Drill Head System](drill-heads.md)). Worldgen
+is suppressed across all sources:
+
+| Source | Suppression method |
+|---|---|
+| Vanilla ores (overworld + nether) | `placed_feature` overrides → `rarity_filter` `chance: 1000000` |
+| Mekanism (osmium, tin, lead, uranium, fluorite) | `config/Mekanism/world.toml` → `shouldGenerate = false` |
+| Create zinc + striated ores | `placed_feature` overrides (`create:` namespace) |
+| Powah uraninite | `placed_feature` overrides (`powah:` namespace) |
+| Create New Age thorium | `placed_feature` overrides (`create_new_age:` namespace) |
+| Mystical Agriculture inferium / prosperity | `placed_feature` overrides (`mysticalagriculture:` namespace) |
+
+### Exceptions — Left in Worldgen
+
+Two resource types are deliberately left untouched:
+
+| Resource | Reason |
+|---|---|
+| **AE2 Certus / Charged Certus** | Comes from meteorites; disabling worldgen has no effect |
+| **Amethyst geodes** | Crystal growth mechanic, not a mineable ore block |
+
+### Bootstrap — Tinted Stone Crush
+
+Before a Drilling Machine is built, early-game metals come exclusively from mining and
+crushing Create's four tinted decorative stones. Their renewable crafting recipes have
+been removed, so they must be mined from the world.
 
 | Create Stone | Crushing Yield |
 |---|---|
@@ -53,102 +79,58 @@ Vanilla iron, copper, and gold ores do **not** spawn in the world. Instead, earl
 | **Ochrum** | Raw Gold |
 | **Asurine** | Raw Zinc |
 
-Until a player has a working crusher, there are no metals. This makes Create's ore processing the gate to every other tech tree.
+This is the *only* pre-drill metal source. It provides just enough to build the
+Drilling Machine and a Basic Drill Head.
 
-### All Other Ores — Super-Rare
+### COE Vein Model — Finite Veins and Infinite Ley Lines
 
-All remaining ores spawn at extreme rarity. Natural deposits exist only as an emergency fallback; **Create Ore Excavation drilling is the primary resource source**.
+Every ore in the tier table has exactly two COE entries:
 
-- Vanilla ores (diamond, coal, redstone, lapis, emerald, ancient debris): `rarity_filter` chance 96 — generating in roughly 1% of placements (1-in-96)
-- Mekanism ores (osmium, tin, lead, uranium, fluorite): `perChunk = 1` — at most one vein per chunk
+| Entry | Behaviour | Access |
+|---|---|---|
+| **Finite vein** | Depletes permanently; larger but one-time | Tier N drill head tag |
+| **Infinite ley line** | Unlimited, renewable; rarer placement | Tier N+1 drill head tag |
 
-### Vein Model — Finite Deposits and Infinite Ley Lines
+"Finite now, infinite once you out-tier it." Every ore becomes infinitely renewable once
+the player reaches the next tier of drill head. See [Drill Head System](drill-heads.md)
+for the tier→ore mapping and head-gating rules.
 
-Each significant ore type has two COE vein categories:
+### Ore Multiplication Downstream
 
-| Category | Spawn Rate | Capacity | Renewal |
-|---|---|---|---|
-| Common Finite Vein | Several per region | ~1,000–3,000 raw items | Depletes permanently |
-| Rare Infinite Ley Line | Very rare | Unlimited | Renewable via Create drilling |
+Drilled raw items feed the existing Create / Mekanism processing chain unchanged. No
+multiplier lives in the ore block itself.
 
-Base metals (iron, copper, gold, zinc) and diamond each have both a common finite vein and a rare infinite ley line. Ancient Debris has a finite Nether vein only. Using a higher-tier drill head increases yield per operation and drilling speed on all vein types.
+| Processing stage | Multiplier |
+|---|---|
+| Furnace only | ×1 |
+| Create crushing | ×2 |
+| Mekanism enrichment / purification | ×3–4 |
+| Full Mekanism chemical chain | up to ×16+ |
 
 ### Design Philosophy
 
 ```
-Tinted stones (Crimsite/Veridium/Ochrum/Asurine)  →  Early metal source (mine & crush)
-Super-rare natural ores                             →  Emergency fallback only
-COE finite veins (~1,000–3,000 items, deplete)     →  Mid-game bulk source
-COE infinite ley lines (base metals + diamond)      →  Scalable, renewable endgame source
+Tinted stones (Crimsite / Veridium / Ochrum / Asurine)  →  Bootstrap: only pre-drill metal source
+COE finite veins (deplete permanently)                  →  Mid-game bulk source, gated by tier
+COE infinite ley lines (renewable)                      →  Endgame scaling, one tier higher gate
+Downstream Create / Mekanism processing                 →  ×2 – ×16+ ore multiplication
 ```
-
-### Natural Ore Depth Zones
-
-Natural ore spawns are a fallback — sparse, but present across all depth zones.
-
-#### Zone 1 — Surface (Y +64 to +192)
-
-| Ore | Notes |
-|-----|-------|
-| Coal | Reduced vein count; still hand-minable early |
-| (Iron, Copper, Gold absent) | Replaced by Crimsite / Veridium / Ochrum crushing |
-
-Zinc (Create) is shifted slightly downward; a few veins remain near the surface.
-
-#### Zone 2 — Normal Caves (Y -32 to +64)
-
-| Ore | Notes |
-|-----|-------|
-| Zinc (Create) | Sparse; primary source is COE veins |
-| Lapis | Reduced; sufficient for early enchanting |
-| Redstone | Reduced; automation staple |
-| Ars Nouveau Source Gem | Reduced |
-| AE2 Certus Quartz | Reduced |
-
-#### Zone 3 — Deep Caves (Y -48 to 0)
-
-| Ore | Notes |
-|-----|-------|
-| Osmium (Mekanism) | `perChunk = 1`; one vein max |
-| Tin (Mekanism) | `perChunk = 1`; one vein max |
-| Certus Quartz (AE2) | Reduced |
-| Diamond | `rarity_filter` chance 96 — ~1% placement rate (1-in-96) |
-
-#### Zone 4 — Abyss (Y -96 to -48)
-
-| Ore | Notes |
-|-----|-------|
-| Uranium | Extremely rare; `perChunk = 1` |
-| Lead | Minimal natural occurrence |
-| Fluorite | Chemicals gate; very rare |
-| Osmium (peak) | Higher concentration for late T3 |
-
-#### Zone 5 — Void Layer (Y -128 to -96)
-
-| Ore | Notes |
-|-----|-------|
-| Ancient Debris | Rare finite Nether vein only; no infinite ley line |
-| Osmium Mega-Cluster | Large veins for lategame bulk |
-
-Zone 5 is only available in world presets with the extended Y range (Apex: The Grand Journey and equivalents).
 
 ---
 
 ## Create Ore Excavation — Drilling Veins
 
-COE drilling veins are the primary long-term resource source. The two vein categories (common finite and rare infinite ley line) are described in the Vein Model section above. Base metals and diamond have both types; Ancient Debris has a finite Nether vein only.
+COE drilling veins are the **only** long-term ore source. Every ore in scope has one
+finite vein and one infinite ley line, each hard-gated by a cumulative drill-head tier tag.
+
+For the full tier→ore mapping and gating rules, see [Drill Head System](drill-heads.md).
 
 ### Drilling Machine
 
-The COE `drilling_machine` is an expensive, intentional gate:
+The COE `drilling_machine` is an intentional mid-game gate:
 
 - **Cost**: 6× Iron Block, 1× Precision Mechanism, 1× Brass Casing
-- COE's built-in drill heads are disabled; two custom heads bridge early tiers:
-  - **Basic Drill Head** — T1/T2; iron + andesite alloy
-  - **Reinforced Drill Head** — T2; brass + iron + basic drill head
-  - Existing T3+ heads unlock at higher tiers
-
-A higher-tier drill head increases yield per operation and drilling speed on all vein types.
+- COE's built-in drill heads are disabled; custom heads replace them entirely
 
 ---
 
@@ -156,11 +138,11 @@ A higher-tier drill head increases yield per operation and drilling speed on all
 
 | Tier | Resource strategy |
 |------|-----------------|
-| T1 | Mine Crimsite/Veridium/Ochrum for first ingots; hand-mine coal and sparse ores |
-| T2 | Build crusher; tap first iron/zinc COE finite vein with a Create drilling contraption |
-| T3 | Go deeper for osmium/certus/diamond veins; find rare infinite ley lines for base metals |
-| T4 | Reach Zone 4 Abyss for uranium/lead/fluorite; expand Create automation |
-| T5 | Zone 5 Void Layer for Ancient Debris (finite); Shattered Outer Rim for endgame loot |
+| T1 | Mine Crimsite / Veridium / Ochrum / Asurine for first ingots; build crusher and Drilling Machine |
+| T2 | Drill iron, copper, coal, gold, zinc, redstone, lapis, osmium, tin, lead, nether quartz, inferium |
+| T3 | Drill uranium, fluorite, nether gold, glowstone, ancient debris, diamond, emerald, prosperity |
+| T4 | Drill thorium and uraninite with Refined Obsidian head; unlock T3 ley lines |
+| T5 | Gaia-Infused head unlocks T4 ley lines (thorium / uraninite infinite) and ancient debris ley line |
 
 ---
 
