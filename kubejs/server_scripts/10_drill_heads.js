@@ -109,7 +109,7 @@ ServerEvents.recipes(event => {
         .placement(2048, 256, 73849201)
         .veinSize(1, 1)
         .alwaysFinite()
-        .biomeWhitelist('forge:is_overworld')
+        .biomeWhitelist('c:is_overworld')
         .id('gaia:catalyst_node_vein')
 
     event.recipes.createoreexcavation.drilling(
@@ -136,7 +136,7 @@ ServerEvents.recipes(event => {
         .placement(4096, 512, 91827364)
         .veinSize(1, 1)
         .alwaysInfinite()
-        .biomeWhitelist('forge:is_overworld')
+        .biomeWhitelist('c:is_overworld')
         .id('gaia:catalyst_ley_line')
 
     event.recipes.createoreexcavation.drilling(
