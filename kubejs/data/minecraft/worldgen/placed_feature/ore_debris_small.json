@@ -1,5 +1,5 @@
 {
-  "feature": "minecraft:ore_lapis_buried",
+  "feature": "minecraft:ore_ancient_debris_small",
   "placement": [
     {
       "type": "minecraft:rarity_filter",
