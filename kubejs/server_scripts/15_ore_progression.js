@@ -39,22 +39,24 @@ ServerEvents.recipes(event => {
         // Per-ore distinct + tier-scaled placement so vein types DON'T all cluster
         // in the same cells. Higher tiers spread wider; large distinct salts
         // (prime step) decorrelate each type's grid so they land in different areas.
-        const fSpacing = 600 + o.tier * 150 + (i % 5) * 45  // finite: ~750..1380 chunks (rare nodes)
+        const fSpacing = 140 + o.tier * 30 + (i % 5) * 16   // finite: ~140..294 chunks (~2.2k..4.7k blocks)
         const fSalt = 50021 + i * 104729
-        const lSpacing = fSpacing * 2                        // ley line: rarer still
+        const lSpacing = fSpacing * 2                        // ley line: ~2x rarer
         const lSalt = 800011 + i * 104729
 
         // finite vein — depletes; min head = o.tier
         // COE expects `name` as a STRING (stringified text component), not an object.
-        coe.vein(JSON.stringify({ text: `${o.id} Deposit`, color: o.color }), o.block)
-            .placement(fSpacing, 64, fSalt).veinSize(1, 3).alwaysFinite()
+        // icon = the (colorful) raw item, not the grey ore block — the Better Finder radar
+        // colours markers from the icon, so distinct raws give distinguishable colours.
+        coe.vein(JSON.stringify({ text: `${o.id} Deposit`, color: o.color }), o.raw)
+            .placement(fSpacing, 32, fSalt).veinSize(1, 3).alwaysFinite()
             .biomeWhitelist(biome).id(`gaia:${o.id}_vein`)
         coe.drilling(Item.of(o.raw, o.n), `gaia:${o.id}_vein`, 240)
             .drill(TAG(o.tier)).id(`gaia:${o.id}_drill`)
 
         // infinite ley line — renewable; min head = one tier up
-        coe.vein(JSON.stringify({ text: `${o.id} Ley Line`, color: o.color }), o.block)
-            .placement(lSpacing, 128, lSalt).alwaysInfinite()
+        coe.vein(JSON.stringify({ text: `${o.id} Ley Line`, color: o.color }), o.raw)
+            .placement(lSpacing, 64, lSalt).alwaysInfinite()
             .biomeWhitelist(biome).id(`gaia:${o.id}_ley`)
         coe.drilling(Item.of(o.raw, o.n), `gaia:${o.id}_ley`, 240)
             .drill(TAG(leyTier)).id(`gaia:${o.id}_ley_drill`)
