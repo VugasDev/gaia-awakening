@@ -101,47 +101,6 @@ ServerEvents.recipes(event => {
 // =========================================================================
 ServerEvents.recipes(event => {
 
-    // ─── Osmium-Ader (T3) ─────────────────────────────────────────────────────
-    event.recipes.createoreexcavation.vein(
-        { text: 'Osmium Deposit', color: 'blue' },
-        'mekanism:osmium_ore'
-    )
-        .placement(512, 64, 91823741)
-        .veinSize(1, 3)
-        .alwaysFinite()
-        .biomeWhitelist('forge:is_overworld')
-        .id('gaia:osmium_vein')
-
-    event.recipes.createoreexcavation.drilling(
-        Item.of('mekanism:raw_osmium', 2),
-        'gaia:osmium_vein', 200
-    ).id('gaia:osmium_any_drill')
-
-    event.recipes.createoreexcavation.drilling(
-        [
-            Item.of('mekanism:raw_osmium', 4),
-            coeutil.processingOutput('gaia:resource_catalyst', 0.01)
-        ],
-        'gaia:osmium_vein', 150
-    ).drill('gaia:osmium_drill_head').priority(1).id('gaia:osmium_osmium_head')
-
-    event.recipes.createoreexcavation.drilling(
-        [
-            Item.of('mekanism:raw_osmium', 6),
-            coeutil.processingOutput('gaia:resource_catalyst', 0.03)
-        ],
-        'gaia:osmium_vein', 120
-    ).drill('gaia:refined_obsidian_drill_head').priority(2).id('gaia:osmium_robs_head')
-
-    event.recipes.createoreexcavation.drilling(
-        [
-            Item.of('mekanism:raw_osmium', 8),
-            Item.of('gaia:resource_catalyst'),
-            coeutil.processingOutput('gaia:singularity_shard', 0.01)
-        ],
-        'gaia:osmium_vein', 100
-    ).drill('gaia:gaia_infused_drill_head').priority(3).id('gaia:osmium_gaia_head')
-
     // ─── Certus-/Kristall-Ader (T3, Crystal Head) ─────────────────────────────
     event.recipes.createoreexcavation.vein(
         { text: 'Crystal Vein', color: 'aqua' },
