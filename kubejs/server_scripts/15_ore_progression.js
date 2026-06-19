@@ -51,5 +51,14 @@ ServerEvents.recipes(event => {
             .biomeWhitelist(biome).id(`gaia:${o.id}_ley`)
         coe.drilling(Item.of(o.raw, o.n), `gaia:${o.id}_ley`, 240)
             .drill(TAG(leyTier)).id(`gaia:${o.id}_ley_drill`)
+
+        // premium: Gaia-Infused head — best yield + small catalyst byproduct.
+        // Higher priority than the tier recipe (the tier tag also contains the gaia head),
+        // so a gaia head always rolls the premium recipe. Preserves the old "best head = bonus" flavor.
+        const premium = [ Item.of(o.raw, o.n + 1), coeutil.processingOutput('gaia:resource_catalyst', 0.02) ]
+        coe.drilling(premium, `gaia:${o.id}_vein`, 200)
+            .drill('gaia:gaia_infused_drill_head').priority(2).id(`gaia:${o.id}_premium`)
+        coe.drilling(premium, `gaia:${o.id}_ley`, 200)
+            .drill('gaia:gaia_infused_drill_head').priority(2).id(`gaia:${o.id}_ley_premium`)
     })
 })
