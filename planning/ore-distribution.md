@@ -47,7 +47,7 @@ been removed, so they must be mined from the world.
 | Ochrum | Raw Gold |
 | Asurine | Raw Zinc |
 
-This is sufficient to craft the Drilling Machine (6× Iron Block, 1× Precision Mechanism,
+This is sufficient to craft the Drilling Machine (7× Iron Block, 1× Precision Mechanism,
 1× Brass Casing) and the Basic Drill Head, which unlocks the full COE system.
 
 ---
