@@ -1566,7 +1566,7 @@ hash = "b1184fe1f76ba6556e83510d0ec41d14fe56d8e2b8b0971748d732ec135a7387"
 
 [[files]]
 file = "kubejs/server_scripts/10_drill_heads.js"
-hash = "2479291f13ced7292fdfadf3964e22d00f4f108bb6300e07f8da1b5142f9ceba"
+hash = "8f51a64cc8426a27ef23f184d4c76a7e4a0ed59a46572a61963dcc93f0ba94df"
 
 [[files]]
 file = "kubejs/server_scripts/11_base_metal_veins.js"
@@ -1586,7 +1586,7 @@ hash = "aea589498154ed1c296582268c10f87e13ba4effbe22d8a1d0f3afa784b432b3"
 
 [[files]]
 file = "kubejs/server_scripts/15_ore_progression.js"
-hash = "d5ff581e984dea5e33ca4d62facf23c5100f2c4fcf64a6a51460762d42364ab7"
+hash = "818aa8047a9ecf9d6048077ca4842f8c31feb68e74dc4d411dba2a5460a28348"
 
 [[files]]
 file = "kubejs/server_scripts/enchantment_automation.js"

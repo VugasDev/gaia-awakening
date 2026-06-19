@@ -103,7 +103,7 @@ ServerEvents.recipes(event => {
 
     // ─── Catalyst Node (T4, immer finite) ────────────────────────────────────
     event.recipes.createoreexcavation.vein(
-        { text: 'Catalyst Node', color: 'gold' },
+        JSON.stringify({ text: 'Catalyst Node', color: 'gold' }),
         'gaia:catalyst_node'
     )
         .placement(2048, 256, 73849201)
@@ -130,7 +130,7 @@ ServerEvents.recipes(event => {
 
     // ─── Catalyst Ley Line (T4, immer infinite) ───────────────────────────────
     event.recipes.createoreexcavation.vein(
-        { text: 'Catalyst Ley Line', color: 'light_purple' },
+        JSON.stringify({ text: 'Catalyst Ley Line', color: 'light_purple' }),
         'gaia:catalyst_node'
     )
         .placement(4096, 512, 91827364)

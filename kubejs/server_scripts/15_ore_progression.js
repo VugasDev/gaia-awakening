@@ -40,14 +40,15 @@ ServerEvents.recipes(event => {
         const leyTier = Math.min(o.tier + 1, 5)
 
         // finite vein — depletes; min head = o.tier
-        coe.vein({ text: `${o.id} Deposit`, color: o.color }, o.block)
+        // COE expects `name` as a STRING (stringified text component), not an object.
+        coe.vein(JSON.stringify({ text: `${o.id} Deposit`, color: o.color }), o.block)
             .placement(24, 8, salt).veinSize(1, 3).alwaysFinite()
             .biomeWhitelist(biome).id(`gaia:${o.id}_vein`)
         coe.drilling(Item.of(o.raw, o.n), `gaia:${o.id}_vein`, 240)
             .drill(TAG(o.tier)).id(`gaia:${o.id}_drill`)
 
         // infinite ley line — renewable; min head = one tier up
-        coe.vein({ text: `${o.id} Ley Line`, color: o.color }, o.block)
+        coe.vein(JSON.stringify({ text: `${o.id} Ley Line`, color: o.color }), o.block)
             .placement(220, 32, salt + 100000).alwaysInfinite()
             .biomeWhitelist(biome).id(`gaia:${o.id}_ley`)
         coe.drilling(Item.of(o.raw, o.n), `gaia:${o.id}_ley`, 240)
