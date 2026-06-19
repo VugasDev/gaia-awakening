@@ -39,14 +39,6 @@ ServerEvents.recipes(event => {
     })
 })
 
-// --- Add early heads to the COE drill tag ---
-ServerEvents.tags('item', event => {
-    event.add('createoreexcavation:drills', [
-        'gaia:basic_drill_head',
-        'gaia:reinforced_drill_head'
-    ])
-})
-
 // Part B — base-metal veins: common finite + rare infinite ley line.
 // finite amount = finiteAmountBase (config = 1000) * veinSize.
 // veinSize MUST be integers (floats caused FluidBuilder/COE instability earlier;
