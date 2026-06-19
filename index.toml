@@ -1373,6 +1373,10 @@ file = "kubejs/data/create_new_age/worldgen/placed_feature/thorium_ore.json"
 hash = "95868663e1cfbc455dd03c29f70b75a56b77058af08162159d2551e4d0bd0285"
 
 [[files]]
+file = "kubejs/data/minecraft/worldgen/noise/ore_veininess.json"
+hash = "e825bf91021fa604aa1a1eaa2b134a453e74de2a692aba2c0820cad89149098e"
+
+[[files]]
 file = "kubejs/data/minecraft/worldgen/placed_feature/glowstone.json"
 hash = "7aac218bb6803309946cda0010110a176e12ac67b7cf5c2b00a0356ffd402adf"
 
