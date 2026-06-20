@@ -20,10 +20,12 @@ ServerEvents.recipes(event => {
     // Nutzt KubeJS High-Level Mekanism API (vermeidet Recipe-JSON Format-Probleme)
     const crushedOres = ['iron', 'gold', 'copper', 'osmium']
     crushedOres.forEach(metal => {
-        event.recipes.mekanism.enriching(
-            `2x mekanism:dust_${metal}`,
-            `create:crushed_raw_${metal}`
-        )
+        // native mekanism:enriching JSON (KubeJS high-level API signature changed)
+        event.custom({
+            type: 'mekanism:enriching',
+            input: { count: 1, item: `create:crushed_raw_${metal}` },
+            output: { count: 2, id: `mekanism:dust_${metal}` }
+        })
     })
 
     // --- 3. Pneumaticraft Druckluft-Gate ---

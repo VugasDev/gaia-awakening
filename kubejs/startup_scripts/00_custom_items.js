@@ -18,6 +18,21 @@ StartupEvents.registry('fluid', event => {
             type.lightLevel(4)
         })
     // Bucket-Item wird von KubeJS 2101 automatisch als gaia:mythic_liquid_xp_bucket erstellt
+
+    // Hyper Experience — T4 Zwischen-Fluid: konzentriertes Liquid XP (10:1 via Mixer).
+    // Herstellung: Create:EI Liquid Experience → Mixer (enchantment_automation.js).
+    // Verwendung: Catalyst Altar → Resource Catalyst; + Singularity → Mythic Liquid XP (08).
+    // Reuse der Mythic-XP-Textur (entsättigte Animation) mit eigenem Amber-Tint.
+    event.create('gaia:hyper_experience')
+        .displayName('Hyper Experience')
+        .stillTexture('gaia:fluid/mythic_liquid_xp_still')
+        .flowingTexture('gaia:fluid/mythic_liquid_xp_flowing')
+        .tint(0xFFB200)
+        .type(function(type) {
+            type.viscosity(1000)
+            type.density(2000)
+            type.lightLevel(6)
+        })
 })
 
 // ─── ITEMS ───────────────────────────────────────────────────────────────────

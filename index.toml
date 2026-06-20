@@ -1534,7 +1534,7 @@ hash = "b2f4a65f9a363e87cd6ab4ce2dd5b2b28692b0d0b5d7282d594a33ec37f9e1aa"
 
 [[files]]
 file = "kubejs/server_scripts/02_recipe_harmonization.js"
-hash = "ef8092e6989df98f46dd90eacc0c858cd3e9937412f139b60857ebbbed929710"
+hash = "0e772608e438339eca8b82e23643ec80d12fda7454b61859136dd08b36590897"
 
 [[files]]
 file = "kubejs/server_scripts/03_ui_cleanup.js"
@@ -1550,19 +1550,19 @@ hash = "3ce4c00a28e7906de3cb8a7efeee69f15e758043770b80ef06421b4fb447b30a"
 
 [[files]]
 file = "kubejs/server_scripts/06_loot_modifications.js"
-hash = "848b4a64e3debcc1b64586f393cc9269ef0f3ab2a0ab5bb722561d60bb88fa1b"
+hash = "1ac65eab15b8ab269b4dbcaaca6307d08b514a94bf62aeb4928377b3c1411702"
 
 [[files]]
 file = "kubejs/server_scripts/07_enchanting_system.js"
-hash = "fb6b368cb00eb431879b1952ba5248f9c283603979a4f06f3f54e57f225c1a9b"
+hash = "4613c166a98f609ffb2491eaa2bdc7df292953f529fbcd50d2ce042b38c35daa"
 
 [[files]]
 file = "kubejs/server_scripts/08_catalyst_system.js"
-hash = "29447bf50bd55cd11909e3ffba3595c857e03e3b7e58aeb8b440bf9b454863c5"
+hash = "d3103ed0a351157af9abdeb5be59ae17ee3c30b9d2bf118001505aa136b74c93"
 
 [[files]]
 file = "kubejs/server_scripts/09_mechanical_crafter_recipes.js"
-hash = "b1184fe1f76ba6556e83510d0ec41d14fe56d8e2b8b0971748d732ec135a7387"
+hash = "1dbb4c97483d678b8f560a5c736dbc0bb32bc859f00aa1133edb9247c566ef81"
 
 [[files]]
 file = "kubejs/server_scripts/10_drill_heads.js"
@@ -1590,11 +1590,11 @@ hash = "1cb762aa432ed959ed571ef279f952fb961928f70195c4e027e008827cf041cf"
 
 [[files]]
 file = "kubejs/server_scripts/enchantment_automation.js"
-hash = "a13ce1644fce26ed533a3e66db95c90a5fa3a4f08b4dab717fab0c0e005ab11b"
+hash = "3570685ea9f2c6b593a81736b15076470513bc0d3f87d875fa312b6cf8329a80"
 
 [[files]]
 file = "kubejs/server_scripts/ore_processing_system.js"
-hash = "66fde3759a8d79e501e0ea61b5f9cb5b158cdd876604a6cdb09ca02b72a766b0"
+hash = "fdc0af688819e557aae377c8de0d181c09d7827affb615b30bd83560445cb3e7"
 
 [[files]]
 file = "kubejs/server_scripts/zz_fluid_boost_test.js"
@@ -1602,7 +1602,7 @@ hash = "dd8ca66de44dbfab436105235ccbef847bc3ee345874a6b8a66e7ee867e9a04c"
 
 [[files]]
 file = "kubejs/startup_scripts/00_custom_items.js"
-hash = "96fa770e697a7f967afe3b429114191340d811c90693eaf3381d0c11f23b74b1"
+hash = "d6c10f76128c9c91c81e83cac4d7c3d6b89b7f9e485164e2788747e9d262901d"
 
 [[files]]
 file = "mods/ae2.pw.toml"

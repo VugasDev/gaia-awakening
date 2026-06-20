@@ -2,131 +2,74 @@
 // Mechanical Crafter Rezepte für T3/T4-Infrastruktur — asymmetrische Muster,
 // damit diese Items ein etabliertes Create-Setup (Brass-Tier) voraussetzen.
 //
-// Designprinzip: Unförmige Muster (kein symmetrisches 3×3) → Spieler muss
-// nachdenken, wie er den Crafter bestückt. Erzwingt Create-Adoption.
+// NOTE: KubeJS 2101's high-level create.mechanical_crafting(output, pattern, keys)
+// signature no longer matches Create 6's serializer -> use native event.custom JSON:
+//   { type, accept_mirrored, category, key:{X:{item|tag}}, pattern:[...], result:{id,count} }
 
 ServerEvents.recipes(event => {
 
-    // ==========================================================================
-    // MEKANISM PURIFICATION CHAMBER (T3 Ore-Tripling Gate)
-    // ==========================================================================
-    // Standard-Rezept: 4× Osmium + 4× Steel Casing + 1× Osmium Compressor.
-    // Neue Anforderung: Mechanical Crafter + Brass Ingot + Gas Tank.
-    // L-Muster: Verhindert Standard-Crafting-Table-Umgehung.
-    //
-    //   O O B
-    //   O C B
-    //   O G B
-    //   (O=Osmium, C=Compressor, B=BrassIngot, G=GasTank)
+    // MEKANISM PURIFICATION CHAMBER (T3 Ore-Tripling Gate) — O=Osmium, C=Compressor, B=Brass, G=ChemicalTank
     event.remove({ output: 'mekanism:purification_chamber' })
-    event.recipes.create.mechanical_crafting(
-        'mekanism:purification_chamber',
-        [
-            'OOB',
-            'OCB',
-            'OGB'
-        ],
-        {
-            O: 'mekanism:ingot_osmium',
-            C: 'mekanism:osmium_compressor',
-            B: 'create:brass_ingot',
-            G: 'mekanism:basic_gas_tank'
-        }
-    )
+    event.custom({
+        type: 'create:mechanical_crafting',
+        accept_mirrored: false,
+        category: 'misc',
+        pattern: ['OOB', 'OCB', 'OGB'],
+        key: {
+            O: { item: 'mekanism:ingot_osmium' },
+            C: { item: 'mekanism:osmium_compressor' },
+            B: { item: 'create:brass_ingot' },
+            G: { item: 'mekanism:basic_chemical_tank' }
+        },
+        result: { id: 'mekanism:purification_chamber', count: 1 }
+    })
 
-    // ==========================================================================
     // AE2 ME DRIVE (T3 AE2 Massenspeicher-Gate)
-    // ==========================================================================
-    // Standard-Rezept: 2× Iron Block + 6× Iron Ingot + 1× Basic Card.
-    // Neue Anforderung: Mechanical Crafter + Precision Mechanism + Brass Casing.
-    // Umgekehrtes T-Muster: Zwei Brass-Casings oben außen, ein Precision-Mech innen.
-    //
-    //   B D B
-    //     D
-    //     I
-    //   (B=BrassCasing, D=MEDrive-Legacy, I=IronBlock, P=PrecisionMechanism)
-    // → saubereres Muster:
-    //
-    //   B P B
-    //   I D I
-    //   I I I
     event.remove({ output: 'ae2:drive' })
-    event.recipes.create.mechanical_crafting(
-        'ae2:drive',
-        [
-            'BPB',
-            'IDI',
-            'III'
-        ],
-        {
-            B: 'create:brass_casing',
-            P: 'create:precision_mechanism',
-            I: 'minecraft:iron_block',
-            D: 'ae2:logic_processor'
-        }
-    )
+    event.custom({
+        type: 'create:mechanical_crafting',
+        accept_mirrored: false,
+        category: 'misc',
+        pattern: ['BPB', 'IDI', 'III'],
+        key: {
+            B: { item: 'create:brass_casing' },
+            P: { item: 'create:precision_mechanism' },
+            I: { item: 'minecraft:iron_block' },
+            D: { item: 'ae2:logic_processor' }
+        },
+        result: { id: 'ae2:drive', count: 1 }
+    })
 
-    // ==========================================================================
     // PNEUMATICCRAFT ADVANCED PRESSURE TUBE (T4 PNC Gate)
-    // ==========================================================================
-    // Standard-Rezept: 4× Basic Pressure Tube + 4× Iron Ingot + 1× Compressed Iron.
-    // Neue Anforderung: MC + Brass Ingot + Create Fluid Pipe + Compressed Iron.
-    // Kreuz-Muster mit Brass außen:
-    //
-    //   B B B
-    //   B C B
-    //   B B B
-    // + Fluid-Elbow innen (nicht standard da die Mitte besetzt ist)
-    // → Asymmetrisch: Fluid Pipes oben/unten, Brass links/rechts, Compressed Iron Mitte
-    //
-    //     P
-    //   B C B
-    //   P   P
-    //     I
-    //   (P=FluidPipe, C=CompressedIron, B=BrassIngot, I=BasicPressureTube)
     event.remove({ output: 'pneumaticcraft:advanced_pressure_tube' })
-    event.recipes.create.mechanical_crafting(
-        'pneumaticcraft:advanced_pressure_tube',
-        [
-            ' P ',
-            'BCB',
-            'P P',
-            ' I '
-        ],
-        {
-            P: 'create:fluid_pipe',
-            B: 'create:brass_ingot',
-            C: 'pneumaticcraft:compressed_iron_block',
-            I: 'pneumaticcraft:pressure_tube'
-        }
-    )
+    event.custom({
+        type: 'create:mechanical_crafting',
+        accept_mirrored: false,
+        category: 'misc',
+        pattern: [' P ', 'BCB', 'P P', ' I '],
+        key: {
+            P: { item: 'create:fluid_pipe' },
+            B: { item: 'create:brass_ingot' },
+            C: { item: 'pneumaticcraft:compressed_iron_block' },
+            I: { item: 'pneumaticcraft:pressure_tube' }
+        },
+        result: { id: 'pneumaticcraft:advanced_pressure_tube', count: 1 }
+    })
 
-    // ==========================================================================
     // MEKANISM DIGITAL MINER (T4 Auto-Mining Gate)
-    // ==========================================================================
-    // Einer der stärksten automatischen Mining-Tools — sollte spät kommen.
-    // Standard-Rezept: Osmium/Control Circuit/Steel Casing-Mix.
-    // Neue Anforderung: MC + Precision Mechanism + Refined Obsidian + Atomic Alloy.
-    // Diagonales Muster (Raute):
-    //
-    //   . P .
-    //   O M O
-    //   . A .
-    //   (P=PrecisionMechanism, O=RefinedObsidianIngot, M=OriginalMiner, A=AtomicAlloy)
     event.remove({ output: 'mekanism:digital_miner' })
-    event.recipes.create.mechanical_crafting(
-        'mekanism:digital_miner',
-        [
-            ' P ',
-            'OMO',
-            ' A '
-        ],
-        {
-            P: 'create:precision_mechanism',
-            O: 'mekanism:ingot_refined_obsidian',
-            M: 'mekanism:steel_casing',
-            A: 'mekanism:alloy_infused'
-        }
-    )
+    event.custom({
+        type: 'create:mechanical_crafting',
+        accept_mirrored: false,
+        category: 'misc',
+        pattern: [' P ', 'OMO', ' A '],
+        key: {
+            P: { item: 'create:precision_mechanism' },
+            O: { item: 'mekanism:ingot_refined_obsidian' },
+            M: { item: 'mekanism:steel_casing' },
+            A: { item: 'mekanism:alloy_infused' }
+        },
+        result: { id: 'mekanism:digital_miner', count: 1 }
+    })
 
 })

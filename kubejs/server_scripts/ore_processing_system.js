@@ -13,7 +13,13 @@ ServerEvents.recipes(event => {
     ]
 
     crushedOres.forEach(([ore, crushed]) => {
-        event.recipes.create.crushing(`2x ${crushed}`, ore)
+        // native create:crushing JSON (KubeJS high-level API signature changed in 2101)
+        event.custom({
+            type: 'create:crushing',
+            ingredients: [ { item: ore } ],
+            processing_time: 250,
+            results: [ { id: crushed, count: 2 } ]
+        })
     })
 
     // === TIER 5: PneumaticCraft x16 Multiplier ===

@@ -69,42 +69,51 @@ ServerEvents.recipes(event => {
     // Requires T2 MA Essences (Iron + Lapis + Quartz) + Apotheosis Gem + center
     // Only craftable in Mechanical Crafter — no crafting table shortcut
     // TODO: verify apotheosis gem item ID in 1.21.1 (apotheosis:common_gem ?)
-    event.recipes.create.mechanical_crafting(
-        'gaia:resource_catalyst',
-        [
-            'III',
-            'LGL',
-            'QQQ'
-        ],
-        {
-            I: 'mysticalagriculture:iron_essence',
-            L: 'mysticalagriculture:lapis_essence',
-            Q: 'mysticalagriculture:nether_quartz_essence',
-            G: 'apotheosis:common_gem'
-        }
-    )
+    event.custom({
+        type: 'create:mechanical_crafting',
+        accept_mirrored: false,
+        category: 'misc',
+        pattern: ['III', 'LGL', 'QQQ'],
+        key: {
+            I: { item: 'mysticalagriculture:iron_essence' },
+            L: { item: 'mysticalagriculture:lapis_lazuli_essence' },
+            Q: { item: 'mysticalagriculture:nether_quartz_essence' },
+            G: { item: 'apotheosis:gem' }
+        },
+        result: { id: 'gaia:resource_catalyst', count: 1 }
+    })
 
     // PATH 3c: Catalyst Altar — Create:EI Spout recipes
     // Variant A: Catalyst Altar + Hyper Experience (1000 mB) → Resource Catalyst
-    event.recipes.create.filling(
-        'gaia:resource_catalyst',
-        ['gaia:catalyst_altar', Fluid.of('create_enchantment_industry:hyper_experience', 1000)]
-    )
+    event.custom({
+        type: 'create:filling',
+        ingredients: [
+            { item: 'gaia:catalyst_altar' },
+            { type: 'neoforge:single', amount: 1000, fluid: 'gaia:hyper_experience' }
+        ],
+        results: [ { id: 'gaia:resource_catalyst' } ]
+    })
 
     // Variant B: Catalyst Altar + Mythic Liquid XP (500 mB) → Mythic Catalyst
-    event.recipes.create.filling(
-        'gaia:mythic_catalyst',
-        ['gaia:catalyst_altar', Fluid.of('gaia:mythic_liquid_xp', 500)]
-    )
+    event.custom({
+        type: 'create:filling',
+        ingredients: [
+            { item: 'gaia:catalyst_altar' },
+            { type: 'neoforge:single', amount: 500, fluid: 'gaia:mythic_liquid_xp' }
+        ],
+        results: [ { id: 'gaia:mythic_catalyst' } ]
+    })
 
     // MYTHIC LIQUID XP — Create Mixing recipe
     // Hyper Experience (2000 mB) + Singularity Shard → Mythic Liquid XP (1000 mB)
     // Requires heated mixing (Blaze Burner under Mixer)
-    event.recipes.create.mixing(
-        [Fluid.of('gaia:mythic_liquid_xp', 1000)],
-        [
-            Fluid.of('create_enchantment_industry:hyper_experience', 2000),
-            'gaia:singularity_shard'
-        ]
-    ).heated()
+    event.custom({
+        type: 'create:mixing',
+        heat_requirement: 'heated',
+        ingredients: [
+            { type: 'neoforge:single', amount: 2000, fluid: 'gaia:hyper_experience' },
+            { item: 'gaia:singularity_shard' }
+        ],
+        results: [ { amount: 1000, id: 'gaia:mythic_liquid_xp' } ]
+    })
 })
