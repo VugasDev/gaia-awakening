@@ -4,8 +4,10 @@
 LootJS.lootTables(event => {
 
     const drop = (entityId, item, min, max) => {
-        event.entity(entityId).createPool(pool => {
-            pool.addEntry(LootEntry.create(item).count([min, max]))
+        event.modifyEntityTables(entityId, table => {
+            table.createPool(pool => {
+                pool.addEntry(LootEntry.create(item).count([min, max]))
+            })
         })
     }
 

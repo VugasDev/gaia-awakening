@@ -1550,7 +1550,7 @@ hash = "3ce4c00a28e7906de3cb8a7efeee69f15e758043770b80ef06421b4fb447b30a"
 
 [[files]]
 file = "kubejs/server_scripts/06_loot_modifications.js"
-hash = "1ac65eab15b8ab269b4dbcaaca6307d08b514a94bf62aeb4928377b3c1411702"
+hash = "f4a8a46e1be33b8aa0b3bfcc3d6fd513e9f5faffc94a43eb80e659b81e499a6f"
 
 [[files]]
 file = "kubejs/server_scripts/07_enchanting_system.js"
@@ -1595,10 +1595,6 @@ hash = "3570685ea9f2c6b593a81736b15076470513bc0d3f87d875fa312b6cf8329a80"
 [[files]]
 file = "kubejs/server_scripts/ore_processing_system.js"
 hash = "fdc0af688819e557aae377c8de0d181c09d7827affb615b30bd83560445cb3e7"
-
-[[files]]
-file = "kubejs/server_scripts/zz_fluid_boost_test.js"
-hash = "dd8ca66de44dbfab436105235ccbef847bc3ee345874a6b8a66e7ee867e9a04c"
 
 [[files]]
 file = "kubejs/startup_scripts/00_custom_items.js"
