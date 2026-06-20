@@ -77,8 +77,8 @@ on a higher-tier vein produces no useful output.
 | `gaia:drills/tier4` | Refined Obsidian + Gaia-Infused |
 | `gaia:drills/tier5` | Gaia-Infused only |
 
-A finite vein's drilling recipe gates on `gaia:drills/tierN` where N is the ore's tier.
-Its ley line gates on `gaia:drills/tier(N+1)` — one tier above.
+A vein's drilling recipe gates on `gaia:drills/tierN` where N is the ore's tier. A lower-tier
+head on a higher-tier vein produces no useful output.
 
 ### Tier → Ore Mapping
 
@@ -97,18 +97,14 @@ capped at T2 — craftable before the heads that need them are made.
 
 ---
 
-## Finite Vein + Ley Line per Ore
+## One Finite Vein per Ore
 
-Every ore in the table above has exactly two COE entries:
-
-| Entry | Type | Gate |
-|---|---|---|
-| Finite vein | `.alwaysFinite()` — depletes permanently | tier tag N |
-| Infinite ley line | `.alwaysInfinite()` — rarer placement, unlimited | tier tag N+1 |
-
-"Finite now, infinite once you out-tier it." Ancient debris is the one exception: its
-ley line is gated at the Gaia-Infused tier (T5) rather than T4, making it the rarest
-renewable resource.
+COE ties finite/infinite to the recipe id (a single recipe is uniformly finite or infinite),
+so each ore has exactly **one finite vein** — no separate ley line. The per-chunk `randomMul`
+rolls each vein's amount across a wide range (`veinSize(0.5, 30)` x `finiteAmountBase` 1000 =
+~500..30000 raw ore), so most veins are moderate and some are practically inexhaustible.
+"Finite now; out-tier it and the next vein is yours." True per-instance "% infinite" would need
+a custom mod (tracked as BL-022).
 
 ---
 
@@ -124,9 +120,12 @@ Nothing in the ore block itself carries multipliers.
 | Mekanism enrichment / purification | ×3–4 | Enrichment Chamber → Purification Chamber |
 | Full Mekanism chemical chain | up to ×16+ | Chemical Dissolution + Crystallizer + Injection |
 
-**Planned (not yet implemented):** a fluid-boost at the Drilling Machine using a NeoForge
-fluid (e.g. lubricant or a custom Gaia fluid). Mekanism chemicals are not NeoForge fluids
-and cannot be used here; this enhancement is deferred to a future iteration.
+**Brine fluid-boost (implemented):** pumping Mekanism Brine (via a Rotary Condensentrator into
+fluid form) into the Drilling Machine runs a higher-priority drilling recipe for ~50% more
+yield. Mekanism chemicals DO have NeoForge fluid forms (`c:brine`), so they work here. Caveat:
+COE only re-selects the recipe on drill-head change and checks fluid type (not amount), so a
+fluid recipe and the dry base recipe on the same head can stall if brine runs partially dry —
+keep the brine fed.
 
 ---
 
