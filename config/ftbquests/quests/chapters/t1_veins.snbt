@@ -1,0 +1,483 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "t1_veins"
+	group: "0000000000020000"
+	icon: "create:crimsite"
+	id: "0000000000024000"
+	order_index: 2
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"Bad news: ore doesn't spawn in the stone here. Swing a pickaxe at a cave wall all day and you'll get cobblestone and regret."
+				"Good news: metal comes from two new places. Early on, Create's coloured stones. Later, the Drilling Machine taps deep ore veins."
+				"This chapter is your map from a fistful of raw iron to an automated ore empire."
+			]
+			icon: "create:crimsite"
+			id: "0000000000024001"
+			rewards: [
+				{
+					id: "A000000000024001"
+					type: "xp"
+					xp: 50
+				}
+			]
+			subtitle: "Your iron isn't where you left it."
+			tasks: [
+				{
+					id: "1000000000024001"
+					title: "Read on, prospector"
+					type: "checkmark"
+				}
+			]
+			title: "The Crimson Truth"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"0000000000024001"
+			]
+			description: [
+				"Crimsite is the blood-red stone streaked through the world. Mine it, drop it between two Crushing Wheels, and it bleeds Raw Iron."
+				"You cannot craft these stones — that recipe is gone. They must be mined. This is your only metal until the drill is built."
+			]
+			icon: "minecraft:raw_iron"
+			id: "0000000000024002"
+			rewards: [
+				{
+					count: 8L
+					id: "A000000000024002"
+					item: "minecraft:raw_iron"
+					type: "item"
+				}
+				{
+					id: "B000000000024002"
+					type: "xp"
+					xp: 75
+				}
+			]
+			subtitle: "Red rock, raw iron."
+			tasks: [
+				{
+					count: 16L
+					id: "1000000000024002"
+					item: "create:crimsite"
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "2000000000024002"
+					item: "minecraft:raw_iron"
+					type: "item"
+				}
+			]
+			title: "Bleeding Stone"
+			x: 0.0d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"0000000000024002"
+			]
+			description: [
+				"The other three coloured stones crush just like Crimsite: Veridium gives Copper, Ochrum gives Gold, Asurine gives Zinc."
+				"Stockpile all four metals — the Drilling Machine and its first bit are hungry for iron and brass parts."
+			]
+			icon: "minecraft:raw_gold"
+			id: "0000000000024003"
+			rewards: [
+				{
+					count: 6L
+					id: "A000000000024003"
+					item: "minecraft:raw_gold"
+					type: "item"
+				}
+				{
+					id: "B000000000024003"
+					type: "xp"
+					xp: 100
+				}
+			]
+			subtitle: "Four stones, four metals."
+			tasks: [
+				{
+					count: 8L
+					id: "1000000000024003"
+					item: "minecraft:raw_copper"
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "2000000000024003"
+					item: "minecraft:raw_gold"
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "3000000000024003"
+					item: "create:raw_zinc"
+					type: "item"
+				}
+			]
+			title: "The Full Palette"
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"0000000000024003"
+			]
+			description: [
+				"The Drilling Machine is the heart of this pack's ore game. Build it: 7 Iron Blocks, a Precision Mechanism and a Brass Casing."
+				"It needs Brass — so this is your push into the Brass Age. You'll power it with Create rotation."
+			]
+			icon: "createoreexcavation:drilling_machine"
+			id: "0000000000024004"
+			rewards: [
+				{
+					count: 1L
+					id: "A000000000024004"
+					item: "create:precision_mechanism"
+					type: "item"
+				}
+				{
+					id: "B000000000024004"
+					type: "xp"
+					xp: 150
+				}
+			]
+			subtitle: "The machine eats stone. You eat ingots."
+			tasks: [
+				{
+					count: 1L
+					id: "1000000000024004"
+					item: "createoreexcavation:drilling_machine"
+					type: "item"
+				}
+			]
+			title: "Stop Digging, Start Drilling"
+			x: 0.0d
+			y: 4.5d
+		}
+		{
+			dependencies: [
+				"0000000000024004"
+			]
+			description: [
+				"A Drilling Machine without a bit just hums. Craft the Basic Drill Head and slot it in."
+				"The Basic head handles Tier 1 veins: iron, copper and coal. Everything deeper needs a tougher bit."
+			]
+			icon: "gaia:basic_drill_head"
+			id: "0000000000024005"
+			rewards: [
+				{
+					id: "A000000000024005"
+					type: "xp"
+					xp: 100
+				}
+			]
+			subtitle: "Your first bit."
+			tasks: [
+				{
+					count: 1L
+					id: "1000000000024005"
+					item: "gaia:basic_drill_head"
+					type: "item"
+				}
+			]
+			title: "Basic Instinct"
+			x: 0.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"0000000000024005"
+			]
+			description: [
+				"Find a vein with the Ore Vein Finder or the Prospector's Radar, sit the machine on top, and feed it rotation."
+				"Veins are FINITE — each one drains dry, then you move on. The world is full of them, so go prospecting."
+				"Let the machine do the mining and pull out a stack of raw iron."
+			]
+			icon: "minecraft:iron_ingot"
+			id: "0000000000024006"
+			rewards: [
+				{
+					count: 1L
+					id: "A000000000024006"
+					item: "createoreexcavation:vein_finder"
+					type: "item"
+				}
+				{
+					id: "B000000000024006"
+					type: "xp"
+					xp: 150
+				}
+			]
+			subtitle: "Stone goes in, ingots come out."
+			tasks: [
+				{
+					count: 32L
+					id: "1000000000024006"
+					item: "minecraft:raw_iron"
+					type: "item"
+				}
+			]
+			title: "Strike Iron"
+			x: 0.0d
+			y: 7.5d
+		}
+		{
+			dependencies: [
+				"0000000000024006"
+			]
+			description: [
+				"The Reinforced Drill Head (Tier 2) cracks open a whole new shopping list: gold, zinc, redstone, lapis, osmium, tin, lead, silver, nether quartz and inferium."
+				"Osmium and nether quartz cap at this tier on purpose — you need them to build the fancier bits."
+			]
+			icon: "gaia:reinforced_drill_head"
+			id: "0000000000024007"
+			rewards: [
+				{
+					id: "A000000000024007"
+					type: "xp"
+					xp: 150
+				}
+			]
+			subtitle: "Tougher bit, richer veins."
+			tasks: [
+				{
+					count: 1L
+					id: "1000000000024007"
+					item: "gaia:reinforced_drill_head"
+					type: "item"
+				}
+			]
+			title: "Reinforcements"
+			x: 0.0d
+			y: 9.0d
+		}
+		{
+			dependencies: [
+				"0000000000024007"
+			]
+			description: [
+				"The Osmium Drill Head (Tier 3) reaches the radioactive shelf: uranium and fluorite."
+				"Handle uranium with care — Mekanism radiation is no joke."
+			]
+			icon: "gaia:osmium_drill_head"
+			id: "0000000000024008"
+			rewards: [
+				{
+					id: "A000000000024008"
+					type: "xp"
+					xp: 200
+				}
+			]
+			subtitle: "Glowing green payday."
+			tasks: [
+				{
+					count: 1L
+					id: "1000000000024008"
+					item: "gaia:osmium_drill_head"
+					type: "item"
+				}
+			]
+			title: "Osmium Bit"
+			x: -1.5d
+			y: 10.5d
+		}
+		{
+			dependencies: [
+				"0000000000024007"
+			]
+			description: [
+				"The Nether Drill Head (Tier 3) works the hot rocks: nether gold, glowstone and ancient debris."
+				"Yes — this is how you farm netherite now. Set up shop in the Nether."
+			]
+			icon: "gaia:nether_drill_head"
+			id: "0000000000024009"
+			rewards: [
+				{
+					id: "A000000000024009"
+					type: "xp"
+					xp: 200
+				}
+			]
+			subtitle: "Bring fire resistance."
+			tasks: [
+				{
+					count: 1L
+					id: "1000000000024009"
+					item: "gaia:nether_drill_head"
+					type: "item"
+				}
+			]
+			title: "Hellfire Bit"
+			x: 0.0d
+			y: 10.5d
+		}
+		{
+			dependencies: [
+				"0000000000024007"
+			]
+			description: [
+				"The Crystal Drill Head (Tier 3) cuts gem veins: diamond, emerald and Mystical Agriculture prosperity."
+				"Diamonds are a drill away now — no more digging blind below Y=16."
+			]
+			icon: "gaia:crystal_drill_head"
+			id: "000000000002400A"
+			rewards: [
+				{
+					id: "A00000000002400A"
+					type: "xp"
+					xp: 200
+				}
+			]
+			subtitle: "Shiny rocks that make better rocks."
+			tasks: [
+				{
+					count: 1L
+					id: "100000000002400A"
+					item: "gaia:crystal_drill_head"
+					type: "item"
+				}
+			]
+			title: "Crystal Bit"
+			x: 1.5d
+			y: 10.5d
+		}
+		{
+			dependencies: [
+				"0000000000024008"
+				"0000000000024009"
+				"000000000002400A"
+			]
+			description: [
+				"The Refined Obsidian Drill Head (Tier 4) reaches the deepest veins: thorium and uraninite — the fuel of the late-game power chains."
+				"Refined Obsidian itself is a Mekanism endgame material. You've come a long way from crushing red rocks."
+			]
+			icon: "gaia:refined_obsidian_drill_head"
+			id: "000000000002400B"
+			rewards: [
+				{
+					id: "A00000000002400B"
+					type: "xp"
+					xp: 300
+				}
+			]
+			subtitle: "Endgame metals."
+			tasks: [
+				{
+					count: 1L
+					id: "100000000002400B"
+					item: "gaia:refined_obsidian_drill_head"
+					type: "item"
+				}
+			]
+			title: "Obsidian Bit"
+			x: 0.0d
+			y: 12.0d
+		}
+		{
+			dependencies: [
+				"000000000002400B"
+			]
+			description: [
+				"The Gaia-Infused Drill Head is the pinnacle: the best yields, a chance at a Resource Catalyst byproduct, and the only bit that taps the rarest deposits."
+				"Every vein in the world is now yours for the taking."
+			]
+			icon: "gaia:gaia_infused_drill_head"
+			id: "000000000002400C"
+			rewards: [
+				{
+					count: 2L
+					id: "A00000000002400C"
+					item: "gaia:resource_catalyst"
+					type: "item"
+				}
+				{
+					id: "B00000000002400C"
+					type: "xp"
+					xp: 500
+				}
+			]
+			subtitle: "The apex bit."
+			tasks: [
+				{
+					count: 1L
+					id: "100000000002400C"
+					item: "gaia:gaia_infused_drill_head"
+					type: "item"
+				}
+			]
+			title: "Gaia-Infused Bit"
+			x: 0.0d
+			y: 13.5d
+		}
+		{
+			dependencies: [
+				"0000000000024006"
+			]
+			description: [
+				"Pipe Mekanism Brine through a Rotary Condensentrator to turn it into a fluid, then pump it into the Drilling Machine."
+				"A fed machine drills richer — about 50% more ore per cycle. Keep the brine flowing, or it falls back to dry output."
+			]
+			icon: "mekanism:rotary_condensentrator"
+			id: "000000000002400D"
+			optional: true
+			rewards: [
+				{
+					id: "A00000000002400D"
+					type: "xp"
+					xp: 150
+				}
+			]
+			shape: "diamond"
+			subtitle: "Season your mining."
+			tasks: [
+				{
+					id: "100000000002400D"
+					title: "Boost a Drilling Machine with brine"
+					type: "checkmark"
+				}
+			]
+			title: "Salty Boost"
+			x: -1.5d
+			y: 7.5d
+		}
+		{
+			dependencies: [
+				"0000000000024006"
+			]
+			description: [
+				"Raw ore is just the start. Crush it for x2, enrich it in Mekanism for x3, purify it for x4, or run the full chemical chain for up to x16."
+				"The deeper you process, the further every vein stretches. The Mekanism chapters show you how."
+			]
+			icon: "mekanism:purification_chamber"
+			id: "000000000002400E"
+			optional: true
+			rewards: [
+				{
+					id: "A00000000002400E"
+					type: "xp"
+					xp: 150
+				}
+			]
+			shape: "diamond"
+			subtitle: "One raw, sixteen ingots."
+			tasks: [
+				{
+					id: "100000000002400E"
+					title: "Triple an ore with a Purification Chamber"
+					type: "checkmark"
+				}
+			]
+			title: "Multiply"
+			x: 1.5d
+			y: 7.5d
+		}
+	]
+	title: "Veins of Gaia"
+}
