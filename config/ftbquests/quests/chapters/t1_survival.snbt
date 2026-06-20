@@ -292,8 +292,8 @@
 				"0000000000021003"
 			]
 			description: [
-				"Dig deep — diamonds spawn below Y=16, and this world goes DOWN to Y=-128."
-				"Underground rivers and massive caves make mining here an adventure of its own."
+				"Diamonds don't hide in the stone here — you pull them from diamond veins with a Crystal Drill Head (see Veins of Gaia)."
+				"For your first few, raid dungeons and trade with villagers. The drill handles the rest later."
 			]
 			icon: "minecraft:diamond"
 			id: "0000000000021007"
@@ -413,7 +413,7 @@
 				"0000000000021003"
 			]
 			description: [
-				"FTB Ultimine: hold the grave key (`) while mining to break whole veins, chop whole trees or harvest whole fields at once."
+				"FTB Ultimine: hold the grave key (`) while mining to break a whole rock face, chop a whole tree or harvest a whole field at once."
 				"It costs hunger, so keep snacks around."
 			]
 			icon: "minecraft:iron_pickaxe"
@@ -437,7 +437,7 @@
 			tasks: [
 				{
 					id: "100000000002100A"
-					title: "Use Ultimine to break a vein"
+					title: "Use Ultimine to fell a tree"
 					type: "checkmark"
 				}
 			]
@@ -567,7 +567,7 @@
 			]
 			description: [
 				"Hunt blazes in a Nether fortress. Blaze rods power the Blaze Burners you need for the Brass Age."
-				"Grab some quartz while you're there — the machines are hungry."
+				"Quartz no longer hides in nether rock — you'll drill it from quartz veins with a Reinforced Drill Head (see Veins of Gaia)."
 			]
 			icon: "minecraft:blaze_rod"
 			id: "000000000002100E"

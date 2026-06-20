@@ -162,7 +162,7 @@ register_chapter("t3_ma", 0x44000, T3, 3, "Mystical Farming", "mysticalagricultu
     dict(n=1, title="Prosperity", icon="mysticalagriculture:prosperity_shard", x=0.0, y=0.0,
          sub="Rocks of pure potential.",
          deps=[("t1_survival", 7)],
-         desc=["Mystical Agriculture lets you GROW resources. Prosperity Shards come from prosperity ore underground.",
+         desc=["Mystical Agriculture lets you GROW resources. Prosperity Shards come from prosperity veins, drilled with a Crystal Drill Head (see Veins of Gaia).",
                "These shards build your seed infrastructure — mine generously."],
          tasks=[I("mysticalagriculture:prosperity_shard", 8)],
          rewards=[R("mysticalagriculture:prosperity_shard", 8), XP(100)]),

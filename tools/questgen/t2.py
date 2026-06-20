@@ -72,7 +72,7 @@ register_chapter("t2_mekanism", 0x32000, T2, 1, "Green Machines", "mekanism:meta
     dict(n=1, title="Osmium — The New Iron", icon="mekanism:ingot_osmium", x=0.0, y=0.0,
          sub="Heavier. Bluer. Better.",
          deps=[("t1_survival", 7)],
-         desc=["Osmium is Mekanism's foundation metal, found underground everywhere.",
+         desc=["Osmium is Mekanism's foundation metal — drilled from osmium veins with a Reinforced Drill Head (see Veins of Gaia).",
                "Tip: our custom Crushed Osmium from Create crushing wheels smelts into ingots too."],
          tasks=[I("mekanism:ingot_osmium", 16)],
          rewards=[R("mekanism:ingot_osmium", 8), XP(100)]),

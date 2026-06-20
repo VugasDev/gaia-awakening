@@ -13,7 +13,7 @@
 				"0000000000021007"
 			]
 			description: [
-				"Osmium is Mekanism's foundation metal, found underground everywhere."
+				"Osmium is Mekanism's foundation metal — drilled from osmium veins with a Reinforced Drill Head (see Veins of Gaia)."
 				"Tip: our custom Crushed Osmium from Create crushing wheels smelts into ingots too."
 			]
 			icon: "mekanism:ingot_osmium"
