@@ -1550,7 +1550,7 @@ hash = "3ce4c00a28e7906de3cb8a7efeee69f15e758043770b80ef06421b4fb447b30a"
 
 [[files]]
 file = "kubejs/server_scripts/06_loot_modifications.js"
-hash = "f4a8a46e1be33b8aa0b3bfcc3d6fd513e9f5faffc94a43eb80e659b81e499a6f"
+hash = "b101ba5e0b44c6b98a6dd91c968d6a1db9b692ade72cf437d1995f91fed9a3fe"
 
 [[files]]
 file = "kubejs/server_scripts/07_enchanting_system.js"
