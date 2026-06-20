@@ -1597,6 +1597,10 @@ file = "kubejs/server_scripts/ore_processing_system.js"
 hash = "66fde3759a8d79e501e0ea61b5f9cb5b158cdd876604a6cdb09ca02b72a766b0"
 
 [[files]]
+file = "kubejs/server_scripts/zz_fluid_boost_test.js"
+hash = "dd8ca66de44dbfab436105235ccbef847bc3ee345874a6b8a66e7ee867e9a04c"
+
+[[files]]
 file = "kubejs/startup_scripts/00_custom_items.js"
 hash = "96fa770e697a7f967afe3b429114191340d811c90693eaf3381d0c11f23b74b1"
 
