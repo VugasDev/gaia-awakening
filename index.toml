@@ -1205,6 +1205,10 @@ file = "config/xnetgases.toml"
 hash = "39b423a5786f48f0f479cac4004734fc2eae55a9607b5e931a6f9f4373b5e945"
 
 [[files]]
+file = "defaultconfigs/createoreexcavation-server.toml"
+hash = "723c28adf7cf5c145fdb95e646fac5f57c6e9fc0703b8eba9dfca5bf861b9c06"
+
+[[files]]
 file = "kubejs/assets/gaia/models/item/mythic_liquid_xp_bucket.json"
 hash = "5c9290a4fc149510e2f6772dcd96acfe4fbc3d4ae63a74285385f851f53194cb"
 
