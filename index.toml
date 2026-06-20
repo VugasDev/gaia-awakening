@@ -1566,7 +1566,7 @@ hash = "b1184fe1f76ba6556e83510d0ec41d14fe56d8e2b8b0971748d732ec135a7387"
 
 [[files]]
 file = "kubejs/server_scripts/10_drill_heads.js"
-hash = "8f51a64cc8426a27ef23f184d4c76a7e4a0ed59a46572a61963dcc93f0ba94df"
+hash = "d750ed6bfb793aea2297910fd2ab3d952cba48ea324d7d9c7dbabddb0bb01fee"
 
 [[files]]
 file = "kubejs/server_scripts/11_base_metal_veins.js"

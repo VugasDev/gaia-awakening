@@ -51,7 +51,7 @@ ServerEvents.recipes(event => {
         'BNB',
         'QBQ'
     ], {
-        Q: 'minecraft:nether_quartz',
+        Q: 'minecraft:quartz',
         B: 'minecraft:blaze_rod',
         N: 'minecraft:magma_block'
     })
