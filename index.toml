@@ -609,6 +609,10 @@ file = "config/citadel-common.toml"
 hash = "6cade6912a3873af0b297eb2da7ffa4bf5bac23f5ccfe9511aea9f5755745758"
 
 [[files]]
+file = "config/coebetterfinder-common.toml"
+hash = "020ac1e7a500c3a548b9440a89c36b315bbd6f5ea4c522b6faaa593117a28c0f"
+
+[[files]]
 file = "config/create-client.toml"
 hash = "cce3eab1a290cc1f0eada00031f0577f661f883aee3438cf1139283c65d1f319"
 
@@ -1550,7 +1554,7 @@ hash = "3ce4c00a28e7906de3cb8a7efeee69f15e758043770b80ef06421b4fb447b30a"
 
 [[files]]
 file = "kubejs/server_scripts/06_loot_modifications.js"
-hash = "b101ba5e0b44c6b98a6dd91c968d6a1db9b692ade72cf437d1995f91fed9a3fe"
+hash = "5cb2157ffb41dc0bbfb2bb0188e147a72f943b7529ed576bca51b93bf35e3aa7"
 
 [[files]]
 file = "kubejs/server_scripts/07_enchanting_system.js"
@@ -1586,7 +1590,7 @@ hash = "e29ee97a826aa277d167a566fbf5ddb8de24beeb153fb5a502874f77b302b874"
 
 [[files]]
 file = "kubejs/server_scripts/15_ore_progression.js"
-hash = "1cb762aa432ed959ed571ef279f952fb961928f70195c4e027e008827cf041cf"
+hash = "a8dcb9ec90869a44b1f8068b9a88100d3dbffa27b7e9932e7ed8aebb8d2fcdbf"
 
 [[files]]
 file = "kubejs/server_scripts/enchantment_automation.js"

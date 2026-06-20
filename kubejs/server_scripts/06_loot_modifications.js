@@ -1,13 +1,11 @@
 // 06_loot_modifications.js — LootJS 3.x API (almostreliable).
 // The old LootJS 2.x API (LootJS.modifiers / addEntityLootModifier /
 // addLootTableModifier) was removed; 3.x uses LootJS.lootTables + event.entity(...).
-LootJS.lootTables(event => {
+LootJS.modifiers(event => {
 
     const drop = (entityId, item, min, max) => {
-        // lootjs 3.7: modifyEntityTables(IdFilter...) -> LootTableList.createPool(Consumer<MutableLootPool>)
-        event.modifyEntityTables(entityId).createPool(pool => {
-            pool.addEntry(LootEntry.create(item).count([min, max]))
-        })
+        event.addEntityModifier(entityId)
+            .addLoot(LootEntry.of(item).setCount([min, max]))
     }
 
     // T5 Singularity Shards — Cataclysm Apex bosses (Fusion Reactor gate)

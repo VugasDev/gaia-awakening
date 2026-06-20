@@ -5,7 +5,7 @@ ServerEvents.recipes(event => {
     const TAG = t => `#gaia:drills/tier${t}`
 
     // id, block (vein type/display), raw (drilling output), n (output count),
-    // tier (finite-vein min head), nether?, color
+    // tier (finite-vein min head), nether?, color (Minecraft color name for Better Finder)
     const ORES = [
         { id:'coal',          block:'minecraft:coal_ore',                 raw:'minecraft:coal',                        n:3, tier:1, color:'black'    },
         { id:'iron',          block:'minecraft:iron_ore',                 raw:'minecraft:raw_iron',                    n:2, tier:1, color:'white'    },
@@ -23,51 +23,68 @@ ServerEvents.recipes(event => {
         { id:'fluorite',      block:'mekanism:fluorite_ore',              raw:'mekanism:fluorite_gem',                 n:2, tier:3, color:'white'    },
         { id:'diamond',       block:'minecraft:diamond_ore',              raw:'minecraft:diamond',                     n:1, tier:3, color:'aqua'     },
         { id:'emerald',       block:'minecraft:emerald_ore',              raw:'minecraft:emerald',                     n:1, tier:3, color:'green'    },
-        { id:'prosperity',    block:'mysticalagriculture:prosperity_ore', raw:'mysticalagriculture:prosperity_shard', n:2, tier:3, color:'yellow'   },
-        { id:'thorium',       block:'create_new_age:thorium_ore',         raw:'create_new_age:thorium',                n:1, tier:4, color:'green'    },
-        { id:'uraninite',     block:'powah:uraninite_ore',                raw:'powah:uraninite_raw',                   n:1, tier:4, color:'green'    },
+        { id:'prosperity',    block:'mysticalagriculture:prosperity_ore', raw:'mysticalagriculture:prosperity_shard', n:2, tier:3, color:'white'    },
+        { id:'thorium',       block:'create_new_age:thorium_ore',         raw:'create_new_age:thorium',                n:1, tier:4, color:'dark_gray'},
+        { id:'uraninite',     block:'powah:uraninite_ore',                raw:'powah:uraninite_raw',                   n:1, tier:4, color:'dark_gray'},
         // nether
-        { id:'nether_quartz', block:'minecraft:nether_quartz_ore',        raw:'minecraft:quartz',                      n:3, tier:2, nether:true, color:'white'  },
+        { id:'nether_quartz', block:'minecraft:nether_quartz_ore',        raw:'minecraft:quartz',                      n:3, tier:2, nether:true, cf:'quartz',    color:'white'  },
         { id:'nether_gold',   block:'minecraft:nether_gold_ore',          raw:'minecraft:gold_nugget',                 n:6, tier:3, nether:true, color:'gold'   },
         { id:'glowstone',     block:'minecraft:glowstone',                raw:'minecraft:glowstone_dust',              n:4, tier:3, nether:true, color:'yellow' },
-        { id:'ancient_debris',block:'minecraft:ancient_debris',           raw:'minecraft:ancient_debris',              n:1, tier:3, nether:true, color:'dark_red'}
+        { id:'ancient_debris',block:'minecraft:ancient_debris',           raw:'minecraft:ancient_debris',              n:1, tier:3, nether:true, cf:'netherite', color:'dark_red'}
     ]
 
     ORES.forEach((o, i) => {
         const biome = o.nether ? 'c:is_nether' : 'c:is_overworld'
-        const leyTier = Math.min(o.tier + 1, 5)
-        // Per-ore distinct + tier-scaled placement so vein types DON'T all cluster
-        // in the same cells. Higher tiers spread wider; large distinct salts
-        // (prime step) decorrelate each type's grid so they land in different areas.
-        const fSpacing = 140 + o.tier * 30 + (i % 5) * 16   // finite: ~140..294 chunks (~2.2k..4.7k blocks)
+        // Better Finder colours radar markers via a hardcoded switch on the vein id's LAST
+        // segment (it strips everything before ':' or '/'). Name ids 'gaia:veins/<seg>' so the
+        // segment matches a known material (iron/gold/copper/coal/redstone/lapis/zinc/diamond/
+        // emerald/nether_gold/glowstone/quartz/netherite). Unknown segments -> default orange.
+        const seg = o.cf || o.id
+
+        const fSpacing = 140 + o.tier * 30 + (i % 5) * 16
         const fSalt = 50021 + i * 104729
-        const lSpacing = fSpacing * 2                        // ley line: ~2x rarer
-        const lSalt = 800011 + i * 104729
+        
+        const veinName = JSON.stringify({ text: `${o.id.replace('_', ' ').replace(/\b\w/g, c => c.toUpperCase())} Deposit`, color: o.color })
 
-        // finite vein — depletes; min head = o.tier
-        // COE expects `name` as a STRING (stringified text component), not an object.
-        // icon = the (colorful) raw item, not the grey ore block — the Better Finder radar
-        // colours markers from the icon, so distinct raws give distinguishable colours.
-        coe.vein(JSON.stringify({ text: `${o.id} Deposit`, color: o.color }), o.raw)
-            .placement(fSpacing, 32, fSalt).veinSize(1, 3).alwaysFinite()
-            .biomeWhitelist(biome).id(`gaia:${o.id}_vein`)
-        coe.drilling(Item.of(o.raw, o.n), `gaia:${o.id}_vein`, 240)
-            .drill(TAG(o.tier)).id(`gaia:${o.id}_drill`)
+        // ONE finite vein per ore. COE ties finite/infinite to the recipe id, so a single
+        // radar source must be uniformly finite (per-instance "% infinite" is impossible
+        // without a custom mod — see BL-022). veinSize is the amountMultiplier; the per-chunk
+        // randomMul rolls UNIFORMLY in [min,max] x finiteAmountBase(1000). So 0.5..30 -> a
+        // vein holds ~500..30000 raw ore (low ~500-1000, top ~20-30k). NOTE: uniform roll, so
+        // there's no "mostly mid" bias — every size in the range is equally likely.
+        coe.vein(veinName, o.raw)
+            .placement(fSpacing, 32, fSalt).veinSize(0.5, 30).alwaysFinite()
+            .biomeWhitelist(biome).id(`gaia:veins/${seg}`)
 
-        // infinite ley line — renewable; min head = one tier up
-        coe.vein(JSON.stringify({ text: `${o.id} Ley Line`, color: o.color }), o.raw)
-            .placement(lSpacing, 64, lSalt).alwaysInfinite()
-            .biomeWhitelist(biome).id(`gaia:${o.id}_ley`)
-        coe.drilling(Item.of(o.raw, o.n), `gaia:${o.id}_ley`, 240)
-            .drill(TAG(leyTier)).id(`gaia:${o.id}_ley_drill`)
+        // RECIPE MATRIX
+        const addRecipes = (veinId, minHeadTag) => {
+            // Base Output
+            const baseItem = Item.of(o.raw, o.n)
+            // Enhanced Output (Brine) -> 50% more output
+            const enhancedItem = Item.of(o.raw, Math.floor(o.n * 1.5) || 1)
+            
+            // Premium Output
+            const premiumItem = [ Item.of(o.raw, o.n + 1), coeutil.processingOutput('gaia:resource_catalyst', 0.02) ]
+            // Premium Enhanced (Brine) -> 50% more output
+            const premiumEnhancedItem = [ Item.of(o.raw, Math.floor((o.n + 1) * 1.5)), coeutil.processingOutput('gaia:resource_catalyst', 0.05) ]
 
-        // premium: Gaia-Infused head — best yield + small catalyst byproduct.
-        // Higher priority than the tier recipe (the tier tag also contains the gaia head),
-        // so a gaia head always rolls the premium recipe. Preserves the old "best head = bonus" flavor.
-        const premium = [ Item.of(o.raw, o.n + 1), coeutil.processingOutput('gaia:resource_catalyst', 0.02) ]
-        coe.drilling(premium, `gaia:${o.id}_vein`, 200)
-            .drill('gaia:gaia_infused_drill_head').priority(2).id(`gaia:${o.id}_premium`)
-        coe.drilling(premium, `gaia:${o.id}_ley`, 200)
-            .drill('gaia:gaia_infused_drill_head').priority(2).id(`gaia:${o.id}_ley_premium`)
+            // Prio 0: Standard Drill, No Fluid
+            coe.drilling(baseItem, veinId, 240)
+                .drill(minHeadTag).priority(0).id(`${veinId}_drill_base`)
+                
+            // Prio 1: Standard Drill, Mekanism Brine
+            coe.drilling(enhancedItem, veinId, 240)
+                .drill(minHeadTag).fluid('mekanism:brine 100').priority(1).id(`${veinId}_drill_brine`)
+                
+            // Prio 2: Premium Drill (Gaia), No Fluid
+            coe.drilling(premiumItem, veinId, 200)
+                .drill('gaia:gaia_infused_drill_head').priority(2).id(`${veinId}_premium_base`)
+                
+            // Prio 3: Premium Drill (Gaia), Mekanism Brine
+            coe.drilling(premiumEnhancedItem, veinId, 200)
+                .drill('gaia:gaia_infused_drill_head').fluid('mekanism:brine 100').priority(3).id(`${veinId}_premium_brine`)
+        }
+
+        addRecipes(`gaia:veins/${seg}`, TAG(o.tier))
     })
 })
