@@ -766,7 +766,11 @@ hash = "281df41281d35a8ef3e883911d4e1a25d155b99f041f969ca37a4f64d8df57f7"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/t1_survival.snbt"
-hash = "94645f7cd8a8bb627cad0a58e84564a0a7d29665c737a744315607b6223ac278"
+hash = "e9c9c79b70c8066939533e8f0031b6c21c134dfa92d95125f4c0106d3a27d347"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/t1_veins.snbt"
+hash = "067d862eff3ebb7b5e6da2770c83bc9745638439e5a5e4e7f69f15e49a578950"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/t2_create_brass.snbt"
@@ -778,7 +782,7 @@ hash = "00c81a0d83157c0a1b18ff9be60b15fc04803fe5cd64eccbdfa9e4ce336aa546"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/t2_mekanism.snbt"
-hash = "2ff56ec815854703b5976efff1393c4f5f82c178fd31849c7e88512583c9f7fd"
+hash = "b59eedb43d200be39806979a6ed9c990bad8f39a7931754cb99a432d051ef37c"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/t2_storage.snbt"
@@ -790,7 +794,7 @@ hash = "5af4ff61d0f7a5033516c9c786a259b272af37d9c405244aaf0e7c6e9079fe78"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/t3_ma.snbt"
-hash = "a30a79e09c87377cb7b4e8b3143d33d1290538afa5d8f9b1e162bdeb4ba431eb"
+hash = "a30fadb3136427eb56bbcaf6b6cc1614ae1be9aca0d61fe158f5a89eb546422e"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/t3_magic.snbt"
@@ -2330,15 +2334,15 @@ hash = "dff789897d1bc9ec6cd85360b8cf5a201948092c5f03043206bc259c0cdaaae0"
 
 [[files]]
 file = "tools/questgen/t1.py"
-hash = "2c1fd684ebc5a414f0f0a0940673ab8c54814f352c8e7add74ed33d25b1b3072"
+hash = "1a6c0d8482948e6d90a7aea7a017dd69f704faf2a5497500ec794a8faeeb79ec"
 
 [[files]]
 file = "tools/questgen/t2.py"
-hash = "520cb3f3b4bc9046a1b9180222d10acbd9e60ff9d83a81af2116810f3b0c68ac"
+hash = "0d823939c060f92cca63cdcff38da749dd1ac162c9f00b145d1bfe55e7a440a0"
 
 [[files]]
 file = "tools/questgen/t3.py"
-hash = "788f8653e8be1b8f7edcd73d2434fa641854346e37e052a9383cc8ed2f6b1e77"
+hash = "52c68c54f6ea38e5ad60ed6ea37c4a11a167704d22cc654aba35b9e366e11ebb"
 
 [[files]]
 file = "tools/questgen/t4.py"
