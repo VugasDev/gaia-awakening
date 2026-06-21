@@ -3,6 +3,9 @@ CLAUDE.md
 docs/
 planning/
 ai-workflows/
+tools/
+wiki/
+.github/
 
 # Packwiz-Output — komplett ausschließen
 modrinth/
