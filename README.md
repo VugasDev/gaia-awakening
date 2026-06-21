@@ -1,11 +1,11 @@
 # Gaia Awakening
 
-> **A curated Minecraft modpack for friends — from your first steam engine to a flying fortress.**
+> **A curated Create-focused modpack for friends — from crushing your first red stone to awakening the Gaia Cathedral.**
 
 [![Minecraft 1.21.1](https://img.shields.io/badge/Minecraft-1.21.1-green?logo=minecraft)](https://www.minecraft.net)
-[![NeoForge 21.1.228](https://img.shields.io/badge/NeoForge-21.1.228-orange)](https://neoforged.net)
+[![NeoForge 21.1.233](https://img.shields.io/badge/NeoForge-21.1.233-orange)](https://neoforged.net)
 [![Modrinth](https://img.shields.io/badge/Modrinth-Published-brightgreen?logo=modrinth)](https://modrinth.com)
-[![Version](https://img.shields.io/badge/Version-0.1.35--alpha-blue)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/Version-0.3.1--beta-blue)](CHANGELOG.md)
 
 ---
 
@@ -13,7 +13,7 @@
 
 **Gaia Awakening** is a kitchen-sink modpack built around **Create** as the central tech progression, enriched with automation (AE2, Mekanism), magic (Ars Nouveau, Apotheosis), exploration, and quality-of-life mods. It's designed for a small group of friends, with casual-friendly defaults and a guided quest system covering all five progression tiers.
 
-The world generates with dramatically tall terrain (Tectonic + Terralith), underground rivers, and massively improved structure generation. You'll start punching trees and end up inside a flying fortress powered by a fusion reactor.
+The world generates with dramatically tall terrain (Tectonic + Terralith), underground rivers, and massively improved structure generation. The headline twist: **ore worldgen is disabled** — you mine and crush Create's tinted stones to bootstrap, then drill deep ore veins with tiered drill heads. You start punching trees and end up raising the Gaia Cathedral around a fusion reactor.
 
 ---
 
@@ -25,7 +25,7 @@ The world generates with dramatically tall terrain (Tectonic + Terralith), under
 | **T2 – Brass & Machines** | Automation, railways, storage | Create (Brass), Steam 'n' Rails, Sophisticated Storage |
 | **T3 – Energy & Automation** | Digital storage, power networks, magic | AE2, Mekanism, Ars Nouveau, PneumaticCraft |
 | **T4 – Advanced Systems** | Heavy industry, arcane crafting | Mekanism Generators, MEGA Cells, Mystical Agriculture |
-| **T5 – Endgame** | Boss fights, flying machines, fusion | L'Ender's Cataclysm, Mekanism Fusion Reactor |
+| **T5 – Endgame** | Boss fights, the Gaia Cathedral, fusion | L'Ender's Cataclysm, Mekanism Fusion Reactor |
 
 ### The Catalyst System (Custom)
 
@@ -34,7 +34,7 @@ Progression into T3 and T4 seeds (Mystical Agriculture) is gated behind two cust
 - **Resource Catalyst** — required for T3 seeds. Three acquisition paths:
   1. *Passive* — drops from Create Ore Excavation veins
   2. *Mechanical* — Mechanical Crafter recipe (MA essences + Apotheosis gem)
-  3. *Active* — Catalyst Altar + Hyper Experience fluid (Create Enchantment Industry Spout)
+  3. *Active* — Catalyst Altar + Hyper Experience (custom `gaia:hyper_experience` fluid)
 
 - **Mythic Catalyst** — required for T4 seeds. Harder to obtain:
   1. *Boss drops* — Cataclysm Apex bosses only
@@ -132,24 +132,30 @@ Progression into T3 and T4 seeds (Mystical Agriculture) is gated behind two cust
 
 ## Custom Systems
 
-### Drill Head System
+### Veins of Gaia — the ore economy
 
-Five tiers of drill heads craftable via Create Ore Excavation integration:
+All real ore worldgen is disabled; every ore comes from **Create: Ore Excavation**.
 
-| Item | Tier | Color |
-|------|------|-------|
-| Osmium Drill Head | T3 | Steel-blue |
-| Crystal Drill Head | T3 | Ice-blue |
-| Nether Drill Head | T3 | Red-orange |
-| Refined Obsidian Drill Head | T4 | Purple-black |
-| Gaia Infused Drill Head | T4 | Emerald green (glow) |
-| Catalyst Drill Head | T5 | Amber (glow) |
+- **Bootstrap** by mining and crushing Create's four tinted stones — Crimsite → Raw Iron, Veridium → Copper, Ochrum → Gold, Asurine → Zinc (their craft recipes are removed, so they must be mined).
+- **Build a Drilling Machine** and tap deep ore veins. Each vein is finite and rolls a random size, so most are moderate and some are nearly inexhaustible.
+- **Tiered drill heads** hard-gate which veins each one can drill — a lower-tier head on a higher-tier vein yields nothing:
 
-### XP Economy
+| Drill Head | Tier | Unlocks |
+|------------|------|---------|
+| Basic | T1 | iron, copper, coal |
+| Reinforced | T2 | gold, zinc, redstone, lapis, osmium, tin, lead, silver, nether quartz, inferium |
+| Osmium | T3 | uranium, fluorite |
+| Nether | T3 | nether gold, glowstone, ancient debris |
+| Crystal | T3 | diamond, emerald, prosperity |
+| Refined Obsidian | T4 | thorium, uraninite |
+| Gaia-Infused | T5 | apex yield + a Resource Catalyst byproduct |
 
-- **Hyper Experience** (Create Enchantment Industry fluid) — base XP fluid, used in Catalyst Altar and Mixer
-- **Mythic Liquid XP** (custom fluid) — 2000 mB Hyper XP + Singularity Shard → 1000 mB Mythic XP via heated Mixer
-- Enables Mythic Catalyst crafting via Spout
+Drilled raw ore feeds the standard Create → Mekanism chain for up to ×16 output. Pumping Mekanism brine (as a fluid, via a Rotary Condensentrator) into the machine boosts the yield.
+
+### XP fluids
+
+- **Hyper Experience** (custom `gaia:hyper_experience` fluid) — concentrated experience, made from Create: Enchantment Industry liquid experience in a Mixer.
+- **Mythic Liquid XP** (custom fluid) — Hyper Experience + a Singularity Shard in a heated Mixer; used to craft the Mythic Catalyst.
 
 ---
 
