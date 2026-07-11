@@ -5,7 +5,7 @@
 [![Minecraft 1.21.1](https://img.shields.io/badge/Minecraft-1.21.1-green?logo=minecraft)](https://www.minecraft.net)
 [![NeoForge 21.1.233](https://img.shields.io/badge/NeoForge-21.1.233-orange)](https://neoforged.net)
 [![Modrinth](https://img.shields.io/badge/Modrinth-Published-brightgreen?logo=modrinth)](https://modrinth.com)
-[![Version](https://img.shields.io/badge/Version-0.3.2--beta-blue)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/Version-0.3.3--beta-blue)](CHANGELOG.md)
 
 ---
 
