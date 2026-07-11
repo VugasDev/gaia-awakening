@@ -2023,6 +2023,11 @@ hash = "1faf48b7c3887b3b9ccae6999c9ebb36e9424009b8d3be5c4275aa7c0f139bcd"
 metafile = true
 
 [[files]]
+file = "mods/fusion-connected-textures.pw.toml"
+hash = "198c99aecc2dfae1a25ca18b2563aef02e6226b844867a01c56db7073a494797"
+metafile = true
+
+[[files]]
 file = "mods/geckolib.pw.toml"
 hash = "0521ed2becdf2b460511c92e80e2702a4b6e540c85c99fb571844e1c7c505724"
 metafile = true
@@ -2419,7 +2424,7 @@ metafile = true
 
 [[files]]
 file = "mods/waystones.pw.toml"
-hash = "6469e09b6d02aa3f1aeb653c9e33ec948e2bd9d09cabc60a834552783120c018"
+hash = "2282d643312815eac969dc7df9904d80f190a476ec487ec7d501adda9ba60a39"
 metafile = true
 
 [[files]]
