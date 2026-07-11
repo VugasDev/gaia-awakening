@@ -50,11 +50,13 @@ ServerEvents.recipes(event => {
         // ONE finite vein per ore. COE ties finite/infinite to the recipe id, so a single
         // radar source must be uniformly finite (per-instance "% infinite" is impossible
         // without a custom mod — see BL-022). veinSize is the amountMultiplier; the per-chunk
-        // randomMul rolls UNIFORMLY in [min,max] x finiteAmountBase(1000). So 0.5..30 -> a
-        // vein holds ~500..30000 raw ore (low ~500-1000, top ~20-30k). NOTE: uniform roll, so
-        // there's no "mostly mid" bias — every size in the range is equally likely.
+        // randomMul rolls UNIFORMLY in [min,max] x finiteAmountBase(1000).
+        // Tier-scaled: normal veins are STARTER supply only — scaling comes from
+        // motherlodes. T1 500-1000, T2 2-4k, T3 5-8k, T4 8-12k raw ore per vein.
+        const vsMin = [0, 0.5, 2, 5, 8][o.tier]
+        const vsMax = [0, 1, 4, 8, 12][o.tier]
         coe.vein(veinName, o.raw)
-            .placement(fSpacing, 32, fSalt).veinSize(0.5, 30).alwaysFinite()
+            .placement(fSpacing, 32, fSalt).veinSize(vsMin, vsMax).alwaysFinite()
             .biomeWhitelist(biome).id(`gaia:veins/${seg}`)
 
         // RECIPE MATRIX — mult: 1 for normal veins, 2 for motherlodes
