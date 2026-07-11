@@ -84,3 +84,14 @@ Custom: each hohlraum cell requires AE2:Fluix_Crystal + Create:Precision_Mechani
 - Apotheosis gems (high): only in "When Dungeons Arise" + YUNG's Better Dungeons
 - AE2 Meteorite Compass: increase spawn rate (QoL for new players)
 - Mekanism schematics: in high-tier dungeon chests
+
+---
+
+## Motherlodes (0.3.3)
+
+- Jede Erzsorte hat zusätzlich zur normalen finiten Ader eine **Motherlode**:
+  `alwaysInfinite`, 2× Drilling-Output, gleiches Drill-Head-Gate.
+- Spacing: 2500/3000/3500/4000 Blöcke (Tier 1–4); normale Veins T3 ≈ 900, T4 ≈ 1200.
+- Vein-IDs: `gaia:motherlodes/<material>` (Radarfarben-kompatibel).
+- Intendiertes Gameplay: Motherlode finden (Vein Finder) → Außenposten + Drill →
+  automatisierter Erzzug zur Basis (Quest-Kapitel „Iron Arteries", T3).
