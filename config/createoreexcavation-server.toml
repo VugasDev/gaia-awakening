@@ -5,7 +5,7 @@ importantInfo = true
 #Finite vein base amount
 # Default: 1000
 # Range: > 1
-finiteAmountBase = 1000
+finiteAmountBase = 1
 #Veins infinite by default
 defaultInfinite = true
 #Max number of extractor per ore vein, Set to 0 for infinite

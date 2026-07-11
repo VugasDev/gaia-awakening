@@ -92,6 +92,9 @@ Custom: each hohlraum cell requires AE2:Fluix_Crystal + Create:Precision_Mechani
 - Jede Erzsorte hat zusätzlich zur normalen finiten Ader eine **Motherlode**:
   `alwaysInfinite`, 2× Drilling-Output, gleiches Drill-Head-Gate.
 - Spacing: 2500/3000/3500/4000 Blöcke (Tier 1–4); normale Veins T3 ≈ 900, T4 ≈ 1200.
+- Normale Vein-Größen (tier-skaliert, `finiteAmountBase = 1`, in-game getuned):
+  T1 0.5–1, T2 2–4, T3 5–8, T4 8–12 — reine Starter-Versorgung, Skalierung
+  läuft über Motherlodes.
 - Vein-IDs: `gaia:motherlodes/<material>` (Radarfarben-kompatibel).
 - Intendiertes Gameplay: Motherlode finden (Vein Finder) → Außenposten + Drill →
   automatisierter Erzzug zur Basis (Quest-Kapitel „Iron Arteries", T3).

@@ -662,7 +662,7 @@ hash = "68918aeea1ff71d7102b6554fd60a3111a7bb6601431aa1dbcdf50750e6df4dd"
 
 [[files]]
 file = "config/createoreexcavation-server.toml"
-hash = "2c51e07416eee0783db1decb5309e0d7a886f6e4f41749122aa007f3da6b36e5"
+hash = "7d1ae2a27994b31b2bdc70f0e6eae753c55ecaababc9ff167a9a0ed2238bfd09"
 
 [[files]]
 file = "config/cucumber-client.toml"
@@ -1210,7 +1210,7 @@ hash = "39b423a5786f48f0f479cac4004734fc2eae55a9607b5e931a6f9f4373b5e945"
 
 [[files]]
 file = "defaultconfigs/createoreexcavation-server.toml"
-hash = "723c28adf7cf5c145fdb95e646fac5f57c6e9fc0703b8eba9dfca5bf861b9c06"
+hash = "16b232927ced17370b4c9df7db8e1e149133171f48f4fcdb575224a85a204c46"
 
 [[files]]
 file = "kubejs/assets/gaia/models/item/mythic_liquid_xp_bucket.json"
@@ -1598,7 +1598,7 @@ hash = "e29ee97a826aa277d167a566fbf5ddb8de24beeb153fb5a502874f77b302b874"
 
 [[files]]
 file = "kubejs/server_scripts/15_ore_progression.js"
-hash = "72a398e7a6a727a4f4336adfe5f363907f6a1e66e0e4b6f192669a1b03607407"
+hash = "47287aaedfab92b502f671325c572033f6d3ee33e2e8e7a10e63093fda25b46a"
 
 [[files]]
 file = "kubejs/server_scripts/enchantment_automation.js"
