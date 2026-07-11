@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Generate all FTB Quests chapter SNBT files for Gaia Awakening.
 
-Usage: python3 tools/generate_quests.py
+Usage: python3 tools/generate_quests.py [chapter_key ...]
 Writes to config/ftbquests/quests/chapters/ and chapter_groups.snbt.
 """
 import os
@@ -24,10 +24,18 @@ def main():
             print(f"ERROR: {e}")
         sys.exit(1)
 
+    only = set(sys.argv[1:])
+    unknown = only - set(lib.CHAPTERS)
+    if unknown:
+        print(f"ERROR: unknown chapter key(s): {', '.join(sorted(unknown))}")
+        sys.exit(1)
+
     os.makedirs(CHAPTERS, exist_ok=True)
 
     total = 0
     for key in lib.CHAPTERS:
+        if only and key not in only:
+            continue
         path = os.path.join(CHAPTERS, f"{key}.snbt")
         with open(path, "w") as f:
             f.write(lib.emit_chapter(key))
@@ -35,9 +43,10 @@ def main():
         total += n
         print(f"  {key}.snbt  ({n} quests)")
 
-    with open(os.path.join(QUESTS, "chapter_groups.snbt"), "w") as f:
-        f.write(lib.emit_chapter_groups())
-    print("  chapter_groups.snbt")
+    if not only:
+        with open(os.path.join(QUESTS, "chapter_groups.snbt"), "w") as f:
+            f.write(lib.emit_chapter_groups())
+        print("  chapter_groups.snbt")
 
     n_opt = sum(1 for ch in lib.CHAPTERS.values()
                 for q in ch["quests"] if q.get("optional"))
