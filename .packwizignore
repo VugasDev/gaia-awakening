@@ -6,6 +6,9 @@ ai-workflows/
 tools/
 wiki/
 .github/
+.superpowers/
+*.mrpack
+*.zip
 
 # Packwiz-Output — komplett ausschließen
 modrinth/

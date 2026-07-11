@@ -41,7 +41,8 @@ ServerEvents.recipes(event => {
         // emerald/nether_gold/glowstone/quartz/netherite). Unknown segments -> default orange.
         const seg = o.cf || o.id
 
-        const fSpacing = 140 + o.tier * 30 + (i % 5) * 16
+        // T1/T2: near home (~170-260). T3/T4: pushed out — first taste of expeditions.
+        const fSpacing = (o.tier === 3 ? 900 : o.tier === 4 ? 1200 : 140 + o.tier * 30) + (i % 5) * 16
         const fSalt = 50021 + i * 104729
         
         const veinName = JSON.stringify({ text: `${o.id.replace('_', ' ').replace(/\b\w/g, c => c.toUpperCase())} Deposit`, color: o.color })
@@ -49,42 +50,58 @@ ServerEvents.recipes(event => {
         // ONE finite vein per ore. COE ties finite/infinite to the recipe id, so a single
         // radar source must be uniformly finite (per-instance "% infinite" is impossible
         // without a custom mod — see BL-022). veinSize is the amountMultiplier; the per-chunk
-        // randomMul rolls UNIFORMLY in [min,max] x finiteAmountBase(1000). So 0.5..30 -> a
-        // vein holds ~500..30000 raw ore (low ~500-1000, top ~20-30k). NOTE: uniform roll, so
-        // there's no "mostly mid" bias — every size in the range is equally likely.
+        // randomMul rolls UNIFORMLY in [min,max] x finiteAmountBase.
+        // finiteAmountBase is shipped as 1 (user-playtested) — vein totals equal
+        // the veinSize roll directly. Tier-scaled: normal veins are STARTER supply
+        // only, scaling comes from motherlodes. T1 0.5-1, T2 2-4, T3 5-8, T4 8-12.
+        const vsMin = [0, 0.5, 2, 5, 8][o.tier]
+        const vsMax = [0, 1, 4, 8, 12][o.tier]
         coe.vein(veinName, o.raw)
-            .placement(fSpacing, 32, fSalt).veinSize(0.5, 30).alwaysFinite()
+            .placement(fSpacing, 32, fSalt).veinSize(vsMin, vsMax).alwaysFinite()
             .biomeWhitelist(biome).id(`gaia:veins/${seg}`)
 
-        // RECIPE MATRIX
-        const addRecipes = (veinId, minHeadTag) => {
+        // RECIPE MATRIX — mult: 1 for normal veins, 2 for motherlodes
+        const addRecipes = (veinId, minHeadTag, mult) => {
             // Base Output
-            const baseItem = Item.of(o.raw, o.n)
+            const baseItem = Item.of(o.raw, o.n * mult)
             // Enhanced Output (Brine) -> 50% more output
-            const enhancedItem = Item.of(o.raw, Math.floor(o.n * 1.5) || 1)
-            
+            const enhancedItem = Item.of(o.raw, Math.floor(o.n * mult * 1.5) || 1)
+
             // Premium Output
-            const premiumItem = [ Item.of(o.raw, o.n + 1), coeutil.processingOutput('gaia:resource_catalyst', 0.02) ]
+            const premiumItem = [ Item.of(o.raw, (o.n + 1) * mult), coeutil.processingOutput('gaia:resource_catalyst', 0.02) ]
             // Premium Enhanced (Brine) -> 50% more output
-            const premiumEnhancedItem = [ Item.of(o.raw, Math.floor((o.n + 1) * 1.5)), coeutil.processingOutput('gaia:resource_catalyst', 0.05) ]
+            const premiumEnhancedItem = [ Item.of(o.raw, Math.floor((o.n + 1) * mult * 1.5)), coeutil.processingOutput('gaia:resource_catalyst', 0.05) ]
 
             // Prio 0: Standard Drill, No Fluid
             coe.drilling(baseItem, veinId, 240)
                 .drill(minHeadTag).priority(0).id(`${veinId}_drill_base`)
-                
+
             // Prio 1: Standard Drill, Mekanism Brine
             coe.drilling(enhancedItem, veinId, 240)
                 .drill(minHeadTag).fluid('mekanism:brine 100').priority(1).id(`${veinId}_drill_brine`)
-                
+
             // Prio 2: Premium Drill (Gaia), No Fluid
             coe.drilling(premiumItem, veinId, 200)
                 .drill('gaia:gaia_infused_drill_head').priority(2).id(`${veinId}_premium_base`)
-                
+
             // Prio 3: Premium Drill (Gaia), Mekanism Brine
             coe.drilling(premiumEnhancedItem, veinId, 200)
                 .drill('gaia:gaia_infused_drill_head').fluid('mekanism:brine 100').priority(3).id(`${veinId}_premium_brine`)
         }
 
-        addRecipes(`gaia:veins/${seg}`, TAG(o.tier))
+        addRecipes(`gaia:veins/${seg}`, TAG(o.tier), 1)
+
+        // MOTHERLODE — one per ore: alwaysInfinite, far out (2500-4000 by tier), 2x output.
+        // Permanent outpost anchor: the distance is the gate, not the tool (same tier tag).
+        // Id scheme gaia:motherlodes/<seg> keeps Better Finder radar colours (last segment).
+        const mSpacing = 2500 + (o.tier - 1) * 500
+        const mSalt = 90017 + i * 130363
+        const mName = JSON.stringify({ text: `${o.id.replace('_', ' ').replace(/\b\w/g, c => c.toUpperCase())} Motherlode`, color: o.color, bold: true })
+
+        coe.vein(mName, o.raw)
+            .placement(mSpacing, 64, mSalt).veinSize(10, 10).alwaysInfinite()
+            .biomeWhitelist(biome).id(`gaia:motherlodes/${seg}`)
+
+        addRecipes(`gaia:motherlodes/${seg}`, TAG(o.tier), 2)
     })
 })
