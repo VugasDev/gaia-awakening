@@ -2,7 +2,7 @@ hash-format = "sha256"
 
 [[files]]
 file = "README.md"
-hash = "81a2cb9c27b9c02fc2a29df3d082fa4a56878dee6c19dfa75b1b53a63ed927c4"
+hash = "edff2aafcd55cb33eb304bd10901265c01e9001d331e8082f2d72b7abe13d871"
 
 [[files]]
 file = "config/DistantHorizons.toml"
