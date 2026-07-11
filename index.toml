@@ -1,46 +1,6 @@
 hash-format = "sha256"
 
 [[files]]
-file = ".superpowers/sdd/review-1249c54..cd0cdb2.diff"
-hash = "738ed742ed07611fd42f7e57a632fea1f4ec66d31d49754f6bccba8b8e17f991"
-
-[[files]]
-file = ".superpowers/sdd/review-242e164..968f7dc.diff"
-hash = "cccec5ba3a89730e2034edaa253021e09cd50b20964dd4c9951dec1da62f8d34"
-
-[[files]]
-file = ".superpowers/sdd/review-968f7dc..1249c54.diff"
-hash = "047e7f64a54c028fccdc55691ca0396522be0f9e2f473df8939e082922466185"
-
-[[files]]
-file = ".superpowers/sdd/task-1-brief.md"
-hash = "4fa7ca48664ab6764cdfd344e4d123092ab5834594ae2ae953d840b12d1b0208"
-
-[[files]]
-file = ".superpowers/sdd/task-1-report.md"
-hash = "7e47fb7a19653c0a053f802cf40a9b241087bb5d0b15d452a12f67412f6f1cd8"
-
-[[files]]
-file = ".superpowers/sdd/task-2-brief.md"
-hash = "1c04c275d36dcc643e934109952161db40e905d5398311a3891edd1ad6a98b8e"
-
-[[files]]
-file = ".superpowers/sdd/task-2-report.md"
-hash = "245e9ea87e4c6a4bd25722884a77f5cde8b971ace18640f2707bb76aa9038cf3"
-
-[[files]]
-file = ".superpowers/sdd/task-3-brief.md"
-hash = "33ff305e8752174ec3dc9218b502c1e12ca0c8ec8c8361e45cd6b9661f356c10"
-
-[[files]]
-file = ".superpowers/sdd/task-3-report.md"
-hash = "4f3774d8db732e888cd1e71d3130bf4b5a9ccc505e2b4f1c13d4055172453b3f"
-
-[[files]]
-file = ".superpowers/sdd/task-4-brief.md"
-hash = "81decac3f7e6b179070e5efea55ea1ce0e597f5c10ba8b70e2982280fc9d5314"
-
-[[files]]
 file = "README.md"
 hash = "edff2aafcd55cb33eb304bd10901265c01e9001d331e8082f2d72b7abe13d871"
 
