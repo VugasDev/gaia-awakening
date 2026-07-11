@@ -1,0 +1,502 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "t3_rails"
+	group: "0000000000040000"
+	icon: "create:track"
+	id: "0000000000046000"
+	order_index: 5
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"The richest veins of Gaia don't sit under your base. Normal deposits run dry, and the deeper tiers spawn far from home — but out there, MOTHERLODES wait: infinite veins that never deplete."
+				""
+				"A motherlode is worthless without a way to haul its ore home. This chapter is about building that way: steel arteries, rolling stock, and a supply line that runs while you sleep."
+			]
+			id: "0000000000046001"
+			rewards: [
+				{
+					id: "A000000000046001"
+					type: "xp"
+					xp: 50
+				}
+			]
+			shape: "gear"
+			subtitle: "Logistics is the endgame"
+			tasks: [
+				{
+					id: "1000000000046001"
+					title: "Read the briefing — logistics time"
+					type: "checkmark"
+				}
+			]
+			title: "All Aboard"
+			x: 0d
+			y: 0d
+		}
+		{
+			dependencies: [
+				"0000000000046001"
+			]
+			description: [
+				"Press iron sheets, cast andesite alloy, and produce Train Tracks in bulk. Sixty-four is a start — a real artery will eat thousands."
+			]
+			id: "0000000000046002"
+			rewards: [
+				{
+					count: 32L
+					id: "A000000000046002"
+					item: "create:track"
+					type: "item"
+				}
+				{
+					id: "B000000000046002"
+					type: "xp"
+					xp: 100
+				}
+			]
+			subtitle: "No shortcuts without rails"
+			tasks: [
+				{
+					count: 64L
+					id: "1000000000046002"
+					item: "create:track"
+					type: "item"
+				}
+			]
+			title: "Laying Steel"
+			x: 1.5d
+			y: 0d
+		}
+		{
+			dependencies: [
+				"0000000000046002"
+			]
+			description: [
+				"Place a Train Station at your base. This is where your artery begins — name it something worthy. 'Home' works. 'Gaia Central' works better."
+			]
+			id: "0000000000046003"
+			rewards: [
+				{
+					id: "A000000000046003"
+					type: "xp"
+					xp: 100
+				}
+			]
+			subtitle: "Every line needs a home"
+			tasks: [
+				{
+					count: 1L
+					id: "1000000000046003"
+					item: "create:track_station"
+					type: "item"
+				}
+			]
+			title: "Terminal One"
+			x: 3d
+			y: 0d
+		}
+		{
+			dependencies: [
+				"0000000000046003"
+			]
+			description: [
+				"Assemble your first train: put down train casing bogeys on the track, build a locomotive on top, add Train Controls and a Steam Whistle, then assemble it at the station."
+			]
+			id: "0000000000046004"
+			rewards: [
+				{
+					count: 2L
+					id: "A000000000046004"
+					item: "create:railway_casing"
+					type: "item"
+				}
+			]
+			subtitle: "Controls, whistle, casing"
+			tasks: [
+				{
+					count: 1L
+					id: "1000000000046004"
+					item: "create:controls"
+					type: "item"
+				}
+				{
+					count: 1L
+					id: "2000000000046004"
+					item: "create:steam_whistle"
+					type: "item"
+				}
+			]
+			title: "Rolling Stock"
+			x: 4.5d
+			y: 0d
+		}
+		{
+			dependencies: [
+				"0000000000046004"
+			]
+			description: [
+				"Write a Schedule, hand it to the conductor seat, and watch your train run its first automated round trip. From here on, you never drive ore yourself again."
+			]
+			id: "0000000000046005"
+			rewards: [
+				{
+					id: "A000000000046005"
+					type: "xp"
+					xp: 150
+				}
+			]
+			subtitle: "Trains that drive themselves"
+			tasks: [
+				{
+					count: 1L
+					id: "1000000000046005"
+					item: "create:schedule"
+					type: "item"
+				}
+				{
+					id: "2000000000046005"
+					title: "Run your first automated schedule"
+					type: "checkmark"
+				}
+			]
+			title: "Timetables"
+			x: 6d
+			y: 0d
+		}
+		{
+			dependencies: [
+				"0000000000046001"
+			]
+			description: [
+				"Craft a Vein Finder and start sweeping. Normal deposits show up close to home — but keep an eye out for something bigger."
+			]
+			id: "0000000000046006"
+			rewards: [
+				{
+					id: "A000000000046006"
+					type: "xp"
+					xp: 100
+				}
+			]
+			subtitle: "Point it at the horizon"
+			tasks: [
+				{
+					count: 1L
+					id: "1000000000046006"
+					item: "createoreexcavation:vein_finder"
+					type: "item"
+				}
+			]
+			title: "The Prospector"
+			x: 1.5d
+			y: 2d
+		}
+		{
+			dependencies: [
+				"0000000000046006"
+			]
+			description: [
+				"Motherlodes are INFINITE veins with double yield, placed thousands of blocks apart. Find one with your Vein Finder and mark it on your map."
+				""
+				"This spot is your future outpost. It will never run dry — it deserves rails."
+			]
+			id: "0000000000046007"
+			rewards: [
+				{
+					id: "A000000000046007"
+					type: "xp_levels"
+					xp_levels: 5
+				}
+			]
+			subtitle: "Infinite — but far"
+			tasks: [
+				{
+					id: "1000000000046007"
+					title: "Locate a Motherlode vein"
+					type: "checkmark"
+				}
+			]
+			title: "Motherlode!"
+			x: 3d
+			y: 2d
+		}
+		{
+			dependencies: [
+				"0000000000046007"
+			]
+			description: [
+				"Haul a Drilling Machine and a Drill out to the motherlode and set up shop. Power it however you like — steam hauled in barrels, a local windmill farm, or something more creative."
+			]
+			id: "0000000000046008"
+			rewards: [
+				{
+					id: "A000000000046008"
+					type: "xp"
+					xp: 200
+				}
+			]
+			subtitle: "An outpost is born"
+			tasks: [
+				{
+					count: 1L
+					id: "1000000000046008"
+					item: "createoreexcavation:drilling_machine"
+					type: "item"
+				}
+				{
+					count: 1L
+					id: "2000000000046008"
+					item: "createoreexcavation:drill"
+					type: "item"
+				}
+			]
+			title: "Breaking Ground"
+			x: 4.5d
+			y: 2d
+		}
+		{
+			dependencies: [
+				"0000000000046008"
+			]
+			description: [
+				"Get the drill running on the motherlode. Watch the ore pile up — and realize your pockets are not a logistics network."
+			]
+			id: "0000000000046009"
+			rewards: [
+				{
+					id: "A000000000046009"
+					type: "xp_levels"
+					xp_levels: 5
+				}
+			]
+			subtitle: "Ore without end"
+			tasks: [
+				{
+					id: "1000000000046009"
+					title: "Drill running at a Motherlode"
+					type: "checkmark"
+				}
+			]
+			title: "Remote Operations"
+			x: 6d
+			y: 2d
+		}
+		{
+			dependencies: [
+				"0000000000046005"
+				"0000000000046009"
+			]
+			description: [
+				"Portable Storage Interfaces transfer cargo between stopped trains and your base — one at the outpost to load ore, one at home to unload it."
+			]
+			id: "000000000004600A"
+			rewards: [
+				{
+					id: "A00000000004600A"
+					type: "xp"
+					xp: 200
+				}
+			]
+			subtitle: "Trains load themselves too"
+			tasks: [
+				{
+					count: 2L
+					id: "100000000004600A"
+					item: "create:portable_storage_interface"
+					type: "item"
+				}
+			]
+			title: "Loading Dock"
+			x: 7.5d
+			y: 1d
+		}
+		{
+			dependencies: [
+				"0000000000046005"
+			]
+			description: [
+				"Planning more than one train on the line? Track Signals split your network into blocks, and a Track Observer can trigger redstone when cargo rolls past."
+			]
+			id: "000000000004600B"
+			optional: true
+			rewards: [
+				{
+					count: 2L
+					id: "A00000000004600B"
+					item: "create:track_signal"
+					type: "item"
+				}
+			]
+			subtitle: "Two trains, zero collisions"
+			tasks: [
+				{
+					count: 2L
+					id: "100000000004600B"
+					item: "create:track_signal"
+					type: "item"
+				}
+				{
+					count: 1L
+					id: "200000000004600B"
+					item: "create:track_observer"
+					type: "item"
+				}
+			]
+			title: "Signal Discipline"
+			x: 7.5d
+			y: -1.5d
+		}
+		{
+			dependencies: [
+				"000000000004600A"
+			]
+			description: [
+				"Close the loop: a scheduled train shuttles between your motherlode outpost and your base, loading and unloading through storage interfaces — fully automatic, day and night."
+				""
+				"This is what Gaia Awakening is about. Everything after this scales."
+			]
+			id: "000000000004600C"
+			rewards: [
+				{
+					count: 128L
+					id: "A00000000004600C"
+					item: "create:track"
+					type: "item"
+				}
+				{
+					id: "B00000000004600C"
+					type: "xp_levels"
+					xp_levels: 10
+				}
+			]
+			shape: "hexagon"
+			subtitle: "The pack's namesake moment"
+			tasks: [
+				{
+					id: "100000000004600C"
+					title: "Automated ore train delivering from outpost to base"
+					type: "checkmark"
+				}
+			]
+			title: "The Iron Artery"
+			x: 9d
+			y: 1d
+		}
+		{
+			dependencies: [
+				"0000000000046005"
+			]
+			description: [
+				"No self-respecting railway runs without a properly dressed conductor. The whistle summons your train — the cap completes you."
+			]
+			id: "000000000004600D"
+			optional: true
+			rewards: [
+				{
+					id: "A00000000004600D"
+					type: "xp"
+					xp: 100
+				}
+			]
+			subtitle: "Dress for the job"
+			tasks: [
+				{
+					count: 1L
+					id: "100000000004600D"
+					item: "railways:conductor_cap"
+					type: "item"
+				}
+				{
+					count: 1L
+					id: "200000000004600D"
+					item: "railways:conductor_whistle"
+					type: "item"
+				}
+			]
+			title: "Conductor's Pride"
+			x: 6d
+			y: -1.5d
+		}
+		{
+			dependencies: [
+				"000000000004600C"
+			]
+			description: [
+				"Rails are king on land — but some motherlodes sit across oceans and canyons. Create Aeronautics lets contraptions fly: propellers, bearings, envelopes."
+				""
+				"Start small. A propeller and a bearing are the seed of your first airship."
+			]
+			id: "000000000004600E"
+			rewards: [
+				{
+					id: "A00000000004600E"
+					type: "xp"
+					xp: 200
+				}
+			]
+			subtitle: "Rails end at the coastline"
+			tasks: [
+				{
+					count: 1L
+					id: "100000000004600E"
+					item: "aeronautics:propeller_bearing"
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "200000000004600E"
+					item: "aeronautics:wooden_propeller"
+					type: "item"
+				}
+			]
+			title: "Lighter Than Air"
+			x: 10.5d
+			y: 1d
+		}
+		{
+			dependencies: [
+				"000000000004600E"
+			]
+			description: [
+				"Build a small flying platform with a Physics Assembler, assemble it, and take to the air."
+				""
+				"This is just a taste. Full airship logistics — and rails in the sky — arrive in a future chapter. For now: enjoy the view, captain."
+			]
+			id: "000000000004600F"
+			rewards: [
+				{
+					count: 1L
+					id: "A00000000004600F"
+					item: "aeronautics:aviators_goggles"
+					type: "item"
+				}
+				{
+					id: "B00000000004600F"
+					type: "xp_levels"
+					xp_levels: 5
+				}
+			]
+			shape: "diamond"
+			subtitle: "The skies come later..."
+			tasks: [
+				{
+					count: 1L
+					id: "100000000004600F"
+					item: "simulated:physics_assembler"
+					type: "item"
+				}
+				{
+					id: "200000000004600F"
+					title: "Assemble and fly your first airship"
+					type: "checkmark"
+				}
+			]
+			title: "Maiden Voyage"
+			x: 12d
+			y: 1d
+		}
+	]
+	title: "Iron Arteries"
+}

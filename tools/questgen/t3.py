@@ -250,3 +250,137 @@ register_chapter("t3_magic", 0x45000, T3, 4, "School of Magic", "ars_nouveau:wor
          tasks=[I("occultism:dictionary_of_spirits")],
          rewards=[R("minecraft:soul_sand", 16), R("minecraft:diamond", 4), XP(175)]),
 ])
+
+# ── t3_rails ─────────────────────────────────────────────────────────────────
+register_chapter("t3_rails", 0x46000, T3, 5, "Iron Arteries", "create:track", [
+    # ── Act I: Rails ─────────────────────────────────────────────────────────
+    dict(n=1, title="All Aboard", x=0, y=0, shape="gear",
+         sub="Logistics is the endgame",
+         desc=["The richest veins of Gaia don't sit under your base. Normal deposits run dry, "
+               "and the deeper tiers spawn far from home — but out there, MOTHERLODES wait: "
+               "infinite veins that never deplete.",
+               "",
+               "A motherlode is worthless without a way to haul its ore home. This chapter is "
+               "about building that way: steel arteries, rolling stock, and a supply line that "
+               "runs while you sleep."],
+         tasks=[CK("Read the briefing — logistics time")],
+         rewards=[XP(50)]),
+
+    dict(n=2, title="Laying Steel", x=1.5, y=0, deps=[1],
+         sub="No shortcuts without rails",
+         desc=["Press iron sheets, cast andesite alloy, and produce Train Tracks in bulk. "
+               "Sixty-four is a start — a real artery will eat thousands."],
+         tasks=[I("create:track", 64)],
+         rewards=[R("create:track", 32), XP(100)]),
+
+    dict(n=3, title="Terminal One", x=3, y=0, deps=[2],
+         sub="Every line needs a home",
+         desc=["Place a Train Station at your base. This is where your artery begins — name it "
+               "something worthy. 'Home' works. 'Gaia Central' works better."],
+         tasks=[I("create:track_station", 1)],
+         rewards=[XP(100)]),
+
+    dict(n=4, title="Rolling Stock", x=4.5, y=0, deps=[3],
+         sub="Controls, whistle, casing",
+         desc=["Assemble your first train: put down train casing bogeys on the track, build a "
+               "locomotive on top, add Train Controls and a Steam Whistle, then assemble it at "
+               "the station."],
+         tasks=[I("create:controls", 1), I("create:steam_whistle", 1)],
+         rewards=[R("create:railway_casing", 2)]),
+
+    dict(n=5, title="Timetables", x=6, y=0, deps=[4],
+         sub="Trains that drive themselves",
+         desc=["Write a Schedule, hand it to the conductor seat, and watch your train run its "
+               "first automated round trip. From here on, you never drive ore yourself again."],
+         tasks=[I("create:schedule", 1),
+                CK("Run your first automated schedule")],
+         rewards=[XP(150)]),
+
+    # ── Act II: The Find ─────────────────────────────────────────────────────
+    dict(n=6, title="The Prospector", x=1.5, y=2, deps=[1],
+         sub="Point it at the horizon",
+         desc=["Craft a Vein Finder and start sweeping. Normal deposits show up close to home — "
+               "but keep an eye out for something bigger."],
+         tasks=[I("createoreexcavation:vein_finder", 1)],
+         rewards=[XP(100)]),
+
+    dict(n=7, title="Motherlode!", x=3, y=2, deps=[6],
+         sub="Infinite — but far",
+         desc=["Motherlodes are INFINITE veins with double yield, placed thousands of blocks "
+               "apart. Find one with your Vein Finder and mark it on your map.",
+               "",
+               "This spot is your future outpost. It will never run dry — it deserves rails."],
+         tasks=[CK("Locate a Motherlode vein")],
+         rewards=[LV(5)]),
+
+    # ── Act III: The Outpost ─────────────────────────────────────────────────
+    dict(n=8, title="Breaking Ground", x=4.5, y=2, deps=[7],
+         sub="An outpost is born",
+         desc=["Haul a Drilling Machine and a Drill out to the motherlode and set up shop. "
+               "Power it however you like — steam hauled in barrels, a local windmill farm, or "
+               "something more creative."],
+         tasks=[I("createoreexcavation:drilling_machine", 1),
+                I("createoreexcavation:drill", 1)],
+         rewards=[XP(200)]),
+
+    dict(n=9, title="Remote Operations", x=6, y=2, deps=[8],
+         sub="Ore without end",
+         desc=["Get the drill running on the motherlode. Watch the ore pile up — and realize "
+               "your pockets are not a logistics network."],
+         tasks=[CK("Drill running at a Motherlode")],
+         rewards=[LV(5)]),
+
+    # ── Act IV: The Artery ───────────────────────────────────────────────────
+    dict(n=10, title="Loading Dock", x=7.5, y=1, deps=[5, 9],
+         sub="Trains load themselves too",
+         desc=["Portable Storage Interfaces transfer cargo between stopped trains and your "
+               "base — one at the outpost to load ore, one at home to unload it."],
+         tasks=[I("create:portable_storage_interface", 2)],
+         rewards=[XP(200)]),
+
+    dict(n=11, title="Signal Discipline", x=7.5, y=-1.5, deps=[5], optional=True,
+         sub="Two trains, zero collisions",
+         desc=["Planning more than one train on the line? Track Signals split your network "
+               "into blocks, and a Track Observer can trigger redstone when cargo rolls past."],
+         tasks=[I("create:track_signal", 2), I("create:track_observer", 1)],
+         rewards=[R("create:track_signal", 2)]),
+
+    dict(n=12, title="The Iron Artery", x=9, y=1, deps=[10], shape="hexagon",
+         sub="The pack's namesake moment",
+         desc=["Close the loop: a scheduled train shuttles between your motherlode outpost and "
+               "your base, loading and unloading through storage interfaces — fully automatic, "
+               "day and night.",
+               "",
+               "This is what Gaia Awakening is about. Everything after this scales."],
+         tasks=[CK("Automated ore train delivering from outpost to base")],
+         rewards=[R("create:track", 128), LV(10)]),
+
+    dict(n=13, title="Conductor's Pride", x=6, y=-1.5, deps=[5], optional=True,
+         sub="Dress for the job",
+         desc=["No self-respecting railway runs without a properly dressed conductor. The "
+               "whistle summons your train — the cap completes you."],
+         tasks=[I("railways:conductor_cap", 1), I("railways:conductor_whistle", 1)],
+         rewards=[XP(100)]),
+
+    # ── Teaser: the skies ────────────────────────────────────────────────────
+    dict(n=14, title="Lighter Than Air", x=10.5, y=1, deps=[12],
+         sub="Rails end at the coastline",
+         desc=["Rails are king on land — but some motherlodes sit across oceans and canyons. "
+               "Create Aeronautics lets contraptions fly: propellers, bearings, envelopes.",
+               "",
+               "Start small. A propeller and a bearing are the seed of your first airship."],
+         tasks=[I("aeronautics:propeller_bearing", 1),
+                I("aeronautics:wooden_propeller", 4)],
+         rewards=[XP(200)]),
+
+    dict(n=15, title="Maiden Voyage", x=12, y=1, deps=[14], shape="diamond",
+         sub="The skies come later...",
+         desc=["Build a small flying platform with a Physics Assembler, assemble it, and take "
+               "to the air.",
+               "",
+               "This is just a taste. Full airship logistics — and rails in the sky — arrive in "
+               "a future chapter. For now: enjoy the view, captain."],
+         tasks=[I("simulated:physics_assembler", 1),
+                CK("Assemble and fly your first airship")],
+         rewards=[R("aeronautics:aviators_goggles", 1), LV(5)]),
+])
